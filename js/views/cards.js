@@ -76,7 +76,7 @@ const CARDS = (() => {
     if (embedIdx !== -1) content = content.substring(0, embedIdx).replace(/<\/div>\s*$/, '').trim();
     if (!content) return '';
     return `<div class="norm-block alert alert-info small">
-      <div class="text-uppercase fw-semibold mb-1">Normwaarden / Afkapwaarden</div>
+      <div class="text-uppercase fw-semibold mb-1">Reference values / Cut-off values</div>
       ${content}
     </div>`;
   }
@@ -85,7 +85,7 @@ const CARDS = (() => {
     if (!content) return '';
     if (content.includes('implicatie-block')) return content;
     return `<div class="implicatie-block alert alert-warning small">
-      <div class="text-uppercase fw-semibold mb-1">Klinische implicatie</div>
+      <div class="text-uppercase fw-semibold mb-1">Clinical implication</div>
       ${content}
     </div>`;
   }
@@ -114,7 +114,7 @@ const CARDS = (() => {
       pills.push(_neutralBadge(t))
     );
     if (obj.type === 'casuistiek') {
-      const CAS_LABELS = { diagnostiek: 'Diagnostiek', behandelen: 'Behandelen' };
+      const CAS_LABELS = { diagnostiek: 'Diagnostics', behandelen: 'Treatment' };
       const ct = tags.find(t => CAS_LABELS[t]) || 'diagnostiek';
       pills.push(_neutralBadge(CAS_LABELS[ct] || ct));
     }
@@ -150,14 +150,14 @@ const CARDS = (() => {
 
     // ── Body: inhoud ──────────────────────────────────────────────────────────
     const body = [
-      f.watMeetHet        ? _field('Wat meet het', f.watMeetHet)             : '',
-      f.scoringscriteria  ? _field('Scoringscriteria', f.scoringscriteria)   : '',
+      f.watMeetHet        ? _field('What it measures', f.watMeetHet)          : '',
+      f.scoringscriteria  ? _field('Scoring criteria', f.scoringscriteria)   : '',
       f.normwaarden       ? _normBlock(f.normwaarden)                        : '',
       f.implicatie        ? _implicatieBlock(f.implicatie)                   : '',
       f.focus             ? `<p class="small fst-italic text-muted">${f.focus}</p>` : '',
       f.content           ? `<div class="small">${f.content}</div>`          : '',
-      f.scope             ? _field('Scope', f.scope)                         : '',
-      f.kernaanbevelingen ? _field('Kernaanbevelingen', f.kernaanbevelingen) : '',
+      f.scope             ? _field('Scope', f.scope)                              : '',
+      f.kernaanbevelingen ? _field('Key recommendations', f.kernaanbevelingen)    : '',
     ].filter(Boolean).join('');
 
     // ── Footer: graaf-relaties (richting + rel-type) ──────────────────────────

@@ -13,9 +13,9 @@ const OVZ = (() => {
 
   const TYPE_LABELS = {
     instrument:  'Instrument',
-    kennis:      'Kennis',
-    bronnen:     'Bronnen',
-    casuistiek:  'Casuistiek',
+    kennis:      'Knowledge',
+    bronnen:     'Sources',
+    casuistiek:  'Case Studies',
   };
 
   const DOMEIN_TAGS = ['msa', 'cna', 'rca', 'mtt', 'onco'];
@@ -59,7 +59,7 @@ const OVZ = (() => {
         <!-- Zoekbalk + actieve filters -->
         <div class="d-flex flex-column gap-1">
           <input type="search" class="form-control form-control-sm" id="ovzSearch"
-            placeholder="Zoek…"
+            placeholder="Search…"
             value="${_esc(_filters.search)}"
             oninput="OVZ.setFilter('search', this.value)"
             autocomplete="off">
@@ -73,9 +73,9 @@ const OVZ = (() => {
             return `
               <div class="d-flex align-items-start gap-2">
                 <span class="text-muted small flex-grow-1 text-break">
-                  ${hasFilter ? parts.join(' · ') : 'geen filters actief'}
+                  ${hasFilter ? parts.join(' · ') : 'no filters active'}
                 </span>
-                ${hasFilter ? `<button class="btn btn-sm btn-outline-secondary py-0 px-2 flex-shrink-0" onclick="OVZ.clearAllFilters()">wis</button>` : ''}
+                ${hasFilter ? `<button class="btn btn-sm btn-outline-secondary py-0 px-2 flex-shrink-0" onclick="OVZ.clearAllFilters()">clear</button>` : ''}
               </div>`;
           })()}
         </div>
@@ -91,9 +91,9 @@ const OVZ = (() => {
         <!-- Domein -->
         <div>
           <div class="d-flex justify-content-between align-items-center mb-2">
-            <span class="text-uppercase fw-semibold text-secondary">Domein</span>
+            <span class="text-uppercase fw-semibold text-secondary">Domain</span>
             ${_filters.domeinen.size
-              ? `<button class="btn btn-sm btn-outline-secondary py-0 px-2" onclick="OVZ.setFilter('domeinen_clear','')">wis</button>`
+              ? `<button class="btn btn-sm btn-outline-secondary py-0 px-2" onclick="OVZ.setFilter('domeinen_clear','')">clear</button>`
               : ''}
           </div>
           <div class="d-flex flex-column gap-1">
@@ -118,7 +118,7 @@ const OVZ = (() => {
                   value="${_esc(_filters.tagSearch)}"
                   oninput="OVZ.setFilter('tagSearch', this.value)">
                 <button class="btn btn-sm text-start px-2 py-1 ${!_filters.tag ? 'btn-secondary' : 'btn-outline-secondary'}"
-                  onclick="OVZ.setFilter('tag','')">Alle</button>
+                  onclick="OVZ.setFilter('tag','')">All</button>
                 ${filtered.map(t => `
                   <button class="btn btn-sm text-start px-2 py-1 ${_filters.tag === t ? 'btn-secondary' : 'btn-outline-secondary'}"
                     onclick="OVZ.setFilter('tag','${t}')">
@@ -212,7 +212,7 @@ const OVZ = (() => {
     if (_filters.search.trim()) results = _rank(results, _filters.search.trim());
 
     if (!results.length) {
-      grid.innerHTML = `<p class="text-muted small p-2">Geen resultaten.</p>`;
+      grid.innerHTML = `<p class="text-muted small p-2">No results.</p>`;
       return;
     }
 
@@ -230,7 +230,7 @@ const OVZ = (() => {
     }).join('');
 
     grid.innerHTML = `
-      <p class="text-muted mb-2" style="font-size:0.74rem;">${results.length} objecten · ${breakdown}</p>
+      <p class="text-muted mb-2" style="font-size:0.74rem;">${results.length} objects · ${breakdown}</p>
       <div class="masonry">${cards}</div>`;
   }
 
@@ -292,7 +292,7 @@ const OVZ = (() => {
         return `<span class="badge rounded-pill border" style="color:${c};background:${bg};border-color:${bdr};">${t.toUpperCase()}</span>`;
       }).join(' ');
 
-    const relatiePill = `<span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis border">◈ ${linkCount} relatie${linkCount !== 1 ? 's' : ''}</span>`;
+    const relatiePill = `<span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis border">◈ ${linkCount} relation${linkCount !== 1 ? 's' : ''}</span>`;
 
     document.getElementById('ovzDetailHeader').innerHTML = `
       <div class="mb-1">
@@ -309,7 +309,7 @@ const OVZ = (() => {
     document.getElementById('ovzDetailBody').innerHTML =
       detail.body
         ? `<div class="d-flex flex-column gap-3">${detail.body}</div>`
-        : `<p class="text-muted small">Geen inhoud.</p>`;
+        : `<p class="text-muted small">No content.</p>`;
 
     const f1 = document.getElementById('ovzDetailFooter');
     const f2 = document.getElementById('ovzDetailFooter2');

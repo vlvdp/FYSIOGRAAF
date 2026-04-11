@@ -25,9 +25,9 @@ const GRAPH = (() => {
 
   const TYPE_LABEL = {
     instrument:  'Instrument',
-    kennis:      'Kennis',
-    bronnen:     'Bronnen',
-    casuistiek:  'Casuistiek',
+    kennis:      'Knowledge',
+    bronnen:     'Sources',
+    casuistiek:  'Case Studies',
   };
 
   // ── State ─────────────────────────────────────────────────────────────────
@@ -67,14 +67,14 @@ const GRAPH = (() => {
       <div class="p-3 d-flex flex-column gap-3">
         <div class="d-flex flex-column gap-1">
           <input type="text" id="graphSearch" class="form-control form-control-sm"
-            placeholder="Zoek node…" autocomplete="off">
+            placeholder="Search node…" autocomplete="off">
           <div class="d-flex align-items-start gap-2">
-            <span class="text-muted small flex-grow-1 text-break" id="graphFilterStatus">geen filters actief</span>
+            <span class="text-muted small flex-grow-1 text-break" id="graphFilterStatus">no filters active</span>
           </div>
           <div id="graphFocusBar" class="d-none d-flex align-items-center gap-2 px-2 py-1 rounded"
             style="background:color-mix(in srgb,var(--bs-warning) 15%,transparent);border:1px solid color-mix(in srgb,var(--bs-warning) 40%,transparent);">
             <span class="small flex-grow-1 text-truncate" id="graphFocusLabel"></span>
-            <button class="btn btn-sm p-0 lh-1 border-0 bg-transparent text-secondary" id="graphFocusClear" title="Focus wissen">✕</button>
+            <button class="btn btn-sm p-0 lh-1 border-0 bg-transparent text-secondary" id="graphFocusClear" title="Clear focus">✕</button>
           </div>
         </div>
         <div>
@@ -88,7 +88,7 @@ const GRAPH = (() => {
           </div>
         </div>
         <div>
-          <div class="text-uppercase fw-semibold text-secondary mb-2">Relatie</div>
+          <div class="text-uppercase fw-semibold text-secondary mb-2">Relation</div>
           <div class="d-flex flex-column gap-1">
             ${Object.entries(REL_COLOR).map(([rel, color]) => `
               <button class="btn btn-sm w-100 text-start d-flex align-items-center gap-2 btn-secondary"
@@ -100,8 +100,8 @@ const GRAPH = (() => {
         </div>
         <div class="d-flex flex-column gap-1">
           <button class="btn btn-sm btn-outline-secondary" id="graphFit">⊡ Fit</button>
-          <button class="btn btn-sm btn-outline-secondary" id="graphPhysics">⟳ Stabiliseer</button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#legendaModal">⊞ Legenda</button>
+          <button class="btn btn-sm btn-outline-secondary" id="graphPhysics">⟳ Stabilise</button>
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#legendaModal">⊞ Legend</button>
         </div>
       </div>
     `;
@@ -130,7 +130,7 @@ const GRAPH = (() => {
       const label  = obj.afk || obj.title?.slice(0, 12) || obj.id;
       const degree = degreeMap[obj.id] || 0;
       const size   = Math.min(10 + degree * 2.5, 32);
-      const fullTitle = [obj.afk, obj.title, `${degree} verbinding${degree !== 1 ? 'en' : ''}`].filter(Boolean).join(' — ');
+      const fullTitle = [obj.afk, obj.title, `${degree} connection${degree !== 1 ? 's' : ''}`].filter(Boolean).join(' — ');
       return {
         id:     obj.id,
         label,
@@ -269,9 +269,9 @@ const GRAPH = (() => {
     const hiddenTypes = allTypes.filter(t => !_activeTypes.has(t));
     const hiddenRels  = allRels.filter(r => !_activeRels.has(r));
     const parts = [];
-    if (hiddenTypes.length) parts.push(hiddenTypes.map(t => TYPE_LABEL[t]).join(', ') + ' verborgen');
-    if (hiddenRels.length)  parts.push(hiddenRels.join(', ') + ' verborgen');
-    el.textContent = parts.length ? parts.join(' · ') : 'geen filters actief';
+    if (hiddenTypes.length) parts.push(hiddenTypes.map(t => TYPE_LABEL[t]).join(', ') + ' hidden');
+    if (hiddenRels.length)  parts.push(hiddenRels.join(', ') + ' hidden');
+    el.textContent = parts.length ? parts.join(' · ') : 'no filters active';
   }
 
   // ── Focus mode ────────────────────────────────────────────────────────────
@@ -303,7 +303,7 @@ const GRAPH = (() => {
       const node = _visNodes.find(n => n.id === _focusNodeId);
       const name = node ? (node.title?.split(' — ')[0] || node.label) : _focusNodeId;
       const count = _focusNeighborIds.size - 1;
-      label.textContent = `${name} · ${count} buur${count !== 1 ? 'en' : ''}`;
+      label.textContent = `${name} · ${count} neighbour${count !== 1 ? 's' : ''}`;
       bar.classList.remove('d-none');
     } else {
       bar.classList.add('d-none');
@@ -367,7 +367,7 @@ const GRAPH = (() => {
       const opts = _network.physics;
       const current = opts?.physicsEnabled ?? false;
       _network.setOptions({ physics: { enabled: !current } });
-      document.getElementById('graphPhysics').textContent = !current ? '⏸ Pauzeer' : '⟳ Stabiliseer';
+      document.getElementById('graphPhysics').textContent = !current ? '⏸ Pause' : '⟳ Stabilise';
     });
   }
 

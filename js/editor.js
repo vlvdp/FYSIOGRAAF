@@ -10,10 +10,10 @@
 const EDITOR = (() => {
 
   const TYPES = [
-    { id: 'instrument',  label: 'Instrument',  icon: '📋' },
-    { id: 'kennis',      label: 'Kennis',       icon: '🧠' },
-    { id: 'bronnen',     label: 'Bronnen',      icon: '📖' },
-    { id: 'casuistiek',  label: 'Casuistiek',   icon: '🏥' },
+    { id: 'instrument',  label: 'Instrument',   icon: '📋' },
+    { id: 'kennis',      label: 'Knowledge',    icon: '🧠' },
+    { id: 'bronnen',     label: 'Sources',      icon: '📖' },
+    { id: 'casuistiek',  label: 'Case Studies', icon: '🏥' },
   ];
 
   const FIXED_TAGS = ['msa', 'cna', 'rca', 'mtt', 'onco', 'ger'];
@@ -44,7 +44,7 @@ const EDITOR = (() => {
     }
 
     document.getElementById('editorTitle').textContent =
-      existing ? `Bewerken: ${existing.afk || existing.title || editId}` : 'Nieuw object';
+      existing ? `Edit: ${existing.afk || existing.title || editId}` : 'New object';
 
     _renderBody();
     _renderActions();
@@ -66,7 +66,7 @@ const EDITOR = (() => {
 
       <!-- Type selector — Bootstrap btn-group -->
       <div class="mb-3">
-        <label class="form-label fw-semibold">Type object</label>
+        <label class="form-label fw-semibold">Object type</label>
         <div class="btn-group w-100" role="group" id="typeGrid">
           ${TYPES.map(t => `
             <button type="button"
@@ -83,7 +83,7 @@ const EDITOR = (() => {
 
       <!-- Links -->
       <div class="mb-3">
-        <label class="form-label fw-semibold">Externe links</label>
+        <label class="form-label fw-semibold">External links</label>
         <div class="row g-2">
           <div class="col">
             <input class="form-control form-control-sm" id="f_links_miz"
@@ -103,7 +103,7 @@ const EDITOR = (() => {
         <label class="form-label fw-semibold">Tags</label>
         <div id="tagPicker" class="mb-2">${_renderTagPicker()}</div>
         <div class="input-group input-group-sm">
-          <input class="form-control" id="customTagInput" placeholder="Nieuwe tag…"
+          <input class="form-control" id="customTagInput" placeholder="New tag…"
             onkeydown="if(event.key==='Enter'){event.preventDefault();EDITOR._addCustomTag();}">
           <button class="btn btn-outline-secondary" type="button" onclick="EDITOR._addCustomTag()">+</button>
         </div>
@@ -111,11 +111,11 @@ const EDITOR = (() => {
 
       <!-- Relaties -->
       <div class="mb-3">
-        <label class="form-label fw-semibold">Relaties</label>
+        <label class="form-label fw-semibold">Relations</label>
         <div id="linkList" class="mb-2">${_renderLinkList()}</div>
         <div class="input-group input-group-sm">
           <input class="form-control" id="linkSearchInput"
-            placeholder="Zoek object…"
+            placeholder="Search object…"
             oninput="EDITOR._searchLinks(this.value)">
           <select class="form-select" id="linkRelSelect" style="max-width:140px;">
             <option value="nexus">Nexus</option>
@@ -145,29 +145,29 @@ const EDITOR = (() => {
       `<textarea class="form-control form-control-sm" id="${id}" style="min-height:${minH || '80px'};resize:vertical;">${_esc(val)}</textarea>`;
 
     if (_currentType === 'instrument') return `
-      ${field('Afkorting (bijv. MUST)', inp('f_afk', v('afk')))}
-      ${field('Volledige naam',         inp('f_fullname', v('fullname')))}
-      ${field('Wat meet het',           ta('f_watMeetHet', f.watMeetHet))}
-      ${field('Scoringscriteria',       ta('f_scoringscriteria', f.scoringscriteria))}
-      ${field('Normwaarden / Afkapwaarden', ta('f_normwaarden', f.normwaarden))}
-      ${field('Klinische implicatie',   ta('f_implicatie', f.implicatie))}`;
+      ${field('Abbreviation (e.g. MUST)', inp('f_afk', v('afk')))}
+      ${field('Full name',                inp('f_fullname', v('fullname')))}
+      ${field('What it measures',         ta('f_watMeetHet', f.watMeetHet))}
+      ${field('Scoring criteria',         ta('f_scoringscriteria', f.scoringscriteria))}
+      ${field('Reference values / Cut-off values', ta('f_normwaarden', f.normwaarden))}
+      ${field('Clinical implication',     ta('f_implicatie', f.implicatie))}`;
 
     if (_currentType === 'casuistiek') return `
-      ${field('Code (bijv. TD1)',       inp('f_code', v('code')))}
-      ${field('Titel',                  inp('f_title', v('title')))}
-      ${field('Setting',                inp('f_setting', f.setting))}
-      ${field('Focus / omschrijving',   ta('f_focus', f.focus))}
-      ${field('Inhoud (HTML of tekst)', ta('f_content', f.content, '160px'))}`;
+      ${field('Code (e.g. TD1)',         inp('f_code', v('code')))}
+      ${field('Title',                   inp('f_title', v('title')))}
+      ${field('Setting',                 inp('f_setting', f.setting))}
+      ${field('Focus / description',     ta('f_focus', f.focus))}
+      ${field('Content (HTML or text)',  ta('f_content', f.content, '160px'))}`;
 
     if (_currentType === 'bronnen') return `
-      ${field('Titel',                  inp('f_title', v('title')))}
-      ${field('Scope',                  ta('f_scope', f.scope))}
-      ${field('Kernaanbevelingen',      ta('f_kernaanbevelingen', f.kernaanbevelingen, '160px'))}`;
+      ${field('Title',                   inp('f_title', v('title')))}
+      ${field('Scope',                   ta('f_scope', f.scope))}
+      ${field('Key recommendations',     ta('f_kernaanbevelingen', f.kernaanbevelingen, '160px'))}`;
 
     // kennis
     return `
-      ${field('Titel',                  inp('f_title', v('title')))}
-      ${field('Inhoud (HTML of tekst)', ta('f_content', f.content, '200px'))}`;
+      ${field('Title',                  inp('f_title', v('title')))}
+      ${field('Content (HTML or text)', ta('f_content', f.content, '200px'))}`;
   }
 
   // ── Type selectie ─────────────────────────────────────────────────────────
@@ -216,7 +216,7 @@ const EDITOR = (() => {
 
   function _renderLinkList() {
     if (!_pendingLinks.length)
-      return '<p class="text-muted small mb-0">Nog geen relaties.</p>';
+      return '<p class="text-muted small mb-0">No relations yet.</p>';
 
     return `<ul class="list-group list-group-flush">` +
       _pendingLinks.map((l, i) => {
@@ -235,7 +235,7 @@ const EDITOR = (() => {
     if (!q || q.length < 2) { el.innerHTML = ''; return; }
     const hits = DB.query({ search: q }).slice(0, 8);
     if (!hits.length) {
-      el.innerHTML = '<p class="text-muted small mb-0">Geen resultaten.</p>';
+      el.innerHTML = '<p class="text-muted small mb-0">No results.</p>';
       return;
     }
     el.innerHTML = `<div class="list-group">` +
@@ -338,7 +338,7 @@ const EDITOR = (() => {
 
   function _delete() {
     if (!_editingId) return;
-    if (!confirm('Weet je zeker dat je dit object wilt verwijderen?')) return;
+    if (!confirm('Are you sure you want to delete this object?')) return;
     DB.remove(_editingId);
     APP.updateStats();
     OVZ.render();
@@ -350,10 +350,10 @@ const EDITOR = (() => {
   function _renderActions() {
     document.getElementById('editorActions').innerHTML = `
       ${_editingId
-        ? `<button type="button" class="btn btn-outline-danger me-auto" onclick="EDITOR._delete()">🗑 Verwijderen</button>`
+        ? `<button type="button" class="btn btn-outline-danger me-auto" onclick="EDITOR._delete()">🗑 Delete</button>`
         : ''}
-      <button type="button" class="btn btn-outline-secondary" onclick="EDITOR.close()">Annuleren</button>
-      <button type="button" class="btn btn-warning" onclick="EDITOR._save()">Opslaan</button>
+      <button type="button" class="btn btn-outline-secondary" onclick="EDITOR.close()">Cancel</button>
+      <button type="button" class="btn btn-warning" onclick="EDITOR._save()">Save</button>
     `;
   }
 

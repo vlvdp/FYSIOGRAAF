@@ -52,7 +52,7 @@ const APP = (() => {
     if (el('dbStatLastEdit')) {
       if (s.lastEdit) {
         const d = new Date(s.lastEdit);
-        el('dbStatLastEdit').textContent = d.toLocaleString('nl-NL', {
+        el('dbStatLastEdit').textContent = d.toLocaleString('en-GB', {
           day: '2-digit', month: '2-digit', year: 'numeric',
           hour: '2-digit', minute: '2-digit',
         });
