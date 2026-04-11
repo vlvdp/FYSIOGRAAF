@@ -79,22 +79,13 @@ const APP = (() => {
     // Negeer als gebruiker aan het typen is
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
 
-    const overlayOpen = document.getElementById('editorOverlay')?.classList.contains('active');
-    const ovzOpen     = document.getElementById('ovzDetailOverlay')?.classList.contains('active');
+    const ovzOpen = document.getElementById('ovzDetailOverlay')?.classList.contains('active');
 
-    // Escape: sluit overlay (editor of rolodex detail)
-    if (e.key === 'Escape') {
-      if (overlayOpen) { EDITOR.close(); return; }
-      if (ovzOpen)     { OVZ.closeDetail(); return; }
-    }
-
-    // N: nieuw object (alleen als overlay dicht is)
-    if ((e.key === 'n' || e.key === 'N') && !overlayOpen) {
-      e.preventDefault();
-      EDITOR.open();
+    // Escape: sluit rolodex detail
+    if (e.key === 'Escape' && ovzOpen) {
+      OVZ.closeDetail();
       return;
     }
-
   });
 
   return { showTop, updateStats };

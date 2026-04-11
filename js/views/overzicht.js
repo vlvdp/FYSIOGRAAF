@@ -18,7 +18,7 @@ const OVZ = (() => {
     casuistiek:  'Case Studies',
   };
 
-  const DOMEIN_TAGS = ['msa', 'cna', 'rca', 'mtt', 'onco'];
+  const DOMEIN_TAGS = ['msa', 'cna', 'rca', 'mtt', 'onco', 'ger'];
 
   let _filters = {
     search:    '',
@@ -26,6 +26,17 @@ const OVZ = (() => {
     domeinen:  new Set(),
     tag:       '',
     tagSearch: '',
+    sort:      'relevance',
+  };
+
+  const SORT_LABELS = {
+    relevance: 'Relevance',
+    az:        'A → Z',
+    za:        'Z → A',
+    type:      'Type',
+    relations: 'Most relations',
+    modified:  'Recently modified',
+    created:   'Recently created',
   };
 
   // ── Render ────────────────────────────────────────────────────────────────
@@ -56,13 +67,19 @@ const OVZ = (() => {
     el.innerHTML = `
       <div class="p-3 d-flex flex-column gap-3">
 
-        <!-- Zoekbalk + actieve filters -->
+        <!-- Zoekbalk + sort + actieve filters -->
         <div class="d-flex flex-column gap-1">
           <input type="search" class="form-control form-control-sm" id="ovzSearch"
             placeholder="Search…"
             value="${_esc(_filters.search)}"
             oninput="OVZ.setFilter('search', this.value)"
             autocomplete="off">
+          <select class="form-select form-select-sm" id="ovzSort"
+            onchange="OVZ.setFilter('sort', this.value)" title="Sort by">
+            ${Object.entries(SORT_LABELS).map(([k, v]) =>
+              `<option value="${k}" ${_filters.sort === k ? 'selected' : ''}>${v}</option>`
+            ).join('')}
+          </select>
           ${(() => {
             const parts = [];
             if (_filters.search.trim())   parts.push(`"${_esc(_filters.search.trim())}"`);
@@ -138,7 +155,7 @@ const OVZ = (() => {
     }
   }
 
-  const DOMEIN_COLORS = { msa: 'var(--msa)', cna: 'var(--cna)', rca: 'var(--rca)', mtt: 'var(--mtt)', onco: 'var(--onco)' };
+  const DOMEIN_COLORS = { msa: 'var(--msa)', cna: 'var(--cna)', rca: 'var(--rca)', mtt: 'var(--mtt)', onco: 'var(--onco)', ger: 'var(--ger)' };
 
   function _typeBtn(val, label, icon) {
     const active = _filters.type === val;
@@ -171,6 +188,11 @@ const OVZ = (() => {
     if (key === 'tagSearch') {
       _filters.tagSearch = value;
       _renderSidebar();
+      _renderGrid();
+      return;
+    }
+    if (key === 'sort') {
+      _filters.sort = value;
       _renderGrid();
       return;
     }
@@ -209,7 +231,7 @@ const OVZ = (() => {
       });
     }
 
-    if (_filters.search.trim()) results = _rank(results, _filters.search.trim());
+    results = _sort(results);
 
     if (!results.length) {
       grid.innerHTML = `<p class="text-muted small p-2">No results.</p>`;
@@ -234,11 +256,36 @@ const OVZ = (() => {
       <div class="masonry">${cards}</div>`;
   }
 
-  // ── Relevantie-sortering ──────────────────────────────────────────────────
+  // ── Sorting ───────────────────────────────────────────────────────────────
 
-  function _rank(objs, q) {
-    const lq = q.toLowerCase();
-    return objs.slice().sort((a, b) => _score(a, lq) - _score(b, lq));
+  function _sort(objs) {
+    const arr = objs.slice();
+    const key = (o) => (o.afk || o.title || '').toLowerCase();
+    const azCmp = (a, b) => key(a).localeCompare(key(b));
+
+    let mode = _filters.sort;
+    // Relevance only meaningful with active search; otherwise fall back to A→Z
+    if (mode === 'relevance' && !_filters.search.trim()) mode = 'az';
+
+    switch (mode) {
+      case 'relevance': {
+        const lq = _filters.search.trim().toLowerCase();
+        return arr.sort((a, b) => _score(a, lq) - _score(b, lq) || azCmp(a, b));
+      }
+      case 'za':
+        return arr.sort((a, b) => key(b).localeCompare(key(a)));
+      case 'type':
+        return arr.sort((a, b) => (a.type || '').localeCompare(b.type || '') || azCmp(a, b));
+      case 'relations':
+        return arr.sort((a, b) => DB.getLinks(b.id).length - DB.getLinks(a.id).length || azCmp(a, b));
+      case 'modified':
+        return arr.sort((a, b) => (b.modified || 0) - (a.modified || 0) || azCmp(a, b));
+      case 'created':
+        return arr.sort((a, b) => (b.created || 0) - (a.created || 0) || azCmp(a, b));
+      case 'az':
+      default:
+        return arr.sort(azCmp);
+    }
   }
 
   function _score(obj, lq) {
@@ -338,6 +385,7 @@ const OVZ = (() => {
     _filters.domeinen  = new Set();
     _filters.tag       = '';
     _filters.tagSearch = '';
+    _filters.sort      = 'relevance';
     _renderSidebar();
     _renderGrid();
   }

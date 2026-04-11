@@ -8,7 +8,7 @@
 
 const CARDS = (() => {
 
-  const DOMAIN_TAGS = ['rca', 'cna', 'msa', 'mtt', 'onco'];
+  const DOMAIN_TAGS = ['rca', 'cna', 'msa', 'mtt', 'onco', 'ger'];
 
   const TYPE_ICONS = {
     instrument: `<svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#F97316" stroke="#C05A0B" stroke-width="1.5"/></svg>`,
@@ -23,6 +23,7 @@ const CARDS = (() => {
     msa:  'var(--msa)',
     mtt:  'var(--mtt)',
     onco: 'var(--onco)',
+    ger:  'var(--ger)',
   };
 
   // ── Badge helpers — Bootstrap .badge.rounded-pill ─────────────────────────

@@ -70,7 +70,13 @@
       "Bash(bash /tmp/extract_data.sh)",
       "Bash(node migrate_rels.js)",
       "Bash(command -v node)",
-      "Bash(python3 migrate_rels.py)"
+      "Bash(python3 migrate_rels.py)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(wc -l /Users/vincent/Documents/Projects/FYSIOGRAAF/index.html /Users/vincent/Documents/Projects/FYSIOGRAAF/js/*.js /Users/vincent/Documents/Projects/FYSIOGRAAF/js/views/*.js /Users/vincent/Documents/Projects/FYSIOGRAAF/css/style.css)",
+      "Bash(grep -h \"textContent\\\\|innerHTML\\\\|placeholder\" /Users/vincent/Documents/Projects/FYSIOGRAAF/js/*.js /Users/vincent/Documents/Projects/FYSIOGRAAF/js/views/*.js)",
+      "Bash(git checkout:*)"
     ]
   }
 }

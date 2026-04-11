@@ -71,7 +71,6 @@
           <span id="dbStatLastEdit" class="mt-1" style="opacity:0.6;"></span>
         </div>
         <div class="d-flex gap-2">
-          <button class="btn btn-sm btn-outline-warning flex-grow-1" onclick="EDITOR.open()">+ New</button>
           <button class="btn btn-sm btn-outline-secondary flex-grow-1" onclick="DB.exportJSON()">↓ Export</button>
           <button class="btn btn-sm btn-outline-danger flex-grow-1" onclick="if(confirm('Reset DB to seed data?')) { DB.reset(); location.reload(); }">↺ Reset</button>
         </div>
@@ -216,22 +215,6 @@
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════════
-     EDITOR MODAL
-     ══════════════════════════════════════════════════════════════════════════ -->
-<div class="modal fade" id="editorModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h6 class="modal-title" id="editorTitle" style="font-family:var(--bs-font-monospace);">New object</h6>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="EDITOR.close()"></button>
-      </div>
-      <div class="modal-body" id="editorBody"></div>
-      <div class="modal-footer" id="editorActions"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════════════════════════════
      SCRIPTS — volgorde is belangrijk
      ══════════════════════════════════════════════════════════════════════════ -->
 <script src="data/seed.js"></script>
@@ -240,7 +223,6 @@
 <script src="js/views/overzicht.js"></script>
 <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
 <script src="js/views/graph.js"></script>
-<script src="js/editor.js"></script>
 <script src="js/app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

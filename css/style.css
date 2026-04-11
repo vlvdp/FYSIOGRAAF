@@ -3,12 +3,13 @@
    ══════════════════════════════════════════════════════════════════════════ */
 
 :root {
-  --rca:  #0D9488;
-  --cna:  #7C3AED;
+  --rca:  #ff1212;
+  --cna:  #7b31fb;
   --msa:  #F59E0B;
   --mtt:  #3B82F6;
-  --onco: #DB2777;
-  --type-richtlijn: #6bf65c;
+  --onco: #cfdb27;
+  --ger:  #14B8A6;
+  --type-richtlijn: #831eff;
   --badge-ric: #DC2626;
 }
 
