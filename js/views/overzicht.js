@@ -311,12 +311,12 @@ const OVZ = (() => {
         ? `<div class="d-flex flex-column gap-3">${detail.body}</div>`
         : `<p class="text-muted small">Geen inhoud.</p>`;
 
-    document.getElementById('ovzDetailFooter').innerHTML = `
-      ${detail.footer}
-      <div>
-        <button class="btn btn-sm btn-outline-warning" onclick="EDITOR.open(null,'${id}')">✏ Bewerken</button>
-      </div>
-    `;
+    const f1 = document.getElementById('ovzDetailFooter');
+    const f2 = document.getElementById('ovzDetailFooter2');
+    f1.innerHTML  = detail.footer;
+    f2.innerHTML  = detail.footer2;
+    f1.classList.toggle('d-none', !detail.footer);
+    f2.classList.toggle('d-none', !detail.footer2);
 
     bootstrap.Offcanvas.getOrCreateInstance(document.getElementById('detailPanel')).show();
   }

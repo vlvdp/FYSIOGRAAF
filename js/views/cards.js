@@ -160,72 +160,41 @@ const CARDS = (() => {
       f.kernaanbevelingen ? _field('Kernaanbevelingen', f.kernaanbevelingen) : '',
     ].filter(Boolean).join('');
 
-    // ── Footer: graaf-metadata ────────────────────────────────────────────────
-    const linkedInstr    = links.filter(({ object: o }) => o?.type === 'instrument');
-    const linkedCasussen = links.filter(({ object: o }) => o?.type === 'casuistiek');
-    const linkedBronnen  = links.filter(({ object: o }) => o?.type === 'bronnen');
-    const otherLinks     = links.filter(({ object: o }) => o && !['instrument','casuistiek','bronnen'].includes(o.type));
-    const refBadges      = (obj.links || []).map(l =>
-      _linkBadge(`${LINK_ICONS[l.label] || '🔗'} ${l.label}`, l.url)
+    // ── Footer: graaf-relaties (richting + rel-type) ──────────────────────────
+    const rawLinks = DB.getLinks(id);
+
+    function _groupByRel(ls, getOtherId) {
+      const map = {};
+      for (const l of ls) {
+        const o = DB.get(getOtherId(l));
+        if (!o) continue;
+        if (!map[l.rel]) map[l.rel] = [];
+        map[l.rel].push(o);
+      }
+      return map;
+    }
+
+    const outGroups = _groupByRel(rawLinks.filter(l => l.from === id), l => l.to);
+    const inGroups  = _groupByRel(rawLinks.filter(l => l.to   === id), l => l.from);
+
+    function _relRows(groups, arrow) {
+      return Object.entries(groups).map(([rel, objs]) => `
+        <div class="d-flex flex-wrap align-items-baseline gap-1">
+          <span class="text-muted small font-monospace flex-shrink-0">${arrow} ${rel}</span>
+          ${objs.map(o => _navBadge(o.afk || o.title || o.id, null, o.id)).join('')}
+        </div>`).join('');
+    }
+
+    const refBadges = (obj.links || []).map(l =>
+      _linkBadge(l.label, l.url)
     );
 
-    const footer = [
-      linkedInstr.length ? `
-        <div>
-          <div class="text-uppercase fw-semibold text-secondary">Gebruikte instrumenten</div>
-          <div class="d-flex flex-wrap gap-1 mt-1">
-            ${linkedInstr.map(({ object: o }) =>
-              _navBadge(o.afk || o.id, 'var(--rca)', o.id)
-            ).join('')}
-          </div>
-        </div>` : '',
-      linkedCasussen.length ? `
-        <div>
-          <div class="text-uppercase fw-semibold text-secondary">Gerelateerde casussen</div>
-          <div class="d-flex flex-wrap gap-1 mt-1">
-            ${linkedCasussen.map(({ object: o }) =>
-              _navBadge(o.afk || o.id, 'var(--cna)', o.id)
-            ).join('')}
-          </div>
-        </div>` : '',
-      linkedBronnen.length ? `
-        <div>
-          <div class="text-uppercase fw-semibold text-secondary">Bronnen</div>
-          <div class="d-flex flex-wrap gap-1 mt-1">
-            ${linkedBronnen.map(({ object: o }) =>
-              _navBadge(o.afk || o.title, 'var(--type-richtlijn, #8B5CF6)', o.id)
-            ).join('')}
-          </div>
-        </div>` : '',
-      otherLinks.length ? `
-        <div>
-          <div class="text-uppercase fw-semibold text-secondary">Gerelateerde objecten</div>
-          <div class="d-flex flex-wrap gap-1 mt-1">
-            ${otherLinks.map(({ object: o }) =>
-              _navBadge(o.afk || o.title || o.id, null, o.id)
-            ).join('')}
-          </div>
-        </div>` : '',
-      tags.length ? `
-        <div>
-          <div class="text-uppercase fw-semibold text-secondary">Tags</div>
-          <div class="d-flex flex-wrap gap-1 mt-1">
-            ${tags.map(t => DOMAIN_COLORS[t]
-              ? _colorBadge(t, DOMAIN_COLORS[t])
-              : _neutralBadge(t)
-            ).join('')}
-          </div>
-        </div>` : '',
-      refBadges.length ? `
-        <div>
-          <div class="text-uppercase fw-semibold text-secondary">Referenties</div>
-          <div class="d-flex flex-wrap gap-1 mt-1">
-            ${refBadges.join('')}
-          </div>
-        </div>` : '',
-    ].filter(Boolean).join('');
+    const relSection = [_relRows(outGroups, '→'), _relRows(inGroups, '←')].filter(Boolean).join('');
 
-    return { body, footer };
+    const footer  = relSection ? `<div class="d-flex flex-column gap-1">${relSection}</div>` : '';
+    const footer2 = refBadges.join('');
+
+    return { body, footer, footer2 };
   }
 
   function openDetail(id) {
