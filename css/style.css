@@ -1,0 +1,57 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   DESIGN TOKENS — alleen wat Bootstrap niet biedt
+   ══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --rca:  #0D9488;
+  --cna:  #7C3AED;
+  --msa:  #F59E0B;
+  --mtt:  #3B82F6;
+  --onco: #DB2777;
+  --type-richtlijn: #6bf65c;
+  --badge-ric: #DC2626;
+}
+
+/* ── Heading kleurenpalet ───────────────────────────────────────────────── */
+h1 { color: var(--bs-primary); }
+h2 { color: var(--bs-info); }
+h3 { color: var(--bs-success); }
+h4 { color: var(--bs-warning); }
+h5 { color: var(--bs-danger); }
+h6 { color: var(--bs-secondary-color); }
+
+
+/* ── Sidebar breedte ─────────────────────────────────────────────────────── */
+.app-sidebar { width: 240px; }
+
+/* ── Detail offcanvas breedte ────────────────────────────────────────────── */
+#detailPanel { --bs-offcanvas-width: min(540px, 95vw); }
+
+/* ── Masonry grid ────────────────────────────────────────────────────────── */
+.masonry { columns: 300px; column-gap: 14px; }
+.masonry .card { break-inside: avoid; margin-bottom: 14px; display: inline-block; width: 100%; }
+
+
+
+/* .norm-block / .implicatie-block — guard classes; stijl via .alert-info/.alert-warning */
+/* ── Klikbare elementen ───────────────────────────────────────────────────── */
+[onclick] { cursor: pointer; }
+
+
+
+/* ── Print ───────────────────────────────────────────────────────────────── */
+@media print {
+  nav, .offcanvas, button, .btn { display: none !important; }
+  body, .card, .norm-block, .implicatie-block {
+    background: #fff !important; color: #111 !important; border-color: #ddd !important;
+  }
+  .masonry { display: block !important; }
+  .card {
+    page-break-inside: avoid;
+    border: 1px solid #ddd !important;
+    border-left: 3px solid #555 !important;
+    margin-bottom: 16px; width: 100%; box-shadow: none !important;
+  }
+
+
+}

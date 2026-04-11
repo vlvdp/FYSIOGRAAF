@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="nl" data-bs-theme="dark" class="h-100">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fysiograaf</title>
+<script>
+  (function(){
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light') document.documentElement.setAttribute('data-bs-theme','light');
+    else document.documentElement.setAttribute('data-bs-theme','dark');
+  })();
+</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column h-100">
+
+<!-- ── NAVBAR ─────────────────────────────────────────────────────────────── -->
+<nav class="navbar border-bottom py-2 sticky-top p-0 d-flex align-items-stretch" id="appNavbar">
+
+  <!-- Brand — exact zelfde breedte als filter sidebar -->
+  <div class="d-flex align-items-center px-3 flex-shrink-0 app-sidebar">
+    <span class="fw-bold" style="color:#ff5900;font-family:var(--bs-font-monospace);">Fysiograaf</span>
+    <button class="btn btn-outline-secondary btn-sm d-lg-none ms-auto"
+      type="button" data-bs-toggle="offcanvas" data-bs-target="#filterPanel">
+      ☰ Filters
+    </button>
+  </div>
+
+  <!-- Tabs + acties -->
+  <div class="d-flex align-items-center flex-grow-1 px-3 gap-2">
+    <ul class="nav nav-tabs border-0 me-auto" id="topTabs">
+      <li class="nav-item">
+        <button class="nav-link active" id="tab-overzicht" onclick="APP.showTop('overzicht')"><svg width="16" height="13" viewBox="0 0 16 13" style="margin-bottom:1px;">
+  <circle cx="4" cy="4" r="3" fill="#F97316" stroke="#C05A0B" stroke-width="1.2"/>
+  <polygon points="12,1 15,6 9,6" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.2" stroke-linejoin="round"/>
+  <rect x="1" y="7.5" width="6" height="5" fill="#7C3AED" stroke="#5B28B3" stroke-width="1.2"/>
+  <polygon points="12,8 15,11 12,13.5 9,11" fill="#0D9488" stroke="#0A6B62" stroke-width="1.2" stroke-linejoin="round"/>
+</svg> Rolodex</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="tab-graph" onclick="APP.showTop('graph')"><svg width="13" height="13" viewBox="0 0 20 14" style="margin-bottom:1px;"><circle cx="4" cy="7" r="3.5" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.5"/><line x1="7.5" y1="7" x2="12.5" y2="7" stroke="#888" stroke-width="1.2"/><circle cx="16" cy="7" r="3.5" fill="#0D9488" stroke="#0A6B62" stroke-width="1.5"/></svg> Graaf</button>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     GEDEELDE LAYOUT — sidebar + main (beide tabs)
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div class="d-flex flex-grow-1 overflow-hidden" id="appLayout">
+
+  <!-- ── SIDEBAR (offcanvas op mobiel, statisch op desktop) ───────────────── -->
+  <div class="offcanvas-lg offcanvas-start border-end flex-shrink-0 app-sidebar" id="filterPanel"
+       tabindex="-1">
+    <div class="offcanvas-header d-lg-none border-bottom">
+      <h6 class="offcanvas-title">Filters</h6>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#filterPanel"></button>
+    </div>
+    <div class="offcanvas-body p-0 d-flex flex-column h-100">
+      <div id="ovzSidebar" class="flex-grow-1 overflow-auto"><!-- overzicht.js --></div>
+      <div id="graphSidebar" class="d-none flex-grow-1 overflow-auto"><!-- graph.js --></div>
+      <!-- Persistent bodem -->
+      <div class="border-top p-3 d-flex flex-column gap-2">
+        <div class="text-muted d-flex flex-column small">
+          <span><span id="dbStatObjects">…</span> nodes</span>
+          <span><span id="dbStatLinks">…</span> edges</span>
+          <span><span id="dbStatTags">…</span> tags</span>
+          <span id="dbStatLastEdit" class="mt-1" style="opacity:0.6;"></span>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-sm btn-outline-warning flex-grow-1" onclick="EDITOR.open()">+ Nieuw</button>
+          <button class="btn btn-sm btn-outline-secondary flex-grow-1" onclick="DB.exportJSON()">↓ Export</button>
+          <button class="btn btn-sm btn-outline-danger flex-grow-1" onclick="if(confirm('DB resetten naar seed data?')) { DB.reset(); location.reload(); }">↺ Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── HOOFDINHOUD ──────────────────────────────────────────────────────── -->
+  <div class="flex-grow-1 overflow-hidden d-flex flex-column">
+    <div id="overzicht-main" class="flex-grow-1 p-3 overflow-auto"></div>
+    <div id="graph-main" class="d-none flex-grow-1 overflow-hidden" style="min-height:0"></div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     DETAIL OFFCANVAS (rechts)
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div class="offcanvas offcanvas-end" id="detailPanel" tabindex="-1">
+  <div class="offcanvas-header border-bottom align-items-start py-2">
+    <div class="flex-grow-1 me-2" id="ovzDetailHeader"></div>
+    <button type="button" class="btn-close flex-shrink-0 mt-1" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body" id="ovzDetailBody"></div>
+  <div class="border-top p-3 d-flex flex-column gap-3" id="ovzDetailFooter"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     LEGENDA MODAL
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div class="modal fade" id="legendaModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title font-monospace">Graaf — Legenda</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Objecttypen -->
+        <p class="text-uppercase fw-semibold text-secondary small mb-2">Objecttypen</p>
+        <table class="table table-sm table-borderless mb-4">
+          <tbody>
+            <tr>
+              <td class="pe-3" style="width:28px"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="1" width="12" height="12" fill="#7C3AED" stroke="#5B28B3" stroke-width="1.5"/></svg></td>
+              <td class="fw-semibold pe-3" style="width:110px">Bron</td>
+              <td class="text-muted small">Richtlijn of reader als professioneel kader</td>
+            </tr>
+            <tr>
+              <td><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#F97316" stroke="#C05A0B" stroke-width="1.5"/></svg></td>
+              <td class="fw-semibold">Instrument</td>
+              <td class="text-muted small">Gestandaardiseerd meetinstrument</td>
+            </tr>
+            <tr>
+              <td><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="7,1 13,13 1,13" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.5" stroke-linejoin="round"/></svg></td>
+              <td class="fw-semibold">Kennis</td>
+              <td class="text-muted small">Kennismodule of submodule</td>
+            </tr>
+            <tr>
+              <td><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="7,1 13,7 7,13 1,7" fill="#0D9488" stroke="#0A6B62" stroke-width="1.5" stroke-linejoin="round"/></svg></td>
+              <td class="fw-semibold">Casuistiek</td>
+              <td class="text-muted small">Klinische casus (diagnose of behandeling)</td>
+            </tr>
+            <tr>
+              <td><svg width="14" height="14" viewBox="0 0 14 14"><polygon points="7,1 13,5 11,12 3,12 1,5" fill="#DB2777" stroke="#9D174D" stroke-width="1.5" stroke-linejoin="round"/></svg></td>
+              <td class="fw-semibold">Vaardigheid <span class="badge text-bg-secondary fw-normal" style="font-size:9px">toekomstig</span></td>
+              <td class="text-muted small">Communicatieve of klinische techniek</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Relatietypen -->
+        <p class="text-uppercase fw-semibold text-secondary small mb-2">Relatietypen</p>
+        <table class="table table-sm table-borderless mb-4">
+          <thead class="text-secondary" style="font-size:11px">
+            <tr>
+              <th style="width:28px"></th>
+              <th style="width:110px">Relatie</th>
+              <th style="width:120px">Karakter</th>
+              <th>Betekenis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:#F97316"></span></td>
+              <td class="fw-semibold">Nexus</td>
+              <td class="text-muted small">Structureel / Anker</td>
+              <td class="text-muted small">X hoort bij Y — wijst omhoog naar het kader</td>
+            </tr>
+            <tr>
+              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:#7C3AED"></span></td>
+              <td class="fw-semibold">Contextus</td>
+              <td class="text-muted small">Associatief / Verlichtend</td>
+              <td class="text-muted small">Kennis geeft betekenis aan instrument, vaardigheid of casus</td>
+            </tr>
+            <tr>
+              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:#E11D48"></span></td>
+              <td class="fw-semibold">Usus <span class="badge text-bg-secondary fw-normal" style="font-size:9px">toekomstig</span></td>
+              <td class="text-muted small">Functioneel / Actie</td>
+              <td class="text-muted small">Bron schrijft voor — casus zet in</td>
+            </tr>
+            <tr>
+              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:#16A34A"></span></td>
+              <td class="fw-semibold">Sequens <span class="badge text-bg-secondary fw-normal" style="font-size:9px">toekomstig</span></td>
+              <td class="text-muted small">Narratief / Volgorde</td>
+              <td class="text-muted small">Casus-diagnose leidt naar casus-behandeling</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Richtingen -->
+        <p class="text-uppercase fw-semibold text-secondary small mb-2">Richtingen</p>
+        <table class="table table-sm mb-0" style="font-size:12px">
+          <thead class="text-secondary" style="font-size:11px">
+            <tr><th>Van</th><th>Naar</th><th>Relatie</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bron</td><td>Instrument</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
+            <tr><td>Bron</td><td>Kennis</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
+            <tr><td>Bron</td><td>Vaardigheid</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
+            <tr><td>Kennis</td><td>Instrument</td><td><span class="badge rounded-pill" style="background:#7C3AED">contextus</span></td></tr>
+            <tr><td>Kennis</td><td>Vaardigheid</td><td><span class="badge rounded-pill" style="background:#7C3AED">contextus</span></td></tr>
+            <tr><td>Kennis</td><td>Casuistiek</td><td><span class="badge rounded-pill" style="background:#7C3AED">contextus</span></td></tr>
+            <tr><td>Kennis</td><td>Bron</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
+            <tr><td>Kennis</td><td>Kennis</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
+            <tr><td>Instrument</td><td>Kennis</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
+            <tr><td>Instrument</td><td>Bron</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
+            <tr><td>Vaardigheid</td><td>Kennis</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
+            <tr><td>Vaardigheid</td><td>Bron</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
+            <tr><td>Casuistiek</td><td>Bron</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
+            <tr><td>Casuistiek</td><td>Kennis</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
+            <tr><td>Casuistiek</td><td>Instrument</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
+            <tr><td>Casuistiek</td><td>Vaardigheid</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
+            <tr><td>Casus-diagnose</td><td>Casus-behandeling</td><td><span class="badge rounded-pill" style="background:#16A34A">sequens</span></td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     EDITOR MODAL
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div class="modal fade" id="editorModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="editorTitle" style="font-family:var(--bs-font-monospace);">Nieuw object</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="EDITOR.close()"></button>
+      </div>
+      <div class="modal-body" id="editorBody"></div>
+      <div class="modal-footer" id="editorActions"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     SCRIPTS — volgorde is belangrijk
+     ══════════════════════════════════════════════════════════════════════════ -->
+<script src="data/seed.js"></script>
+<script src="js/db.js"></script>
+<script src="js/views/cards.js"></script>
+<script src="js/views/overzicht.js"></script>
+<script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<script src="js/views/graph.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
