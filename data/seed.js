@@ -1771,8 +1771,8 @@ window.SEED_DATA = {
         }
       ]
     },
-    "acsm-spav-pijn": {
-      "id": "acsm-spav-pijn",
+    "acsm-pijn": {
+      "id": "acsm-pijn",
       "type": "instrument",
       "afk": "ACSM-schaal",
       "title": "ACSM Pijnschaal voor Symptomatisch Perifeer Arterieel Vaatlijden",
@@ -1789,8 +1789,8 @@ window.SEED_DATA = {
         }
       ]
     },
-    "wiq-spav": {
-      "id": "wiq-spav",
+    "wiq": {
+      "id": "wiq",
       "type": "instrument",
       "afk": "WIQ",
       "title": "Walking Impairment Questionnaire",
@@ -1807,8 +1807,8 @@ window.SEED_DATA = {
         }
       ]
     },
-    "cirs-spav": {
-      "id": "cirs-spav",
+    "cirs": {
+      "id": "cirs",
       "type": "instrument",
       "afk": "CIRS",
       "title": "Cumulative Illness Rating Scale",
@@ -1825,8 +1825,8 @@ window.SEED_DATA = {
         }
       ]
     },
-    "eq5d-spav": {
-      "id": "eq5d-spav",
+    "eq5d": {
+      "id": "eq5d",
       "type": "instrument",
       "afk": "EQ-5D",
       "title": "EuroQol 5D — kwaliteit van leven",
@@ -1847,8 +1847,8 @@ window.SEED_DATA = {
         }
       ]
     },
-    "loopbandtest-spav": {
-      "id": "loopbandtest-spav",
+    "loopbandtest": {
+      "id": "loopbandtest",
       "type": "instrument",
       "afk": "Loopbandtest",
       "title": "Loopbandtest sPAV — incrementeel protocol",
@@ -3577,31 +3577,31 @@ window.SEED_DATA = {
     {
       "id": "lnk-spav-01",
       "from": "rl-spav",
-      "to": "acsm-spav-pijn",
+      "to": "acsm-pijn",
       "rel": "usus"
     },
     {
       "id": "lnk-spav-02",
       "from": "rl-spav",
-      "to": "wiq-spav",
+      "to": "wiq",
       "rel": "usus"
     },
     {
       "id": "lnk-spav-03",
       "from": "rl-spav",
-      "to": "cirs-spav",
+      "to": "cirs",
       "rel": "usus"
     },
     {
       "id": "lnk-spav-04",
       "from": "rl-spav",
-      "to": "eq5d-spav",
+      "to": "eq5d",
       "rel": "usus"
     },
     {
       "id": "lnk-spav-05",
       "from": "rl-spav",
-      "to": "loopbandtest-spav",
+      "to": "loopbandtest",
       "rel": "usus"
     },
     {
@@ -3663,6 +3663,72 @@ window.SEED_DATA = {
       "from": "spav-fitt-looptraining",
       "to": "spav-activeringsprogramma",
       "rel": "nexus"
+    },
+    {
+      "id": "lnk-spav-x01",
+      "from": "spav-fitt-looptraining",
+      "to": "borg-rpe-3q3dw37",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-spav-x02",
+      "from": "spav-fitt-looptraining",
+      "to": "stoplicht-s6kx9h0",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-spav-x03",
+      "from": "spav-fitt-looptraining",
+      "to": "hr-u8blzi3",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-spav-x04",
+      "from": "spav-fitt-looptraining",
+      "to": "spo-vr0dlo5",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-spav-x05",
+      "from": "spav-activeringsprogramma",
+      "to": "borg-rpe-3q3dw37",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-spav-x06",
+      "from": "rl-spav",
+      "to": "rl-rug-2021",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-spav-x07",
+      "from": "rl-spav",
+      "to": "rl-artrose-2020",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-spav-x08",
+      "from": "casus-ez-diag-005b",
+      "to": "wiq",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-spav-x09",
+      "from": "casus-ez-diag-005a",
+      "to": "rl-spav",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-spav-x10",
+      "from": "casus-ez-diag-005b",
+      "to": "rl-spav",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-spav-x11",
+      "from": "casus-ez-beh-005",
+      "to": "rl-spav",
+      "rel": "usus"
     },
     {
       "id": "lnk-copd-k01",
@@ -4771,23 +4837,23 @@ window.SEED_DATA = {
       "tag": "rca"
     },
     {
-      "object": "acsm-spav-pijn",
+      "object": "acsm-pijn",
       "tag": "rca"
     },
     {
-      "object": "wiq-spav",
+      "object": "wiq",
       "tag": "rca"
     },
     {
-      "object": "cirs-spav",
+      "object": "cirs",
       "tag": "rca"
     },
     {
-      "object": "eq5d-spav",
+      "object": "eq5d",
       "tag": "rca"
     },
     {
-      "object": "loopbandtest-spav",
+      "object": "loopbandtest",
       "tag": "rca"
     },
     {
