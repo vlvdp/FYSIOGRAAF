@@ -1429,14 +1429,17 @@ window.SEED_DATA = {
         }
       ]
     },
-    "rl-copd": {
-      "id": "rl-copd",
+    "rl-copd-2020": {
+      "id": "rl-copd-2020",
       "type": "bronnen",
       "afk": "COPD",
       "title": "KNGF-richtlijn COPD — 2020",
       "fields": {
         "scope": "Longrevalidatie in eerste, tweede en derde lijn. Indicatiestelling op basis van GOLD-stadium, ziektelast (CCQ/CAT) en functionele beperkingen.",
-        "kernaanbevelingen": "• Longrevalidatie geïndiceerd bij GOLD 2–4 én CCQ ≥1 of mMRC ≥2<br> • Aerobe training: 60–80% Wmax of Borg 12–14, minimaal 3×/week<br> • Krachttraining 2–3×/week bij perifere spierzwakte (MRC &lt;4)<br> • Inspiratoire spiertraining bij MIP &lt;60% voorspeld<br> • Educatie: energiemanagement, ademtechnieken, exacerbatieherkenning<br> • Stoppen-met-rokenadvies bij iedere contactmoment"
+        "kernaanbevelingen": "<ul><li>Bepaal het patiëntenprofiel (1–6) op basis van ziektestabiliteit, symptoomlast (CCQ of CAT), fysieke capaciteit (6MWT) en fysieke activiteit (stappenteller) en stem de behandeling daarop af.<sup data-src=\"rl-copd-2020\" data-p=\"9-10\">[p9–10]</sup></li><li>Integreer voorlichting en educatie gericht op zelfmanagement als vast onderdeel van de therapie, niet als losstaande interventie.<sup data-src=\"rl-copd-2020\" data-p=\"13\">[p13]</sup></li><li>Bied duur-/intervaltraining aan bij patiënten met beperkte fysieke capaciteit (profiel 4, 5 en 6) op geleide van FITT-parameters en Borgscore 4–6.<sup data-src=\"rl-copd-2020\" data-p=\"14\">[p14]</sup></li><li>Focus bij patiënten met onvoldoende fysieke activiteit (profiel 3, 5 en 6) op gedragsverandering, niet primair op trainen.<sup data-src=\"rl-copd-2020\" data-p=\"13\">[p13]</sup></li><li>Start of hervat therapie zo snel mogelijk bij een longaanval als de klinische status dit toelaat, ongeacht opname.<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup></li><li>Gebruik de Patiënt Specifieke Goal-setting methode (PSG) om samen met de patiënt behandeldoelen te formuleren.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup></li><li>Monitor zuurstofsaturatie: start oefentherapie alleen bij rust-SpO₂ ≥ 90%; stop bij SpO₂ &lt; 85%.<sup data-src=\"rl-copd-2020\" data-p=\"15\">[p15]</sup></li></ul>",
+        "doelen": "Deze richtlijn beoogt een leidraad te geven voor de dagelijkse praktijk van fysiotherapeutische en oefentherapeutische diagnostiek en behandeling van patiënten met COPD.<sup data-src=\"rl-copd-2020\" data-p=\"1\">[p1]</sup> Door het formuleren van patiëntenprofielen en het daaruit volgend diagnose- en behandelalgoritme beoogt deze evidencebased richtlijn zorg op maat mogelijk te maken.<sup data-src=\"rl-copd-2020\" data-p=\"1\">[p1]</sup>",
+        "indicaties": "Fysiotherapie en oefentherapie C/M bij patiënten met COPD is afhankelijk van de gediagnosticeerde beperkingen, gericht op een of meer van de volgende drie aangrijpingspunten: de fysieke capaciteit, de fysieke activiteit en het adembewegingsapparaat.<sup data-src=\"rl-copd-2020\" data-p=\"3\">[p3]</sup> Verwijzing is geïndiceerd bij patiënten met milde tot matige symptoomlast (profiel 2–5) en bij hoge symptoomlast na screening voor longrevalidatie (profiel 6).<sup data-src=\"rl-copd-2020\" data-p=\"9-11\">[p9–11]</sup>",
+        "contraindicaties": "Rode vlaggen voor (terug)verwijzing naar de arts: desaturatie bij kamerlucht (SpO₂ &lt; 90% in rust of &lt; 85% bij inspanning), perifeer oedeem, hemoptoë, overvloedige sputumproductie, cyanose met hoofdpijn, koorts, tachypneu in rust, verdenking op onbekende comorbiditeit, verergering van bekende comorbiditeit.<sup data-src=\"rl-copd-2020\" data-p=\"8\">[p8]</sup> Generieke rode vlaggen omvatten o.a. instabiele angina pectoris, hartkloppingen, duizeligheid na inspanning, verminderd bewustzijn, acuut optredende zwelling van één been, plotselinge heftige pijn in de borst/rug, systolische bloeddruk &gt; 200 mmHg of diastolisch &gt; 120 mmHg, tachycardie &gt; 120/min of bradycardie &lt; 40/min in rust.<sup data-src=\"rl-copd-2020\" data-p=\"8-9\">[p8–9]</sup>"
       },
       "links": [
         {
@@ -2672,6 +2675,270 @@ window.SEED_DATA = {
         "implicatie": "Werk niet geïsoleerd. Beoordeel of de patiënt gebaat is bij verwijzing naar een collega met specifieke expertise. Zorg voor goede rapportage naar de verwijzer."
       },
       "links": []
+    },
+    "copd-patientenprofielen-r7k2m": {
+      "id": "copd-patientenprofielen-r7k2m",
+      "type": "kennis",
+      "afk": "Profielen COPD",
+      "title": "Patiëntenprofielen COPD — zes profielen op basis van ziektestabiliteit, symptoomlast, fysieke capaciteit en fysieke activiteit",
+      "fields": {
+        "kern": "De richtlijn onderscheidt zes patiëntenprofielen die bepalen welke zorgvorm en behandelintensiteit passend is. Profielbepaling vindt plaats op vier kenmerken: ziektestabiliteit, symptoomlast (CCQ of CAT), fysieke capaciteit (6MWT) en fysieke activiteit (stappenteller).<sup data-src=\"rl-copd-2020\" data-p=\"9\">[p9]</sup>",
+        "toelichting": "<b>Beoordelingscriteria:</b><br>Symptoomlast: geen/laag (CCQ &lt; 1,0 of CAT &lt; 10), mild/matig (CCQ 1–1,8 of CAT 10–17), hoog (CCQ ≥ 1,9 of CAT ≥ 18).<sup data-src=\"rl-copd-2020\" data-p=\"7\">[p7]</sup><br>Fysieke capaciteit: voldoende (6MWT ≥ 70% voorspelde waarde) vs. onvoldoende (&lt; 70%).<sup data-src=\"rl-copd-2020\" data-p=\"37\">[p37]</sup><br>Fysieke activiteit: voldoende (≥ 5000 stappen/dag) vs. onvoldoende (&lt; 5000).<sup data-src=\"rl-copd-2020\" data-p=\"37\">[p37]</sup><br><br><b>Profielen:</b><ul><li><b>Profiel 1</b> — Geen/lage symptoomlast: geen therapie-indicatie; adviseer reguliere beweeg-/sportactiviteiten. Overweeg GLI.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup></li><li><b>Profiel 2</b> — Milde/matige symptoomlast, voldoende capaciteit én activiteit: geen of zeer beperkte therapie; adviseer beweeg-/sportactiviteiten en overweeg GLI.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup></li><li><b>Profiel 3</b> — Milde/matige symptoomlast, voldoende capaciteit, onvoldoende activiteit: eerstelijns therapie primair gericht op optimaliseren fysieke activiteit.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup></li><li><b>Profiel 4</b> — Milde/matige symptoomlast, onvoldoende capaciteit, voldoende activiteit: eerstelijns therapie primair gericht op bevorderen fysieke capaciteit.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup></li><li><b>Profiel 5</b> — Milde/matige symptoomlast, onvoldoende capaciteit én activiteit: eerstelijns therapie gericht op zowel fysieke capaciteit als activiteit.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup></li><li><b>Profiel 6</b> — Hoge symptoomlast: screening voor tweede-/derdelijns interdisciplinaire longrevalidatie, gevolgd door eerstelijns onderhoudsbehandeling.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup></li></ul><b>Herindeling:</b> Na iedere longaanval en bij sterke toename in symptoomlast, afname van 6MWT (≥ 45 m) of fysieke activiteit (≥ 1500 stappen/dag) wordt het profiel opnieuw bepaald.<sup data-src=\"rl-copd-2020\" data-p=\"37\">[p37]</sup><br><b>Onderhoudsbehandeling:</b> Bij zeer kwetsbare patiënten (chronische O₂-therapie, NIV, 6MWD &lt; 350 m, beperkte gezondheidsvaardigheden niv. 1–2, wachtlijst longtransplantatie, palliatieve fase) kan onderhoudsbehandeling worden overwogen.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup>",
+        "implicatie": "Het patiëntenprofiel is het startpunt van iedere behandelbeslissing. Fysiotherapeuten bepalen aan de hand van vier eenvoudige parameters welk therapieaanbod past — van 'geen indicatie' tot 'longrevalidatie' — en wanneer herindicatie nodig is."
+      },
+      "links": []
+    },
+    "copd-doelen-stellen-q3f8n": {
+      "id": "copd-doelen-stellen-q3f8n",
+      "type": "kennis",
+      "afk": "Doelen COPD",
+      "title": "Doelen stellen bij COPD — PSG-methode en afstemming op patiëntenprofiel",
+      "fields": {
+        "kern": "Behandeldoelen worden samen met de patiënt geformuleerd met de Patiënt Specifieke Goal-setting methode (PSG), afgestemd op de hulpvraag, het fysiek functioneren en de gezondheidsgerelateerde kwaliteit van leven.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup>",
+        "toelichting": "Richt zowel diagnostiek als interventies op:<ul><li>het bevorderen van het fysiek functioneren van de patiënt, binnen reële mogelijkheden;</li><li>de gezondheidsgerelateerde kwaliteit van leven.</li></ul><sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup>Sluit aan op de individuele context: verkrijg een compleet beeld van beperkingen en mogelijkheden in ADL en participatie, bepaal haalbare oefeningen, en formuleer indien gewenst een behandeldoel gericht op zelfmanagement.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup><br>Bij de behandeling van COPD is het streven de zelfredzaamheid van de patiënt te verhogen c.q. te normaliseren; 'het weer kunnen traplopen' kan bijvoorbeeld als behandeldoel gelden.<sup data-src=\"rl-copd-2020\" data-p=\"39\">[p39]</sup><br><b>Evaluatie:</b> Ieder behandeldoel wordt regelmatig geëvalueerd in het tijdpad dat is afgesproken met de patiënt en overeenkomstig de aanbevolen evaluatiemomenten. Na behalen van een doel kan in overleg een nieuw aansluitend doel worden geformuleerd, rekening houdend met het maximaal aantal aanbevolen behandelingen.<sup data-src=\"rl-copd-2020\" data-p=\"39\">[p39]</sup>",
+        "implicatie": "De PSG structureert gezamenlijke besluitvorming over behandeldoelen. Door doelen expliciet te koppelen aan het patiëntenprofiel en regelmatig te evalueren, voorkomt de therapeut zowel overbehandeling als onderbehandeling."
+      },
+      "links": []
+    },
+    "copd-rode-vlaggen-d9w4p": {
+      "id": "copd-rode-vlaggen-d9w4p",
+      "type": "kennis",
+      "afk": "Rode vlaggen COPD",
+      "title": "Rode vlaggen en doorverwijzing bij COPD",
+      "fields": {
+        "kern": "De therapeut beoordeelt of symptomen 'pluis' of 'niet-pluis' zijn en verwijst (terug) naar de arts bij COPD-specifieke en generieke rode vlaggen.<sup data-src=\"rl-copd-2020\" data-p=\"8\">[p8]</sup>",
+        "toelichting": "<b>COPD-specifieke rode vlaggen:</b><ul><li>Desaturatie bij kamerlucht: rust-SpO₂ &lt; 90% of inspannings-SpO₂ ≤ 85%<sup data-src=\"rl-copd-2020\" data-p=\"33\">[p33]</sup></li><li>Perifeer oedeem</li><li>Hemoptoë (bloedhoesten)</li><li>Overvloedige sputumproductie ten opzichte van normaal</li><li>Cyanose en/of slaperigheid overdag met hoofdpijn</li><li>Koorts</li><li>Tachypneu in rust</li><li>Verdenking op onbekende comorbiditeit</li><li>Verergering van bekende comorbiditeit</li></ul><sup data-src=\"rl-copd-2020\" data-p=\"8\">[p8]</sup><b>Generieke rode vlaggen:</b> instabiele angina pectoris, hartkloppingen, duizeligheid na inspanning, verminderd bewustzijn, acuut optredende zwelling van één been, plotselinge heftige pijn in de borst, systolische BD &gt; 200 mmHg of diastolisch &gt; 120 mmHg, tachycardie &gt; 120/min of bradycardie &lt; 40/min in rust, verhoogd valrisico (≥ 2 valincidenten/jaar of TUG ≥ 20 sec).<sup data-src=\"rl-copd-2020\" data-p=\"8-9\">[p8–9]</sup><br><b>Doorverwijzing:</b> Ergotherapeut bij hulpvraag op activiteiten-/participatieniveau; diëtist bij MUST ≥ 1 of sarcopenie (SARC-F ≥ 4); psycholoog bij HADS &gt; 10 of belemmerende psychische klachten.<sup data-src=\"rl-copd-2020\" data-p=\"9\">[p9]</sup>",
+        "implicatie": "Herkenning van rode vlaggen is essentieel om onveilige situaties te voorkomen. De therapeut heeft een signaleringsfunctie gedurende het gehele traject en verwijst tijdig terug bij 'niet-pluis'."
+      },
+      "links": []
+    },
+    "copd-diag-longaanval-h5t3v": {
+      "id": "copd-diag-longaanval-h5t3v",
+      "type": "kennis",
+      "afk": "Diag. longaanval",
+      "title": "Diagnostisch handelen bij een longaanval (AECOPD)",
+      "fields": {
+        "kern": "Bij een longaanval (exacerbatie) — een verslechtering gekenmerkt door toename van dyspneu en/of hoesten binnen één of enkele dagen — wordt de therapie zo snel mogelijk gestart of hervat als de klinische status dit toelaat, zowel met als zonder ziekenhuisopname.<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup>",
+        "toelichting": "<b>Ernst van een longaanval</b> wordt gekenmerkt door: hoorbare ademhaling of stridor, ademfrequentie &gt; 24/min, saturatie &lt; 92% (COPD &lt; 88%) of &lt; 94% bij hoge ademfrequentie, systolische BD &lt; 100 mmHg of &gt; 40 mmHg lager dan normaal, hartslag &gt; 100/min, dufheid en verwardheid, temperatuur &gt; 38 °C.<sup data-src=\"rl-copd-2020\" data-p=\"42\">[p42]</sup><br><b>Met ziekenhuisopname:</b> Na ontslag screening voor tweede-/derdelijns longrevalidatie; indien niet op korte termijn haalbaar, doorbehandeling in eerste lijn ter overbrugging (fysiek functioneren behouden, ademspierfunctie trainen). Doorbehandeling bij voorkeur direct na ontslag, uiterlijk binnen 4 weken.<sup data-src=\"rl-copd-2020\" data-p=\"43\">[p43]</sup><br><b>Zonder ziekenhuisopname:</b> Therapie bij voorkeur niet onderbreken. Bij voortzetting: intensiteit en/of duur aanpassen. Beoordeel: verloop symptomen, kortademigheid in rust/inspanning, inspanningsvermogen, zuurstofsaturatie, verstoord mucustransport, informatiebehoefte.<sup data-src=\"rl-copd-2020\" data-p=\"43\">[p43]</sup><br>Bepaal het patiëntenprofiel opnieuw na iedere longaanval.<sup data-src=\"rl-copd-2020\" data-p=\"11\">[p11]</sup>",
+        "implicatie": "Vroegtijdig hervatten van therapie na een longaanval voorkomt verdere fysieke achteruitgang. De therapeut past de behandeling aan op basis van de actuele status en herbeoordeelt het patiëntenprofiel."
+      },
+      "links": []
+    },
+    "copd-diag-comorbiditeit-j6n2w": {
+      "id": "copd-diag-comorbiditeit-j6n2w",
+      "type": "kennis",
+      "afk": "Diag. comorbiditeit",
+      "title": "Diagnostisch handelen bij comorbiditeit — inventarisatie, signalering en aanpassing",
+      "fields": {
+        "kern": "De therapeut inventariseert comorbiditeit die het fysiek functioneren beïnvloedt (cardiovasculair, bewegingsapparaat, angst/depressie, abnormale lichaamssamenstelling) en past de diagnostiek en therapie hierop aan.<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup>",
+        "toelichting": "<b>Veelvoorkomende comorbiditeit bij COPD:</b><ul><li>Cardiovasculair: chronisch hartfalen, atherosclerose, metabool syndroom, perifeer arterieel vaatlijden<sup data-src=\"rl-copd-2020\" data-p=\"40\">[p40]</sup></li><li>Angst en depressie (komen vaak in combinatie voor)<sup data-src=\"rl-copd-2020\" data-p=\"40\">[p40]</sup></li><li>Abnormale lichaamssamenstelling: obesitas, ondergewicht, sarcopenie<sup data-src=\"rl-copd-2020\" data-p=\"40\">[p40]</sup></li><li>Houdings-/bewegingsapparaat: osteoporose, vertebrale fracturen, gewrichtsartrose<sup data-src=\"rl-copd-2020\" data-p=\"40\">[p40]</sup></li><li>Overig: cognitieve disfunctie, longkanker, obstructieve slaapapneu, diabetes, bloedarmoede<sup data-src=\"rl-copd-2020\" data-p=\"40\">[p40]</sup></li></ul><b>Signaleringsfunctie:</b> 'Onbekwaam maakt onbevoegd' — bij onvoldoende kennis/vaardigheden verwijzen naar therapeut die deze wel heeft. Medische gegevens zijn niet altijd volledig; de therapeut is alert op onbekende/nieuwe comorbiditeit.<sup data-src=\"rl-copd-2020\" data-p=\"41\">[p41]</sup><br><b>Medicatiegebruik:</b> Inventariseer invloed van medicatie op fysiek functioneren (bètablokkers, insuline, antipsychotica).<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup><br><b>CPET:</b> Bij patiënten met profiel 4, 5 en 6 met cardiovasculaire comorbiditeit wordt de CPET aanbevolen om veilig trainen te waarborgen.<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup>",
+        "implicatie": "Comorbiditeit is de regel bij COPD, niet de uitzondering. De therapeut moet breed inventariseren en het behandelplan aanpassen; bij twijfel terugverwijzen naar de behandelend arts."
+      },
+      "links": []
+    },
+    "copd-diag-palliatief-m2x7g": {
+      "id": "copd-diag-palliatief-m2x7g",
+      "type": "kennis",
+      "afk": "Diag. palliatief",
+      "title": "Diagnostisch handelen in de palliatieve fase bij COPD",
+      "fields": {
+        "kern": "In de palliatieve fase verschuiven behandeldoelen geleidelijk van behoud van fysieke capaciteit naar vermindering van symptomen zoals vermoeidheid, kortademigheid en depressie/angst.<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup>",
+        "toelichting": "Palliatieve zorg kent drie stadia: ziektegerichte palliatie, symptoomgerichte palliatie en palliatie in de stervensfase.<sup data-src=\"rl-copd-2020\" data-p=\"44\">[p44]</sup><br>De palliatieve fase is niet objectief te markeren; de 'surprise question' ('Zou het u verbazen als deze patiënt binnen een jaar is overleden?') en een verslechtering in het klinisch beeld zonder effect van intensieve behandelingen zijn aanwijzingen.<sup data-src=\"rl-copd-2020\" data-p=\"44\">[p44]</sup><br><b>Aandachtspunten:</b><ul><li>Zet tijdig in op proactieve zorgplanning met de patiënt en behandelend arts, inclusief de inzet van fysio-/oefentherapie.<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup></li><li>Stel behandeldoelen op in samenspraak met andere betrokken zorgverleners.<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup></li><li>Betrek mantelzorgers en naasten bij de doelen.<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup></li><li>Neem geen maximale inspanningstest af vanwege de beperkte toegevoegde waarde in deze fase.<sup data-src=\"rl-copd-2020\" data-p=\"45\">[p45]</sup></li></ul>",
+        "implicatie": "De therapeut moet alert zijn op het moment waarop de palliatieve fase intreedt en behandeldoelen proactief bijstellen in overleg met het multidisciplinaire team. Symptoomverlichting krijgt voorrang boven fysieke capaciteitverbetering."
+      },
+      "links": []
+    },
+    "copd-voorlichting-educatie-v4p9k": {
+      "id": "copd-voorlichting-educatie-v4p9k",
+      "type": "kennis",
+      "afk": "Educatie COPD",
+      "title": "Voorlichting en educatie bij COPD — zelfmanagement en gezondheidsvaardigheden",
+      "fields": {
+        "kern": "Educatie is een integraal onderdeel van de therapie en dient niet als losstaande interventie te worden gezien; het draagt bij aan gedragsverandering, zelfmanagement en adequate coping.<sup data-src=\"rl-copd-2020\" data-p=\"13\">[p13]</sup>",
+        "toelichting": "<b>Inhoud voorlichting en educatie:</b><ul><li>Ziektespecifieke informatie: wat COPD is, gevolgen op fysiek functioneren, aangrijpingspunten therapie, rol fysieke activiteit in gezonde leefstijl<sup data-src=\"rl-copd-2020\" data-p=\"13\">[p13]</sup></li><li>Zelfmanagement en eigen regie: impact van COPD en longaanvallen op fysiek functioneren; eigen rol van de patiënt; longaanval-actieplan<sup data-src=\"rl-copd-2020\" data-p=\"13\">[p13]</sup></li><li>Energiemanagement: balans belasting/belastbaarheid, dag-/weekindeling, impact fysieke activiteiten, therapie en sportsessies<sup data-src=\"rl-copd-2020\" data-p=\"13\">[p13]</sup></li><li>Gebruik van (loop)hulpmiddelen: rollator overwegen bij 6MWD &lt; 350 m<sup data-src=\"rl-copd-2020\" data-p=\"46\">[p46]</sup></li><li>Sociale voorzieningen en lotgenotencontact: Longpunten (4×/jaar, ~60 locaties Nederland)<sup data-src=\"rl-copd-2020\" data-p=\"47\">[p47]</sup></li></ul><b>Aandachtspunten:</b> ~40% van patiënten met COPD heeft cognitieve stoornissen; ~46% is onvoldoende of beperkt gezondheidsvaardig. Afstemming van de wijze van informatieoverdracht (folder, verbaal, video) en herhaling is wenselijk.<sup data-src=\"rl-copd-2020\" data-p=\"45\">[p45]</sup><br>Motiverende Gespreksvoering kan worden ingezet voor voorlichting en educatie.<sup data-src=\"rl-copd-2020\" data-p=\"45\">[p45]</sup>",
+        "implicatie": "Educatie moet worden afgestemd op het niveau van gezondheidsvaardigheden van de patiënt. Het is geen bijzaak maar een kerninterventie die de effectiviteit van training versterkt en zelfmanagement bevordert."
+      },
+      "links": []
+    },
+    "copd-fysieke-activiteit-b8s2c": {
+      "id": "copd-fysieke-activiteit-b8s2c",
+      "type": "kennis",
+      "afk": "Fysieke activiteit COPD",
+      "title": "Optimaliseren van fysieke activiteit bij COPD — gedragsverandering en monitoring",
+      "fields": {
+        "kern": "Bij patiënten met onvoldoende fysieke activiteit (profiel 3, 5, 6) staat gedragsverandering centraal, niet primair fysieke training. De therapeut past de principes van gedragsverandering toe (weten, willen, ervaren/kunnen, doen, blijven doen).<sup data-src=\"rl-copd-2020\" data-p=\"13\">[p13]</sup>",
+        "toelichting": "Fysieke capaciteit en fysieke activiteit zijn gerelateerd maar niet inwisselbaar: 14% van verwezen patiënten heeft goede capaciteit maar is fysiek inactief ('underachievers'), 21% heeft beperkte capaciteit maar is wel actief ('overachievers').<sup data-src=\"rl-copd-2020\" data-p=\"47\">[p47]</sup><br><b>Afkappunt:</b> &lt; 5000 stappen/dag = onvoldoende fysieke activiteit.<sup data-src=\"rl-copd-2020\" data-p=\"7\">[p7]</sup><br><b>Vijf fasen van gedragsverandering:</b><ol><li>Open staan (weten) en willen — informeren, bevorderende/belemmerende factoren bespreken</li><li>Ervaren/kunnen — functionele activiteiten oefenen in praktijk, thuissituatie nagebootst</li><li>Doen — subdoelen opstellen, patiënt voert zelfstandig uit</li><li>Blijven doen/volhouden — verwijzen naar regionale beweeg-/sportactiviteiten</li></ol><sup data-src=\"rl-copd-2020\" data-p=\"48-49\">[p48–49]</sup><b>eHealth:</b> Activiteitenmeters geven patiënt en therapeut inzicht; zonder begeleiding is digitale ondersteuning onvoldoende voor behoud op lange termijn.<sup data-src=\"rl-copd-2020\" data-p=\"48\">[p48]</sup><br><b>Bevorderende factoren:</b> sociale steun, interne motivatie, eigen regie, professionele ondersteuning.<br><b>Belemmerende factoren:</b> veranderende ziektestatus, angst/depressie, gebrek aan support, negatieve therapie-ervaringen.<sup data-src=\"rl-copd-2020\" data-p=\"49\">[p49]</sup>",
+        "implicatie": "Het optimaliseren van fysieke activiteit vereist een gedragsgerichte aanpak die verschilt van het trainen van fysieke capaciteit. De therapeut moet beide domeinen onderscheiden en per profiel het juiste accent leggen."
+      },
+      "links": []
+    },
+    "copd-ademspiertraining-imt-g3r1p": {
+      "id": "copd-ademspiertraining-imt-g3r1p",
+      "type": "kennis",
+      "afk": "IMT COPD",
+      "title": "Ademspiertraining (IMT) bij COPD — indicatie en FITT-parameters",
+      "fields": {
+        "kern": "Inspiratoire ademspiertraining (IMT) wordt conditioneel aanbevolen bij patiënten met een verminderde ademspierfunctie (PImax &lt; 70% voorspeld) in combinatie met kortademigheid, en/of bij wie duur-/intervaltraining nagenoeg onmogelijk is.<sup data-src=\"rl-copd-2020\" data-p=\"16\">[p16]</sup>",
+        "toelichting": "<b>FITT-parameters:</b><ul><li><b>Frequentie:</b> minimaal 5 dagen/week; ≥ 4 weken aaneengesloten<sup data-src=\"rl-copd-2020\" data-p=\"57\">[p57]</sup></li><li><b>Intensiteit:</b> ~30–50% van PImax (afhankelijk van het toestel)<sup data-src=\"rl-copd-2020\" data-p=\"57\">[p57]</sup></li><li><b>Type:</b> threshold, flow-resistive of combinatie (threshold/flow-resistive)<sup data-src=\"rl-copd-2020\" data-p=\"57\">[p57]</sup></li><li><b>Tijdsduur:</b> ~30 ademhalingen per sessie; 1–2 sessies/dag; ~5 min per sessie. Korte intensieve sessies lijken effectiever dan lange sessies van ≥ 15 min.<sup data-src=\"rl-copd-2020\" data-p=\"57\">[p57]</sup></li></ul><b>Uitvoering:</b> Inspiratie zo snel en diep mogelijk; expiratie rustig en volledig. Optimale verhouding in-/uitademing is 1:2–3. Bij dreigend hyperventileren: korte pauze na elke uitademing; elke 10 ademhalingen een korte rustpauze.<sup data-src=\"rl-copd-2020\" data-p=\"57\">[p57]</sup><br><b>Behoud:</b> 2–3 sessies per week na de initiële trainingsperiode.<sup data-src=\"rl-copd-2020\" data-p=\"57\">[p57]</sup>",
+        "implicatie": "IMT is een gerichte interventie voor patiënten met aantoonbaar verminderde ademspierkracht. De therapeut meet de PImax met de MIP-meting en stelt de trainingsintensiteit daarop in."
+      },
+      "links": []
+    },
+    "copd-ademhalingstechnieken-t5k8n": {
+      "id": "copd-ademhalingstechnieken-t5k8n",
+      "type": "kennis",
+      "afk": "Ademtechnieken COPD",
+      "title": "Ademhalingstechnieken bij COPD — PLB, diafragma-ademhaling, ventilatiefeedback",
+      "fields": {
+        "kern": "Pursed lip breathing (PLB) is een conditioneel aanbevolen, veilige en laagdrempelige ademhalingsinterventie die kortademigheid matig kan verminderen. Diafragma-ademhaling wordt conditioneel afgeraden bij hyperinflatie.<sup data-src=\"rl-copd-2020\" data-p=\"16\">[p16]</sup>",
+        "toelichting": "<b>PLB:</b> Geeft direct na de interventie een matige afname van kortademigheid; na 8 weken een zeer grote toename van fysieke capaciteit en matige verbetering van kwaliteit van leven. Bewijskracht is zeer laag.<sup data-src=\"rl-copd-2020\" data-p=\"57-58\">[p57–58]</sup> PLB is veilig, makkelijk toe te passen en heeft nauwelijks ongewenste effecten. Belangrijk om ook te leren aan patiënten die de techniek al onbewust gebruiken.<sup data-src=\"rl-copd-2020\" data-p=\"58\">[p58]</sup><br><b>Diafragma-ademhaling:</b> Conditionele aanbeveling tégen het aanleren; bij hyperinflatie en/of teken van Hoover kan het mechanisch ongunstig en energetisch inefficiënt zijn. Symptomen van kortademigheid kunnen verergeren.<sup data-src=\"rl-copd-2020\" data-p=\"58\">[p58]</sup><br><b>Ventilatiefeedback:</b> Klein effect, dure apparatuur; conditionele aanbeveling tégen, tenzij het apparaat al beschikbaar is in de praktijk.<sup data-src=\"rl-copd-2020\" data-p=\"58\">[p58]</sup><br><b>Gecombineerde ademhalingsinterventies:</b> Conditioneel aanbevolen; veilig en individueel aanpasbaar. Leer niet meerdere technieken tegelijk aan; start altijd met PLB.<sup data-src=\"rl-copd-2020\" data-p=\"59\">[p59]</sup>",
+        "implicatie": "PLB is de eerste keus ademhalingstechniek en kan aan vrijwel elke patiënt met COPD worden aangeleerd. Diafragma-ademhaling moet kritisch worden overwogen vanwege het risico op verergering bij hyperinflatie."
+      },
+      "links": []
+    },
+    "copd-ontspanningstechnieken-w2q5r": {
+      "id": "copd-ontspanningstechnieken-w2q5r",
+      "type": "kennis",
+      "afk": "Ontspanning COPD",
+      "title": "Ontspanningstechnieken bij COPD — vermindering van kortademigheid en angst",
+      "fields": {
+        "kern": "Ontspanningsoefeningen worden conditioneel aanbevolen als integraal onderdeel van de therapie om kortademigheid en (passende) spanning/angst te reduceren.<sup data-src=\"rl-copd-2020\" data-p=\"17\">[p17]</sup>",
+        "toelichting": "Patiënten met COPD kunnen door kortademigheid en vermoeidheid gespannen, angstig of gestrest raken; toename in spanning kan de patiënt vermoeider en/of kortademiger maken (wisselwerking).<sup data-src=\"rl-copd-2020\" data-p=\"59\">[p59]</sup><br><b>Best beoordeelde technieken (Hyland 2016):</b><ul><li><em>Guided imagery</em> — denken aan een fijne plek, zich ontspannen, zich concentreren op de ervaring</li><li><em>Progressieve spierrelaxatie van Jacobson</em> — bewust aanspannen en ontspannen van spiergroepen</li><li><em>Tellen</em> — tellen van één tot vijf en herhalen</li></ul><sup data-src=\"rl-copd-2020\" data-p=\"59-60\">[p59–60]</sup>Het is belangrijk om samen met de patiënt af te stemmen welke techniek het beste bij hem past. <b>Let op:</b> bij aanhoudende of zeer grote angst (paniek) waarbij ontspanningsoefeningen niet tot angstreductie leiden, is overleg met de verwijzer en eventueel doorverwijzing naar een psycholoog noodzakelijk.<sup data-src=\"rl-copd-2020\" data-p=\"59\">[p59]</sup>",
+        "implicatie": "Ontspanningstechnieken zijn laagdrempelig en kunnen thuis zelfstandig worden uitgevoerd. De therapeut leert de patiënt de techniek aan en monitort of angst/paniek een psychologische verwijzing vraagt."
+      },
+      "links": []
+    },
+    "copd-houdingsaanpassingen-y1k6s": {
+      "id": "copd-houdingsaanpassingen-y1k6s",
+      "type": "kennis",
+      "afk": "Houding COPD",
+      "title": "Houdingsaanpassingen bij COPD — vermindering van kortademigheid door lichaamsposities",
+      "fields": {
+        "kern": "Het aannemen van specifieke lichaamshoudingen (met name voorwaarts leunend) is een therapeutische interventie met bewezen effect op kortademigheid en kwaliteit van leven.<sup data-src=\"rl-copd-2020\" data-p=\"17\">[p17]</sup>",
+        "toelichting": "Patiënten met COPD tonen vaak verhoogde ventilatie en verminderd functioneren van het diafragma. De voorwaarts leunende positie wordt vaak spontaan aangenomen en ervaren als verlichting van kortademigheid.<sup data-src=\"rl-copd-2020\" data-p=\"60\">[p60]</sup><br><b>Mechanisme:</b> Vooroverbuigen vanuit de heup en lichte buiging in de thoracale wervelkolom verbeteren de spierlengtespanningscurve van het diafragma. De armen ondersteunen het hoofd, waardoor de hulpademhalingsspieren (mm. pectoralis minor en major) meer kracht kunnen leveren.<sup data-src=\"rl-copd-2020\" data-p=\"60\">[p60]</sup><br><b>Praktische toepassingen:</b> handen op knieën, ellebogen op tafel, hoofd op handen; staand: handen steunen op een winkelkar, rollator of op leuningen bij het lopen op een loopband.<sup data-src=\"rl-copd-2020\" data-p=\"60\">[p60]</sup>",
+        "implicatie": "Houdingsadviezen zijn eenvoudig te integreren in dagelijkse activiteiten en oefensituaties. Ze bieden directe symptoomverlichting en kosten geen extra materiaal."
+      },
+      "links": []
+    },
+    "copd-mucusklaring-e4n9t": {
+      "id": "copd-mucusklaring-e4n9t",
+      "type": "kennis",
+      "afk": "Mucusklaring COPD",
+      "title": "Mucusklaring bij COPD — technieken voor sputumevacuatie",
+      "fields": {
+        "kern": "Technieken ter bevordering van mucusklaring worden conditioneel aanbevolen bij stabiel COPD; start met technieken die de patiënt zelf kan uitvoeren en schakel bij onvoldoende effect over op hulpmiddelen (PEP/O-PEP).<sup data-src=\"rl-copd-2020\" data-p=\"17\">[p17]</sup>",
+        "toelichting": "<b>Actieve ademhalingstechnieken:</b> Active Cycle of Breathing Technique (ACBT), huffen/FET, autogene drainage (AD), ELTGOL.<sup data-src=\"rl-copd-2020\" data-p=\"60-61\">[p60–61]</sup><br><b>Hulpmiddelen:</b> PEP en O-PEP hebben waarschijnlijk zeer gunstige effecten op kwaliteit van leven, kortademigheid, fysieke capaciteit en mogelijk op het risico op longaanvallen.<sup data-src=\"rl-copd-2020\" data-p=\"61\">[p61]</sup><br><b>Passieve technieken:</b> vibratie, percussie, houdingsdrainage — bij voorkeur niet, gezien lage effectiviteit en arbeidsintensiviteit.<sup data-src=\"rl-copd-2020\" data-p=\"60\">[p60]</sup><br><b>Bij een longaanval:</b> De aanbevelingen voor mucusklaring bij een longaanval zijn gelijk aan die bij stabiel COPD; effecten zijn waarschijnlijk niet minder groot dan bij stabiel COPD.<sup data-src=\"rl-copd-2020\" data-p=\"61\">[p61]</sup><br><b>Hygiëne:</b> Bij het gebruik van hulpmiddelen is het raadzaam de hygiëne te bespreken.<sup data-src=\"rl-copd-2020\" data-p=\"61\">[p61]</sup>",
+        "implicatie": "Begin altijd met zelfredzame technieken (huffen, ACBT) voordat hulpmiddelen worden ingezet. Passieve technieken zoals vibratie en percussie zijn zelden geïndiceerd vanwege lage effectiviteit."
+      },
+      "links": []
+    },
+    "copd-aanvullende-trainingsmod-f7h3q": {
+      "id": "copd-aanvullende-trainingsmod-f7h3q",
+      "type": "kennis",
+      "afk": "Aanv. training COPD",
+      "title": "Aanvullende trainingsmodaliteiten bij COPD — hydrotherapie, zuurstofdesaturatie, NMES",
+      "fields": {
+        "kern": "Hydrotherapie, trainen bij zuurstofdesaturatie en neuromusculaire elektrostimulatie (NMES) zijn aanvullende modaliteiten met specifieke indicaties en beperkingen.<sup data-src=\"rl-copd-2020\" data-p=\"15\">[p15]</sup>",
+        "toelichting": "<b>Hydrotherapie:</b> Bij voorkeur niet bij COPD; overweeg alleen bij bijkomende fysieke problemen die conventionele training ernstig beperken (gewrichtsartrose, uitgesproken zwaarlijvigheid) en/of een sterke voorkeur van de patiënt.<sup data-src=\"rl-copd-2020\" data-p=\"15\">[p15]</sup><br><b>Trainen bij zuurstofdesaturatie:</b><ul><li>Start oefentherapie alleen bij rust-SpO₂ ≥ 90% (na 10 min zitten).<sup data-src=\"rl-copd-2020\" data-p=\"15\">[p15]</sup></li><li>Stop bij SpO₂ &lt; 85% en neem contact op met verwijzer.<sup data-src=\"rl-copd-2020\" data-p=\"15\">[p15]</sup></li><li>Monitor SpO₂-herstel na inspanning; neem contact op indien SpO₂ in herstelfase (2 min na inspanning) onvoldoende herstelt naar pre-inspanningsrust-SpO₂.<sup data-src=\"rl-copd-2020\" data-p=\"15\">[p15]</sup></li><li>Medische zuurstofsuppletie alleen na afstemming met behandelend arts.<sup data-src=\"rl-copd-2020\" data-p=\"55\">[p55]</sup></li></ul><b>NMES:</b> Niet bij stabiel COPD wanneer patiënt zelf fysiek kan trainen. Overweeg NMES bij patiënten die gedurende langere tijd niet in staat zijn tot fysieke training (ernstige kortademigheid, bedlegerigheid, orthopedie, ernstige longaanval). Bij opname in ziekenhuis: NMES in combinatie met mobilisatieoefeningen.<sup data-src=\"rl-copd-2020\" data-p=\"15\">[p15]</sup><br>NMES-parameters: rechthoekpuls ≥ 35 Hz, pulsduur ≥ 300 µs, minimaal 15 min/sessie, ≥ 12 sessies, 3×/week, ≥ 4 weken.<sup data-src=\"rl-copd-2020\" data-p=\"56\">[p56]</sup>",
+        "implicatie": "Deze modaliteiten zijn niet de eerste keus maar vullen het trainingsaanbod aan voor specifieke subgroepen. De therapeut moet de indicatie per patiënt beoordelen."
+      },
+      "links": []
+    },
+    "copd-supervisie-duur-freq-a9d4z": {
+      "id": "copd-supervisie-duur-freq-a9d4z",
+      "type": "kennis",
+      "afk": "Supervisie COPD",
+      "title": "Supervisie bij COPD — duur, frequentie en maximale behandelaantallen per profiel",
+      "fields": {
+        "kern": "De optimale duur en frequentie van supervisie is patiëntafhankelijk. Per profiel worden maximale behandelaantallen aanbevolen, variërend van 0 (profiel 1) tot n.v.t. bij longrevalidatie (profiel 6).<sup data-src=\"rl-copd-2020\" data-p=\"17\">[p17]</sup>",
+        "toelichting": "<b>Behandelaantallen per profiel:</b><ul><li>Profiel 1 → 0 behandelingen (geen indicatie)</li><li>Profiel 2 → maximaal 6 behandelingen</li><li>Profiel 3 → maximaal 42 behandelingen</li><li>Profiel 4 → maximaal 62 behandelingen</li><li>Profiel 5 → maximaal 70 behandelingen</li><li>Profiel 6 → n.v.t. (tweede-/derdelijns longrevalidatie)</li></ul><sup data-src=\"rl-copd-2020\" data-p=\"63\">[p63]</sup><b>Intensieve behandelfase:</b><ul><li>Profiel 2: 2 wkn, 1×/wk</li><li>Profiel 3: 6 wkn 2×/wk + 6 wkn 1×/wk</li><li>Profiel 4: 12 wkn, 3×/wk</li><li>Profiel 5: 12 wkn, 3×/wk</li></ul><b>Afbouwfase:</b> geleidelijk afbouwen (bijv. 1×/2wk, 1×/4wk).<sup data-src=\"rl-copd-2020\" data-p=\"63\">[p63]</sup><b>Klinisch-relevant effect:</b> 8–12 weken fysieke training nodig om effect op fysieke capaciteit te bereiken. Frequente supervisie in de eerste weken is wenselijk voor ziekte-inzicht en trainingskennis.<sup data-src=\"rl-copd-2020\" data-p=\"62\">[p62]</sup><br><b>Groepsverband:</b> 4–6 patiënten per therapeut (AACVPR/BTS-richtlijn). In de praktijk kan 3–4 patiënten per therapeut realistischer zijn. Groepstherapie en individuele therapie laten vergelijkbare klinische uitkomsten zien.<sup data-src=\"rl-copd-2020\" data-p=\"64-65\">[p64–65]</sup><br><b>Onderhoudsbehandeling:</b> Bij zeer kwetsbare patiënten kan 1×/week worden overwogen; afsluiten indien de patiënt zelfstandig beweeg-/sportactiviteiten kan uitvoeren.<sup data-src=\"rl-copd-2020\" data-p=\"64\">[p64]</sup>",
+        "implicatie": "De behandelaantallen bieden een kader voor doelmatige zorg. De therapeut bouwt de supervisie systematisch af en streeft naar zelfstandigheid van de patiënt."
+      },
+      "links": []
+    },
+    "copd-ther-longaanval-c7k2f": {
+      "id": "copd-ther-longaanval-c7k2f",
+      "type": "kennis",
+      "afk": "Ther. longaanval",
+      "title": "Therapeutisch handelen bij een longaanval — opname en eerste lijn",
+      "fields": {
+        "kern": "Het is belangrijk bij een longaanval — zodra de klinische status het toelaat — direct de therapie te starten of te hervatten, ongeacht of de patiënt is opgenomen.<sup data-src=\"rl-copd-2020\" data-p=\"19\">[p19]</sup>",
+        "toelichting": "<b>Longaanval met ziekenhuisopname:</b><ul><li>Doel: zo spoedig mogelijk ADL-zelfstandig functioneren, randvoorwaarden scheppen voor veilig naar huis gaan.<sup data-src=\"rl-copd-2020\" data-p=\"67\">[p67]</sup></li><li>Doelstellingen: verminderen kortademigheid, vroegtijdige mobilisatie, verbeteren mucusklaring, verbeteren vertrouwen in activiteiten.<sup data-src=\"rl-copd-2020\" data-p=\"67\">[p67]</sup></li><li>Therapie afgestemd op inspanningstolerantie; niet overbelasten maar ook niet onderbelasten.<sup data-src=\"rl-copd-2020\" data-p=\"67\">[p67]</sup></li><li>Bij onvoldoende intensieve belasting: strategieën die minder aanspraak doen op ventilatie en gaswisseling, zoals NMES, krachtoefeningen.<sup data-src=\"rl-copd-2020\" data-p=\"67\">[p67]</sup></li><li>Screening voor interdisciplinaire longrevalidatie zodra de patiënt medisch stabiel is.<sup data-src=\"rl-copd-2020\" data-p=\"67\">[p67]</sup></li><li>Bij ontslag: nazorgdocument met (beïnvloedbare) aandachtspunten.<sup data-src=\"rl-copd-2020\" data-p=\"67\">[p67]</sup></li></ul><b>Longaanval zonder ziekenhuisopname:</b><ul><li>Therapie bij voorkeur niet onderbreken; hervat zo snel mogelijk als de klinische status het toelaat.<sup data-src=\"rl-copd-2020\" data-p=\"67\">[p67]</sup></li><li>Intensiteit en/of duur van de therapie aanpassen.<sup data-src=\"rl-copd-2020\" data-p=\"67\">[p67]</sup></li><li>Bij problemen met sputumevacuatie: ademhalingstechnieken en mucusklaring inzetten.<sup data-src=\"rl-copd-2020\" data-p=\"67\">[p67]</sup></li><li>Let op rode vlaggen in relatie tot de longaanval.<sup data-src=\"rl-copd-2020\" data-p=\"12\">[p12]</sup></li></ul>",
+        "implicatie": "Vroege mobilisatie en therapie bij een longaanval beperken het verlies aan fysiek functioneren. In het ziekenhuis is de therapeut onderdeel van het behandelteam en richt zich op functioneel herstel met het oog op veilig ontslag."
+      },
+      "links": []
+    },
+    "copd-ther-palliatief-n8v5x": {
+      "id": "copd-ther-palliatief-n8v5x",
+      "type": "kennis",
+      "afk": "Ther. palliatief",
+      "title": "Therapeutisch handelen in de palliatieve fase bij COPD",
+      "fields": {
+        "kern": "In de palliatieve fase worden interventies geleidelijk meer gericht op vermindering van symptomen (vermoeidheid, kortademigheid, depressie/angst) en minder op het verbeteren van fysieke capaciteit.<sup data-src=\"rl-copd-2020\" data-p=\"19\">[p19]</sup>",
+        "toelichting": "<b>Aandachtspunten voor de therapeut:</b><ul><li>Interventies afstemmen op stadia van palliatieve zorg, behoeften, grenzen en wensen van de patiënt.<sup data-src=\"rl-copd-2020\" data-p=\"68\">[p68]</sup></li><li>Fysieke training is veilig en effectief gebleken bij ernstig beperkte, kortademige longpatiënten die op de wachtlijst staan voor longtransplantatie; fysieketraining kan worden overwogen ter behoud van capaciteit.<sup data-src=\"rl-copd-2020\" data-p=\"68\">[p68]</sup></li><li>NMES kan worden overwogen ter stabilisering van de spierfunctie van de onderste extremiteit indien actief oefenen niet mogelijk is.<sup data-src=\"rl-copd-2020\" data-p=\"68\">[p68]</sup></li><li>Ademhalingstechnieken en ontspanningsoefeningen kunnen worden ingezet tegen kortademigheid en angst.<sup data-src=\"rl-copd-2020\" data-p=\"68\">[p68]</sup></li><li>Informatie en advies ook aan mantelzorgers en naasten richten, waaronder transfers en (lig)houding.<sup data-src=\"rl-copd-2020\" data-p=\"68\">[p68]</sup></li><li>Behandeling kan worden gecontinueerd indien de interventies positief effect hebben op de symptoomlast; stop in samenspraak met de patiënt als er geen effect is.<sup data-src=\"rl-copd-2020\" data-p=\"68\">[p68]</sup></li></ul>",
+        "implicatie": "De therapeut speelt een rol in de palliatieve zorg bij COPD door symptoomverlichting te bieden en mantelzorgers te ondersteunen. Continue evaluatie van het effect van interventies is essentieel om tijdig te stoppen."
+      },
+      "links": []
+    },
+    "copd-evaluatie-afsluiting-s3p7w": {
+      "id": "copd-evaluatie-afsluiting-s3p7w",
+      "type": "kennis",
+      "afk": "Evaluatie COPD",
+      "title": "Evaluatie en afsluiting van het therapeutisch proces bij COPD",
+      "fields": {
+        "kern": "Na twaalf weken initiële behandeling wordt een tussenevaluatie aanbevolen; de behandeling wordt afgesloten zodra de patiënt in staat is tot het zelfstandig uitvoeren van beweeg- en/of sportactiviteiten.<sup data-src=\"rl-copd-2020\" data-p=\"19\">[p19]</sup>",
+        "toelichting": "<b>Evaluatiemomenten:</b> SOAP-registratie (subjectief, objectief, analyse en plan) bij elk therapeut-patiëntcontact. Na 12 weken een tussenevaluatie. Bij onderhoudsbehandeling: 1× per 4–6 maanden relevante parameters evalueren.<sup data-src=\"rl-copd-2020\" data-p=\"69\">[p69]</sup><br><b>Herindeling overwegen bij:</b><ul><li>Klinisch-relevante terugval in symptoomlast (van geen naar mild/matig of mild/matig naar hoog)</li><li>Afname in 6MWT van ≥ 45 m</li><li>Afname in fysieke activiteit van ≥ 1500 stappen/dag</li><li>Na iedere longaanval (met of zonder ziekenhuisopname)</li></ul><sup data-src=\"rl-copd-2020\" data-p=\"69\">[p69]</sup><b>Stopcriteria:</b><ul><li>De hulpvraag is opgelost doordat behandeldoelen zijn bereikt.</li><li>De patiënt kan zelfstandig trainingen continueren via reguliere beweeg-/sportactiviteiten (wandelen, fietsen, yoga, Nationale COPD Challenge).</li><li>De patiënt kan niet worden gemotiveerd om therapietrouw te zijn of fysiek actief te worden/blijven.</li><li>Er is een rode vlag of contra-indicatie.<sup data-src=\"rl-copd-2020\" data-p=\"69\">[p69]</sup></li></ul>",
+        "implicatie": "Evaluatie is cyclisch en profielgebonden. De therapeut bewaakt dat de behandeling niet onnodig lang doorloopt maar ook niet te vroeg wordt afgesloten bij kwetsbare patiënten."
+      },
+      "links": []
+    },
+    "copd-anamnese-structuur-a1n2m": {
+      "id": "copd-anamnese-structuur-a1n2m",
+      "type": "kennis",
+      "afk": "Anamnese",
+      "title": "Anamnese bij COPD — structuur en inhoud",
+      "fields": {
+        "kern": "De anamnese bij COPD inventariseert gezondheidsproblemen op drie aangrijpingspunten (fysieke capaciteit, fysieke activiteit, adembewegingsapparaat) plus contextfactoren. Parameters worden waar mogelijk geobjectiveerd met een <em>aanbevolen</em> of <em>optioneel</em> meetinstrument.<sup data-src=\"rl-copd-2020\" data-p=\"4\">[p4]</sup>",
+        "toelichting": "<h4>Gerelateerd aan de therapeutische aangrijpingspunten</h4>\n<ul>\n  <li>hulpvraag van de patiënt;</li>\n  <li>vermoeidheid in rust en bij inspanning — beloop (CIS8R<sup>opt</sup> en/of Borgschaal vermoeidheid<sup>opt</sup>);</li>\n  <li>kortademigheid in rust en bij inspanning — beloop (mMRC<sup>opt</sup> en/of Borgschaal kortademigheid<sup>opt</sup>);</li>\n  <li>gestoord adembewegingsapparaat: hoesten en mucusklaring (item-CAT<sup>aanbev</sup>);</li>\n  <li>afgenomen fysieke capaciteit;</li>\n  <li>verminderde fysieke activiteit;</li>\n  <li>verminderde balans/valrisico (TUG<sup>opt</sup>);</li>\n  <li>beperkingen in activiteiten of participatie (PSG<sup>aanbev</sup>).</li>\n</ul><sup data-src=\"rl-copd-2020\" data-p=\"4\">[p4]</sup>\n<h4>Contextfactoren</h4>\n<ul>\n  <li>niet-COPD-gerelateerde symptomen (pijn NPRS<sup>opt</sup>, slaapproblemen, incontinentie);</li>\n  <li>longaanval(len): aantal en ernst (met/zonder opname) in afgelopen jaar;</li>\n  <li>comorbiditeit en gerelateerde beperkingen;</li>\n  <li>medicatie en gebruik van hulpmiddelen (bv. medische zuurstof);</li>\n  <li>contact met andere zorgverleners;</li>\n  <li>ervaren gezondheidstoestand / symptoomlast (CCQ<sup>aanbev</sup> of CAT<sup>aanbev</sup>);</li>\n  <li>kennis van COPD en ziekte-inzicht;</li>\n  <li>zelfredzaamheid, zelfmanagement en eigen regie;</li>\n  <li>angst- of depressieve klachten (HADS<sup>opt</sup>);</li>\n  <li>voedingstoestand (MUST<sup>opt</sup> en/of SARC-F<sup>opt</sup>);</li>\n  <li>motivatie, zelfeffectiviteit, coping;</li>\n  <li>risico- en prognostische factoren (roken, blootstelling aan schadelijke gassen);</li>\n  <li>arbeidsstatus, hobby's, thuissituatie (incl. mantelzorger);</li>\n  <li>belemmerende en bevorderende factoren voor fysieke activiteit.</li>\n</ul><sup data-src=\"rl-copd-2020\" data-p=\"4-5\">[p4-5]</sup>",
+        "implicatie": "De anamnese levert de grondstof voor profielbepaling (B.5), doelen stellen (B.6) en signalering van rode vlaggen (B.4). Gebruik de aanbevolen (CCQ/CAT/mMRC/PSG) en optionele meetinstrumenten gericht — niet alles hoeft te worden afgenomen, wel alles moet worden uitgevraagd."
+      },
+      "links": []
+    },
+    "copd-lichamelijk-onderzoek-l3k7p": {
+      "id": "copd-lichamelijk-onderzoek-l3k7p",
+      "type": "kennis",
+      "afk": "LO",
+      "title": "Lichamelijk onderzoek bij COPD — inspectie, functionele inspectie, basisonderzoek",
+      "fields": {
+        "kern": "Het lichamelijk onderzoek bij COPD bestaat uit drie componenten: inspectie in rust, functionele inspectie en basisonderzoek. Waar relevant overlegt de therapeut met de verwijzer over aanvullende gegevens, zoals de uitkomst van een maximale inspanningstest.<sup data-src=\"rl-copd-2020\" data-p=\"5\">[p5]</sup>",
+        "toelichting": "<h4>Inspectie in rust</h4>\n<ul>\n  <li>lichaamshouding, tekenen van kortademigheid/vermoeidheid, cyanose, spieratrofie, hypertonie van (hulp)ademhalingsspieren, perifeer oedeem;</li>\n  <li>vorm van de borstkas: statische hyperinflatie, deformiteiten.</li>\n</ul><sup data-src=\"rl-copd-2020\" data-p=\"5\">[p5]</sup>\n<h4>Functionele inspectie</h4>\n<ul>\n  <li>klinische indruk tijdens functionele bewegingen (houding, balans, kortademigheid/vermoeidheid, gebruik van loophulpmiddel);</li>\n  <li>manier van ademhalen: ademfrequentie, bewegingspatroon, paradoxale thoraco-abdominale beweging (rust en inspanning), activiteit en hypertonie van (hulp)ademhalingsspieren;</li>\n  <li>manier van hoesten en huffen ter bevordering van mucusklaring.</li>\n</ul><sup data-src=\"rl-copd-2020\" data-p=\"5\">[p5]</sup>\n<h4>Basisonderzoek</h4>\n<ul>\n  <li>fysieke capaciteit (6MWT<sup>aanbev</sup> en/of SWT<sup>opt</sup>, CWRT<sup>opt</sup>);</li>\n  <li>fysieke activiteit (activiteitenmeter<sup>aanbev</sup>);</li>\n  <li>zuurstofsaturatie in rust en tijdens inspanning, met en zonder medische zuurstof (saturatiemeter<sup>aanbev</sup>);</li>\n  <li>perifere spierkracht (HHD<sup>opt</sup> en/of 1RM<sup>opt</sup>);</li>\n  <li>ademspierfunctie (MIP<sup>opt</sup>);</li>\n  <li>balans/valrisico (TUG<sup>opt</sup>).</li>\n</ul><sup data-src=\"rl-copd-2020\" data-p=\"6\">[p6]</sup>",
+        "implicatie": "Inspectie + functionele inspectie levert de klinische indruk; het basisonderzoek objectiveert de drie aangrijpingspunten (capaciteit, activiteit, adembewegingsapparaat). Combineer met anamnese-bevindingen om het patiëntenprofiel te bepalen en interventies te kiezen. Overleg met de verwijzer over een maximale inspanningstest als het resultaat niet beschikbaar maar wél beslissend is."
+      },
+      "links": []
+    },
+    "copd-duur-intervaltraining-d4r8x": {
+      "id": "copd-duur-intervaltraining-d4r8x",
+      "type": "kennis",
+      "afk": "Duur-/intervaltraining",
+      "title": "Duur- versus intervaltraining bij COPD — keuze en rationale",
+      "fields": {
+        "kern": "Duur- en intervaltraining zijn gelijkwaardige vormen voor het vergroten van fysieke capaciteit bij COPD; de keuze wordt gestuurd door de primaire inspanningslimitatie uit de CPET (zuurstoftransport, ventilatoir, cardiocirculatoir).<sup data-src=\"rl-copd-2020\" data-p=\"50\">[p50]</sup> Intervaltraining heeft de voorkeur bij ernstige luchtwegobstructie of wanneer een duurtest van <10 min op 75% van de maximale fietsbelasting niet gehaald wordt.<sup data-src=\"rl-copd-2020\" data-p=\"51\">[p51]</sup>",
+        "toelichting": "<h4>Beslisregel op basis van CPET</h4>\n<ul>\n  <li><b>Uitstroomtest:</b> duurtest op 75% van de maximale fietsbelasting. ≥10 min volhoudbaar → <b>duurtraining</b> is kandidaat. &lt;10 min → <b>intervaltraining</b>.<sup data-src=\"rl-copd-2020\" data-p=\"51\">[p51]</sup></li>\n  <li><b>Cardiocirculatoir beperkt</b> (verschil tussen berekende en behaalde max-hartslag &lt;15 slagen): duurtraining aangewezen.<sup data-src=\"rl-copd-2020\" data-p=\"51\">[p51]</sup></li>\n  <li><b>Ventilatoir gelimiteerd</b> (max ventilatie &gt;85% van berekende MVV, of inspiratoir reservevolume &lt;0,5 L, of toename arteriële PaCO₂): uitstroomtest bepaalt duur- of intervaltraining.<sup data-src=\"rl-copd-2020\" data-p=\"51\">[p51]</sup></li>\n  <li><b>Zuurstoftransportprobleem</b> (daling transcutaan gemeten SpO₂ &gt;4% of daling arteriële PaO₂): overweeg O₂-suppletie tijdens training; zie C.3.4.<sup data-src=\"rl-copd-2020\" data-p=\"51-52\">[p51-52]</sup></li>\n</ul>\n<h4>FITT-parameters</h4>\n<ul>\n  <li><b>Duurtraining:</b> langere perioden (&gt;10 min) op matige-hoge intensiteit, 60-80% van de maximale belasting (bv. loopband, stationaire fiets, Nordic walking).<sup data-src=\"rl-copd-2020\" data-p=\"52\">[p52]</sup></li>\n  <li><b>Intervaltraining:</b> 85-100% van de maximale belasting, blokken van 30-60 seconden afgewisseld met rust (1-2 min). Veilig en effectief, ook bij zeer kwetsbare patiënten en kandidaten voor longtransplantatie.<sup data-src=\"rl-copd-2020\" data-p=\"52\">[p52]</sup></li>\n  <li>Intensiteit en duur worden line-air opgebouwd, geleid door symptoomscore (Borg 4-6 op CR-10).<sup data-src=\"rl-copd-2020\" data-p=\"52\">[p52]</sup></li>\n</ul>\n<h4>Overwegingen</h4>\n<p>Niet alle COPD-patiënten kunnen duurtraining op voldoende intensiteit/duur volhouden; juist bij ernstige luchtwegobstructie en verzwakte bovenbeenspieren is intervaltraining effectiever. Bij hypercapnie, verlaagde inademingskracht en/of sterke hyperinflatie kan niet-invasieve ademhalingsondersteuning worden overwogen; de klinische waarde daarvan moet nog verder onderzocht worden.<sup data-src=\"rl-copd-2020\" data-p=\"51\">[p51]</sup></p>",
+        "implicatie": "Gebruik de CPET-uitslag om duur vs interval te kiezen — dit is niet willekeurig of voorkeur-gedreven. Bij twijfel of onvoldoende CPET-data: intervaltraining is veiliger bij ernstige dyspnoe. Koppel altijd aan de FITT-parameter-tabel voor concrete dosering en bouw line-air op geleide van Borg 4-6."
+      },
+      "links": []
+    },
+    "copd-spierkrachttraining-s5w2k": {
+      "id": "copd-spierkrachttraining-s5w2k",
+      "type": "kennis",
+      "afk": "Spierkrachttraining",
+      "title": "Spierkrachttraining bij COPD — indicatie en rationale",
+      "fields": {
+        "kern": "Spierkrachttraining wordt <em>conditioneel aanbevolen</em> als additie naast duur-/intervaltraining bij patiënten met een beperkte fysieke capaciteit (profiel 4, 5, 6), wanneer duur-/intervaltraining niet mogelijk is of wanneer de grotere spiergroepen van de onderste extremiteit verzwakt zijn.<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup> Het voordeel boven duurtraining: relatief lage belasting van het respiratoire systeem, dus minder kortademigheid tijdens de inspanning.<sup data-src=\"rl-copd-2020\" data-p=\"52-53\">[p52-53]</sup>",
+        "toelichting": "<h4>Rationale</h4>\n<p>Verzwakking van de grote spiergroepen van de onderste extremiteit draagt bij aan vroegtijdig stoppen van fysieke inspanning bij patiënten met COPD. Spierkrachttraining van grote spiergroepen laat spiermassa en -kracht toenemen, wat bijdraagt aan een grotere fysieke capaciteit.<sup data-src=\"rl-copd-2020\" data-p=\"52-53\">[p52-53]</sup></p>\n<h4>FITT-parameters</h4>\n<ul>\n  <li><b>Intensiteit:</b> line-air opgebouwd, geleid door maximale spierkracht (60-80% van 1RM).<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup></li>\n  <li><b>Apparatuur:</b> groot voordeel — intensiteit nauwkeurig in te stellen na 1RM-bepaling. Functionele oefeningen zijn alternatief en beter toepasbaar in het ADL. Beide vormen zijn geschikt.<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup></li>\n  <li><b>Eenbenig trainen</b> leidt t.o.v. tweebenig tot een lagere ventilatie en grotere verbetering van fysieke capaciteit; verdubbelt wel de trainingsduur.<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup></li>\n</ul>\n<h4>Trilplaat-aanvulling</h4>\n<p>Trilplaattraining tijdens krachttraining geeft mogelijk een kleine verbetering op functionele fysieke capaciteit en QoL en een mogelijk groter effect op balans — bewijskracht laag tot zeer laag. <b>Conditioneel aanbevolen tegen</b> geformuleerd; overweeg trilplaat eventueel bij balansproblemen.<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup></p>",
+        "implicatie": "Koppel spierkrachttraining aan profielbepaling: alléén bij profiel 4-6 of als aanvulling wanneer duur/interval niet lukt. Meet 1RM (of gebruik Borg 0-10 als alternatief) voor dosering. Eenbenig trainen is effectiever maar tijdsintensiever — overweeg bij duidelijk asymmetrische of zwakke onderste extremiteit."
+      },
+      "links": []
     }
   },
   "links": [
@@ -3169,61 +3436,61 @@ window.SEED_DATA = {
     },
     {
       "id": "mnjjixsl77y6e",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "ccq-68j351u",
       "rel": "usus"
     },
     {
       "id": "mnjjixsl49dqa",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "mmrc-8eu1fyi",
       "rel": "usus"
     },
     {
       "id": "mnjjixslvdeao",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "iswt-o7nxght",
       "rel": "usus"
     },
     {
       "id": "mnjjixsl0w17g",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "6mwt-3oaasii",
       "rel": "usus"
     },
     {
       "id": "mnjjixsle1xmh",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "mip-pimax-2tpk0k7",
       "rel": "usus"
     },
     {
       "id": "mnjjixsljiak4",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "hads-3sykkqp",
       "rel": "usus"
     },
     {
       "id": "mnjjixsl9lg7k",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "must-muj4ge0",
       "rel": "usus"
     },
     {
       "id": "mnjjixsla6yqe",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "aecopd-mob-zwuu3ei",
       "rel": "usus"
     },
     {
       "id": "mnjjixslu49j9",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "psk-up6oqkz",
       "rel": "usus"
     },
     {
       "id": "mnjjixslve2wc",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "mrc-0y16lq5",
       "rel": "usus"
     },
@@ -3979,43 +4246,43 @@ window.SEED_DATA = {
     },
     {
       "id": "lnk-copd-k01",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "gold-1-4-4ymlz7m",
       "rel": "usus"
     },
     {
       "id": "lnk-copd-k02",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "gold-a-b-e-yxticp1",
       "rel": "usus"
     },
     {
       "id": "lnk-copd-k03",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "gold-klinimetrie-esyy74n",
       "rel": "usus"
     },
     {
       "id": "lnk-copd-k04",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "fitt-5cftwyg",
       "rel": "usus"
     },
     {
       "id": "lnk-copd-k05",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "rationale-vkz68nk",
       "rel": "usus"
     },
     {
       "id": "lnk-copd-k06",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "beslisboom-uyvfibc",
       "rel": "usus"
     },
     {
       "id": "lnk-copd-k07",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "aanvullend-y4pxnu8",
       "rel": "usus"
     },
@@ -4717,19 +4984,19 @@ window.SEED_DATA = {
     },
     {
       "id": "lnk-borg-copd-01",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "borg-cr-10-1tju1k1",
       "rel": "usus"
     },
     {
       "id": "lnk-borg-copd-02",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "borg-cr-10-7mjowlc",
       "rel": "usus"
     },
     {
       "id": "lnk-borg-copd-03",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "borg-rpe-3q3dw37",
       "rel": "usus"
     },
@@ -4753,7 +5020,7 @@ window.SEED_DATA = {
     },
     {
       "id": "lnk-cat-copd-01",
-      "from": "rl-copd",
+      "from": "rl-copd-2020",
       "to": "cat-tv44uin",
       "rel": "usus"
     },
@@ -5115,6 +5382,852 @@ window.SEED_DATA = {
       "id": "lnk-jn9b2nr",
       "from": "casus-msa-lrs-002b",
       "to": "rug-neurodiag-i0j1",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-zi9ep6l",
+      "from": "rl-copd-2020",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-5984tza",
+      "from": "rl-copd-2020",
+      "to": "copd-doelen-stellen-q3f8n",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-zuvvyed",
+      "from": "rl-copd-2020",
+      "to": "copd-rode-vlaggen-d9w4p",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-q1kaxvk",
+      "from": "rl-copd-2020",
+      "to": "copd-diag-longaanval-h5t3v",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-77q34yq",
+      "from": "rl-copd-2020",
+      "to": "copd-diag-comorbiditeit-j6n2w",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-1ihrcs3",
+      "from": "rl-copd-2020",
+      "to": "copd-diag-palliatief-m2x7g",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-4ebu2au",
+      "from": "rl-copd-2020",
+      "to": "copd-voorlichting-educatie-v4p9k",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-xykbfp0",
+      "from": "rl-copd-2020",
+      "to": "copd-fysieke-activiteit-b8s2c",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-m51urgp",
+      "from": "rl-copd-2020",
+      "to": "copd-ademspiertraining-imt-g3r1p",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-lt96f7j",
+      "from": "rl-copd-2020",
+      "to": "copd-ademhalingstechnieken-t5k8n",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-briuccs",
+      "from": "rl-copd-2020",
+      "to": "copd-ontspanningstechnieken-w2q5r",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-01l3vix",
+      "from": "rl-copd-2020",
+      "to": "copd-houdingsaanpassingen-y1k6s",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-m379qba",
+      "from": "rl-copd-2020",
+      "to": "copd-mucusklaring-e4n9t",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-gow9qc8",
+      "from": "rl-copd-2020",
+      "to": "copd-aanvullende-trainingsmod-f7h3q",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-ufadurw",
+      "from": "rl-copd-2020",
+      "to": "copd-supervisie-duur-freq-a9d4z",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-sqfhqef",
+      "from": "rl-copd-2020",
+      "to": "copd-ther-longaanval-c7k2f",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-w02qtdj",
+      "from": "rl-copd-2020",
+      "to": "copd-ther-palliatief-n8v5x",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-ykgh89k",
+      "from": "rl-copd-2020",
+      "to": "copd-evaluatie-afsluiting-s3p7w",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-ipafa4b",
+      "from": "copd-patientenprofielen-r7k2m",
+      "to": "ccq-68j351u",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-h2f7xbv",
+      "from": "copd-patientenprofielen-r7k2m",
+      "to": "cat-tv44uin",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-h4ppz0f",
+      "from": "copd-patientenprofielen-r7k2m",
+      "to": "mmrc-8eu1fyi",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-mshlnq3",
+      "from": "copd-patientenprofielen-r7k2m",
+      "to": "gold-a-b-e-yxticp1",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-icniys3",
+      "from": "copd-patientenprofielen-r7k2m",
+      "to": "gold-1-4-4ymlz7m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ij3du67",
+      "from": "copd-doelen-stellen-q3f8n",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-s0b082m",
+      "from": "copd-doelen-stellen-q3f8n",
+      "to": "ccq-68j351u",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-yxhjuow",
+      "from": "copd-doelen-stellen-q3f8n",
+      "to": "cat-tv44uin",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-kximrsm",
+      "from": "copd-rode-vlaggen-d9w4p",
+      "to": "ppc-e1suzs2",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-4uswrxb",
+      "from": "copd-diag-longaanval-h5t3v",
+      "to": "aecopd-mob-zwuu3ei",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-04brv8e",
+      "from": "copd-diag-comorbiditeit-j6n2w",
+      "to": "hads-3sykkqp",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-xcdpsjm",
+      "from": "copd-diag-comorbiditeit-j6n2w",
+      "to": "cirs",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-3f1t22w",
+      "from": "copd-voorlichting-educatie-v4p9k",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-qgj9ls8",
+      "from": "copd-fysieke-activiteit-b8s2c",
+      "to": "fitt-5cftwyg",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-v8acp5l",
+      "from": "copd-ademspiertraining-imt-g3r1p",
+      "to": "mip-pimax-2tpk0k7",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-vo72ykk",
+      "from": "copd-ademspiertraining-imt-g3r1p",
+      "to": "copd-ademhalingstechnieken-t5k8n",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-r2uvdk9",
+      "from": "copd-ademspiertraining-imt-g3r1p",
+      "to": "copd-ontspanningstechnieken-w2q5r",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ly2gm38",
+      "from": "copd-ademspiertraining-imt-g3r1p",
+      "to": "copd-houdingsaanpassingen-y1k6s",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-qm6vzph",
+      "from": "copd-ademspiertraining-imt-g3r1p",
+      "to": "copd-mucusklaring-e4n9t",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-6kx54j0",
+      "from": "copd-ademhalingstechnieken-t5k8n",
+      "to": "copd-ontspanningstechnieken-w2q5r",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-6fqoah6",
+      "from": "copd-ademhalingstechnieken-t5k8n",
+      "to": "copd-houdingsaanpassingen-y1k6s",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-3yqegmj",
+      "from": "copd-ademhalingstechnieken-t5k8n",
+      "to": "copd-mucusklaring-e4n9t",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-dgcz383",
+      "from": "copd-ontspanningstechnieken-w2q5r",
+      "to": "copd-houdingsaanpassingen-y1k6s",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-0x67xyv",
+      "from": "copd-ontspanningstechnieken-w2q5r",
+      "to": "copd-mucusklaring-e4n9t",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-3kbrtv7",
+      "from": "copd-houdingsaanpassingen-y1k6s",
+      "to": "copd-mucusklaring-e4n9t",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-f5otc8z",
+      "from": "copd-ademhalingstechnieken-t5k8n",
+      "to": "mmrc-8eu1fyi",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-yr1yltm",
+      "from": "copd-ademhalingstechnieken-t5k8n",
+      "to": "borg-cr-10-1tju1k1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-eias21k",
+      "from": "copd-houdingsaanpassingen-y1k6s",
+      "to": "mmrc-8eu1fyi",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-du1d6og",
+      "from": "copd-houdingsaanpassingen-y1k6s",
+      "to": "borg-cr-10-1tju1k1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-jlo2t27",
+      "from": "copd-mucusklaring-e4n9t",
+      "to": "mmrc-8eu1fyi",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-jeqp8xb",
+      "from": "copd-mucusklaring-e4n9t",
+      "to": "borg-cr-10-1tju1k1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-cn8939i",
+      "from": "copd-ontspanningstechnieken-w2q5r",
+      "to": "mmrc-8eu1fyi",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-o0ks2ky",
+      "from": "copd-ontspanningstechnieken-w2q5r",
+      "to": "borg-cr-10-1tju1k1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-352so1w",
+      "from": "copd-aanvullende-trainingsmod-f7h3q",
+      "to": "tl-trainingszones",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-jxsguqf",
+      "from": "copd-aanvullende-trainingsmod-f7h3q",
+      "to": "fitt-5cftwyg",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-hyg3pie",
+      "from": "copd-aanvullende-trainingsmod-f7h3q",
+      "to": "spo-vr0dlo5",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-e9lvo8a",
+      "from": "copd-supervisie-duur-freq-a9d4z",
+      "to": "fitt-5cftwyg",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-edv2h07",
+      "from": "copd-ther-longaanval-c7k2f",
+      "to": "aecopd-mob-zwuu3ei",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-itkh4kh",
+      "from": "copd-ther-longaanval-c7k2f",
+      "to": "stoplicht-s6kx9h0",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-75ecerj",
+      "from": "copd-ther-longaanval-c7k2f",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-a2wd8xb",
+      "from": "copd-evaluatie-afsluiting-s3p7w",
+      "to": "ccq-68j351u",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-7rt69b0",
+      "from": "copd-evaluatie-afsluiting-s3p7w",
+      "to": "cat-tv44uin",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-ukwmcwb",
+      "from": "copd-evaluatie-afsluiting-s3p7w",
+      "to": "6mwt-3oaasii",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-onww510",
+      "from": "copd-evaluatie-afsluiting-s3p7w",
+      "to": "iswt-o7nxght",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-vosj8wa",
+      "from": "casus-ez-diag-004a",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ss5qa9r",
+      "from": "casus-ez-diag-004a",
+      "to": "copd-doelen-stellen-q3f8n",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-fkxb5er",
+      "from": "casus-ez-diag-004a",
+      "to": "copd-rode-vlaggen-d9w4p",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-fbt0gdh",
+      "from": "casus-ez-diag-004b",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-s4raqh9",
+      "from": "casus-ez-diag-004b",
+      "to": "copd-doelen-stellen-q3f8n",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-f7hj185",
+      "from": "casus-ez-beh-004",
+      "to": "copd-voorlichting-educatie-v4p9k",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-j793npq",
+      "from": "casus-ez-beh-004",
+      "to": "copd-fysieke-activiteit-b8s2c",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-lsbgcwz",
+      "from": "casus-ez-beh-004",
+      "to": "copd-ademspiertraining-imt-g3r1p",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-e9dvq1e",
+      "from": "casus-ez-beh-004",
+      "to": "copd-ademhalingstechnieken-t5k8n",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-hp0vnpf",
+      "from": "casus-ez-beh-004",
+      "to": "copd-ontspanningstechnieken-w2q5r",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-oqoka1e",
+      "from": "casus-ez-beh-004",
+      "to": "copd-houdingsaanpassingen-y1k6s",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-0zbdzlw",
+      "from": "casus-ez-beh-004",
+      "to": "copd-mucusklaring-e4n9t",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-uhp0tjx",
+      "from": "casus-ez-beh-004",
+      "to": "copd-aanvullende-trainingsmod-f7h3q",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-pr49h6p",
+      "from": "casus-ez-beh-004",
+      "to": "copd-supervisie-duur-freq-a9d4z",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-lcdkjvt",
+      "from": "gold-1-4-4ymlz7m",
+      "to": "gold-a-b-e-yxticp1",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-7tnmbmi",
+      "from": "gold-a-b-e-yxticp1",
+      "to": "gold-klinimetrie-esyy74n",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-xlig1fs",
+      "from": "gold-1-4-4ymlz7m",
+      "to": "gold-klinimetrie-esyy74n",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-bmk3bsj",
+      "from": "rationale-vkz68nk",
+      "to": "beslisboom-uyvfibc",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-anzmhck",
+      "from": "beslisboom-uyvfibc",
+      "to": "aanvullend-y4pxnu8",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-89zazt5",
+      "from": "rationale-vkz68nk",
+      "to": "aanvullend-y4pxnu8",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-drp3sdf",
+      "from": "rationale-vkz68nk",
+      "to": "mmrc-8eu1fyi",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-m250klk",
+      "from": "rationale-vkz68nk",
+      "to": "borg-cr-10-1tju1k1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-raa02mb",
+      "from": "fitt-5cftwyg",
+      "to": "6mwt-3oaasii",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-oa0j5tj",
+      "from": "fitt-5cftwyg",
+      "to": "iswt-o7nxght",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-fgohin4",
+      "from": "fitt-5cftwyg",
+      "to": "borg-cr-10-7mjowlc",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-t1bml8t",
+      "from": "gold-klinimetrie-esyy74n",
+      "to": "ccq-68j351u",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-ldgadde",
+      "from": "gold-klinimetrie-esyy74n",
+      "to": "cat-tv44uin",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-zk5zzgq",
+      "from": "gold-klinimetrie-esyy74n",
+      "to": "mmrc-8eu1fyi",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-yi2ypl8",
+      "from": "gold-klinimetrie-esyy74n",
+      "to": "6mwt-3oaasii",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-jojqlus",
+      "from": "gold-klinimetrie-esyy74n",
+      "to": "iswt-o7nxght",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-ijcfvjc",
+      "from": "casus-ez-diag-004a",
+      "to": "casus-ez-diag-004b",
+      "rel": "sequens"
+    },
+    {
+      "id": "lnk-eskac7g",
+      "from": "rl-copd-2020",
+      "to": "copd-anamnese-structuur-a1n2m",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-618paqs",
+      "from": "rl-copd-2020",
+      "to": "copd-lichamelijk-onderzoek-l3k7p",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-1lcx3lb",
+      "from": "rl-copd-2020",
+      "to": "copd-duur-intervaltraining-d4r8x",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-ufu20ai",
+      "from": "rl-copd-2020",
+      "to": "copd-spierkrachttraining-s5w2k",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-37roksd",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "ccq-68j351u",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-ru2m60c",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "cat-tv44uin",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-zvl9sf6",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "mmrc-8eu1fyi",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-jliast5",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "borg-cr-10-1tju1k1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-7hxz8h8",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "borg-cr-10-7mjowlc",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-oe2cb2z",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "hads-3sykkqp",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-4y9qxgs",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "psk-up6oqkz",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-5054964",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "tug-ej2xkyw",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-d1z6g8t",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "must-muj4ge0",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-1z2hz0m",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-9ujtvfs",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "copd-doelen-stellen-q3f8n",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-yjct72w",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "copd-rode-vlaggen-d9w4p",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-0c1hjg1",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "copd-diag-comorbiditeit-j6n2w",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-vgekas0",
+      "from": "copd-anamnese-structuur-a1n2m",
+      "to": "copd-diag-longaanval-h5t3v",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-cek61yj",
+      "from": "casus-ez-diag-004a",
+      "to": "copd-anamnese-structuur-a1n2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-qbbul2n",
+      "from": "copd-lichamelijk-onderzoek-l3k7p",
+      "to": "6mwt-3oaasii",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-gv4dk9y",
+      "from": "copd-lichamelijk-onderzoek-l3k7p",
+      "to": "iswt-o7nxght",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-f5rbvr9",
+      "from": "copd-lichamelijk-onderzoek-l3k7p",
+      "to": "spo-vr0dlo5",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-00stsiy",
+      "from": "copd-lichamelijk-onderzoek-l3k7p",
+      "to": "microfet-9nz5lil",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-aolreug",
+      "from": "copd-lichamelijk-onderzoek-l3k7p",
+      "to": "mip-pimax-2tpk0k7",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-toldb9l",
+      "from": "copd-lichamelijk-onderzoek-l3k7p",
+      "to": "tug-ej2xkyw",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-r6q1wc6",
+      "from": "copd-lichamelijk-onderzoek-l3k7p",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ku0q8b8",
+      "from": "copd-lichamelijk-onderzoek-l3k7p",
+      "to": "copd-rode-vlaggen-d9w4p",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-i2dv93v",
+      "from": "copd-lichamelijk-onderzoek-l3k7p",
+      "to": "copd-anamnese-structuur-a1n2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-6o5yi3v",
+      "from": "casus-ez-diag-004b",
+      "to": "copd-lichamelijk-onderzoek-l3k7p",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-hqtm5cl",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "6mwt-3oaasii",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-aoj0hvj",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "iswt-o7nxght",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-d6mc8x0",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "borg-cr-10-1tju1k1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-m0h7hut",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "borg-cr-10-7mjowlc",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-677aui5",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "spo-vr0dlo5",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-yf2dfiw",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "fitt-5cftwyg",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-z1ty8a9",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-dwetgvb",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "copd-supervisie-duur-freq-a9d4z",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-e8fvncl",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "copd-aanvullende-trainingsmod-f7h3q",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-c5j67tv",
+      "from": "copd-duur-intervaltraining-d4r8x",
+      "to": "tl-trainingszones",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-947l1mg",
+      "from": "copd-spierkrachttraining-s5w2k",
+      "to": "microfet-9nz5lil",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-46mc6b3",
+      "from": "copd-spierkrachttraining-s5w2k",
+      "to": "borg-cr-10-7mjowlc",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-hb9yovm",
+      "from": "copd-spierkrachttraining-s5w2k",
+      "to": "copd-duur-intervaltraining-d4r8x",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-y2915u2",
+      "from": "copd-spierkrachttraining-s5w2k",
+      "to": "fitt-5cftwyg",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-zatmabs",
+      "from": "copd-spierkrachttraining-s5w2k",
+      "to": "copd-patientenprofielen-r7k2m",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-sv5cb0u",
+      "from": "copd-spierkrachttraining-s5w2k",
+      "to": "copd-supervisie-duur-freq-a9d4z",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-m00aflz",
+      "from": "copd-spierkrachttraining-s5w2k",
+      "to": "copd-aanvullende-trainingsmod-f7h3q",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-3qkf5r7",
+      "from": "casus-ez-beh-004",
+      "to": "copd-duur-intervaltraining-d4r8x",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-dib7fob",
+      "from": "casus-ez-beh-004",
+      "to": "copd-spierkrachttraining-s5w2k",
       "rel": "nexus"
     }
   ],
@@ -5584,7 +6697,7 @@ window.SEED_DATA = {
       "tag": "rca"
     },
     {
-      "object": "rl-copd",
+      "object": "rl-copd-2020",
       "tag": "rca"
     },
     {
@@ -6122,6 +7235,94 @@ window.SEED_DATA = {
     {
       "object": "rug-samenwerking-b6c9",
       "tag": "msa"
+    },
+    {
+      "object": "copd-patientenprofielen-r7k2m",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-doelen-stellen-q3f8n",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-rode-vlaggen-d9w4p",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-diag-longaanval-h5t3v",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-diag-comorbiditeit-j6n2w",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-diag-palliatief-m2x7g",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-voorlichting-educatie-v4p9k",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-fysieke-activiteit-b8s2c",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-ademspiertraining-imt-g3r1p",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-ademhalingstechnieken-t5k8n",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-ontspanningstechnieken-w2q5r",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-houdingsaanpassingen-y1k6s",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-mucusklaring-e4n9t",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-aanvullende-trainingsmod-f7h3q",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-supervisie-duur-freq-a9d4z",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-ther-longaanval-c7k2f",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-ther-palliatief-n8v5x",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-evaluatie-afsluiting-s3p7w",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-anamnese-structuur-a1n2m",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-lichamelijk-onderzoek-l3k7p",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-duur-intervaltraining-d4r8x",
+      "tag": "rca"
+    },
+    {
+      "object": "copd-spierkrachttraining-s5w2k",
+      "tag": "rca"
     }
   ]
 };
