@@ -98,9 +98,9 @@ window.SEED_DATA = {
       "afk": "HADS",
       "title": "Hospital Anxiety and Depression Scale",
       "fields": {
-        "watMeetHet": "Angst (7 items) en depressie (7 items) bij patiënten met somatische aandoening. Cognitieve component van depressie staat centraal (niet somatische klachten als vermoeidheid).",
-        "scoringscriteria": "14 items, 4-puntsschaal (0–3). Twee subschalen elk 0–21.<br><b>0–7</b> = normaal | <b>8–10</b> = borderline | <b>≥11</b> = aanwezig",
-        "normwaarden": "Angstschaal ≥8 = verhoogde kans op angststoornis<br>Depressieschaal ≥8 = verhoogde kans op depressie<br>MCiD = <b>1,5 punten</b>",
+        "watMeetHet": "Angst (7 items) en depressie (7 items) bij patiënten met somatische aandoening. Cognitieve component van depressie staat centraal (niet somatische klachten als vermoeidheid). <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "scoringscriteria": "14 items, 4-puntsschaal (0–3). Twee subschalen elk 0–21.<br><b>0–7</b> = normaal | <b>8–10</b> = borderline | <b>≥11</b> = aanwezig <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "normwaarden": "Angstschaal ≥8 = verhoogde kans op angststoornis<br>Depressieschaal ≥8 = verhoogde kans op depressie<br>MCiD = <b>1,5 punten</b> <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Psychische comorbiditeit vermindert therapietrouw en herstelprognose. Score ≥8 op een subschaal: bespreek uitslag met behandelteam, overweeg doorverwijzing psycholoog. Relevant bij COPD, oncologie én lage rugpijn (optioneel instrument KNGF 2021 — inzetten bij vermoeden angst/depressie als prognostische factor, profiel 2/3)."
       },
       "links": [
@@ -893,9 +893,9 @@ window.SEED_DATA = {
       "afk": "PSK",
       "title": "Patiënt Specifieke Klachtenlijst",
       "fields": {
-        "watMeetHet": "Patiëntgerichte meting van uitvoerbaarheid van 3 zelfgekozen activiteiten die de patiënt het belangrijkst vindt. Schaal 0–10 per activiteit. Verplicht meetinstrument bij lage rugpijn (KNGF 2021) naast NPRS en QBPDS. Breed toepasbaar bij alle patiëntgroepen.",
-        "scoringscriteria": "Patiënt benoemt 3 eigen doelactiviteiten (bij lage rugpijn; bij andere aandoeningen 3–5). Scoort uitvoerbaarheid per activiteit op 0–10 (0 = niet kunnen, 10 = volledig normaal). Gemiddelde = totaalscore. Afname bij intake, tussentijdse evaluatie en afsluiting.",
-        "normwaarden": "MCiD: <b>2 punten</b> op 10-puntsschaal (verschil voor vs. na behandeling).<br>Doelwaarde: ≥7 per activiteit voor acceptabele functie.<br>Bij lage rugpijn: onderdeel verplichte set NPRS + QBPDS + PSK (KNGF 2021).",
+        "watMeetHet": "Patiëntgerichte meting van uitvoerbaarheid van 3 zelfgekozen activiteiten die de patiënt het belangrijkst vindt. Schaal 0–10 per activiteit. Verplicht meetinstrument bij lage rugpijn (KNGF 2021) naast NPRS en QBPDS. Breed toepasbaar bij alle patiëntgroepen. <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
+        "scoringscriteria": "Patiënt benoemt 3 eigen doelactiviteiten (bij lage rugpijn; bij andere aandoeningen 3–5). Scoort uitvoerbaarheid per activiteit op 0–10 (0 = niet kunnen, 10 = volledig normaal). Gemiddelde = totaalscore. Afname bij intake, tussentijdse evaluatie en afsluiting. <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
+        "normwaarden": "MCiD: <b>2 punten</b> op 10-puntsschaal (verschil voor vs. na behandeling).<br>Doelwaarde: ≥7 per activiteit voor acceptabele functie.<br>Bij lage rugpijn: onderdeel verplichte set NPRS + QBPDS + PSK (KNGF 2021). <sup data-src=\"rl-rug-2021\" data-p=\"12\">[p12]</sup>",
         "implicatie": "Verplicht meetinstrument bij lage rugpijn (KNGF 2021). Sterk patiëntgericht: behandeldoelen direct gebaseerd op wat patiënt wil bereiken. Verhoogt therapietrouw en intrinsieke motivatie. Responsief voor individuele verandering; niet geschikt voor groepsvergelijkingen."
       },
       "links": [
@@ -1192,9 +1192,9 @@ window.SEED_DATA = {
       "afk": "NRS",
       "title": "Numerieke Beoordelingsschaal (6–20) — pijnintensiteit",
       "fields": {
-        "watMeetHet": "Pijnintensiteit via numerieke schaal 0–10 (NPRS) of 6–20 (Borg-variant). Mondeling of schriftelijk. Duur: &lt;1 min. Breed toepasbaar bij alle patiëntgroepen. Bij lage rugpijn: gemiddelde pijn afgelopen 24 uur als standaardvraag (KNGF-richtlijn LRP 2021).",
-        "scoringscriteria": "Patiënt geeft mondeling of schriftelijk een getal aan.<br><b>NPRS 0–10:</b> gemiddelde pijnintensiteit afgelopen 24 uur.<br><b>Borg 6–20:</b> ervaren pijn/inspanning; score × 10 ≈ hartfrequentie.<br>Afname bij intake, tussentijdse evaluatie en afsluiting.",
-        "normwaarden": "0 = geen pijn · 1–3 = milde pijn · 4–6 = matige pijn · 7–10 = ernstige pijn<br>MCiD: <b>2 punten</b> (0–10 schaal) of <b>≥30% verbetering</b> t.o.v. baseline<br>Schaal 6–20 variant: 6 = geen inspanning/pijn, 20 = maximale inspanning/pijn",
+        "watMeetHet": "Pijnintensiteit via numerieke schaal 0–10 (NPRS) of 6–20 (Borg-variant). Mondeling of schriftelijk. Duur: &lt;1 min. Breed toepasbaar bij alle patiëntgroepen. Bij lage rugpijn: gemiddelde pijn afgelopen 24 uur als standaardvraag (KNGF-richtlijn LRP 2021). <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
+        "scoringscriteria": "Patiënt geeft mondeling of schriftelijk een getal aan.<br><b>NPRS 0–10:</b> gemiddelde pijnintensiteit afgelopen 24 uur.<br><b>Borg 6–20:</b> ervaren pijn/inspanning; score × 10 ≈ hartfrequentie.<br>Afname bij intake, tussentijdse evaluatie en afsluiting. <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
+        "normwaarden": "0 = geen pijn · 1–3 = milde pijn · 4–6 = matige pijn · 7–10 = ernstige pijn<br>MCiD: <b>2 punten</b> (0–10 schaal) of <b>≥30% verbetering</b> t.o.v. baseline<br>Schaal 6–20 variant: 6 = geen inspanning/pijn, 20 = maximale inspanning/pijn <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
         "implicatie": "Breed toepasbaar bij alle patiëntgroepen. Bij lage rugpijn: verplicht meetinstrument in alle drie behandelprofielen (KNGF 2021). Klinisch relevante verbetering = ≥30% t.o.v. baseline. Gebruik consistente schaalversie binnen één patiënt. Bij hartrevalidatie en COPD: NRS gecombineerd met Borg voor onderscheid pijn vs. vermoeidheid."
       },
       "links": [
@@ -2037,8 +2037,11 @@ window.SEED_DATA = {
       "afk": "RUG-2021",
       "title": "KNGF-richtlijn Lage rugpijn en lumbosacraal radiculair syndroom — 2021",
       "fields": {
-        "scope": "Fysiotherapie en oefentherapie bij lage rugpijn (pijn tussen onderste ribben en bilplooi, eventueel met ischialgie) en lumbosacraal radiculair syndroom (LRS). Acute (&lt;6 wkn), subacute (6-12 wkn) en chronische (&gt;12 wkn) fase. Zowel eerste episode als recidief. Exclusies: ankyloserende spondylitis, maligniteiten, infecties, wervelfracturen, ernstige neurologische symptomen, LRS met ernstige parese (MRC ≤3/5) en/of ernstige pijn (NPRS ≥8), ≤16 jaar, zwangerschap, coccygodynie, visceraal gerelateerd, &lt;12 maanden na spinale chirurgie.",
-        "kernaanbevelingen": "• Drie behandelprofielen op basis van risico op persisterende klachten (laag/matig/hoog)<br>• Verplichte meetinstrumenten: NPRS, QBPDS, PSK bij alle profielen<br>• Oefentherapie als kerninterventie bij profiel 2 en 3; instructie zelfstandig oefenen bij profiel 1<br>• Gedragsmatige behandeling bij dominante psychosociale factoren (profiel 3): exposure in vivo, graded activity, CGT/ACT, relaxatie, motivational interviewing<br>• Mobilisatie/manipulatie alleen als supplement bij profiel 2/3 bij mechanisch probleem; bij voorkeur niet bij LRS<br>• Massage alleen kort bij verhoogde spierspanning + sterke voorkeur + gecombineerd met actieve behandeling<br>• TENS en interferentie NIET toepassen<br>• Tijdcontingente aanpak heeft voorkeur boven pijncontingent<br>• LRS: conservatief beleid eerste 3 maanden; verwijs bij klachten &gt;6-8 wkn zonder verbetering<br>• Klinisch relevante verbetering = ≥30% t.o.v. baseline"
+        "scope": "Fysiotherapie en oefentherapie bij lage rugpijn (pijn tussen onderste ribben en bilplooi, eventueel met ischialgie) en lumbosacraal radiculair syndroom (LRS). Acute (&lt;6 wkn), subacute (6-12 wkn) en chronische (&gt;12 wkn) fase. Zowel eerste episode als recidief. Exclusies: ankyloserende spondylitis, maligniteiten, infecties, wervelfracturen, ernstige neurologische symptomen, LRS met ernstige parese (MRC ≤3/5) en/of ernstige pijn (NPRS ≥8), ≤16 jaar, zwangerschap, coccygodynie, visceraal gerelateerd, &lt;12 maanden na spinale chirurgie. <sup data-src=\"rl-rug-2021\" data-p=\"7\">[p7]</sup>",
+        "kernaanbevelingen": "• Drie behandelprofielen op basis van risico op persisterende klachten (laag/matig/hoog)<br>• Verplichte meetinstrumenten: NPRS, QBPDS, PSK bij alle profielen<br>• Oefentherapie als kerninterventie bij profiel 2 en 3; instructie zelfstandig oefenen bij profiel 1<br>• Gedragsmatige behandeling bij dominante psychosociale factoren (profiel 3): exposure in vivo, graded activity, CGT/ACT, relaxatie, motivational interviewing<br>• Mobilisatie/manipulatie alleen als supplement bij profiel 2/3 bij mechanisch probleem; bij voorkeur niet bij LRS<br>• Massage alleen kort bij verhoogde spierspanning + sterke voorkeur + gecombineerd met actieve behandeling<br>• TENS en interferentie NIET toepassen<br>• Tijdcontingente aanpak heeft voorkeur boven pijncontingent<br>• LRS: conservatief beleid eerste 3 maanden; verwijs bij klachten &gt;6-8 wkn zonder verbetering<br>• Klinisch relevante verbetering = ≥30% t.o.v. baseline",
+        "doelen": "Leidraad voor fysiotherapeutische en oefentherapeutische diagnostiek en behandeling van patiënten met lage rugpijn, gebaseerd op systematische evaluatie van wetenschappelijk onderzoek en weging van patiëntvoorkeuren en professionele expertise.<sup data-src=\"rl-rug-2021\" data-p=\"7\">[p7]</sup>",
+        "indicaties": "Patiënt met lage rugpijn (pijn tussen onderste ribben en bilplooien, eventueel met uitstraling naar bil/been) of LRS (radiculaire pijn in bil/been met prikkeling- of uitvalsverschijnselen suggestief voor specifieke lumbosacrale zenuwwortelaandoening).<sup data-src=\"rl-rug-2021\" data-p=\"7\">[p7]</sup>",
+        "contraindicaties": "<ul><li>Ernstige oorzaak van rugpijn/LRS (rode vlaggen: spondylitis ankylopoetica, maligniteiten, infecties, wervelfracturen)<sup data-src=\"rl-rug-2021\" data-p=\"8\">[p8]</sup></li><li>LRS met ernstige motorische uitval (MRC-score &le; 3/5) en/of ernstige pijn (NPRS &ge; 8)<sup data-src=\"rl-rug-2021\" data-p=\"8\">[p8]</sup></li><li>Leeftijd &lt; 16 jaar</li><li>Zwangerschapsgerelateerde rugpijn</li><li>Coccygodynie (stuitpijn)</li><li>Viscerale oorzaak</li><li>Klachten gerelateerd aan operatieve ingreep in de afgelopen 12 maanden<sup data-src=\"rl-rug-2021\" data-p=\"8\">[p8]</sup></li></ul>"
       },
       "links": [
         {
@@ -2053,9 +2056,9 @@ window.SEED_DATA = {
       "afk": "SBST",
       "title": "STarT Back Screening Tool",
       "fields": {
-        "watMeetHet": "Risico op aanhoudende lage rugklachten op basis van 9 fysieke en psychosociale items. Duur: &lt;5 min. KNGF-richtlijn LRP 2021: overweeg gebruik ter ondersteuning van risico-evaluatie, maar baseer profilering nooit uitsluitend op SBST.",
-        "scoringscriteria": "9 items (eens/oneens).<br><b>Totaalscore:</b> items 1–9 (0–9).<br><b>Psychosociale subschaal:</b> items 5–9 (0–5).<br><b>Laag risico:</b> Totaalscore ≤3.<br><b>Matig risico:</b> Totaalscore ≥4 én psychosociale subschaal ≤3.<br><b>Hoog risico:</b> Psychosociale subschaal ≥4.",
-        "normwaarden": "De score classificeert de patiënt in een risicoprofiel (laag/matig/hoog) dat de behandelintensiteit stuurt.<br>KNGF 2021: andere classificatiesystemen (TCS/Delitto, CB-CFT/O'Sullivan) worden nog niet aanbevolen wegens onvoldoende bewijs.",
+        "watMeetHet": "Risico op aanhoudende lage rugklachten op basis van 9 fysieke en psychosociale items. Duur: &lt;5 min. KNGF-richtlijn LRP 2021: overweeg gebruik ter ondersteuning van risico-evaluatie, maar baseer profilering nooit uitsluitend op SBST. <sup data-src=\"rl-rug-2021\" data-p=\"20\">[p20]</sup><sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "scoringscriteria": "9 items (eens/oneens).<br><b>Totaalscore:</b> items 1–9 (0–9).<br><b>Psychosociale subschaal:</b> items 5–9 (0–5).<br><b>Laag risico:</b> Totaalscore ≤3.<br><b>Matig risico:</b> Totaalscore ≥4 én psychosociale subschaal ≤3.<br><b>Hoog risico:</b> Psychosociale subschaal ≥4. <sup data-src=\"rl-rug-2021\" data-p=\"57–58\">[p57–58]</sup>",
+        "normwaarden": "De score classificeert de patiënt in een risicoprofiel (laag/matig/hoog) dat de behandelintensiteit stuurt.<br>KNGF 2021: andere classificatiesystemen (TCS/Delitto, CB-CFT/O'Sullivan) worden nog niet aanbevolen wegens onvoldoende bewijs. <sup data-src=\"rl-rug-2021\" data-p=\"20\">[p20]</sup>",
         "implicatie": "Ondersteunt profielkeuze: profiel 1 (laag, max 3 sessies), profiel 2 (matig, oefentherapie), profiel 3 (hoog, psychosociaal/gedragsmatig). Baseer evaluatie nooit uitsluitend op SBST — combineer met klinisch redeneren, anamnese en prognostische factoren (KNGF 2021)."
       },
       "links": [
@@ -2071,9 +2074,9 @@ window.SEED_DATA = {
       "afk": "QBPDS",
       "title": "Quebec Back Pain Disability Scale",
       "fields": {
-        "watMeetHet": "Functionele beperkingen bij patiënten met lage rugklachten tijdens 20 dagelijkse activiteiten (o.a. bed opmaken, tillen, lopen, zitten, staan, traplopen). Aanbevolen door KNGF-richtlijn LRP 2021 als verplicht meetinstrument voor alle behandelprofielen.",
-        "scoringscriteria": "20 items gescoord op een 6-punts Likert-schaal (0 = geen moeite, 5 = niet in staat). Totaalscore 0–100. Afname bij intake, tussentijdse evaluatie (profielafhankelijk) en afsluiting.",
-        "normwaarden": "Hogere score = meer beperkingen.<br>MCiD: <b>≥20 punten</b> of <b>≥30% verbetering</b> t.o.v. baseline (KNGF 2021).<br>Score &gt;50 duidt op ernstige functionele beperkingen.",
+        "watMeetHet": "Functionele beperkingen bij patiënten met lage rugklachten tijdens 20 dagelijkse activiteiten (o.a. bed opmaken, tillen, lopen, zitten, staan, traplopen). Aanbevolen door KNGF-richtlijn LRP 2021 als verplicht meetinstrument voor alle behandelprofielen. <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
+        "scoringscriteria": "20 items gescoord op een 6-punts Likert-schaal (0 = geen moeite, 5 = niet in staat). Totaalscore 0–100. Afname bij intake, tussentijdse evaluatie (profielafhankelijk) en afsluiting. <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
+        "normwaarden": "Hogere score = meer beperkingen.<br>MCiD: <b>≥20 punten</b> of <b>≥30% verbetering</b> t.o.v. baseline (KNGF 2021).<br>Score &gt;50 duidt op ernstige functionele beperkingen. <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
         "implicatie": "Verplicht meetinstrument naast NPRS en PSK bij alle profielen (KNGF 2021). Inzicht in welke specifieke ADL-taken belemmerd worden; dient als evaluatiemiddel voor functioneel herstel. Klinisch relevante verbetering = ≥30% t.o.v. baseline."
       },
       "links": [
@@ -2089,9 +2092,9 @@ window.SEED_DATA = {
       "afk": "Classificatie",
       "title": "Rugpijn — Classificatie Aspecifiek vs. LRS",
       "fields": {
-        "kern": "Onderscheid maken tussen aspecifieke lage rugpijn, referred pain en het Lumbosacraal Radiculair Syndroom (LRS). KNGF-richtlijn LRP 2021.",
-        "toelichting": "<b>Aspecifieke lage rugpijn:</b> Pijn tussen onderste ribben en bilplooi, zonder aanwijsbare specifieke oorzaak (±90% in eerstelijn). Mogelijk met uitstraling naar bil/been.<br><br><b>Referred pain (doorverwijspijn):</b> Diffuse uitstraling naar been, niet onder de knie, minder intens dan rugpijn, geen dermatomaal patroon, geen neurologische uitval.<br><br><b>LRS:</b> Radiculaire pijn in bil/been langs dermatoom (erger dan rugpijn), gepaard met ≥1: paresthesie, hypo-esthesie, parese (MRC), verlaagde reflexen. Meestal HNP L4-L5 of L5-S1 (90-98%). Positieve Lasègue (SLR).<br><br><b>Fasen:</b> Acuut (&lt;6 wkn), subacuut (6-12 wkn), chronisch (&gt;12 wkn).<br><b>Prevalentie:</b> Jaarprev. 1,4-20%; levenstijdprev. 50-80%; piekleeftijd 40-80 jaar.<br><b>Pathofysiologie:</b> Multifactorieel (biologisch, psychologisch, sociaal). Mogelijk nociplastische pijn/centrale sensitisatie.",
-        "implicatie": "Bij LRS is de prognose vaak gunstig (75% herstelt spontaan in 3 mnd), maar is alertheid op cauda-verschijnselen en progressieve uitval essentieel. Bij ≥90% van lage rugpijn in de eerstelijn is geen specifieke oorzaak aantoonbaar."
+        "kern": "De richtlijn onderscheidt lage rugpijn (aspecifiek) en lumbosacraal radiculair syndroom (LRS) als twee klinische entiteiten met deels overlappende maar ook afzonderlijke diagnostische en therapeutische trajecten.<sup data-src=\"rl-rug-2021\" data-p=\"7\">[p7]</sup>",
+        "toelichting": "<b>Lage rugpijn:</b> pijn tussen de onderste ribben en bilplooien, eventueel met uitstraling naar één of beide billen en/of benen, zonder kenmerken van een onderliggende ernstige pathologie.<sup data-src=\"rl-rug-2021\" data-p=\"7\">[p7]</sup> Een duidelijke pathofysiologische oorzaak is meestal niet aantoonbaar; ernstige oorzaken worden bij minder dan 1% gevonden in de eerste lijn.<sup data-src=\"rl-rug-2021\" data-p=\"9\">[p9]</sup><br><br><b>LRS:</b> pijn in de bil en/of in het been, uitstralend, vergezeld van een of meerdere klachten of symptomen suggestief voor een specifieke lumbosacrale zenuwwortelaandoening: prikkelingsverschijnselen (paresthesieën) en neurologische uitvalsverschijnselen (hypesthesie/hypalgesie, parese, verlaagde reflexen).<sup data-src=\"rl-rug-2021\" data-p=\"7\">[p7]</sup> Meestal veroorzaakt door een hernia nuclei pulposi (HNP), in de meeste gevallen op niveau L4–L5 of L5–S1.<sup data-src=\"rl-rug-2021\" data-p=\"9\">[p9]</sup> In 90–98% bevindt de hernia zich ter hoogte van L4–L5 of L5–S1.<sup data-src=\"rl-rug-2021\" data-p=\"36\">[p36]</sup><br><br><b>Onderscheid gerefereerde vs. radiculaire pijn:</b> gerefereerde pijn in het been wordt over het algemeen aangegeven als diffuse pijn, straalt niet uit onder de knie en is minder intens dan de lage rugpijn. Bij LRS is de pijn typisch schietend, scherp, langs een specifiek dermatoom en vaak erger in het been dan in de rug.<sup data-src=\"rl-rug-2021\" data-p=\"10\">[p10]</sup>",
+        "implicatie": "Bepaal bij elke patiënt met rugklachten of er sprake is van aspecifieke lage rugpijn of LRS. Het onderscheid bepaalt het verdere diagnostische traject (wel/geen neurologisch onderzoek), de profielindeling, en de behandelstrategie."
       },
       "links": []
     },
@@ -2101,9 +2104,9 @@ window.SEED_DATA = {
       "afk": "Gelaagde Zorg",
       "title": "Rugpijn — Strategie: Gelaagde Zorg",
       "fields": {
-        "kern": "Behandelintensiteit afstemmen op het risicoprofiel (stratified care). Organisatie van zorg in 4 stappen (stepped care). KNGF-richtlijn LRP 2021.",
-        "toelichting": "<b>Stepped care (zorgorganisatie):</b><br><b>Stap 1:</b> Preventie — geïndiceerd en zorggerelateerd binnen FT/OT.<br><b>Stap 2:</b> Monodisciplinaire eerstelijn — huisarts diagnosticeert/verwijst; FT/OT via directe toegang of verwijzing.<br><b>Stap 3:</b> Multidisciplinaire eerstelijn (met tweedelijn) — bij langdurige klachten, matige impact, monodisciplinair onvoldoende. Team: huisarts, psycholoog, pijnconsulent, paramedici.<br><b>Stap 4:</b> Multidisciplinaire tweede-/derdelijn — complexe problematiek: &gt;12 wkn verzuim, multimorbiditeit, hoge ziektelast, dominante psychosociale factoren.<br><br><b>Stratified care (profielen):</b><br><b>Profiel 1 (Laag):</b> Max 3 sessies. Evaluatie na 3 wkn.<br><b>Profiel 2 (Midden):</b> Oefentherapie. Evaluatie na 3 en 6 wkn.<br><b>Profiel 3 (Hoog):</b> Gedragsmatig + oefentherapie. Evaluatie na 6 en 12 wkn. Contact huisarts na 6 wkn bij onvoldoende herstel.",
-        "implicatie": "Voorkom overbehandeling bij laag risico en onderbehandeling (te louter fysieke focus) bij hoog risico. LRS-patiënten vallen vaak in profiel 3 door hoge activiteitenbeperkingen/beenpijn/pijnintensiteit."
+        "kern": "De organisatie van zorg volgt een stapsgewijze benadering in vier stappen: preventie, monodisciplinair eerste lijn, multidisciplinair eerste lijn met tweede lijn, en multidisciplinair tweede/derde lijn.<sup data-src=\"rl-rug-2021\" data-p=\"12\">[p12]</sup>",
+        "toelichting": "<ul><li><b>Stap 1 — Preventie:</b> gericht op beginnende klachten en voorkómen van verergering of verminderde kwaliteit van leven.<sup data-src=\"rl-rug-2021\" data-p=\"12\">[p12]</sup></li><li><b>Stap 2 — Monodisciplinair eerste lijn:</b> diagnostiek en behandeling voornamelijk in de eerstelijns gezondheidszorg. Huisarts als diagnosticus en verwijzer; fysiotherapeut behandelt via DTF of op verwijzing.<sup data-src=\"rl-rug-2021\" data-p=\"12\">[p12]</sup></li><li><b>Stap 3 — Multidisciplinair eerste lijn + tweede lijn:</b> bij langdurige problematiek met matige impact op fysieke activiteit, waarbij stap 2 onvoldoende vermindering heeft opgeleverd. Team met o.a. psycholoog en/of psychiater, pijnconsulent.<sup data-src=\"rl-rug-2021\" data-p=\"12–13\">[p12–13]</sup></li><li><b>Stap 4 — Multidisciplinaire tweede/derde lijn:</b> complexe problematiek met ernstige impact, hoge ziektelast, comorbiditeit, onhoudbare pijn, dominant aanwezige psychosociale factoren. Alleen zinvol als patiënt intrinsiek gemotiveerd is.<sup data-src=\"rl-rug-2021\" data-p=\"13\">[p13]</sup></li></ul>",
+        "implicatie": "Bepaal bij elke patiënt in welke stap van de zorgketen hij/zij zich bevindt. Bij stagnatie in stap 2: overleg over opschalen naar stap 3. De fysiotherapeut coördineert bij voorkeur de multidisciplinaire samenwerking of is aanspreekpunt."
       },
       "links": []
     },
@@ -2113,9 +2116,9 @@ window.SEED_DATA = {
       "afk": "Screening",
       "title": "Rugpijn — Rode Vlaggen & Verwijzen",
       "fields": {
-        "kern": "Screening op specifieke pathologie die onmiddellijk medisch ingrijpen vereist. KNGF-richtlijn LRP 2021, sectie B.1.3.",
-        "toelichting": "<b>Neurologische noodsituatie (spoed → huisarts):</b><br>• Urineretentie, fecale/urine-incontinentie, progressieve motorische zwakte, bilaterale zenuwwortelproblemen (cauda equina)<br>• Progressieve neurologische symptomen: ernstige parese (MRC ≤3/5) + sensibiliteitsstoornis &lt;48 uur<br>• Uitgebreide neurologische symptomen (pyramidebaan)<br><br><b>Fractuur:</b> Ernstige LBP na hoog-energetisch trauma; of na minimaal/geen trauma bij verhoogd risico (osteoporose, corticosteroïden, hoge leeftijd, kankerhistorie, axiale spondylarthritis).<br><br><b>Infectie:</b> Nachtzweten, koorts/rillingen, IV drugsgebruik, immunodeficiëntie, onverklaard gewichtsverlies, bekende infectie, recente operatie, urineweginfectie.<br><br><b>Tumor:</b> Recent ontstane rugpijn &lt;18 of &gt;55 jaar, kankerhistorie, onverklaard gewichtsverlies, vermoeidheid, ernstige nachtpijn/nachtzweten.<br><br><b>Inflammatoir:</b> Constante/progressieve niet-mechanische pijn, reageert op NSAID's, verbetert bij activiteit niet bij rust, familiaire component, ochtendstijfheid &gt;30 min, LBP &gt;5 jaar (axiale spondylarthritis).<br><br><b>LRS verwijscriteria:</b> Ernstige parese (MRC ≤3/5) en/of ernstige pijn (NPRS ≥8) → verwijs naar huisarts. Bij klachten &gt;6-8 wkn zonder verbetering: verwijs.",
-        "implicatie": "Bij aanwezigheid van rode vlaggen stopt het fysiotherapeutisch proces en vindt (terug)verwijzing naar de huisarts plaats. Overweeg ook vasculaire claudicatio of neurogene intermitterende claudicatio (syndroom van Verbiest) bij klachten uitsluitend bij staan/lopen."
+        "kern": "Rode vlaggen zijn kenmerken die kunnen wijzen op een onderliggende, zeldzame, ernstige pathologie. Een enkel kenmerk hoeft niet direct op ernstige pathologie te wijzen; een combinatie van meerdere kenmerken vergroot de waarschijnlijkheid.<sup data-src=\"rl-rug-2021\" data-p=\"17\">[p17]</sup>",
+        "toelichting": "<b>Clusters van kenmerken per pathologie:</b><br><br><b>Neurologisch noodgeval (cauda-equinasyndroom):</b><ul><li>Urineretentie, fecale of urine-incontinentie, progressieve motorische zwakte of bewijs voor bilaterale zenuwwortelproblematiek<sup data-src=\"rl-rug-2021\" data-p=\"17\">[p17]</sup></li><li>Progressieve neurologische symptomen: ernstige motorische uitval (MRC &le; 3/5) en gevoelsstoornissen opgetreden in &lt; 48 uur<sup data-src=\"rl-rug-2021\" data-p=\"17\">[p17]</sup></li><li>Wijdverspreide neurologische symptomen (bijv. piramidale tekenen)<sup data-src=\"rl-rug-2021\" data-p=\"17\">[p17]</sup></li></ul><em>Actie: verwijs naar huisarts</em><br><br><b>Fractuur:</b><ul><li>Ernstige rugpijn na (hoog-energetisch) trauma<sup data-src=\"rl-rug-2021\" data-p=\"17\">[p17]</sup></li><li>Ernstige rugpijn na klein trauma bij risicofactoren: osteoporose, langdurig corticosteroïdengebruik, hoge leeftijd, voorgeschiedenis van kanker, axiale spondylartritis<sup data-src=\"rl-rug-2021\" data-p=\"17\">[p17]</sup></li></ul><b>Infectie:</b><ul><li>Nachtzweten, rillingen en temperatuurverhoging, intraveneus druggebruik, immunodeficiëntie, onverklaard gewichtsverlies, systemische infectie, recente chirurgische ingreep, urinaire- of huidinfectie (tuberculose, discitis, spinaal abces)<sup data-src=\"rl-rug-2021\" data-p=\"17\">[p17]</sup></li></ul><b>Tumor:</b><ul><li>Recente klachten bij leeftijd &lt; 18 of &gt; 55 jaar, voorgeschiedenis van kanker, onverklaard gewichtsverlies, vermoeidheid, ernstige nachtelijke pijn en nachtzweten<sup data-src=\"rl-rug-2021\" data-p=\"18\">[p18]</sup></li></ul><b>Inflammatoire aandoening:</b><ul><li>Constante progressieve niet-mechanische pijn, reageert goed op NSAID's, rugpijn verbetert bij lichaamsbeweging maar niet in rust, familiaire component, ernstige nachtelijke pijn, ochtendstijfheid &gt; 30 min bij jonge patiënten, meer dan vijf jaar lage rugpijn (axiale spondylartritis)<sup data-src=\"rl-rug-2021\" data-p=\"18\">[p18]</sup></li></ul><b>Diversen:</b><ul><li>Toenemende postoperatieve pijn, unilaterale piramidale tekenen<sup data-src=\"rl-rug-2021\" data-p=\"18\">[p18]</sup></li></ul>",
+        "implicatie": "Beoordeel bij elke patiënt systematisch of rode vlaggen aanwezig zijn. Bij vermoeden op ernstige pathologie of bij twijfel ('niet-pluisgevoel'): neem altijd contact op met de huisarts of verwijzer. Niet wachten, direct handelen."
       },
       "links": []
     },
@@ -2125,9 +2128,9 @@ window.SEED_DATA = {
       "afk": "RMDQ",
       "title": "Roland Morris Disability Questionnaire",
       "fields": {
-        "watMeetHet": "Rugpijn-gerelateerde functionele beperkingen in het dagelijks leven via 24 ja/nee-items. Optioneel meetinstrument bij lage rugpijn (KNGF 2021). Sensitiever dan ODI bij lichtere beperkingen; ODI is voorkeur bij LRS en ernstigere presentaties.",
-        "scoringscriteria": "24 ja/nee-items. Elke 'ja' = 1 punt. Totaalscore 0–24. Hogere score = meer beperkingen. Afname bij intake en evaluatiemomenten.",
-        "normwaarden": "MCiD: <b>2–3 punten</b> verbetering of <b>≥30%</b> t.o.v. baseline.<br>Score ≥14 duidt op ernstige beperkingen.<br>Alternatief voor QBPDS als primair functie-instrument (KNGF 2021 beveelt QBPDS aan als standaard).",
+        "watMeetHet": "Rugpijn-gerelateerde functionele beperkingen in het dagelijks leven via 24 ja/nee-items. Optioneel meetinstrument bij lage rugpijn (KNGF 2021). Sensitiever dan ODI bij lichtere beperkingen; ODI is voorkeur bij LRS en ernstigere presentaties. <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
+        "scoringscriteria": "24 ja/nee-items. Elke 'ja' = 1 punt. Totaalscore 0–24. Hogere score = meer beperkingen. Afname bij intake en evaluatiemomenten. <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
+        "normwaarden": "MCiD: <b>2–3 punten</b> verbetering of <b>≥30%</b> t.o.v. baseline.<br>Score ≥14 duidt op ernstige beperkingen.<br>Alternatief voor QBPDS als primair functie-instrument (KNGF 2021 beveelt QBPDS aan als standaard). <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
         "implicatie": "Optioneel meetinstrument (KNGF 2021). Voorkeur bij mildere presentaties vanwege hogere responsiviteit in dat bereik. Bij ernstigere presentaties of LRS: overweeg ODI. Niet combineren met QBPDS — kies één van beide als primaire functionele uitkomstmaat."
       },
       "links": [
@@ -2143,9 +2146,9 @@ window.SEED_DATA = {
       "afk": "ODI",
       "title": "Oswestry Disability Index",
       "fields": {
-        "watMeetHet": "Mate van invaliditeit door lage rugpijn en/of LRS bij 10 activiteitsdomeinen (pijnintensiteit, persoonlijke verzorging, tillen, lopen, zitten, staan, slapen, seksleven, sociaal leven, reizen). Versie 2.1a aanbevolen door KNGF 2021. Optioneel meetinstrument — voorkeur bij LRS en ernstigere presentaties.",
-        "scoringscriteria": "10 items, elk 0–5. Totaalscore 0–50 → omgerekend naar percentage 0–100%.<br><b>0–20%:</b> minimale invaliditeit.<br><b>21–40%:</b> matige invaliditeit.<br><b>41–60%:</b> ernstige invaliditeit.<br><b>61–80%:</b> sterk beperkt.<br><b>81–100%:</b> bedgebonden of maximale beperkingen.",
-        "normwaarden": "MCiD: <b>10 procentpunten</b> of <b>≥30% relatieve verbetering</b> t.o.v. baseline.<br>Gebruik versie 2.1a (KNGF 2021).",
+        "watMeetHet": "Mate van invaliditeit door lage rugpijn en/of LRS bij 10 activiteitsdomeinen (pijnintensiteit, persoonlijke verzorging, tillen, lopen, zitten, staan, slapen, seksleven, sociaal leven, reizen). Versie 2.1a aanbevolen door KNGF 2021. Optioneel meetinstrument — voorkeur bij LRS en ernstigere presentaties. <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
+        "scoringscriteria": "10 items, elk 0–5. Totaalscore 0–50 → omgerekend naar percentage 0–100%.<br><b>0–20%:</b> minimale invaliditeit.<br><b>21–40%:</b> matige invaliditeit.<br><b>41–60%:</b> ernstige invaliditeit.<br><b>61–80%:</b> sterk beperkt.<br><b>81–100%:</b> bedgebonden of maximale beperkingen. <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
+        "normwaarden": "MCiD: <b>10 procentpunten</b> of <b>≥30% relatieve verbetering</b> t.o.v. baseline.<br>Gebruik versie 2.1a (KNGF 2021). <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
         "implicatie": "Optioneel meetinstrument (KNGF 2021). Voorkeur bij LRS-patiënten en ernstigere presentaties boven RMDQ/QBPDS vanwege breder scorebereik in hogere invaliditeitsniveaus. Niet combineren met RMDQ — kies één van beide."
       },
       "links": [
@@ -2161,9 +2164,9 @@ window.SEED_DATA = {
       "afk": "FABQ",
       "title": "Fear-Avoidance Beliefs Questionnaire",
       "fields": {
-        "watMeetHet": "Angst-vermijdingsopvattingen over fysieke activiteit (FABQ-PA, 4 items, score 0–24) en werk (FABQ-W, 7 items, score 0–42) bij patiënten met lage rugpijn. Optioneel meetinstrument (KNGF 2021) — inzetten bij vermoeden van pijngerelateerde bewegingsangst.",
-        "scoringscriteria": "<b>FABQ-PA (fysieke activiteit):</b> 4 items, 0–6 per item. Totaal 0–24. Afkappunt ≥15 = verhoogd risico.<br><b>FABQ-W (werk):</b> 7 items, 0–6 per item. Totaal 0–42. Afkappunt ≥34 = verhoogd risico op werkverzuim.<br>Afname wanneer psychosociale factoren vermoedelijk een rol spelen.",
-        "normwaarden": "FABQ-PA ≥15: verhoogde angst-vermijding m.b.t. fysieke activiteit.<br>FABQ-W ≥34: sterk verhoogd risico op langdurig werkverzuim.<br>Hoge scores voorspellen chroniciteit, langdurig verzuim en slechte behandelrespons.",
+        "watMeetHet": "Angst-vermijdingsopvattingen over fysieke activiteit (FABQ-PA, 4 items, score 0–24) en werk (FABQ-W, 7 items, score 0–42) bij patiënten met lage rugpijn. Optioneel meetinstrument (KNGF 2021) — inzetten bij vermoeden van pijngerelateerde bewegingsangst. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "scoringscriteria": "<b>FABQ-PA (fysieke activiteit):</b> 4 items, 0–6 per item. Totaal 0–24. Afkappunt ≥15 = verhoogd risico.<br><b>FABQ-W (werk):</b> 7 items, 0–6 per item. Totaal 0–42. Afkappunt ≥34 = verhoogd risico op werkverzuim.<br>Afname wanneer psychosociale factoren vermoedelijk een rol spelen. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "normwaarden": "FABQ-PA ≥15: verhoogde angst-vermijding m.b.t. fysieke activiteit.<br>FABQ-W ≥34: sterk verhoogd risico op langdurig werkverzuim.<br>Hoge scores voorspellen chroniciteit, langdurig verzuim en slechte behandelrespons. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Optioneel instrument (KNGF 2021). Essentieel bij profiel 3 (hoog risico). Hoge FABQ-PA → overweeg exposure in vivo. Hoge FABQ-W → indicatie voor arbeidsgerichte interventie en eventueel multidisciplinaire aanpak. Alternatief: TSK (kinesiofobie) als angst-vermijding centraal staat."
       },
       "links": [
@@ -2179,9 +2182,9 @@ window.SEED_DATA = {
       "afk": "PSEQ",
       "title": "Pain Self-Efficacy Questionnaire",
       "fields": {
-        "watMeetHet": "Mate van vertrouwen van de patiënt in het eigen vermogen om activiteiten uit te voeren ondanks de pijn. 10 items, elk 0–6. KNGF-richtlijn LRP 2021 noemt negatieve self-efficacy als prognostische factor voor persisterende klachten.",
-        "scoringscriteria": "10 items, elk gescoord 0–6 (0 = helemaal niet zeker, 6 = helemaal zeker). Totaalscore 0–60. Hogere score = meer self-efficacy.",
-        "normwaarden": "Score &lt;40 wijst op lage self-efficacy → geassocieerd met chroniciteit en hogere zorgconsumptie.<br>Score &lt;20 = zeer lage self-efficacy, sterke indicatie voor intensieve begeleiding.",
+        "watMeetHet": "Mate van vertrouwen van de patiënt in het eigen vermogen om activiteiten uit te voeren ondanks de pijn. 10 items, elk 0–6. KNGF-richtlijn LRP 2021 noemt negatieve self-efficacy als prognostische factor voor persisterende klachten. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "scoringscriteria": "10 items, elk gescoord 0–6 (0 = helemaal niet zeker, 6 = helemaal zeker). Totaalscore 0–60. Hogere score = meer self-efficacy. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "normwaarden": "Score &lt;40 wijst op lage self-efficacy → geassocieerd met chroniciteit en hogere zorgconsumptie.<br>Score &lt;20 = zeer lage self-efficacy, sterke indicatie voor intensieve begeleiding. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Lage PSEQ is indicatie voor gedragsmatige interventies (graded activity, ACT) en psycho-educatie. Inzetbaar bij profiel 2 en 3. Negatieve self-efficacy is prognostische factor voor persisterende klachten (KNGF 2021)."
       },
       "links": [
@@ -2197,9 +2200,9 @@ window.SEED_DATA = {
       "afk": "GPE",
       "title": "Global Perceived Effect",
       "fields": {
-        "watMeetHet": "Door de patiënt ervaren globale verandering in toestand ten opzichte van de start van de behandeling. Optioneel meetinstrument bij lage rugpijn (KNGF 2021). GPE-DV = Nederlandse versie.",
-        "scoringscriteria": "7-punts Likertschaal: van -3 (veel slechter) via 0 (onveranderd) tot +3 (volledig hersteld).<br>Dichotome indeling: +3/+2 = succesvol hersteld.<br>Afname bij tussentijdse evaluatie en afsluiting.",
-        "normwaarden": "Score ≥+2 wordt beschouwd als klinisch relevant herstel.<br>Score ≤0 = geen verbetering of verslechtering → heroverweeg behandelprofiel.",
+        "watMeetHet": "Door de patiënt ervaren globale verandering in toestand ten opzichte van de start van de behandeling. Optioneel meetinstrument bij lage rugpijn (KNGF 2021). GPE-DV = Nederlandse versie. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "scoringscriteria": "7-punts Likertschaal: van -3 (veel slechter) via 0 (onveranderd) tot +3 (volledig hersteld).<br>Dichotome indeling: +3/+2 = succesvol hersteld.<br>Afname bij tussentijdse evaluatie en afsluiting. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "normwaarden": "Score ≥+2 wordt beschouwd als klinisch relevant herstel.<br>Score ≤0 = geen verbetering of verslechtering → heroverweeg behandelprofiel. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Optioneel meetinstrument bij lage rugpijn (KNGF 2021). Minimaal uitvragen bij afsluiting. Combineert functioneel én subjectief herstel in één score. Aanbevolen evaluatiemomenten: bij tussentijdse evaluatie (profiel-afhankelijk) en bij ontslag."
       },
       "links": []
@@ -2210,9 +2213,9 @@ window.SEED_DATA = {
       "afk": "Profiel 1",
       "title": "Rugpijn — Patiëntprofiel 1 (Laag Risico)",
       "fields": {
-        "kern": "Patiënten met een laag risico op persisterende klachten: geen dominante prognostische factoren aanwezig. KNGF-richtlijn LRP 2021.",
-        "toelichting": "<b>Kenmerken:</b> Geen dominante prognostische factoren. Weinig of geen psychosociale belasting, positieve prognose.<br><b>Sessies:</b> Maximaal 3 sessies.<br><b>Interventies:</b><br>• Informatie en advies (aard, beloop, prognose)<br>• Voorlichting: pijn ≠ schade; actief blijven; bedrust beperken<br>• Overweeg instructie voor zelfstandige oefentherapie<br>• Geen passieve therapie (massage, TENS, elektrotherapie)<br><b>Evaluatie:</b> Na 3 weken herbeoordelen. Bij onvoldoende verbetering: herclassificatie naar profiel 2.<br><b>Verplichte meetinstrumenten:</b> NPRS, QBPDS, PSK (intake + evaluatie).",
-        "implicatie": "Overbehandeling actief vermijden. De fysiotherapeut heeft vooral een educatieve en geruststellende rol. Bij adequaat herstel binnen 3 weken: afsluiten."
+        "kern": "Behandelprofiel 1: laag risico op aanhoudende klachten. Geen dominant aanwezige prognostische factoren voor vertraagd herstel. Maximaal drie sessies.<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup>",
+        "toelichting": "<b>Kenmerken:</b> Er zijn geen dominant aanwezige prognostische factoren voor vertraagd herstel.<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup><br><b>Behandeling:</b><ul><li>Voorlichting en (pijn)educatie over aard, beloop en prognose<sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup></li><li>Overweeg instructies voor zelfstandig oefenen<sup data-src=\"rl-rug-2021\" data-p=\"25\">[p25]</sup></li><li>Maximaal 3 sessies<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup></li></ul><b>Evaluatie:</b> herevaluatie na 3 weken.<sup data-src=\"rl-rug-2021\" data-p=\"20\">[p20]</sup> Bij onvoldoende verbetering: heroverweeg profiel of behandeling.<br><b>Niet bij profiel 1:</b> mobilisaties/manipulaties, massage.<sup data-src=\"rl-rug-2021\" data-p=\"29–30\">[p29–30]</sup>",
+        "implicatie": "Houd de behandeling kort en gericht op zelfmanagement. De patiënt herstelt waarschijnlijk snel — overbehandeling vermijden. Bij stagnatie na 3 weken: herclassificeer naar profiel 2."
       },
       "links": []
     },
@@ -2222,9 +2225,9 @@ window.SEED_DATA = {
       "afk": "Profiel 2",
       "title": "Rugpijn — Patiëntprofiel 2 (Matig Risico)",
       "fields": {
-        "kern": "Patiënten met een matig risico op persisterende klachten: enkele niet-dominante prognostische factoren aanwezig. KNGF-richtlijn LRP 2021.",
-        "toelichting": "<b>Kenmerken:</b> Enkele niet-dominante prognostische factoren. Functionele beperkingen aanwezig, geen dominante angst-vermijding of catastroferen.<br><b>Interventies:</b><br>• Informatie, advies en (pijn)educatie<br>• Oefentherapie: focus op patiëntbehoeften/voorkeuren. Overweeg functionele training, spierkracht, aeroob, flexibiliteit, neuromotorische controle<br>• Overweeg mobilisatie/manipulatie als supplement bij mechanisch probleem (bijv. verminderde regionale mobiliteit lumbale flexie/extensie)<br>• Overweeg massage alleen kortstondig bij verhoogde spierspanning + sterke patiëntvoorkeur + gecombineerd met actieve behandeling<br>• Overweeg groepsoefentherapie als follow-up<br><b>Evaluatie:</b> Na 3 en 6 weken. Bij onvoldoende verbetering: profiel aanpassen of verwijzen naar huisarts.<br><b>Verplichte meetinstrumenten:</b> NPRS, QBPDS, PSK. Klinisch relevant = ≥30% verbetering t.o.v. baseline.",
-        "implicatie": "Actieve, functiegerichte behandeling. Beweegeducatie is even belangrijk als oefening zelf. Tijdcontingente aanpak verdient voorkeur boven pijncontingent."
+        "kern": "Behandelprofiel 2: middelmatig risico op aanhoudende klachten. Er zijn enkele niet-dominant aanwezige prognostische factoren voor vertraagd herstel. Geen vast aantal sessies.<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup>",
+        "toelichting": "<b>Kenmerken:</b> Er zijn enkele niet-dominant aanwezige prognostische factoren voor vertraagd herstel.<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup> 'Niet-dominant' = de factor draagt bij maar stuurt niet sterk het in stand houden van pijn/beperkingen.<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup><br><b>Behandeling:</b><ul><li>Voorlichting en pijneducatie<sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup></li><li>Oefentherapie (spierkracht, aerobe capaciteit, flexibiliteit, neuromotorische controle)<sup data-src=\"rl-rug-2021\" data-p=\"25–27\">[p25–27]</sup></li><li>Overweeg gedragsprincipes te integreren in oefentherapie<sup data-src=\"rl-rug-2021\" data-p=\"26\">[p26]</sup></li><li>Overweeg mobilisaties/manipulaties als aanvulling bij mechanisch verklaarbare stoornissen<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup></li></ul><b>Evaluatie:</b> herevaluatie na 3 weken en na 6 weken.<sup data-src=\"rl-rug-2021\" data-p=\"20\">[p20]</sup>",
+        "implicatie": "Combineer oefentherapie met voorlichting. Integreer gedragsprincipes wanneer psychosociale factoren deels meespelen. Herevalueer regelmatig en stuur bij. Bij stagnatie na 6 weken: heroverweeg profiel of verwijs."
       },
       "links": []
     },
@@ -2234,9 +2237,9 @@ window.SEED_DATA = {
       "afk": "Profiel 3",
       "title": "Rugpijn — Patiëntprofiel 3 (Hoog Risico)",
       "fields": {
-        "kern": "Patiënten met een hoog risico op persisterende klachten: dominante prognostische factoren aanwezig. LRS-patiënten vallen vaak hier vanwege hoge activiteitenbeperkingen/beenpijn/pijnintensiteit. KNGF-richtlijn LRP 2021.",
-        "toelichting": "<b>Kenmerken:</b> Dominante prognostische factoren: catastroferen, kinesiofobie, depressie/angst, hoge FABQ-W, lage self-efficacy, passieve coping, negatieve herstelverwachtingen.<br><b>Interventies:</b><br>• Informatie, advies en (pijn)educatie — biopsychosociaal model<br>• Oefentherapie (zie profiel 2)<br>• Gedragsmatige behandeling: overweeg bij dominante psychosociale factoren:<br>&nbsp;&nbsp;– Exposure in vivo bij pijngerelateerde bewegingsangst/catastroferen (verwachting van letsel)<br>&nbsp;&nbsp;– Graded activity, CGT (incl. ACT), motivational interviewing bij passieve coping/catastroferen (hulpeloosheid)<br>&nbsp;&nbsp;– Relaxatietherapie bij psychosociale stress (moeite met ontspannen)<br>• Overweeg mobilisatie/manipulatie als supplement (niet bij LRS)<br>• Contact huisarts na 6 wkn bij onvoldoende verbetering<br>• Verwijzing huisarts na 12 wkn voor overweging multidisciplinaire zorg<br><b>Evaluatie:</b> Na 6 en 12 weken.<br><b>Meetinstrumenten:</b> NPRS, QBPDS, PSK (verplicht) + FABQ, TSK, PCS, HADS, PSEQ (optioneel, naar indicatie). Klinisch relevant = ≥30% verbetering.",
-        "implicatie": "Louter fysieke behandeling is onvoldoende. Psychosociale aanpak is de kern van de interventie. Pas alleen gedragsmatige behandelvormen toe waarvoor je competent en bevoegd bent. Psychosomatische FT/OT heeft hier specifieke expertise."
+        "kern": "Behandelprofiel 3: hoog risico op aanhoudende klachten. Er zijn dominant aanwezige prognostische factoren voor vertraagd herstel. Geen vast sessielimiet, meer complexe en intensieve ondersteuning.<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup>",
+        "toelichting": "<b>Kenmerken:</b> Dominant aanwezige prognostische factoren = de factor draagt sterk bij aan het in stand houden van pijn en/of beperkingen in fysiek functioneren.<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup><br><b>Behandeling:</b><ul><li>Uitgebreide voorlichting en pijneducatie, aangevuld met pijneducatie bij irreële pijngerelateerde bewegingsangst en/of catastroferen<sup data-src=\"rl-rug-2021\" data-p=\"24\">[p24]</sup></li><li>Oefentherapie<sup data-src=\"rl-rug-2021\" data-p=\"25\">[p25]</sup></li><li>Gedragsgeoriënteerde behandeling: graded activity, exposure in vivo, cognitieve gedragstherapie, ACT, motivational interviewing, ontspanningstherapie — afgestemd op het dominante psychosociale kenmerk<sup data-src=\"rl-rug-2021\" data-p=\"28\">[p28]</sup></li><li>Overweeg mobilisaties/manipulaties bij mechanisch verklaarbare stoornissen<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup></li></ul><b>Evaluatie:</b> herevaluatie na 6 weken en na 12 weken.<sup data-src=\"rl-rug-2021\" data-p=\"20\">[p20]</sup> Bij onvoldoende vermindering na 6 weken: contact met huisarts. Na 12 weken: verwijs naar huisarts en overleg over stap 3 (multidisciplinair).<sup data-src=\"rl-rug-2021\" data-p=\"20\">[p20]</sup>",
+        "implicatie": "Investeer in het identificeren van het dominante psychosociale kenmerk en stem de behandelvorm daarop af (zie matching-tabel). Zoek bij stagnatie de samenwerking met huisarts, psycholoog of multidisciplinair team. Bouw bij voorkeur in een tijdcontingent programma."
       },
       "links": []
     },
@@ -2246,9 +2249,9 @@ window.SEED_DATA = {
       "afk": "Gele Vlaggen",
       "title": "Rugpijn — Gele Vlaggen (Psychosociale Factoren)",
       "fields": {
-        "kern": "Prognostische factoren voor persisterende klachten bij lage rugpijn. KNGF-richtlijn LRP 2021, sectie A.2.4.",
-        "toelichting": "<b>Etiologische factoren (ontstaan):</b><br>• Eerdere episodes lage rugpijn<br>• Overgewicht/obesitas, roken, comorbiditeit<br>• Depressie<br>• Hoge fysieke belasting werk, hoge mentale stress, weinig sociale steun, weinig autonomie, lage werkzekerheid, monotoon werk<br><br><b>Prognostische factoren (aanhouden):</b><br><b>Ruggebonden:</b> Eerdere episodes, hoge mate activiteitenbeperkingen, beenpijn, hoge pijnintensiteit.<br><b>Patiëntgebonden:</b> Slechte algemene gezondheid/kwaliteit van leven.<br><b>Psychosociaal:</b> Psychologische/psychosociale stress, pijngerelateerde bewegingsangst, depressieve symptomen, passieve coping, negatieve herstelverwachtingen/catastroferen.<br><b>Werkgerelateerd:</b> Hoge fysieke belasting, slechte collega-relaties, verminderde werktevredenheid.<br><br><b>Meetinstrumenten per factor:</b><br>• Bewegingsangst → FABQ, TSK<br>• Catastroferen → PCS<br>• Depressie/angst → HADS, 4-DKL<br>• Self-efficacy → PSEQ<br>• Centrale sensitisatie → CSI",
-        "implicatie": "Aanwezigheid van dominante prognostische factoren → profiel 3 met gedragsmatige aanpak. Niet-dominante factoren → profiel 2. Geen factoren → profiel 1. Comorbiditeit (astma, diabetes, hoofdpijn, artrose, osteoporose, cardiovasculair, bekkenbodem) verslechtert prognose."
+        "kern": "Gele vlaggen zijn psychosociale prognostische factoren die het risico op aanhoudende klachten vergroten en het herstel kunnen belemmeren.<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup>",
+        "toelichting": "<b>Psychosociale factoren (gele vlaggen):</b><ul><li>Psychologische en psychosociale stress (zonder specifieke psychiatrische diagnose)<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup></li><li>Pijngerelateerde bewegingsangst<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup></li><li>Depressieve gevoelens of klachten<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup></li><li>Passieve copingstijl<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup></li><li>Negatieve verwachtingen over herstel of catastroferen<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup></li></ul><b>Werkgerelateerde factoren (blauwe/zwarte vlaggen):</b><ul><li>Hoge fysieke belasting tijdens werk<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup></li><li>Slechte relaties met collega's<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup></li><li>Verminderde tevredenheid met werk<sup data-src=\"rl-rug-2021\" data-p=\"19\">[p19]</sup></li></ul>De richtlijn beschrijft geen apart onderscheid in kleur (geel vs. blauw vs. zwart), maar groepeert psychosociale en werkgerelateerde factoren samen als prognostische factoren voor aanhoudende klachten.<sup data-src=\"rl-rug-2021\" data-p=\"11\">[p11]</sup><sup data-src=\"rl-rug-2021\" data-p=\"39\">[p39]</sup>",
+        "implicatie": "Inventariseer psychosociale en werkgerelateerde prognostische factoren bij het eerste contact. Gebruik optionele meetinstrumenten (FABQ, TSK, PCS, HADS, 4-DKL) om deze te kwantificeren. De aanwezigheid van dominante psychosociale factoren stuurt richting profiel 3 en gedragsgeoriënteerde behandeling."
       },
       "links": []
     },
@@ -2258,9 +2261,9 @@ window.SEED_DATA = {
       "afk": "LRS Diagnostiek",
       "title": "LRS — Neurodynamische Tests & Dermatomen",
       "fields": {
-        "kern": "Klinische diagnostiek van het Lumbosacraal Radiculair Syndroom. KNGF-richtlijn LRP 2021, sectie B.1.2 (neurologisch onderzoek).",
-        "toelichting": "<b>Neurologisch onderzoek (bij verdenking LRS):</b><br>• Pijnverdeling: dermatomaal of niet<br>• Fingertips-to-floor afstand (positief indien &gt;25 cm)<br>• Lasègue/SLR, gekruiste Lasègue, omgekeerde Lasègue<br>• Spierkracht (MRC-score)<br>• Vitale en gnostische sensibiliteit<br>• Reflexen (achillespees, kniepees, voetzolen)<br><br><b>Provocatietests:</b><br>• <b>Lasègue/SLR:</b> Positief bij pijn onder knie bij 30–70° heupflexie (sensitiviteit 91%, specificiteit 26%)<br>• <b>Gekruiste SLR:</b> Lage sensitiviteit maar hoge specificiteit (90%) voor HNP<br>• <b>Slump-test:</b> Sensitiviteit 84%, specificiteit 83%<br>• <b>Omgekeerde Lasègue (FNS):</b> Bij L2–L4 radiculopathie<br><br><b>Dermatomen:</b><br>• L3: voorzijde bovenbeen, knie<br>• L4: mediale onderbeen, grote teen; reflex: kniepeesreflex<br>• L5: dorsale voet, grote teen; geen directe reflex<br>• S1: laterale voet, kleine teen; reflex: achillespeesreflex<br><br><b>Myotomen:</b><br>• L3/L4: knieextensie (m. quadriceps)<br>• L4/L5: dorsiflexie voet (m. tibialis anterior)<br>• L5/S1: plantairflexie (m. gastrocnemius), extensie grote teen<br><br><b>Verwijscriteria LRS:</b><br>• Ernstige parese (MRC ≤3/5) en/of ernstige pijn (NPRS ≥8) → huisarts<br>• Anders: controleer na 2-4 dagen<br>• Overweeg vasculaire claudicatio of neurogene intermitterende claudicatio (Verbiest) bij klachten alleen bij staan/lopen",
-        "implicatie": "Een consistent klinisch beeld (dermatomale pijn + bijpassend neurologische uitval + positieve provocatietest) maakt diagnose LRS aannemelijk zonder beeldvorming. HNP L4-L5 en L5-S1 verantwoordelijk voor 90-98% van LRS."
+        "kern": "Bij vermoeden van LRS voert de therapeut een neurologisch onderzoek uit, gericht op het vaststellen van wortelcompressie via provocatietests, kracht, sensibiliteit en reflexen.<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup>",
+        "toelichting": "<b>Neurologisch onderzoek bij vermoeden LRS:</b><ul><li>Onderzoek van de pijndistributie (wel/niet gebonden aan een dermatoom)<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li><li>Vinger-vloerafstand bij vooroverbuigen met gestrekte knieën (positief bij &gt; 25 cm)<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li><li>Test van Lasègue (SLR), gekruiste test van Lasègue, omgekeerde test van Lasègue<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li><li>Spierkracht (MRC-score van de kennspieren)<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li><li>Vitale en gnostische sensibiliteit (wel/niet gebonden aan dermatoom)<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li><li>Reflexen: achillespees, kniepees, voetzool<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li></ul><b>NB:</b> bij symptomen suggestief voor LRS maar klachten alleen tijdens staan/lopen: denk aan vasculaire claudicatio of neurogene claudicatio intermittens (syndroom van Verbiest).<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup><br><br><b>Dermatoomkaart:</b> L4–L5 en L5–S1 zijn de meest aangedane niveaus. Er is geen consensus over de juiste dermatoomkaart; sensitisatie met uitbreiding van pijn in meerdere dermatomen kan voorkomen.<sup data-src=\"rl-rug-2021\" data-p=\"34\">[p34]</sup>",
+        "implicatie": "Voer bij elk vermoeden op LRS het volledige neurologische onderzoek uit. Combineer SLR met kracht, sensibiliteit en reflexen — geen enkele test is op zichzelf afdoende. Bij MRC ≤ 3/5 en/of NPRS ≥ 8: verwijs naar huisarts."
       },
       "links": []
     },
@@ -2270,9 +2273,9 @@ window.SEED_DATA = {
       "afk": "Prognose",
       "title": "Rugpijn — Prognose Aspecifiek & LRS",
       "fields": {
-        "kern": "Verwacht beloop bij aspecifieke lage rugpijn en LRS. KNGF-richtlijn LRP 2021, sectie A.2.3.",
-        "toelichting": "<b>Aspecifieke lage rugpijn:</b><br>• Dynamische aandoening met afwisselende episodes<br>• Na 1 maand: ~25% hersteld; na 3 maanden: ~50% hersteld (pijn en functie)<br>• Herstel vlakt af na 3 maanden; sommigen nog klachten na 12 maanden<br>• Werkhervatting: ~70% na 1 maand, ~90% na 3 maanden<br>• Recidief: 1-2 op 3 personen binnen 1 jaar<br>• Beloop minder gunstig bij beenpijn<br><br><b>LRS:</b><br>• Significante verbetering bij de meeste patiënten binnen 3 maanden zonder operatie<br>• Conservatief beleid eerste 3 maanden is standaard<br>• Ernstige, scherpe, schietende pijn langs dermatoom; beenpijn vaak erger dan rugpijn<br>• Bij uitblijven herstel na 6–8 weken: overleg huisarts<br>• Progressieve neurologische uitval (MRC ≤3/5) of cauda equina = spoed<br>• Operatief voordeel (discectomie) na 1 jaar gelijk aan conservatief; op lange termijn geen verschil",
-        "implicatie": "Prognose bespreken met patiënt is therapeutisch: geruststelling vermindert angst-vermijding en bevordert herstelgericht gedrag. Vermijd angstigmatigend taalgebruik (letsel, degeneratie, slijtage)."
+        "kern": "Lage rugpijn heeft een gunstige prognose bij de meerderheid; na drie maanden is circa 50% hersteld. Het beloop is minder gunstig bij uitstraling in het been. LRS herstelt in de meeste gevallen binnen drie maanden zonder operatie.<sup data-src=\"rl-rug-2021\" data-p=\"10\">[p10]</sup><sup data-src=\"rl-rug-2021\" data-p=\"38\">[p38]</sup>",
+        "toelichting": "<b>Aspecifieke lage rugpijn:</b><ul><li>Na één maand is 20–40% volledig hersteld, na drie maanden 33–74%.<sup data-src=\"rl-rug-2021\" data-p=\"37–38\">[p37–38]</sup></li><li>Na drie maanden vlakt het herstel af; na 3–12 maanden volledig hersteld: 35–75%.<sup data-src=\"rl-rug-2021\" data-p=\"38\">[p38]</sup></li><li>Na 12 maanden houdt het percentage stabiel of neemt af.<sup data-src=\"rl-rug-2021\" data-p=\"38\">[p38]</sup></li><li>Werkhervatting na één maand: ~70%, na drie maanden: ~90%.<sup data-src=\"rl-rug-2021\" data-p=\"10\">[p10]</sup></li><li>Recidief: 1 op de 2–3 mensen binnen één jaar na herstel.<sup data-src=\"rl-rug-2021\" data-p=\"10\">[p10]</sup></li></ul><b>LRS:</b><ul><li>Korte- en langetermijnprognose ongunstiger dan bij lage rugpijn zonder uitstraling.<sup data-src=\"rl-rug-2021\" data-p=\"38\">[p38]</sup></li><li>Herstelpercentage na één jaar: 44–65%.<sup data-src=\"rl-rug-2021\" data-p=\"38\">[p38]</sup></li><li>De uitpuilende tussenwervelschijf trekt zich in de meeste gevallen vanzelf terug.<sup data-src=\"rl-rug-2021\" data-p=\"24\">[p24]</sup></li><li>16% van consulten bij huisarts met uitstralende pijn wordt verwezen naar tweede lijn; 8% bij rugpijn zonder uitstraling.<sup data-src=\"rl-rug-2021\" data-p=\"38\">[p38]</sup></li></ul>",
+        "implicatie": "Geef patiënten realistische verwachtingen: de meesten herstellen, maar een aanzienlijk deel houdt restverschijnselen of krijgt een recidief. Bij LRS: leg uit dat conservatief beleid de eerste keuze is en dat de hernia zich meestal spontaan terugtrekt."
       },
       "links": []
     },
@@ -2282,9 +2285,9 @@ window.SEED_DATA = {
       "afk": "LRS Behandeling",
       "title": "LRS — Fysiotherapeutische Behandelstrategie",
       "fields": {
-        "kern": "Conservatieve behandeling van het Lumbosacraal Radiculair Syndroom. KNGF-richtlijn LRP 2021, sectie C (LRS-specifiek).",
-        "toelichting": "<b>Informatie LRS-specifiek:</b><br>• Zenuwwortel geprikkeld door HNP, die meestal spontaan resorbeerd<br>• Conservatief beleid eerste 3 maanden standaard<br>• Bewegen op geleide van pijn, geleidelijk activiteiten uitbreiden<br>• Spoedsignalen: zadelverdoving, incontinentie/urineretentie, toenemende beenzwakte → huisarts direct<br><br><b>Responsiviteit bepaalt beleid:</b><br>• <b>Hoge responsiviteit</b> (flexie-ROM 0-30°, constante beenpijn, nachtpijn, ochtendstijfheid &gt;60 min): focus op pijnverlichting, voorkom pijntoename<br>• <b>Matige responsiviteit:</b> kortdurende pijntoename (deel van dag) acceptabel<br><br><b>Oefentherapie:</b> Overweeg als hulpvraag bestaat. Hoge responsiviteit → pijnverlichting. Matige responsiviteit → activiteiten uitbreiden naar voorheen niveau in 6-12 weken.<br><br><b>Mobilisatie/manipulatie:</b> Bij voorkeur NIET bij LRS (hoger risico bijwerkingen).<br><b>TENS:</b> NIET toepassen.<br><b>Massage:</b> NIET bij LRS.<br><br><b>Verwijscriteria:</b> Klachten &gt;6-8 wkn met onvoldoende verbetering → verwijs naar huisarts. Ernstige parese (MRC ≤3/5) en/of ernstige pijn (NPRS ≥8) → verwijs direct.",
-        "implicatie": "Behandeling volgt het beloop en de responsiviteit van de patiënt. Tussentijdse evaluatie essentieel. Na 2-4 dagen controleren bij LRS. Passieve interventies sterk afgeraden."
+        "kern": "Bij LRS geldt een conservatief beleid gedurende de eerste drie maanden. Behandeling richt zich op pijneducatie, geleidelijk activiteitenopbouw, en oefentherapie bij beperkingen in dagelijkse activiteiten.<sup data-src=\"rl-rug-2021\" data-p=\"24–25\">[p24–25]</sup>",
+        "toelichting": "<b>Voorlichting LRS:</b><ul><li>Leg uit dat er sprake is van prikkeling van een zenuwwortel, meestal door een uitpuilende tussenwervelschijf, die zich in de meeste gevallen vanzelf terugtrekt.<sup data-src=\"rl-rug-2021\" data-p=\"24\">[p24]</sup></li><li>Eerste drie maanden: conservatief beleid.<sup data-src=\"rl-rug-2021\" data-p=\"25\">[p25]</sup></li><li>Adviseer te bewegen op geleide van de pijn en de fysieke activiteit stapsgewijs uit te breiden.<sup data-src=\"rl-rug-2021\" data-p=\"25\">[p25]</sup></li></ul><b>Reactiviteit:</b><ul><li>Hoge reactiviteit: lumbale flexie ROM 0–30°, constante pijn in het been, nachtelijke pijn, ochtendpijn of stijfheid &gt; 60 min, kortdurend lopen leidt niet tot pijnvermindering → richt op pijnvermindering.<sup data-src=\"rl-rug-2021\" data-p=\"25\">[p25]</sup></li><li>Middelmatige reactiviteit: intermitterende pijn, pijntoename kort (dagdeel) en acceptabel → stapsgewijze activiteitenopbouw.<sup data-src=\"rl-rug-2021\" data-p=\"25\">[p25]</sup></li></ul><b>Oefentherapie bij LRS:</b> overweeg oefentherapie bij hulpvraag gerelateerd aan beperkingen in dagelijkse activiteiten en/of participatie op basis van het bewegend functioneren.<sup data-src=\"rl-rug-2021\" data-p=\"25\">[p25]</sup><br><b>Verwijzing:</b><ul><li>Verwijs bij ernstige motorische uitval (MRC &le; 3/5) en/of ernstige pijn (NPRS &ge; 8) naar de huisarts.<sup data-src=\"rl-rug-2021\" data-p=\"17\">[p17]</sup></li><li>Na 6–8 weken totale klachtenduur bij onvoldoende afname pijn en/of uitvalsverschijnselen: verwijs naar huisarts.<sup data-src=\"rl-rug-2021\" data-p=\"20\">[p20]</sup></li></ul><b>Spoedverwijzing:</b> doof gevoel in rijbroekgebied, ongewild verlies van urine/ontlasting, toenemend verlies van spierkracht → direct contact huisarts.<sup data-src=\"rl-rug-2021\" data-p=\"25\">[p25]</sup><br><b>Mobilisaties/manipulaties:</b> bij voorkeur niet toepassen bij LRS vanwege kans op bijwerkingen (pijntoename, motorische uitval).<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup><sup data-src=\"rl-rug-2021\" data-p=\"76–77\">[p76–77]</sup>",
+        "implicatie": "Pas het beleid aan op de reactiviteit van de LRS. Bij hoge reactiviteit: focus op pijnvermindering, niet op belastingsopbouw. Wees alert op alarmsignalen voor cauda-equinasyndroom. Verwijs tijdig bij onvoldoende herstel."
       },
       "links": []
     },
@@ -2294,8 +2297,8 @@ window.SEED_DATA = {
       "afk": "Zelfmanagement",
       "title": "Rugpijn & LRS — Zelfmanagement & Ergonomie",
       "fields": {
-        "kern": "Informatie, advies en (pijn)educatie: patiënt in staat stellen zelfstandig met klachten om te gaan en terugval te voorkomen. KNGF-richtlijn LRP 2021, sectie C.1.",
-        "toelichting": "<b>Inhoud voor alle profielen (1, 2, 3):</b><br>1. Aard/diagnose: vaak onduidelijke oorzaak, combinatie van factoren, overgrote meerderheid geen onderliggende zeldzame aandoening<br>2. Beloop/prognose: komt vaak voor, keert regelmatig terug, ~50% pijnvrij na 3 maanden, actief blijven en bedrust beperken bevordert herstel<br>3. Beïnvloedbare etiologische factoren (indien van toepassing)<br>4. Beïnvloedbare prognostische factoren (indien van toepassing)<br>5. Diagnostiek: in eerstelijn; beeldvorming niet aanbevolen zonder alarmsignalen<br>6. Behandelopties: actieve aanpak, omgaan met pijn<br><br><b>Communicatieprincipes:</b><br>• Duidelijk, consistent, gepersonaliseerd, empathisch, begrijpelijke taal<br>• Vermijd angstaanjagend taalgebruik (letsel, degeneratie, slijtage)<br>• Gebruik 'lage rugpijn' niet 'aspecifiek'<br><br><b>Profiel 3 specifiek:</b> Overweeg (pijn)educatie bij onrealistische pijngerelateerde bewegingsangst en/of catastroferen (biopsychosociaal model, wervelkolomfunctie, actief blijven, omgaan met pijn).<br><br><b>Afsluitcriteria:</b> Hulpvraag vervuld, doelen bereikt, patiënt voldoende in staat zelfstandig vaardigheden te onderhouden. Plan follow-up sessies.",
+        "kern": "Informatie, advies en (pijn)educatie: patiënt in staat stellen zelfstandig met klachten om te gaan en terugval te voorkomen. KNGF-richtlijn LRP 2021, sectie C.1. <sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup><sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup>",
+        "toelichting": "<b>Inhoud voor alle profielen (1, 2, 3):</b><br>1. Aard/diagnose: vaak onduidelijke oorzaak, combinatie van factoren, overgrote meerderheid geen onderliggende zeldzame aandoening<br>2. Beloop/prognose: komt vaak voor, keert regelmatig terug, ~50% pijnvrij na 3 maanden, actief blijven en bedrust beperken bevordert herstel<br>3. Beïnvloedbare etiologische factoren (indien van toepassing)<br>4. Beïnvloedbare prognostische factoren (indien van toepassing)<br>5. Diagnostiek: in eerstelijn; beeldvorming niet aanbevolen zonder alarmsignalen<br>6. Behandelopties: actieve aanpak, omgaan met pijn<br><br><b>Communicatieprincipes:</b><br>• Duidelijk, consistent, gepersonaliseerd, empathisch, begrijpelijke taal<br>• Vermijd angstaanjagend taalgebruik (letsel, degeneratie, slijtage)<br>• Gebruik 'lage rugpijn' niet 'aspecifiek'<br><br><b>Profiel 3 specifiek:</b> Overweeg (pijn)educatie bij onrealistische pijngerelateerde bewegingsangst en/of catastroferen (biopsychosociaal model, wervelkolomfunctie, actief blijven, omgaan met pijn).<br><br><b>Afsluitcriteria:</b> Hulpvraag vervuld, doelen bereikt, patiënt voldoende in staat zelfstandig vaardigheden te onderhouden. Plan follow-up sessies. <sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup><sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup><sup data-src=\"rl-rug-2021\" data-p=\"28\">[p28]</sup><sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup>",
         "implicatie": "Zelfmanagement is onderdeel van alle drie de profielen. Integreer informatie/advies doorheen de hele therapie (voorbereiding, behandeling, nazorg). Herhaal bij afsluiting informatie over zelfmanagement, actief copen, gezonde leefstijl en beïnvloedbare factoren voor nieuwe episodes."
       },
       "links": []
@@ -2306,9 +2309,9 @@ window.SEED_DATA = {
       "afk": "TSK",
       "title": "Tampa Scale of Kinesiophobia",
       "fields": {
-        "watMeetHet": "Kinesiofobie — pijngerelateerde bewegingsangst. 17 items over angst voor bewegen en (her)letsel bij patiënten met lage rugpijn. Optioneel meetinstrument (KNGF 2021).",
-        "scoringscriteria": "17 items op 4-puntsschaal (1 = sterk oneens, 4 = sterk eens). Totaalscore 17–68. 4 items worden omgekeerd gescoord. Hogere score = meer kinesiofobie.",
-        "normwaarden": "Afkappunt: <b>≥37</b> = hoge mate van kinesiofobie.<br>Score &lt;37 = geen klinisch relevante bewegingsangst.<br>MCiD: 4–8 punten (afhankelijk van populatie).",
+        "watMeetHet": "Kinesiofobie — pijngerelateerde bewegingsangst. 17 items over angst voor bewegen en (her)letsel bij patiënten met lage rugpijn. Optioneel meetinstrument (KNGF 2021). <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "scoringscriteria": "17 items op 4-puntsschaal (1 = sterk oneens, 4 = sterk eens). Totaalscore 17–68. 4 items worden omgekeerd gescoord. Hogere score = meer kinesiofobie. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "normwaarden": "Afkappunt: <b>≥37</b> = hoge mate van kinesiofobie.<br>Score &lt;37 = geen klinisch relevante bewegingsangst.<br>MCiD: 4–8 punten (afhankelijk van populatie). <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Hoge TSK-score is prognostische factor voor persisterende klachten (KNGF 2021). Inzetten bij vermoeden van bewegingsangst (profiel 2/3). Hoge TSK → overweeg exposure in vivo als gedragsmatige interventie. Alternatief: FABQ (specifiek over fysieke activiteit en werk)."
       },
       "links": [
@@ -2324,9 +2327,9 @@ window.SEED_DATA = {
       "afk": "PCS",
       "title": "Pain Catastrophizing Scale",
       "fields": {
-        "watMeetHet": "Mate van catastroferen over pijn via drie dimensies: ruminatie (herkauwen), magnificatie (vergroting) en hulpeloosheid. 13 items. Optioneel meetinstrument bij lage rugpijn (KNGF 2021).",
-        "scoringscriteria": "13 items op 5-puntsschaal (0 = helemaal niet, 4 = altijd). Totaalscore 0–52.<br><b>Subschalen:</b><br>• Ruminatie (items 8-11): 0–16<br>• Magnificatie (items 6, 7, 13): 0–12<br>• Hulpeloosheid (items 1-5, 12): 0–24",
-        "normwaarden": "Totaalscore <b>≥30</b> = klinisch relevant catastroferen.<br>Subschaal ruminatie ≥11, magnificatie ≥5, hulpeloosheid ≥13 = verhoogd.<br>MCiD: 38% verbetering t.o.v. baseline.",
+        "watMeetHet": "Mate van catastroferen over pijn via drie dimensies: ruminatie (herkauwen), magnificatie (vergroting) en hulpeloosheid. 13 items. Optioneel meetinstrument bij lage rugpijn (KNGF 2021). <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "scoringscriteria": "13 items op 5-puntsschaal (0 = helemaal niet, 4 = altijd). Totaalscore 0–52.<br><b>Subschalen:</b><br>• Ruminatie (items 8-11): 0–16<br>• Magnificatie (items 6, 7, 13): 0–12<br>• Hulpeloosheid (items 1-5, 12): 0–24 <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "normwaarden": "Totaalscore <b>≥30</b> = klinisch relevant catastroferen.<br>Subschaal ruminatie ≥11, magnificatie ≥5, hulpeloosheid ≥13 = verhoogd.<br>MCiD: 38% verbetering t.o.v. baseline. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Catastroferen is prognostische factor voor persisterende klachten (KNGF 2021). Inzetten bij profiel 2/3. Hoge PCS met verwachting van letsel → exposure in vivo. Hoge PCS met hulpeloosheid → graded activity, CGT/ACT, motivational interviewing."
       },
       "links": [
@@ -2342,9 +2345,9 @@ window.SEED_DATA = {
       "afk": "SLR",
       "title": "Straight Leg Raise / Lasègue",
       "fields": {
-        "watMeetHet": "Neurale provocatietest voor lumbosacrale radiculopathie (L4-S1). Passieve heupflexie met gestrekt been in rugligging. Optioneel meetinstrument (KNGF 2021). Fingertips-to-floor afstand (positief indien &gt;25 cm) als alternatief.",
-        "scoringscriteria": "<b>Uitvoering:</b> Patiënt in rugligging, been passief geheven met gestrekte knie.<br><b>Positief:</b> Reproduceerbare beenpijn onder de knie bij 30–70° heupflexie.<br><b>Gekruiste Lasègue:</b> Beenpijn in aangedane been bij heffen contralaterale been.<br><b>Omgekeerde Lasègue:</b> Bij L2-L4 radiculopathie (buikligging, knieflexie).<br><b>Fingertips-to-floor:</b> Positief bij &gt;25 cm.",
-        "normwaarden": "<b>SLR:</b> Sensitiviteit 91%, specificiteit 26%.<br><b>Gekruiste SLR:</b> Lage sensitiviteit, hoge specificiteit (90%) voor HNP.<br><b>Slump-test:</b> Sensitiviteit 84%, specificiteit 83% (alternatief bij beperkte SLR).",
+        "watMeetHet": "Neurale provocatietest voor lumbosacrale radiculopathie (L4-S1). Passieve heupflexie met gestrekt been in rugligging. Optioneel meetinstrument (KNGF 2021). Fingertips-to-floor afstand (positief indien &gt;25 cm) als alternatief. <sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup>",
+        "scoringscriteria": "<b>Uitvoering:</b> Patiënt in rugligging, been passief geheven met gestrekte knie.<br><b>Positief:</b> Reproduceerbare beenpijn onder de knie bij 30–70° heupflexie.<br><b>Gekruiste Lasègue:</b> Beenpijn in aangedane been bij heffen contralaterale been.<br><b>Omgekeerde Lasègue:</b> Bij L2-L4 radiculopathie (buikligging, knieflexie).<br><b>Fingertips-to-floor:</b> Positief bij &gt;25 cm. <sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup><sup data-src=\"rl-rug-2021\" data-p=\"51\">[p51]</sup>",
+        "normwaarden": "<b>SLR:</b> Sensitiviteit 91%, specificiteit 26%.<br><b>Gekruiste SLR:</b> Lage sensitiviteit, hoge specificiteit (90%) voor HNP.<br><b>Slump-test:</b> Sensitiviteit 84%, specificiteit 83% (alternatief bij beperkte SLR). <sup data-src=\"rl-rug-2021\" data-p=\"51\">[p51]</sup>",
         "implicatie": "Onderdeel van het neurologisch onderzoek bij verdenking LRS (KNGF 2021). Positieve SLR + dermatomale pijn + bijpassende neurologische uitval maakt LRS aannemelijk zonder beeldvorming. Evalueer ook spierkracht (MRC), sensibiliteit en reflexen."
       },
       "links": [
@@ -2360,9 +2363,9 @@ window.SEED_DATA = {
       "afk": "CSI",
       "title": "Central Sensitization Inventory",
       "fields": {
-        "watMeetHet": "Kenmerken van centrale sensitisatie (nociplastische pijn). 25 items over symptomen geassocieerd met verstoorde pijnmodulatie in het centraal zenuwstelsel. Optioneel meetinstrument bij lage rugpijn (KNGF 2021).",
-        "scoringscriteria": "Deel A: 25 items op 5-puntsschaal (0 = nooit, 4 = altijd). Totaalscore 0–100.<br>Deel B: 10 ja/nee-items over eerder gediagnosticeerde aandoeningen geassocieerd met centrale sensitisatie (fibromyalgie, chronische vermoeidheid, TMD, migraine etc.).",
-        "normwaarden": "Score <b>≥40</b> = waarschijnlijke centrale sensitisatie.<br>Score &lt;40 = centrale sensitisatie minder waarschijnlijk.<br>Deel B geeft context maar geen score.",
+        "watMeetHet": "Kenmerken van centrale sensitisatie (nociplastische pijn). 25 items over symptomen geassocieerd met verstoorde pijnmodulatie in het centraal zenuwstelsel. Optioneel meetinstrument bij lage rugpijn (KNGF 2021). <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
+        "scoringscriteria": "Deel A: 25 items op 5-puntsschaal (0 = nooit, 4 = altijd). Totaalscore 0–100.<br>Deel B: 10 ja/nee-items over eerder gediagnosticeerde aandoeningen geassocieerd met centrale sensitisatie (fibromyalgie, chronische vermoeidheid, TMD, migraine etc.). <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
+        "normwaarden": "Score <b>≥40</b> = waarschijnlijke centrale sensitisatie.<br>Score &lt;40 = centrale sensitisatie minder waarschijnlijk.<br>Deel B geeft context maar geen score. <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
         "implicatie": "Inzetten bij chronische lage rugpijn wanneer pijnpresentatie niet past bij nociceptieve of neuropathische verklaring (KNGF 2021 noemt nociplastische pijn als mogelijk mechanisme). Hoge CSI → overweeg pijneducatie gericht op centrale sensitisatie. Kan profiel 3-behandeling sturen."
       },
       "links": [
@@ -2378,9 +2381,9 @@ window.SEED_DATA = {
       "afk": "4-DKL",
       "title": "Vierdimensionale Klachtenlijst",
       "fields": {
-        "watMeetHet": "Screening op vier dimensies van psychische klachten: distress (16 items), depressie (6 items), angst (12 items) en somatisatie (16 items). 50 items totaal. Optioneel meetinstrument bij lage rugpijn (KNGF 2021).",
-        "scoringscriteria": "<b>Distress:</b> 16 items, score 0–32. Verhoogd ≥11, sterk verhoogd ≥21.<br><b>Depressie:</b> 6 items, score 0–12. Verhoogd ≥3, sterk verhoogd ≥6.<br><b>Angst:</b> 12 items, score 0–24. Verhoogd ≥8, sterk verhoogd ≥13.<br><b>Somatisatie:</b> 16 items, score 0–32. Verhoogd ≥11, sterk verhoogd ≥21.<br>Antwoorden: nee (0), soms (1), regelmatig (2), vaak/erg (3) of zeer vaak/erg (4, alleen somatisatie).",
-        "normwaarden": "<b>Distress:</b> 0–10 normaal, ≥11 verhoogd, ≥21 sterk verhoogd.<br><b>Depressie:</b> 0–2 normaal, ≥3 verhoogd, ≥6 sterk verhoogd.<br><b>Angst:</b> 0–7 normaal, ≥8 verhoogd, ≥13 sterk verhoogd.<br><b>Somatisatie:</b> 0–10 normaal, ≥11 verhoogd, ≥21 sterk verhoogd.",
+        "watMeetHet": "Screening op vier dimensies van psychische klachten: distress (16 items), depressie (6 items), angst (12 items) en somatisatie (16 items). 50 items totaal. Optioneel meetinstrument bij lage rugpijn (KNGF 2021). <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "scoringscriteria": "<b>Distress:</b> 16 items, score 0–32. Verhoogd ≥11, sterk verhoogd ≥21.<br><b>Depressie:</b> 6 items, score 0–12. Verhoogd ≥3, sterk verhoogd ≥6.<br><b>Angst:</b> 12 items, score 0–24. Verhoogd ≥8, sterk verhoogd ≥13.<br><b>Somatisatie:</b> 16 items, score 0–32. Verhoogd ≥11, sterk verhoogd ≥21.<br>Antwoorden: nee (0), soms (1), regelmatig (2), vaak/erg (3) of zeer vaak/erg (4, alleen somatisatie). <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "normwaarden": "<b>Distress:</b> 0–10 normaal, ≥11 verhoogd, ≥21 sterk verhoogd.<br><b>Depressie:</b> 0–2 normaal, ≥3 verhoogd, ≥6 sterk verhoogd.<br><b>Angst:</b> 0–7 normaal, ≥8 verhoogd, ≥13 sterk verhoogd.<br><b>Somatisatie:</b> 0–10 normaal, ≥11 verhoogd, ≥21 sterk verhoogd. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Breder dan HADS (meet ook distress en somatisatie). Inzetten bij vermoeden van psychosociale belasting als prognostische factor (KNGF 2021). Sterk verhoogde scores → overweeg verwijzing psycholoog/psychiater. Alternatief voor HADS wanneer distress en somatisatie ook relevant zijn."
       },
       "links": [
@@ -2396,9 +2399,9 @@ window.SEED_DATA = {
       "afk": "Oefentherapie LRP",
       "title": "Oefentherapie bij lage rugpijn — dosering & principes",
       "fields": {
-        "kern": "Oefentherapie als kerninterventie bij lage rugpijn profiel 2 en 3. Instructie zelfstandig oefenen bij profiel 1. KNGF-richtlijn LRP 2021, sectie C.2.",
-        "toelichting": "<b>Type:</b> Focus op patiëntbehoeften/voorkeuren/capaciteiten. Overweeg functionele training. Overweeg spierkracht, aeroob uithoudingsvermogen, flexibiliteit, neuromotorische controle alleen bij verband met functionele stoornis.<br><br><b>Dosering spierkracht:</b><br>• Frequentie: 2–3 dagen/week per spiergroep, 48u herstel<br>• Intensiteit: 60–70% 1RM<br>• Volume: 2–4 sets van 8–12 herhalingen, 30–60s rust<br><br><b>Dosering aeroob:</b><br>• Matig: ≥5 dagen/week | Zwaar: ≥3 dagen/week | Combinatie: ≥3–5 dagen/week<br>• Intensiteit: zwaar 60–90% HRmax (ervaren); matig 40–60% HRmax (onervaren); geleidelijk opbouwen<br>• Duur: ≥30 min/dag, minimum 10 min aaneengesloten<br><br><b>Dosering flexibiliteit:</b><br>• Bij voorkeur dagelijks, minimaal 2–3 dagen/week<br>• Strekken tot licht ongemak, 2–4× 10–30 seconden<br>• 8–10 min warming-up eerst<br><br><b>Neuromotorische controle:</b> Geen optimale dosering bekend; afstemmen op patiëntcapaciteiten, focus op kwaliteit zonder pijntoename.<br><br><b>Responsmonitoring:</b><br>• Acceptabel: tolereerbare pijn/vermoeidheid/functionele problemen max 24u dan afnemend<br>• Ongewenst: toegenomen nachtelijke pijn, vermoeidheid, functieverlies na 24 uur",
-        "implicatie": "Tijdcontingente aanpak heeft voorkeur: geleidelijk functioneren verbeteren losgekoppeld van pijnniveau. Begeleiding afbouwen gedurende behandeling. Integreer gedragsveranderingsprincipes waar geïndiceerd. Pas aan bij comorbiditeit. Overweeg eHealth."
+        "kern": "Oefentherapie wordt aanbevolen bij profiel 2 en 3; bij profiel 1 conditioneel als instructie voor zelfstandig oefenen. Dosering volgt de ACSM-richtlijnen voor spierkracht, aeroob uithoudingsvermogen en flexibiliteit.<sup data-src=\"rl-rug-2021\" data-p=\"25–27\">[p25–27]</sup>",
+        "toelichting": "<b>Type:</b> stimuleer het hervatten of uitbreiden van activiteiten bij voorkeur stapsgewijs en tijdcontingent. Richt de oefentherapie op de behoeften, voorkeuren en mogelijkheden van de patiënt.<sup data-src=\"rl-rug-2021\" data-p=\"26\">[p26]</sup><br><br><b>Dosering spierkracht:</b><ul><li>Frequentie: 2–3 dagen per week per spiergroep, herstelperiode 48 uur<sup data-src=\"rl-rug-2021\" data-p=\"26\">[p26]</sup></li><li>Intensiteit: 60–70% van 1RM<sup data-src=\"rl-rug-2021\" data-p=\"26\">[p26]</sup></li><li>Volume: 2–4 sets van 8–12 herhalingen<sup data-src=\"rl-rug-2021\" data-p=\"26\">[p26]</sup></li><li>Rust: 30–60 sec tussen de sets<sup data-src=\"rl-rug-2021\" data-p=\"26\">[p26]</sup></li></ul><b>Dosering aeroob uithoudingsvermogen:</b><ul><li>Frequentie: &ge; 5 dagen/week gematigd óf &ge; 3 dagen/week zwaar óf combinatie &ge; 3–5 dagen/week<sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup></li><li>Intensiteit: zwaar 60–90% HFmax; gematigd 40–60% HFmax<sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup></li><li>Duur: &ge; 30 min/dag, &ge; 10 min aaneengesloten<sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup></li></ul><b>Dosering flexibiliteit:</b><ul><li>Frequentie: dagelijks, minimaal 2–3 dagen/week<sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup></li><li>Intensiteit: tot je rek of licht ongemak voelt<sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup></li><li>Duur: 2–4 keer 10–30 sec rekken; 8–10 min opwarmen vooraf<sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup></li></ul><b>Neuromotorische controle:</b> geen vaste dosering; accent op kwaliteit van bewegen zonder pijntoename.<sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup><br><br><b>Acceptabele reactie:</b> draaglijke pijn, vermoeidheid of functieproblemen die max. 24 uur aanhouden en daarna afnemen.<br><b>Ongewenste reactie:</b> (nachtelijke) pijn, vermoeidheid en functieverlies die na 24 uur toenemen.<sup data-src=\"rl-rug-2021\" data-p=\"27\">[p27]</sup>",
+        "implicatie": "Doseer de oefentherapie op basis van de ACSM-parameters, maar stem altijd af op de haalbaarheid voor de patiënt. Monitor de reactie na elke sessie. Bouw bij goede vooruitgang in 6–12 weken op naar het oude niveau. Gebruik de reactiecriteria om overbelasting te signaleren."
       },
       "links": []
     },
@@ -2408,9 +2411,9 @@ window.SEED_DATA = {
       "afk": "Gedragsmatig LRP",
       "title": "Gedragsmatige behandeling bij lage rugpijn — matching-tabel",
       "fields": {
-        "kern": "Gedragsmatige behandelvormen bij patiënten met dominante psychosociale prognostische factoren (profiel 2 en 3). KNGF-richtlijn LRP 2021, sectie C.3.",
-        "toelichting": "<b>Behandelvormen:</b><br>• Operante conditionering (bijv. graded activity)<br>• Cognitieve gedragstherapie (bijv. exposure in vivo)<br>• Respondente technieken (bijv. relaxatieoefeningen)<br>• ACT (Acceptance and Commitment Therapy)<br>• Mindfulness<br>• Motivational interviewing<br>• EMG-biofeedback<br><br><b>Matching factor → interventie (expertopinie):</b><div class='table-responsive'><table class='table table-sm'><thead><tr><th>Dominante factor</th><th>Aanbevolen interventie</th></tr></thead><tbody><tr><td>Pijngerelateerde bewegingsangst, catastroferen (verwachting van letsel)</td><td>Exposure in vivo</td></tr><tr><td>Passieve coping, catastroferen (hulpeloosheid)</td><td>Graded activity, CGT (incl. ACT), motivational interviewing</td></tr><tr><td>Psychosociale stress (moeite met ontspannen)</td><td>Relaxatietherapie</td></tr><tr><td>Psychosociale stress (medical shopping, controle willen, frustratie)</td><td>CGT (incl. ACT), motivational interviewing</td></tr></tbody></table></div><b>Competentie-eis:</b> Pas alleen behandelvormen toe waarvoor je competent en bevoegd bent. Psychosomatische FT/OT heeft hier specifieke expertise.",
-        "implicatie": "Gedragsmatige behandeling is geen vervanging maar aanvulling op oefentherapie. Inzetten wanneer psychosociale factoren het functioneel herstel belemmeren. Gebruik meetinstrumenten (FABQ, TSK, PCS, HADS, PSEQ) om dominante factoren te identificeren."
+        "kern": "Gedragsgeoriënteerde behandeling wordt overwogen bij patiënten met dominante psychosociale prognostische factoren (profiel 3). De keuze van behandelvorm wordt afgestemd op het specifieke psychosociale kenmerk.<sup data-src=\"rl-rug-2021\" data-p=\"28\">[p28]</sup>",
+        "toelichting": "<b>Matching-tabel psychosociale factoren → behandeling ('expert opinion'):</b><br><table><tr><th>Herstelbelemmerende factor</th><th>Behandeling</th></tr><tr><td>Pijngerelateerde bewegingsangst, catastroferen (verwachting van letsel bij bewegen)</td><td>Exposure in vivo*</td></tr><tr><td>Passieve copingstijl, catastroferen (hulpeloosheid/machteloosheid)</td><td>Graded activity, cognitieve gedragstherapie (waaronder ACT), motivational interviewing</td></tr><tr><td>Psychologische en psychosociale stress (slecht kunnen ontspannen)</td><td>Ontspanningstherapie</td></tr><tr><td>Psychologische en psychosociale stress (medisch shoppen, controle willen houden, frustratie)</td><td>Cognitieve gedragstherapie (waaronder ACT), motivational interviewing</td></tr></table><sup data-src=\"rl-rug-2021\" data-p=\"28\">[p28]</sup><br><br>* Exposure in vivo alleen toepasbaar bij uitdaagbare cognities.<sup data-src=\"rl-rug-2021\" data-p=\"28\">[p28]</sup><br><br><b>Pijneducatie</b> is een basaal onderdeel van graded activity en exposure in vivo.<sup data-src=\"rl-rug-2021\" data-p=\"28\">[p28]</sup><br><b>Voer alleen uit waartoe je bekwaam en bevoegd bent.</b><sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup>",
+        "implicatie": "Identificeer het dominante psychosociale kenmerk en koppel daar de juiste behandelvorm aan. Exposure in vivo is krachtig bij uitdaagbare angstcognities, maar niet bij elke vorm van catastroferen. Bij twijfel over je competentie: verwijs naar psychosomatisch fysiotherapeut of psycholoog."
       },
       "links": []
     },
@@ -2583,6 +2586,90 @@ window.SEED_DATA = {
         "kern": "Overgewicht is een modifiabele risicofactor bij knie- en heupartrose. Gewichtsreductie in combinatie met beweging geeft de sterkste vermindering van pijn en verbetering van functioneren.",
         "toelichting": "<b>Belastingsreductie:</b><br>• Elke kilogram gewichtsverlies resulteert in ~4 kg minder compressiekracht op de knie bij lopen<br>• 5–10% gewichtsreductie leidt al tot klinisch relevante pijnvermindering (HOOS/KOOS-score)<br><br><b>Indicaties voor dieetadvies:</b><br>• BMI ≥25 (overgewicht) → leefstijladvies in consult<br>• BMI ≥30 (obesitas) → verwijzing diëtist aanbevolen<br>• Gecombineerde aanpak bewegen + dieet is effectiever dan elk apart<br><br><b>Beweegrichtlijn:</b><br>• ≥150 minuten per week matige intensiteit aerobe activiteit (KNGF/WHO)<br>• Kies activiteiten met lage gewrichtsbelasting als alternatief: fietsen, zwemmen, fitness op fiets<br><br><b>Leefstijladvies in de praktijk:</b><br>• Beweeggedrag in kaart brengen (activiteitenmeter/stappenteller)<br>• Stapsgewijze verhoging fysieke activiteit als basisinterventie<br>• Sedentair gedrag reduceren: om het uur bewegen, sta-bureau",
         "implicatie": "Bij BMI ≥25 altijd beweeg- en dieetadvies combineren. Verwijs gericht naar diëtist bij BMI ≥30. Benoem expliciet de relatie tussen gewicht en gewrichtsbelasting — dit motiveert patiënten meer dan abstracte gezondheidsdoelen."
+      },
+      "links": []
+    },
+    "rug-voorlichting-k7m3": {
+      "id": "rug-voorlichting-k7m3",
+      "type": "kennis",
+      "afk": "Voorlichting",
+      "title": "Voorlichting en (pijn)educatie bij lage rugpijn en LRS",
+      "fields": {
+        "kern": "Voorlichting en (pijn)educatie zijn een integraal onderdeel van de behandeling bij alle profielen. De inhoud omvat zes thema's bij aspecifieke rugpijn en vier bij LRS.<sup data-src=\"rl-rug-2021\" data-p=\"23–25\">[p23–25]</sup>",
+        "toelichting": "<b>Vorm van de voorlichting:</b><ul><li>Verwijs naar de patiënteninformatie op basis van de richtlijn en naar thuisarts.nl<sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup></li><li>Integreer voorlichting als onderdeel van de therapie (voortraject, behandeling, nazorg)<sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup></li><li>Gebruik heldere, begrijpelijke taal; vermijd termen als 'letsel', 'degeneratie', 'slijtage'<sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup></li><li>Gebruik de term 'lage rugpijn', vermijd 'aspecifiek'<sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup></li></ul><b>Inhoud voorlichting aspecifieke lage rugpijn (6 thema's):</b><ol><li>Aard en diagnose: vaak geen aanwijsbare oorzaak, combinatie van factoren<sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup></li><li>Beloop en prognose: veel voorkomend, na drie maanden ~50% hersteld, recidieven komen voor<sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup></li><li>Beïnvloedbare etiologische factoren<sup data-src=\"rl-rug-2021\" data-p=\"23\">[p23]</sup></li><li>Beïnvloedbare prognostische factoren<sup data-src=\"rl-rug-2021\" data-p=\"24\">[p24]</sup></li><li>Diagnostiek: vindt plaats in eerste lijn; beeldvorming niet aanbevolen bij lage rugpijn zonder alarmsymptomen<sup data-src=\"rl-rug-2021\" data-p=\"24\">[p24]</sup></li><li>Behandelopties: eerstelijns, actieve benadering, adequate omgang met pijn<sup data-src=\"rl-rug-2021\" data-p=\"24\">[p24]</sup></li></ol><b>Pijneducatie:</b> Gaat verder dan voorlichting. Gericht op het vergroten van kennis en inzicht, het verbeteren van meningsvorming, het teweegbrengen van gedragsveranderingen en het aanleren van vaardigheden.<sup data-src=\"rl-rug-2021\" data-p=\"64\">[p64]</sup> Biopsychosociale pijneducatie is mogelijk effectief bij de behandeling van lage rugpijn.<sup data-src=\"rl-rug-2021\" data-p=\"64\">[p64]</sup><br><br><b>Voorlichting bij LRS (4 thema's):</b><ol><li>Aard: prikkeling zenuwwortel door uitpuilende tussenwervelschijf, trekt zich meestal vanzelf terug<sup data-src=\"rl-rug-2021\" data-p=\"24\">[p24]</sup></li><li>Beloop en prognose: herstel in eerste drie maanden zonder operatie<sup data-src=\"rl-rug-2021\" data-p=\"24\">[p24]</sup></li><li>Diagnostiek: MRI alleen bij rode vlaggen of langdurig invaliderend<sup data-src=\"rl-rug-2021\" data-p=\"24\">[p24]</sup></li><li>Behandelopties: conservatief beleid eerste drie maanden<sup data-src=\"rl-rug-2021\" data-p=\"25\">[p25]</sup></li></ol>",
+        "implicatie": "Geef bij elke patiënt in elk profiel voorlichting over de zes (of vier bij LRS) thema's. Vermijd biomedische termen die angst en catastrofaal denken kunnen voeden. Bij profiel 3: overweeg aanvullende pijneducatie gericht op irreële pijncognities."
+      },
+      "links": []
+    },
+    "rug-passieve-interventies-n8p4": {
+      "id": "rug-passieve-interventies-n8p4",
+      "type": "kennis",
+      "afk": "Passieve interventies",
+      "title": "Niet-oefentherapeutische interventies: mobilisaties, manipulaties, massage, TENS en interferentie",
+      "fields": {
+        "kern": "Mobilisaties en manipulaties kunnen als aanvulling op oefentherapie overwogen worden bij profiel 2 en 3 met mechanisch verklaarbare stoornissen. Massage wordt sterk afgeraden als zelfstandige interventie. TENS en interferentie worden niet aanbevolen.<sup data-src=\"rl-rug-2021\" data-p=\"29–30\">[p29–30]</sup>",
+        "toelichting": "<b>Mobilisaties en manipulaties:</b><ul><li>Overweeg bij profiel 2 en 3, in aanvulling op oefentherapie, indien het probleem mechanisch verklaard kan worden vanuit stoornissen binnen het neuromusculoskeletaal systeem (bijv. verminderde regionale mobiliteit bij lumbale flexie of extensie).<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup></li><li>Niet als enkelvoudige interventie<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup></li><li>Niet bij profiel 1<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup></li><li>Bij voorkeur niet bij LRS (kans op pijntoename, motorische uitval)<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup></li><li>Evalueer effecten direct en bij aanvang volgende sessie; alert op nadelige effecten<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup></li><li>Mobilisatie = passieve artrogene mobilisaties; manipulatie = 'high-velocity-thrust'-technieken op synoviale gewrichten<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup></li><li>Valt buiten competentieprofiel oefentherapeut (Cesar/Mensendieck) tenzij aanvullende competenties behaald<sup data-src=\"rl-rug-2021\" data-p=\"29\">[p29]</sup></li></ul><b>Massage:</b><ul><li>Niet als enkelvoudige interventie, niet bij profiel 1, niet bij LRS<sup data-src=\"rl-rug-2021\" data-p=\"30\">[p30]</sup></li><li>Alleen overwegen bij verhoogde spierspanning rondom de lumbale wervelkolom én als brugfunctie naar actieve aanpak bij sterke voorkeur/verwachtingen van de patiënt<sup data-src=\"rl-rug-2021\" data-p=\"30\">[p30]</sup></li><li>Kortdurend, altijd in combinatie met actieve en/of gedragsgeoriënteerde behandeling, en alleen bij profiel 2 of 3<sup data-src=\"rl-rug-2021\" data-p=\"30\">[p30]</sup></li></ul><b>TENS:</b> niet toepassen bij lage rugpijn of LRS. Zeer lage bewijskracht, effecten met veel onzekerheid omgeven.<sup data-src=\"rl-rug-2021\" data-p=\"30\">[p30]</sup><sup data-src=\"rl-rug-2021\" data-p=\"79–81\">[p79–81]</sup><br><b>Interferentie:</b> niet toepassen bij lage rugpijn of LRS.<sup data-src=\"rl-rug-2021\" data-p=\"30\">[p30]</sup><sup data-src=\"rl-rug-2021\" data-p=\"80\">[p80]</sup>",
+        "implicatie": "Wees terughoudend met passieve interventies. Mobilisatie/manipulatie alleen als aanvulling op actieve aanpak bij duidelijke mechanische indicatie. Massage als strategisch instrument om de therapeutische relatie te bouwen, nooit als doel op zich. TENS en interferentie: niet doen."
+      },
+      "links": []
+    },
+    "rug-stopcriteria-q2r5": {
+      "id": "rug-stopcriteria-q2r5",
+      "type": "kennis",
+      "afk": "Stopcriteria",
+      "title": "Afsluiting van de behandeling — stopcriteria en nazorg",
+      "fields": {
+        "kern": "Sluit de behandeling af wanneer de hulpvraag is voldaan, de behandeldoelen zijn bereikt, of wanneer stagnatie optreedt zonder verklaring. Plan nazorg in voor duurzaam zelfmanagement.<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup>",
+        "toelichting": "<b>Stopcriteria (beëindig de therapie voortijdig bij):</b><ul><li>Hulpvraag voldaan en/of behandeldoelen bereikt<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup></li><li>Onvoldoende vermindering van klachten bij evaluatie zonder duidelijke verklaring (meetinstrument kan ondersteunend zijn, maar niet leidend)<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup></li><li>Patiënt in staat om geleerde vaardigheden zelfstandig voort te zetten<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup></li><li>Patiënt niet gemotiveerd om eigen verantwoordelijkheid te nemen<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup></li><li>Rode vlag of niet-pluisgevoel<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup></li><li>Patiënt geeft aan te willen stoppen<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup></li></ul><b>Nazorg:</b><ul><li>Stimuleer zelfstandig oefenen en bewegen na de behandelperiode<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup></li><li>Plan follow-upsessies in<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup></li><li>Herhaal voorlichting over eigen regie, actieve copingstrategieën en gezonde leefstijl<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup></li></ul><b>Rapportage:</b> stuur een rapportage naar huisarts/verwijzer bij aanvang en afsluiting. Overweeg tussentijdse updates.<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup>",
+        "implicatie": "Gebruik de stopcriteria actief — niet eindeloos doorbehandelen bij stagnatie. Geef bij afsluiting een duidelijke nazorgboodschap en plan eventueel follow-up in."
+      },
+      "links": []
+    },
+    "rug-epidemiologie-v3w6": {
+      "id": "rug-epidemiologie-v3w6",
+      "type": "kennis",
+      "afk": "Epidemiologie",
+      "title": "Epidemiologie, pathofysiologie en comorbiditeit van lage rugpijn en LRS",
+      "fields": {
+        "kern": "Lage rugpijn is een zeer prevalente aandoening met grote maatschappelijke impact. Jaarlijks heeft 1,4–20% van de volwassenen een episode; de lifetimeprevalentie is 50–80%. LRS treft jaarlijks 1–5% van de volwassenen.<sup data-src=\"rl-rug-2021\" data-p=\"9\">[p9]</sup>",
+        "toelichting": "<b>Epidemiologie:</b><ul><li>Komt voor in alle leeftijdsgroepen, hoogste prevalentie 40–80 jaar.<sup data-src=\"rl-rug-2021\" data-p=\"9\">[p9]</sup></li><li>In 2017 iets minder dan 900.000 nieuwe gevallen in de Nederlandse huisartsenpraktijk. Verhouding mannen:vrouwen 45:55.<sup data-src=\"rl-rug-2021\" data-p=\"9\">[p9]</sup></li><li>In 30% van de gevallen betrof het uitstralende pijn.<sup data-src=\"rl-rug-2021\" data-p=\"9\">[p9]</sup></li><li>Medische kosten: 937 miljoen euro in 2017 voor nek- en rugklachten = 14% van de totale zorgkosten voor bewegingsstelsel.<sup data-src=\"rl-rug-2021\" data-p=\"10\">[p10]</sup><sup data-src=\"rl-rug-2021\" data-p=\"37\">[p37]</sup></li><li>Verhouding medisch/niet-medisch: 12%/88%.<sup data-src=\"rl-rug-2021\" data-p=\"10\">[p10]</sup></li></ul><b>Pathofysiologie:</b><ul><li>Multifactorieel: biologische, psychologische, sociale factoren, comorbiditeit en pijnprocessen spelen een rol.<sup data-src=\"rl-rug-2021\" data-p=\"9\">[p9]</sup></li><li>Duidelijke pathofysiologische oorzaak meestal niet aantoonbaar; bij &lt; 1% ernstige oorzaak in de eerste lijn.<sup data-src=\"rl-rug-2021\" data-p=\"9\">[p9]</sup></li><li>Pijn is een multidimensionale ervaring met somatosensorische, affectieve en cognitieve componenten; bij een deel is er sprake van nociplastische pijn.<sup data-src=\"rl-rug-2021\" data-p=\"36\">[p36]</sup></li></ul><b>Comorbiditeit:</b> astma, diabetes, hoofdpijn, osteoartritis, osteoporose, cardiovasculaire problematiek, bekkenbodemproblematiek. Comorbiditeit leidt tot verhoogd zorggebruik en nadelig effect op de prognose.<sup data-src=\"rl-rug-2021\" data-p=\"9\">[p9]</sup><sup data-src=\"rl-rug-2021\" data-p=\"36\">[p36]</sup>",
+        "implicatie": "Wees je bewust van de enorme prevalentie en kosten. Inventariseer comorbiditeit, want het beïnvloedt de prognose en de invulling van de oefentherapie. Een duidelijke pathofysiologische oorzaak is bij de overgrote meerderheid niet aantoonbaar — communiceer dat ook zo aan de patiënt."
+      },
+      "links": []
+    },
+    "rug-etiologie-prognostiek-x4y7": {
+      "id": "rug-etiologie-prognostiek-x4y7",
+      "type": "kennis",
+      "afk": "Etiologie & prognostiek",
+      "title": "Etiologische en prognostische factoren bij lage rugpijn en LRS",
+      "fields": {
+        "kern": "Etiologische factoren kunnen bijdragen aan het ontstaan van rugpijn; prognostische factoren beïnvloeden het beloop en de kans op aanhoudende klachten. Beide categorieën worden tijdens de anamnese geïnventariseerd.<sup data-src=\"rl-rug-2021\" data-p=\"10–11\">[p10–11]</sup>",
+        "toelichting": "<b>Etiologische factoren:</b><ul><li>Aan rugpijn gerelateerd: eerdere episodes<sup data-src=\"rl-rug-2021\" data-p=\"11\">[p11]</sup></li><li>Patiëntgerelateerd: overgewicht/obesitas, roken, comorbiditeit<sup data-src=\"rl-rug-2021\" data-p=\"11\">[p11]</sup></li><li>Psychosociaal: depressie<sup data-src=\"rl-rug-2021\" data-p=\"11\">[p11]</sup></li><li>Werkgerelateerd: hoge fysieke/mentale belasting, weinig sociale ondersteuning, weinig autonomie, weinig werkzekerheid, monotone arbeid<sup data-src=\"rl-rug-2021\" data-p=\"11\">[p11]</sup></li></ul><b>Prognostische factoren voor aanhoudende klachten:</b><ul><li>Aan rugpijn gerelateerd: eerdere episodes, hoge mate van beperkingen, pijn in het been, hoge pijnintensiteit<sup data-src=\"rl-rug-2021\" data-p=\"11\">[p11]</sup></li><li>Patiëntgerelateerd: slechte algemene gezondheid of kwaliteit van leven<sup data-src=\"rl-rug-2021\" data-p=\"11\">[p11]</sup></li><li>Psychosociaal: psychologische en psychosociale stress, pijngerelateerde bewegingsangst, depressieve gevoelens, passieve copingstijl, negatieve verwachtingen/catastroferen<sup data-src=\"rl-rug-2021\" data-p=\"11\">[p11]</sup></li><li>Werkgerelateerd: hoge fysieke belasting, slechte relaties met collega's, verminderde tevredenheid met werk<sup data-src=\"rl-rug-2021\" data-p=\"11\">[p11]</sup></li></ul>De verhouding verband factoren–klachten is vaak zwak; behandelen van slechts één factor zal de klachten niet wegnemen, maar mogelijk wel verminderen.<sup data-src=\"rl-rug-2021\" data-p=\"40\">[p40]</sup>",
+        "implicatie": "Inventariseer zowel etiologische als prognostische factoren tijdens de anamnese. Gebruik de etiologische factoren voor gerichte voorlichting. Gebruik de prognostische factoren voor de profielindeling en de evaluatie van het risico op aanhoudende klachten."
+      },
+      "links": []
+    },
+    "rug-anamnese-lo-z5a8": {
+      "id": "rug-anamnese-lo-z5a8",
+      "type": "kennis",
+      "afk": "Anamnese & LO",
+      "title": "Anamnese en lichamelijk onderzoek bij lage rugpijn",
+      "fields": {
+        "kern": "De anamnese inventariseert de hulpvraag, rode vlaggen, etiologische en prognostische factoren. Het lichamelijk onderzoek omvat inspectie, bewegingsonderzoek en eventueel neurologisch onderzoek bij vermoeden op LRS.<sup data-src=\"rl-rug-2021\" data-p=\"14–16\">[p14–16]</sup>",
+        "toelichting": "<b>Anamnese — relevante onderwerpen:</b><br><em>Centraal:</em> hulpvraag van de patiënt.<sup data-src=\"rl-rug-2021\" data-p=\"14\">[p14]</sup><br><em>Functies en anatomische eigenschappen:</em> duur, wijze van ontstaan, lokalisatie, intensiteit, aard van de pijn, continuïteit, uitstraling, invloed van rust/slaap/drukverhogende momenten, eerdere episodes, krachtverlies, sensibiliteitsstoornissen, mictie-/defecatieklachten.<sup data-src=\"rl-rug-2021\" data-p=\"14\">[p14]</sup><br><em>Activiteiten en participatie:</em> mate van belemmering in functioneren thuis/werk/vrije tijd, comorbiditeit, balans belasting-belastbaarheid, seksuele klachten.<sup data-src=\"rl-rug-2021\" data-p=\"15\">[p15]</sup><br><em>Externe factoren:</em> thuissituatie, sociaal netwerk, werksituatie.<sup data-src=\"rl-rug-2021\" data-p=\"15\">[p15]</sup><br><em>Persoonlijke factoren:</em> algehele malaise, gewichtsverlies, koorts, BMI, medische voorgeschiedenis, psychosociale stress, bewegingsangst, catastroferen, ideeën en verwachtingen, bereidheid/motivatie/coping.<sup data-src=\"rl-rug-2021\" data-p=\"15\">[p15]</sup><br><br><b>Lichamelijk onderzoek:</b><br><em>Inspectie:</em> beweeggedrag, pijnlokalisatie, statiek wervelkolom/bekken/benen, huid, spiergroepen, ademhaling, spiertonus, triggerpoints.<sup data-src=\"rl-rug-2021\" data-p=\"15–16\">[p15–16]</sup><br><em>Bewegingsonderzoek:</em><ul><li>Functioneel: kwaliteit van bewegen bij activiteiten, (trap)lopen, transfers, ADL, hulpmiddelen<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li><li>Actief: mobiliteit, rekbaarheid, contractiegevoeligheid, spierkracht, neuromotorische controle, stabiliteit, evenwicht, pijnprovocatie/-reductie<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li><li>Passief: mobiliteit, rekbaarheid, bewegingsweerstand, eindgevoel<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li><li>Biomechanisch: gerelateerde gewrichten (thoracale wervelkolom, heupen)<sup data-src=\"rl-rug-2021\" data-p=\"16\">[p16]</sup></li></ul>",
+        "implicatie": "Gebruik de anamnese-checklist om geen relevante gebieden over te slaan. Begin altijd met de hulpvraag. Screen systematisch op rode vlaggen en prognostische factoren. Het lichamelijk onderzoek volgt logisch uit de anamnese-hypothesen."
+      },
+      "links": []
+    },
+    "rug-samenwerking-b6c9": {
+      "id": "rug-samenwerking-b6c9",
+      "type": "kennis",
+      "afk": "Samenwerking",
+      "title": "Multidisciplinaire samenwerking en verwijsroutes",
+      "fields": {
+        "kern": "Behandeling van lage rugpijn vraagt afstemming en samenwerking met diverse (para)medici. Kennis van elkaars expertise is essentieel.<sup data-src=\"rl-rug-2021\" data-p=\"13\">[p13]</sup>",
+        "toelichting": "<b>Verbijzonderingen fysiotherapie:</b> manuele therapie, psychosomatische fysio- en oefentherapie, bekkenfysio- en oefentherapie, sportfysiotherapie, bedrijfs- en arbeidsfysiotherapie, geriatriefysio- en oefentherapie.<sup data-src=\"rl-rug-2021\" data-p=\"13\">[p13]</sup><br><b>Aanbevelingen:</b><ul><li>Vergaar kennis van de expertise van betrokken (para)medici, waaronder verbijzonderde fysiotherapeuten en oefentherapeuten met aantekening.<sup data-src=\"rl-rug-2021\" data-p=\"14\">[p14]</sup></li><li>Stem af op welke wijze multidisciplinaire samenwerking op lokaal of regionaal niveau wordt georganiseerd.<sup data-src=\"rl-rug-2021\" data-p=\"14\">[p14]</sup></li><li>Overleg wie de samenwerking coördineert en tevens aanspreekpunt is.<sup data-src=\"rl-rug-2021\" data-p=\"14\">[p14]</sup></li></ul><b>Rapportage:</b> stuur rapportage bij aanvang en afsluiting naar huisarts/verwijzer. Stel verslagen op conform de 'Richtlijn Informatie-uitwisseling huisarts-paramedicus (HASP)', 'KNGF-richtlijn Fysiotherapeutische dossiervoering' en 'Richtlijn Verslaglegging' VvOCM.<sup data-src=\"rl-rug-2021\" data-p=\"31\">[p31]</sup>",
+        "implicatie": "Werk niet geïsoleerd. Beoordeel of de patiënt gebaat is bij verwijzing naar een collega met specifieke expertise. Zorg voor goede rapportage naar de verwijzer."
       },
       "links": []
     }
@@ -4669,6 +4756,366 @@ window.SEED_DATA = {
       "from": "rl-copd",
       "to": "cat-tv44uin",
       "rel": "usus"
+    },
+    {
+      "id": "lnk-kymgdsq",
+      "from": "rl-rug-2021",
+      "to": "casus-msa-lrp-001a",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-56h2nuv",
+      "from": "rl-rug-2021",
+      "to": "casus-msa-lrp-001b",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-97y8er4",
+      "from": "rl-rug-2021",
+      "to": "casus-msa-lrs-002a",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-du0zl42",
+      "from": "rl-rug-2021",
+      "to": "casus-msa-lrs-002b",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-0v1x0r6",
+      "from": "rl-rug-2021",
+      "to": "rug-voorlichting-k7m3",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-rvq7ay3",
+      "from": "rl-rug-2021",
+      "to": "rug-passieve-interventies-n8p4",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-ri5ec02",
+      "from": "rl-rug-2021",
+      "to": "rug-stopcriteria-q2r5",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-9uipnxe",
+      "from": "rl-rug-2021",
+      "to": "rug-epidemiologie-v3w6",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-madn2y3",
+      "from": "rl-rug-2021",
+      "to": "rug-etiologie-prognostiek-x4y7",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-osi8hep",
+      "from": "rl-rug-2021",
+      "to": "rug-anamnese-lo-z5a8",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-hqx4e1k",
+      "from": "rl-rug-2021",
+      "to": "rug-samenwerking-b6c9",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-43sst3u",
+      "from": "rug-rode-vlaggen-9t2z",
+      "to": "rug-neurodiag-i0j1",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-fw564rw",
+      "from": "rug-gele-vlaggen-g8h9",
+      "to": "lrp-gedrag-c3d4",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-mz097zh",
+      "from": "rug-profiel1-a2b3",
+      "to": "rug-profiel2-c4d5",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-6f9hn7c",
+      "from": "rug-profiel2-c4d5",
+      "to": "rug-profiel3-e6f7",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ya45n0p",
+      "from": "rug-profiel2-c4d5",
+      "to": "lrp-oefentherapie-a1b2",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-5tt3h4i",
+      "from": "rug-profiel3-e6f7",
+      "to": "lrp-oefentherapie-a1b2",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ps7hh20",
+      "from": "rug-profiel3-e6f7",
+      "to": "lrp-gedrag-c3d4",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-s6vqy62",
+      "from": "rug-lrs-behandeling-m4n5",
+      "to": "rug-classificatie-2m1q",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-2bqfa7l",
+      "from": "rug-zelfmanagement-o6p7",
+      "to": "rug-voorlichting-k7m3",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-udv3xl4",
+      "from": "rug-zelfmanagement-o6p7",
+      "to": "rug-stopcriteria-q2r5",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-6km41n0",
+      "from": "rug-voorlichting-k7m3",
+      "to": "rug-profiel1-a2b3",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-eahgjvo",
+      "from": "rug-voorlichting-k7m3",
+      "to": "rug-profiel2-c4d5",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-z76dlv5",
+      "from": "rug-voorlichting-k7m3",
+      "to": "rug-profiel3-e6f7",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-zdqdbuz",
+      "from": "rug-passieve-interventies-n8p4",
+      "to": "rug-profiel2-c4d5",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-bjmxew6",
+      "from": "rug-passieve-interventies-n8p4",
+      "to": "rug-profiel3-e6f7",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-x18glaa",
+      "from": "rug-epidemiologie-v3w6",
+      "to": "rug-prognose-k2l3",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-wigw6l5",
+      "from": "rug-etiologie-prognostiek-x4y7",
+      "to": "rug-gele-vlaggen-g8h9",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-00wmja6",
+      "from": "rug-etiologie-prognostiek-x4y7",
+      "to": "rug-profiel2-c4d5",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-75b4vsu",
+      "from": "rug-etiologie-prognostiek-x4y7",
+      "to": "rug-profiel3-e6f7",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-fnjim9w",
+      "from": "rug-anamnese-lo-z5a8",
+      "to": "rug-rode-vlaggen-9t2z",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-roem70d",
+      "from": "rug-anamnese-lo-z5a8",
+      "to": "rug-etiologie-prognostiek-x4y7",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-eqwylup",
+      "from": "rug-gelaagde-zorg-4h1p",
+      "to": "rug-samenwerking-b6c9",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ygon7op",
+      "from": "rug-profiel1-a2b3",
+      "to": "nrs-a2j2dqx",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-gp9xhhb",
+      "from": "rug-profiel1-a2b3",
+      "to": "qbpds-rug-5j3k",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-j7we6fg",
+      "from": "rug-profiel1-a2b3",
+      "to": "psk-up6oqkz",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-qrlxduw",
+      "from": "rug-profiel2-c4d5",
+      "to": "qbpds-rug-5j3k",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-bkvl8nf",
+      "from": "rug-profiel2-c4d5",
+      "to": "psk-up6oqkz",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-r1y1vna",
+      "from": "rug-profiel2-c4d5",
+      "to": "sbst-rug-8p2w",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-7l8hizn",
+      "from": "rug-profiel3-e6f7",
+      "to": "nrs-a2j2dqx",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-ug8xnhe",
+      "from": "rug-profiel3-e6f7",
+      "to": "qbpds-rug-5j3k",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-aydrlsm",
+      "from": "rug-profiel3-e6f7",
+      "to": "psk-up6oqkz",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-96zjkup",
+      "from": "rug-profiel3-e6f7",
+      "to": "sbst-rug-8p2w",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-554u8ww",
+      "from": "rug-neurodiag-i0j1",
+      "to": "slr-lrp-u5v6",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-gal9nj8",
+      "from": "rug-stopcriteria-q2r5",
+      "to": "gpe-rug-x0y1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-2xyqy10",
+      "from": "rug-gele-vlaggen-g8h9",
+      "to": "fabq-rug-t6u7",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-1trw11k",
+      "from": "rug-gele-vlaggen-g8h9",
+      "to": "tsk-lrp-q1r2",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-g5w0nbg",
+      "from": "rug-gele-vlaggen-g8h9",
+      "to": "pcs-lrp-s3t4",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-pwl9jrq",
+      "from": "rug-gele-vlaggen-g8h9",
+      "to": "hads-3sykkqp",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-7zfsjo3",
+      "from": "rug-gele-vlaggen-g8h9",
+      "to": "4dkl-lrp-y9z0",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-b8oghr5",
+      "from": "rug-gele-vlaggen-g8h9",
+      "to": "csi-lrp-w7x8",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-m3lgj0m",
+      "from": "casus-msa-lrp-001b",
+      "to": "nrs-a2j2dqx",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-bf6bxhy",
+      "from": "casus-msa-lrp-001b",
+      "to": "qbpds-rug-5j3k",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-ef1rubn",
+      "from": "casus-msa-lrp-001b",
+      "to": "psk-up6oqkz",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-3m6eiqr",
+      "from": "casus-msa-lrs-002b",
+      "to": "nrs-a2j2dqx",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-t69tr1z",
+      "from": "casus-msa-lrp-001a",
+      "to": "rug-profiel2-c4d5",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-jhkye7e",
+      "from": "casus-msa-lrp-001a",
+      "to": "rug-classificatie-2m1q",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ouc2gt1",
+      "from": "casus-msa-lrs-002a",
+      "to": "rug-classificatie-2m1q",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-hpzlmb9",
+      "from": "casus-msa-lrs-002a",
+      "to": "rug-lrs-behandeling-m4n5",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-jn9b2nr",
+      "from": "casus-msa-lrs-002b",
+      "to": "rug-neurodiag-i0j1",
+      "rel": "nexus"
     }
   ],
   "tags": [
@@ -5647,6 +6094,34 @@ window.SEED_DATA = {
     {
       "object": "val-interventies-z1x4",
       "tag": "ger"
+    },
+    {
+      "object": "rug-voorlichting-k7m3",
+      "tag": "msa"
+    },
+    {
+      "object": "rug-passieve-interventies-n8p4",
+      "tag": "msa"
+    },
+    {
+      "object": "rug-stopcriteria-q2r5",
+      "tag": "msa"
+    },
+    {
+      "object": "rug-epidemiologie-v3w6",
+      "tag": "msa"
+    },
+    {
+      "object": "rug-etiologie-prognostiek-x4y7",
+      "tag": "msa"
+    },
+    {
+      "object": "rug-anamnese-lo-z5a8",
+      "tag": "msa"
+    },
+    {
+      "object": "rug-samenwerking-b6c9",
+      "tag": "msa"
     }
   ]
 };
