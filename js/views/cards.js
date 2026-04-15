@@ -164,6 +164,9 @@ const CARDS = (() => {
       f.focus             ? `<p class="small fst-italic text-muted">${f.focus}</p>` : '',
       f.content           ? `<div class="small">${f.content}</div>`          : '',
       f.scope             ? _field('Scope', f.scope)                              : '',
+      f.doelen            ? _field('Doelen', f.doelen)                            : '',
+      f.indicaties        ? _field('Indicaties', f.indicaties)                    : '',
+      f.contraindicaties  ? _field('Contra-indicaties', f.contraindicaties)       : '',
       f.kernaanbevelingen ? _field('Key recommendations', f.kernaanbevelingen)    : '',
     ].filter(Boolean).join('');
 
