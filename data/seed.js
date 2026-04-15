@@ -100,7 +100,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Angst (7 items) en depressie (7 items) bij patiënten met somatische aandoening. Cognitieve component van depressie staat centraal (niet somatische klachten als vermoeidheid). <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "scoringscriteria": "14 items, 4-puntsschaal (0–3). Twee subschalen elk 0–21.<br><b>0–7</b> = normaal | <b>8–10</b> = borderline | <b>≥11</b> = aanwezig <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
-        "normwaarden": "Angstschaal ≥8 = verhoogde kans op angststoornis<br>Depressieschaal ≥8 = verhoogde kans op depressie<br>MCiD = <b>1,5 punten</b> <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
+        "normwaarden": "Angstschaal ≥8 = verhoogde kans op angststoornis<br>Depressieschaal ≥8 = verhoogde kans op depressie<br>MCiD = <b>1,5 punten</b> <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup> <sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
         "implicatie": "Psychische comorbiditeit vermindert therapietrouw en herstelprognose. Score ≥8 op een subschaal: bespreek uitslag met behandelteam, overweeg doorverwijzing psycholoog. Relevant bij COPD, oncologie én lage rugpijn (optioneel instrument KNGF 2021 — inzetten bij vermoeden angst/depressie als prognostische factor, profiel 2/3)."
       },
       "links": [
@@ -466,7 +466,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Neurologische ernst na CVA: 15 items voor bewustzijn, blik, gezichtsveld, facialisparese, motoriek arm/been, ataxie, sensibiliteit, taal, dysartrie, en neglect.",
         "scoringscriteria": "Score per item 0–4 (meeste items). Totaalscore 0–42.<br><b>0</b> = geen uitval | <b>1–4</b> = licht | <b>5–15</b> = matig | <b>16–20</b> = matig–ernstig | <b>≥21</b> = ernstig",
-        "normwaarden": "Drempelwaarde voor trombolyse-overweging: score ≥4<br>Gunstige prognose (functioneel onafhankelijk): score ≤5 bij opname<br>Score &gt;20 = hoge kans op slechte functionele uitkomst",
+        "normwaarden": "Drempelwaarde voor trombolyse-overweging: score ≥4<br>Gunstige prognose (functioneel onafhankelijk): score ≤5 bij opname<br>Score &gt;20 = hoge kans op slechte functionele uitkomst <sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup><sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
         "implicatie": "Hoge NIHSS = intensieve klinische fysiotherapie en multidisciplinaire aanpak. Lage NIHSS (&lt;5) = gunstig voor vroege mobilisatie. NIHSS correleertt sterk met functionele uitkomst (Barthel). Wordt door arts/verpleging afgenomen, maar fysiotherapeut moet uitslag kennen."
       },
       "links": [
@@ -488,7 +488,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "ADL-zelfstandigheid op 10 activiteiten: eten, transfer (bed→stoel), persoonlijke verzorging, toiletgang, bad/douche, lopen, traplopen, aan-/uitkleden, darmcontrole, blaascontrole.",
         "scoringscriteria": "Elk item: 0, 5, 10 of 15 punten (itemspecifiek). Totaal 0–20 (of 0–100 in uitgebreide versie).<br><b>0–4</b> = volledig afhankelijk | <b>5–9</b> = ernstig afhankelijk | <b>10–14</b> = matig afhankelijk | <b>15–19</b> = licht afhankelijk | <b>20</b> = volledig zelfstandig",
-        "normwaarden": "Drempelwaarde voor zelfstandig thuis wonen: <b>≥15</b> (op schaal 0–20)<br>MCiD na CVA: ~2 punten (op schaal 0–20)<br>SAFE-algoritme drempel: BI ≥9 bij opname = gunstige mobiliteitsuitkomst",
+        "normwaarden": "Drempelwaarde voor zelfstandig thuis wonen: <b>≥15</b> (op schaal 0–20)<br>MCiD na CVA: ~2 punten (op schaal 0–20)<br>SAFE-algoritme drempel: BI ≥9 bij opname = gunstige mobiliteitsuitkomst <sup data-src=\"rl-ber\" data-p=\"23\">[p23]</sup><sup data-src=\"rl-ber\" data-p=\"24\">[p24]</sup>",
         "implicatie": "Lage BI bij opname = intensieve ADL-training en transfertraining prioriteit. Hoge BI (&gt;15) = focus op verfijning looppatroon, valpreventie, participatie. Primaire uitkomstmaat in CVA-richtlijn."
       },
       "links": [
@@ -590,7 +590,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Statisch en dynamisch zitbalans, en coördinatie van rompbewegingen na CVA. Drie subschalen: statisch zitten (7 items), dynamisch zitten (10 items), coördinatie (6 items).",
         "scoringscriteria": "Totaal 0–23. Statisch: 0–7, dynamisch: 0–10, coördinatie: 0–6. Hoger = betere rompfunctie.",
-        "normwaarden": "Gezond: max score (23)<br>Matig CVA: ~10–15<br>Ernstig CVA: &lt;8<br>MCiD: ~2 punten",
+        "normwaarden": "Gezond: max score (23)<br>Matig CVA: ~10–15<br>Ernstig CVA: &lt;8<br>MCiD: ~2 punten <sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
         "implicatie": "Lage score = focus op rompstabilisatie voor transfertraining. Rompcontrole is basisvereiste voor veilig lopen na CVA. TIS onderscheidt statisch en dynamisch, wat behandelfocus verfijnt."
       },
       "links": [
@@ -612,7 +612,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Sensoriek van arm en been na CVA: <b>tastzin</b> (licht aanraken), <b>scherp-dof discriminatie</b>, <b>proprioceptie</b> (bewegingsrichtingperceptie). Per extremiteit systematisch getest.",
         "scoringscriteria": "Per modaliteit per locatie: <b>normaal / gestoord / afwezig</b>. Geen totaalcijfer, wel profiel per extremiteit.",
-        "normwaarden": "Normaal = alle sensibiliteitsdomeinen intact aan beide zijden.<br>Verminderde proprioceptie = sterk verhoogd valrisico.<br>Afwezige tastzin = beperkt leervermogen motorisch heroptraining.",
+        "normwaarden": "Normaal = alle sensibiliteitsdomeinen intact aan beide zijden.<br>Verminderde proprioceptie = sterk verhoogd valrisico.<br>Afwezige tastzin = beperkt leervermogen motorisch heroptraining. <sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
         "implicatie": "Gestoorde proprioceptie = extra visuele feedback vereist tijdens looptraining. Verminderde tastzin = risico op beschadiging zonder pijnperceptie (huid inspectie!). Bepaalt keuze voor sensorische compensatiestrategieën."
       },
       "links": [
@@ -630,7 +630,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Loopzelfstandigheid op ordinale schaal, van volledig niet-functioneel lopen tot zelfstandig lopen op trappen en oneven terrein.",
         "scoringscriteria": "<b>0</b> = niet-functioneel lopen (transferhulp nodig)<br><b>1</b> = continu fysieke hulp vereist<br><b>2</b> = continue toezicht maar geen fysieke hulp<br><b>3</b> = begeleiding op oneven terrein of trappen<br><b>4</b> = zelfstandig op vlak terrein<br><b>5</b> = zelfstandig op trappen en oneven terrein",
-        "normwaarden": "Drempelwaarde functioneel lopen: <b>FAC ≥3</b><br>Ontslagnorm stroke unit: streven FAC ≥4<br>Community ambulator: FAC 4–5",
+        "normwaarden": "Drempelwaarde functioneel lopen: <b>FAC ≥3</b><br>Ontslagnorm stroke unit: streven FAC ≥4<br>Community ambulator: FAC 4–5 <sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup><sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
         "implicatie": "FAC 0–2 = intensieve looptherapie met maximale ondersteuning. FAC 3–4 = focus op obstakels en dubbeltaken. FAC 5 = finetuning, sportieve activiteiten. Snel af te nemen, kernmaat voor ontslagplanning CVA."
       },
       "links": [
@@ -652,7 +652,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Uitgebreide ADL-zelfstandigheid bij patiënten na CVA. Meet activiteiten in vier domeinen: mobiliteit (6 items), keukentaken (5 items), huishoudelijk werk (5 items) en vrije tijd (4 items). Beoordeelt of patiënt activiteiten zelfstandig kán uitvoeren, niet hoe goed.",
         "scoringscriteria": "22 items, elk gescoord op 4-puntsschaal: 0 = niet zelfstandig, 1 = met hulp, 2 = zelfstandig maar moeizaam, 3 = zelfstandig en normaal. Totaal 0–66; hogere score = betere ADL-zelfstandigheid.",
-        "normwaarden": "Gezond: max score (66)<br>Na CVA (3 maanden): gemiddeld ~30–45 afhankelijk van ernst<br>MCiD: ~1,5 punten<br>SDD: ~6 punten",
+        "normwaarden": "Gezond: max score (66)<br>Na CVA (3 maanden): gemiddeld ~30–45 afhankelijk van ernst<br>MCiD: ~1,5 punten<br>SDD: ~6 punten <sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
         "implicatie": "Meet participatieniveau thuis en in de wijk — verder dan standaard BI. Signaleert beperkingen in complexere IADL die de BI mist. Geschikt voor follow-up in de chronische fase en als uitkomstmaat voor revalidatieprogramma's gericht op zelfstandig thuis functioneren."
       },
       "links": [
@@ -674,7 +674,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Hemiparese van arm en been na CVA. Arm: knijpkracht, elleboogflexie, schouderabductie. Been: heupheffing, knie-extensie, enkeldorsiflexie. Elk 0–100 per extremiteit.",
         "scoringscriteria": "Per spiergroep: 0=geen contractie, 9=palp. contractie, 14=beweging zonder zwaartekracht, 19=beweging t.o.v. zwaartekracht, 25=zwakker dan normaal, 33=normaal. Totaal per extremiteit 0–100.",
-        "normwaarden": "Score 100 per extremiteit = normale kracht<br>Score &lt;50 = matige–ernstige parese<br>MI-been ≥26 bij opname = voorspeller voor lopen bij ontslag (SAFE-algoritme)",
+        "normwaarden": "Score 100 per extremiteit = normale kracht<br>Score &lt;50 = matige–ernstige parese<br>MI-been ≥26 bij opname = voorspeller voor lopen bij ontslag (SAFE-algoritme) <sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
         "implicatie": "MI-been is component van het SAFE-algoritme: MI-been + TCT ≥26+26 = 98% kans op zelfstandig lopen bij ontslag. Cruciale prognose-indicator voor behandeldoelen CVA-stroke unit."
       },
       "links": [
@@ -696,7 +696,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Rompcontrole na CVA: omrollen naar zwakke kant, omrollen naar sterke kant, van rug naar zit komen, zitbalans (ogen dicht, 30 sec). 4 items.",
         "scoringscriteria": "Per item: 0=niet mogelijk, 12=met compensatie, 25=normaal. Totaal 0–100. Hoger = betere rompcontrole.",
-        "normwaarden": "TCT ≥26 bij opname = drempelwaarde SAFE-algoritme<br>TCT + MI-been ≥26+26 = 98% kans op functioneel lopen bij ontslag<br>Score 100 = normale rompcontrole",
+        "normwaarden": "TCT ≥26 bij opname = drempelwaarde SAFE-algoritme<br>TCT + MI-been ≥26+26 = 98% kans op functioneel lopen bij ontslag<br>Score 100 = normale rompcontrole <sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
         "implicatie": "Kernonderdeel van het SAFE-algoritme. TCT &lt;26 = ernstig beperkte rompcontrole, prioriteit rompstabilisatie vóór looptraining. In combinatie met MI-been bepaalt TCT het behandelperspectief in de eerste week na CVA."
       },
       "links": [
@@ -740,7 +740,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Weerstand bij passief bewegen van extremiteiten: onderscheidt spasticiteit (velociteitsafhankelijk) van rigiditeit (velociteitsonafhankelijk). Langzaam vs. snel bewegen als kern van de test.",
         "scoringscriteria": "Beweeg elk gewricht in <b>1 sec</b> over de volledige pijnvrije ROM. Herhaal 5×. Noteer de <b>hoogste</b> gevoelde tonus. Score <b>1+</b> wordt verrekend als 1 bij optelling.",
-        "normwaarden": "Score 0 = normaal. Score ≥1 = verhoogde tonus aanwezig → bepaal karakter.<br>MAS per zijde: arm subtotaal 0–12, been subtotaal 0–12, totaal 0–24.",
+        "normwaarden": "Score 0 = normaal. Score ≥1 = verhoogde tonus aanwezig → bepaal karakter.<br>MAS per zijde: arm subtotaal 0–12, been subtotaal 0–12, totaal 0–24. <sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
         "implicatie": "Spasticiteit (score hoger bij snellere beweging) → rekken, positioneren, eventueel botulinum-toxin (verwijzing arts). Rigiditeit bij parkinson → andere aanpak: LSVT BIG, cueing. Score ≥2 + lage TCT = herhaal MAS op later tijdstip (tonustoename nog mogelijk)."
       },
       "links": [
@@ -762,7 +762,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Functionele armvaardigheid van de paretische arm: 5 taken (liniaal vasthouden, cilinder pakken, glas pakken en ledigen, wasknijper gebruiken, bal op tafelbord rollen).",
         "scoringscriteria": "Per taak: 0 (niet geslaagd) of 1 (geslaagd). Totaal 0–5.<br><b>5</b> = volledig functioneel | <b>0</b> = geen functionele armvaardigheid",
-        "normwaarden": "Score ≥3 = functioneel bruikbare arm in ADL<br>MCiD: 1 punt (toename van 1 geslaagde taak is klinisch betekenisvol)",
+        "normwaarden": "Score ≥3 = functioneel bruikbare arm in ADL<br>MCiD: 1 punt (toename van 1 geslaagde taak is klinisch betekenisvol) <sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup><sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
         "implicatie": "Score 0–2 = arm-hand activiteitentraining met modificaties. Score 3–5 = verfijning en integratie in complexere taken. Snel, praktisch instrument voor dagelijkse monitoring functioneel armherstel."
       },
       "links": [
@@ -983,7 +983,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Functionele inspanningstolerantie in meters over 6 minuten op vlak terrein (30m gang). Duur: 6 min. Pauzes toegestaan. Benodigdheden: 30m gang, markeringen, stopwatch, pulsoximeter, Borg CR-10.",
         "scoringscriteria": "Maximale afstand in 6 minuten op vlak terrein (30m gang). Pauzes zijn toegestaan maar tellen mee in tijd. Score = totale afstand in meters.",
-        "normwaarden": "Gezond 60jr man: ~565m | Gezond 60jr vrouw: ~500m<br>COPD: ~350m (ernstig: &lt;225m)<br>Hartfalen: &lt;300m = ernstige functionele beperking<br>MCiD COPD: <b>25–35m</b> | MCiD Hartfalen: ~43m",
+        "normwaarden": "Gezond 60jr man: ~565m | Gezond 60jr vrouw: ~500m<br>COPD: ~350m (ernstig: &lt;225m)<br>Hartfalen: &lt;300m = ernstige functionele beperking<br>MCiD COPD: <b>25–35m</b> | MCiD Hartfalen: ~43m <sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
         "implicatie": "Verbetering ≥25–35m na revalidatie = klinisch betekenisvol. Lage afstand correleert met hogere mortaliteit bij COPD en HF. Veiliger en beter getolereerd dan ISWT bij kwetsbare patiënten."
       },
       "links": [
@@ -1005,7 +1005,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Loopsnelheid in m/s over 10 meter (comfortabel en/of maximaal). Meting over middelste 6m (2m acceleratie + 2m deceleratie). Duur: ~30 sec. Benodigdheden: stopwatch, 14m gang, markeringen.",
         "scoringscriteria": "Loopsnelheid over 10 meter, comfortabel en/of maximaal. Meting over middelste 6m (2m acceleratie + 2m deceleratie). Score in m/s.",
-        "normwaarden": "Gezond: ~1,3–1,5 m/s<br>Drempelwaarde community ambulator: <b>≥0,8 m/s</b><br>&lt;0,6 m/s = verhoogd valrisico en beperkte gemeenschapsmobiliteit<br>MCiD CVA: ~0,1 m/s",
+        "normwaarden": "Gezond: ~1,3–1,5 m/s<br>Drempelwaarde community ambulator: <b>≥0,8 m/s</b><br>&lt;0,6 m/s = verhoogd valrisico en beperkte gemeenschapsmobiliteit<br>MCiD CVA: ~0,1 m/s <sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup><sup data-src=\"rl-ber\" data-p=\"24\">[p24]</sup>",
         "implicatie": "&lt;0,8 m/s = loophulpmiddel en begeleiding buiten noodzakelijk. ≥1,0 m/s = adequaat voor veilig oversteken bij verkeerslicht (normtijd). Uitkomstmaat voor loopinterventies CVA."
       },
       "links": [
@@ -1084,7 +1084,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Statisch en dynamisch evenwicht via 14 gestandaardiseerde items (0–4 per item). Totaalscore 0–56. Duur: ~15–20 min. Benodigdheden: stoel met armleuningen, meetlat, stopwatch, bankje.",
         "scoringscriteria": "14 items voor statisch en dynamisch evenwicht (zitten zonder steun, staan, tandemstaan, staan op één been, draaien enz.). Per item 0–4. Totaal 0–56.",
-        "normwaarden": "Score <b>&lt;45</b> = verhoogd valrisico<br>Score <b>&lt;36</b> = bijna 100% kans op vallen<br>Score 56 = optimaal evenwicht<br>MCiD: ~7 punten (CVA-populatie)",
+        "normwaarden": "Score <b>&lt;45</b> = verhoogd valrisico<br>Score <b>&lt;36</b> = bijna 100% kans op vallen<br>Score 56 = optimaal evenwicht<br>MCiD: ~7 punten (CVA-populatie) <sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
         "implicatie": "Score &lt;45 = valpreventieprotocol activeren. Score 36–44 = zelfstandige mobilisatie beperken, toezicht vereist. Score &lt;36 = rollator of loophulp altijd aanwezig. Wijdst gebruikte balanstest in revalidatie."
       },
       "links": [
@@ -1106,7 +1106,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Functionele mobiliteit en valrisico via gecombineerde transfer- en looptaak. Tijdmeting in seconden. Duur: &lt;1 min. Benodigdheden: stoel (zithoogte ~47 cm), stopwatch, 3m ruimte, markeringen.",
         "scoringscriteria": "Tijd in seconden voor: opstaan van stoel → 3m lopen → omdraaien → terugkeren → gaan zitten. Met of zonder loophulpmiddel.",
-        "normwaarden": "Gezond 65+: ~10 sec<br>Drempelwaarde verhoogd valrisico: <b>&gt;12 sec</b><br>Hoog valrisico: &gt;20 sec<br>MCiD: ~3,5 sec (kwetsbare ouderen)",
+        "normwaarden": "Gezond 65+: ~10 sec<br>Drempelwaarde verhoogd valrisico: <b>&gt;12 sec</b><br>Hoog valrisico: &gt;20 sec<br>MCiD: ~3,5 sec (kwetsbare ouderen) <sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
         "implicatie": "&gt;12 sec = valrisico-screening activeren, loophulpmiddel evalueren. &gt;20 sec = intensieve valpreventietraining. Snel uitvoerbaar, ecologisch valide (functionele relevantie dagelijks leven)."
       },
       "links": [
@@ -1194,7 +1194,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Pijnintensiteit via numerieke schaal 0–10 (NPRS) of 6–20 (Borg-variant). Mondeling of schriftelijk. Duur: &lt;1 min. Breed toepasbaar bij alle patiëntgroepen. Bij lage rugpijn: gemiddelde pijn afgelopen 24 uur als standaardvraag (KNGF-richtlijn LRP 2021). <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
         "scoringscriteria": "Patiënt geeft mondeling of schriftelijk een getal aan.<br><b>NPRS 0–10:</b> gemiddelde pijnintensiteit afgelopen 24 uur.<br><b>Borg 6–20:</b> ervaren pijn/inspanning; score × 10 ≈ hartfrequentie.<br>Afname bij intake, tussentijdse evaluatie en afsluiting. <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
-        "normwaarden": "0 = geen pijn · 1–3 = milde pijn · 4–6 = matige pijn · 7–10 = ernstige pijn<br>MCiD: <b>2 punten</b> (0–10 schaal) of <b>≥30% verbetering</b> t.o.v. baseline<br>Schaal 6–20 variant: 6 = geen inspanning/pijn, 20 = maximale inspanning/pijn <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
+        "normwaarden": "0 = geen pijn · 1–3 = milde pijn · 4–6 = matige pijn · 7–10 = ernstige pijn<br>MCiD: <b>2 punten</b> (0–10 schaal) of <b>≥30% verbetering</b> t.o.v. baseline<br>Schaal 6–20 variant: 6 = geen inspanning/pijn, 20 = maximale inspanning/pijn <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup> <sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
         "implicatie": "Breed toepasbaar bij alle patiëntgroepen. Bij lage rugpijn: verplicht meetinstrument in alle drie behandelprofielen (KNGF 2021). Klinisch relevante verbetering = ≥30% t.o.v. baseline. Gebruik consistente schaalversie binnen één patiënt. Bij hartrevalidatie en COPD: NRS gecombineerd met Borg voor onderscheid pijn vs. vermoeidheid."
       },
       "links": [
@@ -1403,8 +1403,11 @@ window.SEED_DATA = {
       "afk": "Beroerte (CVA)",
       "title": "KNGF-richtlijn Beroerte — 2014, klinimetrie update 2017",
       "fields": {
-        "scope": "Fysiotherapie na CVA in alle fasen: stroke unit (hyperacuut/acuut), revalidatie en chronische fase. Richtlijn voor klinimetriekeuze en behandeldoelen.",
-        "kernaanbevelingen": "• Vroege mobilisatie &lt;24u bij stabiele patiënten (geen contra-indicaties)<br> • Taakgericht oefenen met hoge intensiteit en frequentie<br> • Looptraining op loopband of met robotica bij FAC ≥1<br> • Arm-hand activiteitentraining indien FMA vingerextensie ≥1<br> • Spiegeltherapie en mentale training als aanvulling<br> • Verwijzing naar seksueelkundige bij relationele problemen"
+        "scope": "Fysiotherapie na CVA in alle fasen: stroke unit (hyperacuut/acuut), revalidatie en chronische fase. Richtlijn voor klinimetriekeuze en behandeldoelen. <sup data-src=\"rl-ber\" data-p=\"1\">[p1]</sup><sup data-src=\"rl-ber\" data-p=\"3\">[p3]</sup><sup data-src=\"rl-ber\" data-p=\"3-4\">[p3-4]</sup>",
+        "kernaanbevelingen": "<ol><li><b>Stroke service en interdisciplinair team:</b> Behandeling op een gespecialiseerd interdisciplinair CVA-team (stroke unit) heeft een gunstig effect op overlevingskans, opnameduur en ADL-zelfstandigheid ten opzichte van reguliere zorg. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"8\">[p8]</sup></li><li><b>Intensiteit van oefentherapie:</b> Intensivering van oefentherapie (meer uren oefenen) leidt tot een sneller herstel van o.a. gedissocieerd bewegen, loopsnelheid, maximale loopsnelheid, spierkracht, zit- en stabalans, ADL en kwaliteit van leven. Onderzocht in VR, LR en RC. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"11\">[p11]</sup></li><li><b>Taakspecificiteit van trainingseffecten:</b> Specifieke training van vaardigheden bij CVA-patiënten heeft een positief effect op de getrainde vaardigheid zelf, in alle fasen. Generalisatie naar andere vaardigheden is echter nauwelijks aangetoond. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"11\">[p11]</sup></li><li><b>Contextspecificiteit van trainingseffecten:</b> Trainen in een functionele context heeft een positief effect op het aanleren van een vaardigheid, ongeacht de fase. Patiënten worden bij voorkeur in hun eigen (woon-/leef)omgeving gerevalideerd. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"11-12\">[p11–12]</sup></li><li><b>NDT/Bobath: géén meerwaarde.</b> Neurologische oefenmethoden c.q. behandelconcepten (NDT/Bobath) op functie- en activiteitenniveau zijn niet effectiever dan andere behandelvormen. Kies een eclectische, evidence-based benadering. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"12\">[p12]</sup></li><li><b>Systematisch meten:</b> Gebruik de aanbevolen set van 8 meetinstrumenten (MI, TCT, BBS, FAC, 10MLT, FAT, BI, FMA) aangevuld met optionele instrumenten per hulpvraag. Meet systematisch: altijd &lt;48u en bij afsluiting; bij ongunstige prognose wekelijks tot maandelijks.<sup data-src=\"rl-ber\" data-p=\"16-21\">[p16–21]</sup></li><li><b>Prognose 6 maanden stellen binnen de eerste week:</b> Gebruik tabel 7 (determinanten + meetinstrumenten) om de prognose voor loopvaardigheid, arm-handvaardigheid en basale ADL zes maanden na het CVA zo vroeg mogelijk vast te leggen. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"21-23\">[p21–23]</sup></li><li><b>Cognitieve revalidatie:</b> Aandachtstraining (compensatiestrategietraining), geheugenstrategietraining en neglect-gerichte visuele scanningstraining hebben een gunstig effect. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"48-51\">[p48–51]</sup></li><li><b>Valpreventie en secundaire preventie:</b> Alle CVA-patiënten screenen op verhoogd valrisico; multifactoriële valpreventie. Leefstijlprogramma's met fysieke training (aerobe training, min. 3×/wk, 20–60 min, Borg RPE 11–14, HR<sub>max</sub> 50–80%) positief voor risicofactoren. (niveau 2–4)<sup data-src=\"rl-ber\" data-p=\"14-15\">[p14–15]</sup></li><li><b>⚠ 2020-update: vroegmobilisatie &lt;24u is VERVALLEN.</b> Recent onderzoek (Bernhardt et al., Neurology 2020) toont dat vroegtijdige mobilisatie (&lt;24 uur) in sommige gevallen risico kan geven op neurologische verslechtering. Het advies om patiënten zo snel mogelijk uit bed te mobiliseren is daarom vervallen.<sup data-src=\"rl-ber\" data-p=\"1\">[p1]</sup><sup data-src=\"rl-ber\" data-p=\"3\">[p3]</sup><sup data-src=\"rl-ber\" data-p=\"25\">[p25]</sup><sup data-src=\"rl-ber\" data-p=\"54-55\">[p54–55]</sup></li></ol>",
+        "doelen": "Het doel van de KNGF-richtlijn Beroerte is het verbeteren van de <b>kwaliteit, transparantie en uniformiteit</b> van fysiotherapie die wordt gegeven aan patiënten met als hoofddiagnose een CVA, door middel van het expliciteren van het fysiotherapeutisch handelen op basis van wetenschappelijk onderzoek, waar nodig aangevuld op basis van consensus van deskundigen.<sup data-src=\"rl-ber\" data-p=\"1\">[p1]</sup>",
+        "indicaties": "Fysiotherapie is geïndiceerd bij alle patiënten met een CVA in het continuüm van zorg, onafhankelijk van geslacht, leeftijd en ernst.<sup data-src=\"rl-ber\" data-p=\"2\">[p2]</sup> Het gaat hierbij om het fysiotherapeutisch onderzoek en de behandeling gericht op stoornissen in functies, beperkingen in activiteiten en participatieproblemen, met evaluatie en monitoring van het functioneren.<sup data-src=\"rl-ber\" data-p=\"2-3\">[p2–3]</sup> Elke patiënt met een CVA dient in aanmerking te komen voor opname op een stroke unit.<sup data-src=\"rl-ber\" data-p=\"8\">[p8]</sup>",
+        "contraindicaties": "Patiënten met een <b>transient ischaemic attack (TIA)</b> en een <b>subarachnoïdale bloeding (SAB)</b> vallen buiten de scope van deze richtlijn.<sup data-src=\"rl-ber\" data-p=\"1\">[p1]</sup><br><br><b>Rode vlaggen / verwijzing:</b><br><ul><li>Neurologische oefenmethoden c.q. behandelconcepten (NDT/Bobath) op functie- en activiteitenniveau zijn <b>niet effectiever</b> dan andere behandelvormen; kies een eclectische benadering.<sup data-src=\"rl-ber\" data-p=\"12\">[p12]</sup></li><li>Snelle reactivering na intracerebrale bloeding is niet wenselijk wegens risico op bloeddrukverhoging; bij SAB wegens risico op recidief.<sup data-src=\"rl-ber\" data-p=\"25\">[p25]</sup></li><li>Bij vermoeden van cognitieve stoornissen, depressie of apraxie: verwijzing naar neuropsycholoog resp. ergotherapeut.<sup data-src=\"rl-ber\" data-p=\"48-49\">[p48–49]</sup></li></ul>"
       },
       "links": [
         {
@@ -1818,7 +1821,7 @@ window.SEED_DATA = {
       "fields": {
         "watMeetHet": "Kwantificering van comorbiditeit over 14 orgaansystemen. Gebruikt bij sPAV voor indicatiestelling (prognostisch) en om het oefenprogramma op comorbiditeiten af te stemmen. Bron: Linn 1968 / KNGF-richtlijn sPAV.",
         "scoringscriteria": "<b>14 orgaansystemen:</b> hart, vasculair, bloed/immuun, respiratoir, ogen/KNO/larynx, GI-bovenste, GI-onderste, lever, nieren, GU, musculoskeletaal, neurologisch, endocrien/metabolisme, psychiatrie/gedrag.<br><br>Score per systeem: <b>0</b> = geen probleem | <b>1</b> = mild | <b>2</b> = matig | <b>3</b> = ernstig | <b>4</b> = extreem ernstig (levensbedreiging)<br>Totaalscore 0–56.",
-        "normwaarden": "Totaalscore 0–6 = lage comorbiditeitsbelasting<br>Score 7–12 = matige comorbiditeitsbelasting<br>Score &gt;12 = hoge comorbiditeitsbelasting — oefenprogramma sterk aanpassen<br><br>Relevant bij sPAV: diabetes mellitus, COPD, hartfalen, CVA, artrose. Score ≥2 op een systeem = dat systeem beïnvloedt de trainbaarheid.",
+        "normwaarden": "Totaalscore 0–6 = lage comorbiditeitsbelasting<br>Score 7–12 = matige comorbiditeitsbelasting<br>Score &gt;12 = hoge comorbiditeitsbelasting — oefenprogramma sterk aanpassen<br><br>Relevant bij sPAV: diabetes mellitus, COPD, hartfalen, CVA, artrose. Score ≥2 op een systeem = dat systeem beïnvloedt de trainbaarheid. <sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
         "implicatie": "Hoge CIRS-score bij sPAV → overleg met verwijzer of fysiotherapie haalbaar is. Per comorbiditeit: DM → voetinspectie, neuropathie; COPD → ademhaling tijdens training; hartfalen → Borg + HR bewaken; CVA → looppatroonafwijkingen. Gebruik CIRS als prognostisch instrument bij indicatiestelling."
       },
       "links": [
@@ -2937,6 +2940,522 @@ window.SEED_DATA = {
         "kern": "Spierkrachttraining wordt <em>conditioneel aanbevolen</em> als additie naast duur-/intervaltraining bij patiënten met een beperkte fysieke capaciteit (profiel 4, 5, 6), wanneer duur-/intervaltraining niet mogelijk is of wanneer de grotere spiergroepen van de onderste extremiteit verzwakt zijn.<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup> Het voordeel boven duurtraining: relatief lage belasting van het respiratoire systeem, dus minder kortademigheid tijdens de inspanning.<sup data-src=\"rl-copd-2020\" data-p=\"52-53\">[p52-53]</sup>",
         "toelichting": "<h4>Rationale</h4>\n<p>Verzwakking van de grote spiergroepen van de onderste extremiteit draagt bij aan vroegtijdig stoppen van fysieke inspanning bij patiënten met COPD. Spierkrachttraining van grote spiergroepen laat spiermassa en -kracht toenemen, wat bijdraagt aan een grotere fysieke capaciteit.<sup data-src=\"rl-copd-2020\" data-p=\"52-53\">[p52-53]</sup></p>\n<h4>FITT-parameters</h4>\n<ul>\n  <li><b>Intensiteit:</b> line-air opgebouwd, geleid door maximale spierkracht (60-80% van 1RM).<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup></li>\n  <li><b>Apparatuur:</b> groot voordeel — intensiteit nauwkeurig in te stellen na 1RM-bepaling. Functionele oefeningen zijn alternatief en beter toepasbaar in het ADL. Beide vormen zijn geschikt.<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup></li>\n  <li><b>Eenbenig trainen</b> leidt t.o.v. tweebenig tot een lagere ventilatie en grotere verbetering van fysieke capaciteit; verdubbelt wel de trainingsduur.<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup></li>\n</ul>\n<h4>Trilplaat-aanvulling</h4>\n<p>Trilplaattraining tijdens krachttraining geeft mogelijk een kleine verbetering op functionele fysieke capaciteit en QoL en een mogelijk groter effect op balans — bewijskracht laag tot zeer laag. <b>Conditioneel aanbevolen tegen</b> geformuleerd; overweeg trilplaat eventueel bij balansproblemen.<sup data-src=\"rl-copd-2020\" data-p=\"53\">[p53]</sup></p>",
         "implicatie": "Koppel spierkrachttraining aan profielbepaling: alléén bij profiel 4-6 of als aanvulling wanneer duur/interval niet lukt. Meet 1RM (of gebruik Borg 0-10 als alternatief) voor dosering. Eenbenig trainen is effectiever maar tijdsintensiever — overweeg bij duidelijk asymmetrische of zwakke onderste extremiteit."
+      },
+      "links": []
+    },
+    "bro-cva-definitie-k1m9": {
+      "id": "bro-cva-definitie-k1m9",
+      "type": "kennis",
+      "afk": "CVA-definitie",
+      "title": "CVA-definitie: ischemisch en bloedig",
+      "fields": {
+        "kern": "Een CVA (beroerte) is volgens de WHO gedefinieerd als 'plotseling optredende klinische verschijnselen van een focale stoornis in de hersenen die langer dan 24 uur duren of leiden tot de dood, waarvoor geen andere oorzaak aanwezig is dan een vasculaire stoornis'.<sup data-src=\"rl-ber\" data-p=\"1\">[p1]</sup>",
+        "toelichting": "Een CVA kan worden onderverdeeld in:<br><ul><li><b>Niet-bloedig CVA (herseninfarct)</b> – circa 80% van de gevallen</li><li><b>Bloedig CVA (hersenbloeding / hemorrhagie)</b> – circa 20% van de gevallen</li></ul>De incidentie van CVA neemt toe met het stijgen van de leeftijd, met een jaarlijkse schatting van circa 45.000 nieuwe patiënten per jaar in Nederland.<sup data-src=\"rl-ber\" data-p=\"2\">[p2]</sup> Patiënten met een TIA en subarachnoïdale bloeding (SAB) vallen buiten de scope van deze richtlijn.<sup data-src=\"rl-ber\" data-p=\"1\">[p1]</sup>",
+        "implicatie": "Controleer bij aanmelding altijd het type CVA (infarct vs. bloeding) in het medisch dossier. Dit is relevant voor het mobilisatiebeleid in de premobilisatiefase: bij een intracerebrale bloeding is snelle reactivering niet wenselijk wegens risico op bloeddrukverhoging."
+      },
+      "links": []
+    },
+    "bro-fasen-tijdsbeloop-r2q7": {
+      "id": "bro-fasen-tijdsbeloop-r2q7",
+      "type": "kennis",
+      "afk": "CVA-fasen",
+      "title": "Tijdsbeloop herstel na CVA: (H)AR, VR, LR en RC",
+      "fields": {
+        "kern": "Het herstel na een CVA verloopt niet lineair maar in een kromme, waarbij in de eerste dagen tot maanden het meeste herstel plaatsvindt. Er worden vier fasen onderscheiden die in elkaar overlopen.<sup data-src=\"rl-ber\" data-p=\"3\">[p3]</sup>",
+        "toelichting": "<table><tr><th>Fase</th><th>Periode</th><th>Kenmerken</th></tr><tr><td><b>(H)AR</b></td><td>0–24 uur</td><td>Medische diagnostiek, voorkomen progressieve schade, vroege mobilisatie en geïnitieerde revalidatie.<sup data-src=\"rl-ber\" data-p=\"3\">[p3]</sup></td></tr><tr><td><b>VR</b></td><td>24 uur – 3 maanden</td><td>Revalidatie gericht op functieherstel; indien dit niet mogelijk: compensatiestrategieën aanleren. Aanpassingen omgeving zorgverlening naar huis.<sup data-src=\"rl-ber\" data-p=\"3\">[p3]</sup></td></tr><tr><td><b>LR</b></td><td>3–6 maanden</td><td>Vervolg op VR; nadruk op voorkomen van vermindering activiteiten en participatie. Aanpassingen in omgeving zorgverlening naar huis.<sup data-src=\"rl-ber\" data-p=\"3\">[p3]</sup></td></tr><tr><td><b>RC</b></td><td>&gt; 6 maanden</td><td>Ondersteuning en begeleiding ('support'); behoud en preventie. Monitoren kwaliteit van leven, fitheid. Bij functionele verbetering of verslechtering: (tijdelijk) continueren/hervatten therapie.<sup data-src=\"rl-ber\" data-p=\"3\">[p3]</sup></td></tr></table><br>De behandeling wordt beëindigd indien de fysiotherapeut van mening is dat fysiotherapie geen toegevoegde waarde meer heeft, maar wel inschat dat de patiënt de doelstellingen zelfstandig kan bereiken.<sup data-src=\"rl-ber\" data-p=\"3\">[p3]</sup>",
+        "implicatie": "Ken de fase waarin je patiënt zich bevindt — dit bepaalt de meetmomenten (tabel 5/6), de intensiteit, de interventiekeuze en het prognostisch kader. In de (H)AR en VR is het meeste spontane herstel te verwachten; in de RC verschuift de nadruk naar behoud en preventie."
+      },
+      "links": []
+    },
+    "bro-8stappen-p3f2": {
+      "id": "bro-8stappen-p3f2",
+      "type": "kennis",
+      "afk": "8-stappen",
+      "title": "Fysiotherapeutisch handelen in 8 stappen",
+      "fields": {
+        "kern": "Het fysiotherapeutisch methodisch handelen bij CVA bestaat uit acht stappen, gegroepeerd tot 'diagnostiek en prognostiek', 'interventie' en 'evaluatie en monitoring'.<sup data-src=\"rl-ber\" data-p=\"3\">[p3]</sup>",
+        "toelichting": "<table><tr><th>Stap</th><th>Omschrijving</th><th>Hoofdstuk</th></tr><tr><td>1</td><td>Aanmelding, oriëntatie op hulpvraag, screening en informatie</td><td rowspan=\"4\">Diagnostisch proces: C en D</td></tr><tr><td>2</td><td>Anamnesegesprek</td></tr><tr><td>3</td><td>Fysiotherapeutisch onderzoek</td></tr><tr><td>4</td><td>Formulering fysiotherapeutische diagnose en indicatiestelling</td></tr><tr><td>5</td><td>Behandelplan</td><td rowspan=\"2\">Therapeutisch proces: B, E, F en G</td></tr><tr><td>6</td><td>Uitvoering van de behandeling</td></tr><tr><td>7</td><td>Evaluatie</td><td rowspan=\"2\">Evaluatie, monitoring, verslaglegging en afsluiting: C en H</td></tr><tr><td>8</td><td>Afsluiting</td></tr></table><sup data-src=\"rl-ber\" data-p=\"4\">[p4]</sup>",
+        "implicatie": "Gebruik dit als kapstok voor je klinisch redeneren. Elke stap correspondeert met een hoofdstuk van de richtlijn. Het structureert het hele traject van intake tot ontslag."
+      },
+      "links": []
+    },
+    "bro-stroke-service-v4n1": {
+      "id": "bro-stroke-service-v4n1",
+      "type": "kennis",
+      "afk": "Stroke-service",
+      "title": "Stroke service en interdisciplinair team",
+      "fields": {
+        "kern": "Behandeling op een gespecialiseerde stroke unit door een interdisciplinair CVA-team heeft een gunstig effect op overlevingskans, opnameduur en ADL-zelfstandigheid. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"8\">[p8]</sup>",
+        "toelichting": "Een stroke service is een regionaal georganiseerde keten van CVA-zorgaanbieders: ziekenhuis stroke units, revalidatiecentra, verpleeghuizen, long-stay afdelingen, huisartsvoorzieningen, praktijken fysiotherapie en eerstelijnsgezondheidszorg.<sup data-src=\"rl-ber\" data-p=\"8\">[p8]</sup><br><br>Opname op een ziekenhuis stroke unit verlaagt het overlijdensrisico met gemiddeld 18%, de opnameduur met 8% en de kans om weer zelfstandig thuis te wonen stijgt met 20%.<sup data-src=\"rl-ber\" data-p=\"8\">[p8]</sup><br><br>Het interdisciplinair team omvat: neuroloog, revalidatiearts, fysiotherapeut, ergotherapeut, logopedist, psycholoog, maatschappelijk werker, verpleegkundige.<sup data-src=\"rl-ber\" data-p=\"9\">[p9]</sup> De fysiotherapeut heeft een signalerende en monitorende functie binnen het hele continuüm.<sup data-src=\"rl-ber\" data-p=\"9-10\">[p9–10]</sup>",
+        "implicatie": "Zorg dat je als fysiotherapeut onderdeel bent van een interdisciplinair CVA-team. Werk binnen de stroke-service-keten en communiceer structureel met de andere disciplines. Het gaat niet alleen om je eigen behandeling, maar om de keten."
+      },
+      "links": []
+    },
+    "bro-intensiteit-a8k3": {
+      "id": "bro-intensiteit-a8k3",
+      "type": "kennis",
+      "afk": "Intensiteit",
+      "title": "Intensiteit van oefentherapie",
+      "fields": {
+        "kern": "Intensivering van oefentherapie (meer uren oefenen) ten opzichte van minder intensief oefenen bij patiënten met een CVA leidt tot een sneller herstel. Onderzocht in VR, LR en RC. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"11\">[p11]</sup>",
+        "toelichting": "Het sneller herstel betreft: gedissocieerd bewegen, comfortabele en maximale loopsnelheid, spierkracht, zit- en stabalans, uitvoering basale ADL, kwaliteit van leven en mate van depressie en gevoelens van angst.<sup data-src=\"rl-ber\" data-p=\"11\">[p11]</sup><br><br>De dosering van oefentherapie dient gepland te worden; in de praktijk betekent dit dat er bij CVA-patiënten meer malen per dag dienen te worden behandeld, ook in het weekend. De behandelingen dienen door een fysiotherapeut met expertise of gedelegeerd door een expert.<sup data-src=\"rl-ber\" data-p=\"11\">[p11]</sup><br><br>Patiënten in de vroege fase en chronische fase dienen voldoende intensief te worden behandeld.<sup data-src=\"rl-ber\" data-p=\"11\">[p11]</sup>",
+        "implicatie": "Plan meerdere behandelmomenten per dag, ook in het weekend. De fysiotherapeut die CVA-patiënten behandelt, moet adequate expertise hebben. Het gaat om 'meer uren' — niet per se harder, maar vaker en langer."
+      },
+      "links": []
+    },
+    "bro-taakspecificiteit-j5w2": {
+      "id": "bro-taakspecificiteit-j5w2",
+      "type": "kennis",
+      "afk": "Taakspecificiteit",
+      "title": "Taak- en contextspecificiteit van trainingseffecten",
+      "fields": {
+        "kern": "Specifieke training van vaardigheden bij CVA heeft een positief effect op de getrainde vaardigheid zelf (taakspecificiteit, niveau 1). Trainen in een functionele context heeft een positief effect op het aanleren van een vaardigheid (contextspecificiteit, niveau 1).<sup data-src=\"rl-ber\" data-p=\"11-12\">[p11–12]</sup>",
+        "toelichting": "Taakspecificiteit (nr. 6 in Bijlage 1): training van bijv. het evenwicht tijdens staan en reiken tijdens het pakken van voorwerpen heeft een positief effect op de getrainde vaardigheid. Generalisatie naar andere, niet direct in de therapie getrainde vaardigheden is echter nog nauwelijks aangetoond.<sup data-src=\"rl-ber\" data-p=\"11\">[p11]</sup><br><br>Contextspecificiteit (nr. 7): trainen in een functionele context (thuis, woon- en leefomgeving) heeft een positief effect ongeacht de fase. Patiënten met een CVA bij voorkeur in hun eigen omgeving gerevalideerd.<sup data-src=\"rl-ber\" data-p=\"11-12\">[p11–12]</sup>",
+        "implicatie": "Train specifiek wat je wilt verbeteren — generalisatie is niet aangetoond. Oefen loopvaardigheden door te lopen, niet door abstracte oefeningen. Doe dit bij voorkeur in de thuissituatie of een functioneel vergelijkbare omgeving."
+      },
+      "links": []
+    },
+    "bro-ndt-bobath-d7e4": {
+      "id": "bro-ndt-bobath-d7e4",
+      "type": "kennis",
+      "afk": "NDT/Bobath",
+      "title": "NDT/Bobath: géén meerwaarde (niveau 1)",
+      "fields": {
+        "kern": "Neurologische oefenmethoden c.q. behandelconcepten (NDT/Bobath) op functie- en activiteitenniveau zijn niet effectiever dan andere behandelvormen bij patiënten met een CVA. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"12\">[p12]</sup>",
+        "toelichting": "In de jaren rond 2002 werd aangenomen dat meer dan 80% van de fysiotherapeuten in Nederland de behandelprincipes van het Bobath-concept hanteerde bij CVA-patiënten. Er is echter géén evidentie voor het hanteren van een bepaalde methode, ook niet voor het Bobath-concept. Uit de meeste studies blijkt zelfs de interventie volgens het Bobath-concept minder effectief te zijn dan de controle-interventie.<sup data-src=\"rl-ber\" data-p=\"12\">[p12]</sup><br><br>Geadviseerd wordt een eclectische behandeling te kiezen op basis van patiënt- en klinische karakteristieken. Het accent ligt op het aanleren van functionele vaardigheden zelf.<sup data-src=\"rl-ber\" data-p=\"12\">[p12]</sup>",
+        "implicatie": "Pas géén NDT/Bobath-concept toe als leidende methode. Kies een eclectische, evidence-based benadering gericht op functionele vaardigheden. Dit is een expliciete 'don't' op niveau 1."
+      },
+      "links": []
+    },
+    "bro-motorisch-leren-cva-h9p6": {
+      "id": "bro-motorisch-leren-cva-h9p6",
+      "type": "kennis",
+      "afk": "Motorisch-leren-CVA",
+      "title": "Motorisch leren bij CVA",
+      "fields": {
+        "kern": "Verbetering van functionaliteit (zitten, staan, lopen, arm-handvaardigheid) tot stand komt door het aanleren van adaptatiestrategieën. (niveau 2)<sup data-src=\"rl-ber\" data-p=\"12-13\">[p12–13]</sup>",
+        "toelichting": "Belangrijke leerprincipes bij CVA:<br><ul><li>De patiënt dient de oefenstof op maat te krijgen, zodat het te markeren maar ook te moeilijk is.</li><li>De oefenstof dient in voldoende herhaling aangeboden te worden.</li><li>Er moet feedback (verbaal en non-verbaal) worden gegeven in een afnemende frequentie.</li><li>Motorische leren vergt variatie en voldoende herhaling ('repetition-without-repetition'-principe).</li><li>Handelingen moeten worden uitgevoerd in een betekenisvolle context.<sup data-src=\"rl-ber\" data-p=\"13\">[p13]</sup></li></ul><br>Relevant is dat kennis over motorisch leren nog weinig wetenschappelijk is onderbouwd bij CVA. De werkelijke meerwaarde van deze modellen voor CVA is nog nauwelijks onderzocht.<sup data-src=\"rl-ber\" data-p=\"13\">[p13]</sup>",
+        "implicatie": "Pas leerprincipes toe: variatie, herhaling, contextspecifiek, feedback afbouwen. Maar realiseer je dat de wetenschappelijke onderbouwing bij CVA nog beperkt is."
+      },
+      "links": []
+    },
+    "bro-teleconsultatie-w3r8": {
+      "id": "bro-teleconsultatie-w3r8",
+      "type": "kennis",
+      "afk": "Teleconsultatie",
+      "title": "Teleconsultatie en telerevalidatie",
+      "fields": {
+        "kern": "Telerevalidatie/-consultatie leidt tot verbetering van de arm-handvaardigheid van de patiënt met een CVA. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"13\">[p13]</sup>",
+        "toelichting": "Telerevalidatie kan worden geboden via telefoon of videoverbinding. Het is effectief voor self-management, empowerment en verbeteren van kennis. Het meest effectief is teleconsultatie voor het subtype waarvoor het de therapeut de meeste moeite kost om de patiënt te bezoeken (bijv. na ontslag naar huis).<sup data-src=\"rl-ber\" data-p=\"13-14\">[p13–14]</sup>",
+        "implicatie": "Overweeg telerevalidatie-consultatie als aanvulling, met name na ontslag naar huis als de patiënt moeilijk bereikbaar is voor reguliere therapie."
+      },
+      "links": []
+    },
+    "bro-zelfmanagement-u6t5": {
+      "id": "bro-zelfmanagement-u6t5",
+      "type": "kennis",
+      "afk": "Zelfmanagement",
+      "title": "Zelfmanagement bij CVA",
+      "fields": {
+        "kern": "Zelfmanagementprogramma's zijn effectief voor self-efficacy, participatie en kwaliteit van leven bij patiënten met een CVA. (niveau 2)<sup data-src=\"rl-ber\" data-p=\"14\">[p14]</sup>",
+        "toelichting": "Belangrijke componenten: informatieverstrekking, het stellen van doelen, probleemoplossing, het bevorderen van self-efficacy en het gebruik van programma's voor self-efficacy- en gedragsverandering. Het doel is de patiënt een intrinsiek gevoel van controle te geven.<sup data-src=\"rl-ber\" data-p=\"14\">[p14]</sup><br><br>Bij de ondersteuning van zelfmanagement kan gebruik worden gemaakt van Goal Attainment Scaling (GAS) en het stellen van doelen ('goal setting').<sup data-src=\"rl-ber\" data-p=\"14\">[p14]</sup>",
+        "implicatie": "Integreer zelfmanagement in de behandeling: laat de patiënt meesturen in doelen, probleemoplossing en het monitoren van de eigen voortgang."
+      },
+      "links": []
+    },
+    "bro-sec-preventie-q1w0": {
+      "id": "bro-sec-preventie-q1w0",
+      "type": "kennis",
+      "afk": "Sec-preventie",
+      "title": "Secundaire preventie: leefstijlprogramma met fysieke training",
+      "fields": {
+        "kern": "Bij patiënten met een TIA of 'minor stroke' zijn leefstijlprogramma's met aerobe training effectief voor het positief beïnvloeden van risicofactoren voor het krijgen van een CVA. (niveau 2)<sup data-src=\"rl-ber\" data-p=\"14\">[p14]</sup>",
+        "toelichting": "Risicofactoren voor recidief CVA: hypertensie, diabetes mellitus type 2, verhoogd cholesterol ('low-density lipoprotein-cholesterol' [LDL]) en overgewicht/obesitas.<sup data-src=\"rl-ber\" data-p=\"14-15\">[p14–15]</sup><br><br>Bewegingsprogramma's en fitnessapparaattraining hebben een positieve invloed op hypertensie. Intensiteit: <b>VO<sub>2max</sub> 40–70%, HRR 40–70%, HR<sub>max</sub> 50–80%</b> of een <b>Borg RPE-score 11 tot 14</b> (schaal 6 tot 20).<sup data-src=\"rl-ber\" data-p=\"51\">[p51]</sup><br>Frequentie: minimaal <b>drie keer per week</b>, gedurende <b>20 tot 60 minuten per sessie</b> (of meerdere sessies van tien minuten).<sup data-src=\"rl-ber\" data-p=\"51\">[p51]</sup>",
+        "implicatie": "Start een leefstijlprogramma met aerobe component bij elke CVA-patiënt met risicofactoren. Dosering: min. 3×/wk, 20–60 min, RPE 11–14. Verwijs naar de NHG/KNGF-richtlijn Gestructureerde informatie-uitwisseling."
+      },
+      "links": []
+    },
+    "bro-valpreventie-m8f3": {
+      "id": "bro-valpreventie-m8f3",
+      "type": "kennis",
+      "afk": "Valpreventie",
+      "title": "Valpreventie bij CVA",
+      "fields": {
+        "kern": "Alle patiënten met een CVA dienen te worden gescreend op verhoogd valrisico, op grond waarvan, indien nodig, een bij voorkeur interdisciplinaire, multifactoriële behandelstrategie wordt opgesteld. (niveau 4)<sup data-src=\"rl-ber\" data-p=\"15\">[p15]</sup>",
+        "toelichting": "Valincidenten komen voor bij 23% tot soms 73% van de CVA-patiënten. Risicofactoren zijn o.a. verminderde stabalans, loopafstand, spiertonus, psychologische/cognitieve gevolgen, verminderd vermogen valangst, fysieke activiteit. Valincidenten bij CVA leiden tot heupfracturen, verdere immobiliteit, en een verder verminderde zelfstandigheid.<sup data-src=\"rl-ber\" data-p=\"15\">[p15]</sup><br><br>Het screenen dient risicoclasificatie te omvatten op basis van medische voorgeschiedenis, aanwezige risicofactoren en medicine conditie (een contra-indicatie voor fysieke training).<sup data-src=\"rl-ber\" data-p=\"15\">[p15]</sup>",
+        "implicatie": "Screen elke CVA-patiënt op valrisico. Is er een verhoogd risico? Stel een multifactoriële valpreventie-strategie op in samenwerking met het team. Gebruik de FES (Falls-Efficacy Scale) als optioneel instrument."
+      },
+      "links": []
+    },
+    "bro-meetinstr-overzicht-c4g1": {
+      "id": "bro-meetinstr-overzicht-c4g1",
+      "type": "kennis",
+      "afk": "Meetinstrumenten-overzicht",
+      "title": "Aanbevolen vs. optionele meetinstrumenten — overzicht",
+      "fields": {
+        "kern": "De richtlijn selecteert 8 aanbevolen en 23 optionele meetinstrumenten, gekoppeld aan ICF-domeinen en fasen, voor het systematisch objectiveren van stoornissen, beperkingen en mogelijkheden na CVA.<sup data-src=\"rl-ber\" data-p=\"16-19\">[p16–19]</sup>",
+        "toelichting": "<b>8 Aanbevolen meetinstrumenten</b> (tabel 4):<br><ol><li>MI (Motricity Index) – spierkracht</li><li>TCT (Trunk Control Test) – rompactiviteit</li><li>BBS (Berg Balance Scale) – zit-/stabalans</li><li>FAC (Functional Ambulation Categories) – loopvaardigheid</li><li>10MLT (comfortabel + maximaal) – loopsnelheid</li><li>FAT (Frenchay Arm Test) – arm-handvaardigheid</li><li>BI (Barthel Index) – basale ADL</li><li>FMA (Fugl-Meyer Assessment) – gedissocieerd bewegen</li></ol><sup data-src=\"rl-ber\" data-p=\"19\">[p19]</sup><br><br><b>23 Optionele meetinstrumenten</b> (tabel 4 vervolg): FMA, 10MLT-max, 6MWT, Borg RPE, TIS, TUG, ARAT, NHPT, NEADL, SSQOL, NNM, MAS, EmNSA, NIHSS, CIRS, NPRS, FES, FSS, HADS, MoCA, O-LCT, mRS, CSI.<sup data-src=\"rl-ber\" data-p=\"17-19\">[p17–19]</sup><br><br>Figuur 2 (p16) geeft een ICF-gestructureerd overzicht per domein (functies, activiteiten, participatie).",
+        "implicatie": "Gebruik de 8 aanbevolen instrumenten als basisbatterij bij elk diagnostisch proces. Vul aan met optionele instrumenten op geleide van de hulpvraag, fase en klinische bevindingen."
+      },
+      "links": []
+    },
+    "bro-syst-meten-n2j6": {
+      "id": "bro-syst-meten-n2j6",
+      "type": "kennis",
+      "afk": "Syst-meten",
+      "title": "Systematisch meten en meetmomenten",
+      "fields": {
+        "kern": "Systematisch meten (monitoren) met betrouwbare en valide meetinstrumenten leidt tot verbetering van het klinisch redeneerproces en de continuïteit van zorg. (niveau 3)<sup data-src=\"rl-ber\" data-p=\"20\">[p20]</sup>",
+        "toelichting": "<b>Meetmomenten</b> (tabel 6):<br><table><tr><th>Fase</th><th>Wanneer</th></tr><tr><td>(H)AR + VR</td><td>Altijd: &lt; 48 uur na CVA en bij diagnostisch proces</td></tr><tr><td>VR + LR</td><td>Bij ongunstige prognose &lt; 48u: wekelijks gedurende de eerste maand, en in de daarop volgende periode maandelijks, tot 6 maanden na CVA</td></tr><tr><td>RC</td><td>Bij incompleet functioneel herstel na 6 maanden: <b>halfjaarlijks</b></td></tr></table><sup data-src=\"rl-ber\" data-p=\"21\">[p21]</sup><br><br>Daarnaast altijd meten bij: afsluiting/overdracht; einde eerste week, 3 en 6 maanden na CVA; vóór elk interdisciplinair overleg; contextafhankelijk van hulpvraag.<sup data-src=\"rl-ber\" data-p=\"19\">[p19]</sup>",
+        "implicatie": "Meet altijd binnen 48 uur. Bij ongunstige prognose: wekelijks eerste maand, dan maandelijks tot 6 mnd. Na 6 maanden bij incompleet herstel: halfjaarlijks. Gebruik tabel 5 en 6 als checklist."
+      },
+      "links": []
+    },
+    "bro-prog-loop-z7y8": {
+      "id": "bro-prog-loop-z7y8",
+      "type": "kennis",
+      "afk": "Prognose-loop",
+      "title": "Prognose loopvaardigheid 6 maanden na CVA",
+      "fields": {
+        "kern": "De prognose voor loopvaardigheid 6 maanden na het CVA kan worden ingeschat met de zitbalans (TCT) en de motorische functie van het been (MI onderste extremiteit), bij voorkeur op dag twee na het CVA. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
+        "toelichting": "<b>Determinanten</b> (tabel 7):<br><table><tr><th>Determinant</th><th>Meetinstrument (neem minimaal af)</th><th>Overweeg</th></tr><tr><td>Zitbalans</td><td>TCT – zitbalans</td><td></td></tr><tr><td>Motorische functie been</td><td>MI – onderste extremiteit</td><td>FMA – onderste extremiteit</td></tr><tr><td>Initiële ADL</td><td></td><td>BI</td></tr><tr><td>Leeftijd</td><td></td><td></td></tr><tr><td>Homonieme hemianopsie</td><td></td><td>NIHSS – gezichtsvelden</td></tr><tr><td>Incontinentie voor urine</td><td></td><td>BI – blaas</td></tr><tr><td>Premorbide loopvaardigheid</td><td></td><td>FAC</td></tr><tr><td>Premorbide ADL</td><td></td><td>BI</td></tr></table><sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup><br><br>Ongeveer 80% van het herstel vindt plaats in de eerste maand na het CVA; toestandsfase bereikt rond 10 weken.<sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
+        "implicatie": "Meet TCT-zitbalans en MI-been zo snel mogelijk (dag 2). Zijn beide gunstig? Verwacht herstel loopvaardigheid. Bij ongunstige prognose: wekelijks monitoren, maandelijks tot 6 mnd."
+      },
+      "links": []
+    },
+    "bro-prog-armhand-t3k9": {
+      "id": "bro-prog-armhand-t3k9",
+      "type": "kennis",
+      "afk": "Prognose-armhand",
+      "title": "Prognose arm-handvaardigheid 6 maanden na CVA",
+      "fields": {
+        "kern": "De prognose voor arm-handvaardigheid 6 maanden na het CVA kan worden ingeschat met FMA-vingerextensie en MI-schouderabductie, bij voorkeur op dag twee na het CVA. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
+        "toelichting": "<b>Determinanten</b> (tabel 7):<br><table><tr><th>Determinant</th><th>Meetinstrument (neem minimaal af)</th><th>Overweeg</th></tr><tr><td>Motorische functie arm</td><td>FMA – vingerextensie<br>MI – schouderabductie</td><td></td></tr><tr><td>Initiële arm-handvaardigheid</td><td></td><td>FAT, ARAT</td></tr><tr><td>Neurofysiologische maten (MEP, SEP)</td><td></td><td></td></tr></table><sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup><br><br>Het 'SAFE'-model (Shoulder Abduction – Finger Extension) voorspelt de prognose: patiënten met enige schouderabductie en vingerextensie binnen 72 uur hebben een gunstige prognose.<sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup><br><br><b>'Learned non-use':</b> patiënten met somatosensorische stoornissen of hemineglect zijn 'at risk' voor het niet gebruiken van de paretische arm in het dagelijks leven, ondanks aanwezige motorische capaciteit.<sup data-src=\"rl-ber\" data-p=\"24\">[p24]</sup>",
+        "implicatie": "Meet FMA-vingerextensie en MI-schouderabductie op dag 2. Bij ongunstige prognose: monitor wekelijks eerste 4 weken, dan maandelijks tot 6 mnd. Let op 'learned non-use' — deze patiënten zijn kandidaat voor mCIMT."
+      },
+      "links": []
+    },
+    "bro-prog-adl-b5c1": {
+      "id": "bro-prog-adl-b5c1",
+      "type": "kennis",
+      "afk": "Prognose-ADL",
+      "title": "Prognose basale ADL-vaardigheden 6 maanden na CVA",
+      "fields": {
+        "kern": "Het meest optimale moment om de prognose voor basale ADL 6 maanden na het CVA te stellen is de Barthel Index, afgenomen aan het eind van de eerste week na het CVA, bij voorkeur op dag vijf. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"23\">[p23]</sup>",
+        "toelichting": "<b>Determinanten</b> (tabel 7):<br><table><tr><th>Determinant</th><th>Neem minimaal af</th><th>Overweeg</th></tr><tr><td>ADL eind eerste week</td><td><b>BI (dag 5)</b></td><td></td></tr><tr><td>Initiële neurologische status, o.a. motorische functie arm</td><td></td><td>NIHSS, MI-bovenste extremiteit</td></tr><tr><td>Leeftijd</td><td></td><td></td></tr><tr><td>Initiële loopvaardigheid</td><td></td><td>FAC</td></tr><tr><td>Premorbide ADL</td><td></td><td>BI</td></tr><tr><td>Premorbide participatie</td><td></td><td>mRS</td></tr><tr><td>Recidief CVA</td><td></td><td></td></tr></table><sup data-src=\"rl-ber\" data-p=\"22-23\">[p22–23]</sup><br><br>25–74% van de CVA-patiënten heeft op de lange termijn grote ondersteuning nodig bij het uitvoeren van ADL.<sup data-src=\"rl-ber\" data-p=\"23\">[p23]</sup>",
+        "implicatie": "Neem BI af op dag 5. Dit is het cruciale prognostische moment voor basale ADL. Bij ongunstige prognose: wekelijks 4 weken, dan maandelijks tot 6 mnd monitoren."
+      },
+      "links": []
+    },
+    "bro-prog-chronisch-e2d8": {
+      "id": "bro-prog-chronisch-e2d8",
+      "type": "kennis",
+      "afk": "Prognose-chronisch",
+      "title": "Prognose chronische fase en MCID's",
+      "fields": {
+        "kern": "In de chronische fase (≥ 6 mnd) kan 10–40% van de patiënten nog verbeteren of verslechteren buiten de 95%-grenzen van de meetfout. MCID's: 10MLT 0,16 m/s; ARAT 6 pnt; BI 2 pnt.<sup data-src=\"rl-ber\" data-p=\"23-24\">[p23–24]</sup>",
+        "toelichting": "<b>Loopvaardigheid:</b> 20–30% verbetert de 95%-grens; 10–20% verslechtert. Monitor met FAC (≥ 3) + 10MLT-comfortabel elke 6 maanden. MCID = <b>0,16 m/s</b>.<sup data-src=\"rl-ber\" data-p=\"23-24\">[p23–24]</sup><br><br><b>Arm-handvaardigheid:</b> 10–15% verbetert. Monitor met FAT (score 1–4 pnt), somatosensoriek en/of hemineglect: elke 6 mnd gevalueerd met ARAT. MCID ARAT = <b>6 punten</b>. Let op 'learned non-use'.<sup data-src=\"rl-ber\" data-p=\"24\">[p24]</sup><br><br><b>Basale ADL:</b> circa 10–15% verbetert; 5–40% verslechtert. BI elke 6 mnd. MCID = <b>≥ 2 punten</b>.<sup data-src=\"rl-ber\" data-p=\"24\">[p24]</sup><br><br>Voorspellers achteruitgang: hogere leeftijd, hoger gelegen corticale functiestoornissen, depressie, vermoeidheid en/of fysieke inactiviteit.<sup data-src=\"rl-ber\" data-p=\"23-24\">[p23–24]</sup>",
+        "implicatie": "Patiënten met een CVA zijn altijd 'at risk' voor achteruitgang. Monitor halfjaarlijks met 10MLT, ARAT en BI. Gebruik de MCID's om klinisch relevante verandering vast te stellen. Significante verbetering of verslechtering legitimeert herstarten therapie."
+      },
+      "links": []
+    },
+    "bro-premobilisatie-f6g2": {
+      "id": "bro-premobilisatie-f6g2",
+      "type": "kennis",
+      "afk": "Premobilisatie",
+      "title": "Premobilisatiefase",
+      "fields": {
+        "kern": "De premobilisatiefase is de fase waarin het medisch beleid erop gericht is de patiënt in bed te houden. Interdisciplinaire samenwerking is essentieel; de premobilisatiefase dient zo kort mogelijk te zijn.<sup data-src=\"rl-ber\" data-p=\"25\">[p25]</sup>",
+        "toelichting": "Duur: enkele uren tot soms vele weken, afhankelijk van koorts, cardiale instabiliteit, malaise, bewustzijnsdaling. (niveau 3)<sup data-src=\"rl-ber\" data-p=\"25\">[p25]</sup><br><br>Secundaire complicaties: 1) koorts, 2) luchtweginfecties, 3) decubitus, 4) pijn, 5) DVT, 6) cardiale, 7) gastro-intestinale, 8) depressie.<sup data-src=\"rl-ber\" data-p=\"25\">[p25]</sup><br><br>Fysiotherapeutische interventies:<br><ul><li>Adviseren optimale lighouding (comfortabel)<sup data-src=\"rl-ber\" data-p=\"25\">[p25]</sup></li><li>Adequaat wisselliggingsschema (decubituspreventie)<sup data-src=\"rl-ber\" data-p=\"26\">[p26]</sup></li><li>Monitoren functiestoornissen (parese, somatosensoriek)<sup data-src=\"rl-ber\" data-p=\"25\">[p25]</sup></li><li>Pulmonale ventilatie en sputumlozing<sup data-src=\"rl-ber\" data-p=\"26\">[p26]</sup></li><li>DVT-signalering<sup data-src=\"rl-ber\" data-p=\"26\">[p26]</sup></li></ul><br><b>⚠ 2020-UPDATE: Vroegmobilisatie &lt; 24u is VERVALLEN.</b> Recent onderzoek (Bernhardt et al., Neurology 2020) toont dat vroegtijdige mobilisatie (&lt; 24 uur) in sommige gevallen risico kan geven op neurologische verslechtering. Het advies om patiënten zo snel mogelijk uit bed te mobiliseren is daarom vervallen.<sup data-src=\"rl-ber\" data-p=\"1\">[p1]</sup><sup data-src=\"rl-ber\" data-p=\"25\">[p25]</sup><sup data-src=\"rl-ber\" data-p=\"54-55\">[p54–55]</sup>",
+        "implicatie": "NIET meer standaard binnen 24u mobiliseren. Overleg met het team over het moment van mobilisatie op basis van type CVA, medische stabiliteit en lokalisatie. Richt je in de premobilisatiefase op lighouding, decubituspreventie, DVT-signalering en pulmonale zorg."
+      },
+      "links": []
+    },
+    "bro-loop-interv-niv1-s9a4": {
+      "id": "bro-loop-interv-niv1-s9a4",
+      "type": "kennis",
+      "afk": "Loop-interv-N1",
+      "title": "Loop-interventies: aanbevolen (niveau 1)",
+      "fields": {
+        "kern": "Er zijn meerdere interventies met niveau 1-evidenence die effectief zijn voor verbetering van loopvaardigheid en gerelateerde functies bij CVA-patiënten in de mobilisatiefase.<sup data-src=\"rl-ber\" data-p=\"26-35\">[p26–35]</sup>",
+        "toelichting": "<table><tr><th>Interventie</th><th>Effect op</th><th>Niv.</th><th>Fase</th></tr><tr><td>Oefenen evenwicht in stand zonder visuele feedback krachtenplatform</td><td>Stabalans, opstaan en gaan zitten, loopvaardigheid</td><td>1</td><td>VR(+), RC(+)</td></tr><tr><td>Oefenen evenwicht tijdens verschillende activiteiten</td><td>Zit-/stabalans, basale ADL</td><td>1</td><td>VR(+), LR(+), RC(+)</td></tr><tr><td>Loopbandtraining met gewichtsondersteuning (BWSTT)</td><td>Comfortabele loopsnelheid, loopafstand</td><td>1</td><td>VR(+), RC(+)</td></tr><tr><td>Robotgeassisteerde looptraining</td><td>Comfortabele/maximale loopsnelheid, loopafstand, hartfrequentie, zit-/stabalans, loopvaardigheid, basale ADL</td><td>1</td><td>VR(+), RC(+)</td></tr><tr><td>Loopbandtraining zonder gewichtsondersteuning</td><td>Maximale loopsnelheid, breedte gangspoor</td><td>1</td><td>VR(+), LR(+), RC(+)</td></tr><tr><td>Looptraining op vaste ondergrond</td><td>Loopafstand, vermindering angst</td><td>1</td><td>RC(+)</td></tr><tr><td>Groepstraining met werkstations (CCT)</td><td>Loopafstand, loopsnelheid, zit-/stabalans, loopvaardigheid, vermindering inactiviteit</td><td>1</td><td>VR(+), LR(+), RC(+)</td></tr><tr><td>Oefenen met mantelzorger</td><td>Mobiliteit gerelateerde functies, basale ADL, vermindering zorglast</td><td>1</td><td>VR(+)</td></tr><tr><td>Spierkrachttraining paretische been</td><td>Spierkracht, weerstand passief bewegen, gangbeeld</td><td>1</td><td>VR(+), RC(+)</td></tr><tr><td>Training aeroob uithoudingsvermogen</td><td>VO<sub>2max</sub>, respiratoire functies, uithoudingsvermogen</td><td>1</td><td>VR(+), RC(+)</td></tr><tr><td>Aeroob + spierkrachttraining</td><td>Gedissocieerd bewegen, spierkracht, maximale loopsnelheid, loopafstand, inspanning, balans, fysieke activiteit, kwaliteit van leven</td><td>1</td><td>VR(+), LR(+), RC(+)</td></tr><tr><td>Hydrotherapie</td><td>Spierkracht paretische been</td><td>1</td><td>RC(+)</td></tr></table><sup data-src=\"rl-ber\" data-p=\"27-35\">[p27–35]</sup>",
+        "implicatie": "Kies uit deze evidence-based interventies op basis van de patiëntkenmerken, fase en hulpvraag. Combineer meerdere interventies. BWSTT bij FAC < 3; looptraining vaste ondergrond bij FAC ≥ 3 en zelfstandig lopen."
+      },
+      "links": []
+    },
+    "bro-loop-interv-rest-y1b3": {
+      "id": "bro-loop-interv-rest-y1b3",
+      "type": "kennis",
+      "afk": "Loop-interv-rest",
+      "title": "Loop-interventies: niet effectief of onduidelijk",
+      "fields": {
+        "kern": "Diverse interventies voor loopvaardigheid bij CVA hebben een bewijskracht van niveau 2 of zijn niet effectief bevonden.<sup data-src=\"rl-ber\" data-p=\"36-38\">[p36–38]</sup>",
+        "toelichting": "<table><tr><th>Interventie</th><th>Effect</th><th>Niv.</th></tr><tr><td>Bilaterale beentraining met ritmische auditieve cueing (BLETRAC)</td><td>Niet effectief voor gedissocieerd bewegen, loopsnelheid, staplengte</td><td>2</td></tr><tr><td>Spiegeltherapie paretische been</td><td>Gedissocieerd bewegen, basale ADL (RC): positief</td><td>2</td></tr><tr><td>Limb overloading externe gewichten</td><td>Niet effectief voor balans en loopsnelheid</td><td>2</td></tr><tr><td>Systematische feedback loopsnelheid</td><td>Loopsnelheid positief, maar niet voor opnameduur, loopafstand, loopvaardigheid</td><td>2</td></tr><tr><td>Statafel/nachtspalk voor enkeldorsaalflexie</td><td>Niet effectief</td><td>2</td></tr><tr><td>Manuele passieve gewrichtsmobilisaties enkel</td><td>Wisselende effecten</td><td>2</td></tr><tr><td>Oefeningen enkel met speciaal apparaat</td><td>Niet effectief</td><td>2</td></tr><tr><td>Ultrageluid paretische been</td><td>Niet effectief</td><td>2</td></tr><tr><td>Segmentale spiervibratie voetheffersparese</td><td>Wisselend</td><td>2</td></tr><tr><td>Trilplaat</td><td>Niet effectief</td><td>2</td></tr></table><sup data-src=\"rl-ber\" data-p=\"36-38\">[p36–38]</sup>",
+        "implicatie": "Pas deze interventies niet routinematig toe. BLETRAC, trilplaat, ultrageluid, statafel/nachtspalk en extern gewichten worden afgeraden op basis van de huidige evidence."
+      },
+      "links": []
+    },
+    "bro-loophulpmiddelen-x0p5": {
+      "id": "bro-loophulpmiddelen-x0p5",
+      "type": "kennis",
+      "afk": "Loophulpmiddelen",
+      "title": "Loophulpmiddelen en beenorthesen",
+      "fields": {
+        "kern": "Het gebruik van loophulpmiddelen ten goede komt aan de veiligheid, zelfstandigheid en efficiëntie van het lopen bij CVA-patiënten. (niveau 4) Beenorthesen: looptraining met orthese leidt tot verbetering van loopsnelheid en loopafstand (niveau 1); lopen met orthese verbetert loopsnelheid en energieverbruik (niveau 2).<sup data-src=\"rl-ber\" data-p=\"38-39\">[p38–39]</sup>",
+        "toelichting": "Loophulpmiddelen: stok, elleboogkruk, looprek, rollator, drie-/vierpoot.<sup data-src=\"rl-ber\" data-p=\"38\">[p38]</sup><br>Beenorthesen: extern verwijderbare ondersteuning om functioneel bewegen te verbeteren, spasticiteit en pijn te verminderen, hyperextensie te voorkomen.<sup data-src=\"rl-ber\" data-p=\"39\">[p39]</sup><br>Orthese voorschrijven interdisciplinair; 'custom-made' in overleg met orthesiologie. Evalueer functionaliteit, veiligheid, loopsnelheid, gangbeeld, draagcomfort.<sup data-src=\"rl-ber\" data-p=\"39\">[p39]</sup>",
+        "implicatie": "Overweeg altijd een loophulpmiddel ter bevordering van veiligheid en zelfstandigheid. Beenorthese interdisciplinair voorschrijven; evalueer regelmatig in een gangbeeldlaboratorium."
+      },
+      "links": []
+    },
+    "bro-arm-interv-niv1-g3h7": {
+      "id": "bro-arm-interv-niv1-g3h7",
+      "type": "kennis",
+      "afk": "Arm-interv-N1",
+      "title": "Arm-hand interventies: aanbevolen (niveau 1)",
+      "fields": {
+        "kern": "Meerdere interventies voor arm-handvaardigheid bij CVA hebben niveau 1-evidenence.<sup data-src=\"rl-ber\" data-p=\"39-46\">[p39–46]</sup>",
+        "toelichting": "<table><tr><th>Interventie</th><th>Effect op</th><th>Niv.</th><th>Fase</th></tr><tr><td>Therapeutisch positioneren paretische arm</td><td>Passieve exorotatie schouder</td><td>1</td><td>VR(+)</td></tr><tr><td>Bilaterale armtraining (incl. BATRAC)</td><td>Gedissocieerd bewegen</td><td>1</td><td>LR(+), RC(+)</td></tr><tr><td>(m)CIMT – origineel, hoge en lage intensiteit</td><td>Arm-handvaardigheid, ervaren gebruik arm en hand, kwaliteit van bewegen, basale ADL</td><td>1</td><td>VR(+), LR(+), RC(+)</td></tr><tr><td>Robotgeassisteerde training paretische arm (unilateraal schouder + elleboog)</td><td>Gedissocieerd bewegen, spierkracht, pijn</td><td>1</td><td>VR(+), LR(+), RC(+)</td></tr><tr><td>NMS pols- en vingerextensoren</td><td>Gedissocieerd bewegen, spierkracht</td><td>1</td><td>VR(+)</td></tr><tr><td>NMS schouderspieren</td><td>Vermindering glenohumerale subluxatie</td><td>1</td><td>VR(+), LR(+), RC(+)</td></tr><tr><td>EMG-NMS pols- en vingerextensoren</td><td>Gedissocieerd bewegen, actieve bewegingsuitslag, arm-handvaardigheid</td><td>1</td><td>VR(+), RC(+)</td></tr><tr><td>Somatosensorische functies arm + hand</td><td>Somatosensorische functies, weerstand tegen passief bewegen</td><td>1</td><td>VR(+), LR(+), RC(+)</td></tr><tr><td>Training virtuele omgeving arm + hand</td><td>Basale ADL</td><td>1</td><td>VR(+), RC(+)</td></tr><tr><td>Spierkrachttraining paretische arm + hand</td><td>Gedissocieerd bewegen, spierkracht, bewegingsuitslag, pijn, arm-handvaardigheid</td><td>1</td><td>VR(+), RC(+)</td></tr></table><sup data-src=\"rl-ber\" data-p=\"39-46\">[p39–46]</sup>",
+        "implicatie": "Kies interventies op basis van fase en patiëntprofiel. mCIMT bij patiënten met enige willekeurige extensie pols/vingers. Bilaterale armtraining in LR/RC. Robottraining als aanvulling. NMS voor pols-/vingerextensoren vroeg in VR."
+      },
+      "links": []
+    },
+    "bro-arm-interv-rest-i8l2": {
+      "id": "bro-arm-interv-rest-i8l2",
+      "type": "kennis",
+      "afk": "Arm-interv-rest",
+      "title": "Arm-hand interventies: niveau 2 / niet effectief",
+      "fields": {
+        "kern": "Diverse interventies voor arm-handvaardigheid hebben niveau 2-evidenence of zijn niet effectief bevonden.<sup data-src=\"rl-ber\" data-p=\"46-47\">[p46–47]</sup>",
+        "toelichting": "<table><tr><th>Interventie</th><th>Effect</th><th>Niv.</th></tr><tr><td>CPM voor de schouder</td><td>Niet effectief voor stabiliteit schouder, spierkracht, weerstand passief, pijn, ADL</td><td>2</td></tr><tr><td>Subsensorische elektrische en vibratiestimulatie arm</td><td>Niet effectief</td><td>2</td></tr><tr><td>Groepstraining werkstations arm</td><td>Gedissocieerd bewegen, arm-handvaardigheid (positief)</td><td>2</td></tr><tr><td>Passieve bilaterale armtraining</td><td>Niet effectief (gedissocieerd bewegen, handknijpkracht, neurologische functies)</td><td>2</td></tr><tr><td>Mechanische armtrainer</td><td>Niet effectief voor gedissocieerd bewegen, spierkracht, ADL; wel arm-handvaardigheid (VR)</td><td>2</td></tr></table><sup data-src=\"rl-ber\" data-p=\"46-47\">[p46–47]</sup>",
+        "implicatie": "CPM, subsensorische stimulatie, passieve bilaterale armtraining en mechanische armtrainer zijn niet routinematig aan te bevelen. Groepstraining werkstations arm kan als aanvulling voor patiënten met incompleet arm-handherstel."
+      },
+      "links": []
+    },
+    "bro-adl-dyspraxie-c7d3": {
+      "id": "bro-adl-dyspraxie-c7d3",
+      "type": "kennis",
+      "afk": "ADL-dyspraxie",
+      "title": "ADL-vaardigheden en dyspraxie-training",
+      "fields": {
+        "kern": "Behandeling van dyspraxie middels gebarentraining ('gestural training') heeft een gunstig effect op de mate van apraxie en ADL. (niveau 1 – CVA linker hemisfeer)<sup data-src=\"rl-ber\" data-p=\"47-48\">[p47–48]</sup>",
+        "toelichting": "Dyspraxie: problemen bij het uitvoeren van aangeleerde en/of doelgerichte activiteiten, primair door stoornissen in motoriek, coördinatie of sensibiliteit. Komt vaker voor bij CVA in de linker hemisfeer.<sup data-src=\"rl-ber\" data-p=\"47\">[p47]</sup><br><br>Strategietraining bij dyspraxie heeft gunstig effect op basale ADL (niveau 2, LR). Samenwerking fysiotherapeut–ergotherapeut is essentieel.<sup data-src=\"rl-ber\" data-p=\"47-48\">[p47–48]</sup><br><br>Therapie gericht op (her)leren en hervatten van vrijetijds-/dagbesteding heeft een gunstig effect op participatie in vrijetijdsbesteding (niveau 1, VR).<sup data-src=\"rl-ber\" data-p=\"48\">[p48]</sup>",
+        "implicatie": "Bij vermoeden van dyspraxie: verwijs naar ergotherapeut voor diagnostiek. Werk samen aan gebarentraining en strategietraining. Stimuleer participatie in vrijetijdsactiviteiten vroeg in de VR-fase."
+      },
+      "links": []
+    },
+    "bro-cognitieve-reval-w4e6": {
+      "id": "bro-cognitieve-reval-w4e6",
+      "type": "kennis",
+      "afk": "Cogn-reval",
+      "title": "Cognitieve revalidatie: aandacht, geheugen, neglect",
+      "fields": {
+        "kern": "Compensatiestrategietraining voor aandacht, geheugenstrategietraining en visuele scanningstraining voor neglect zijn effectieve interventies bij CVA. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"48-51\">[p48–51]</sup>",
+        "toelichting": "<b>Aandacht</b> (G.1):<br>Training van compensatiestrategieën heeft gunstig effect op vasthouden van aandacht na 6 weken. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"49\">[p49]</sup> Gebruik 'time pressure management', 'attention process training'. Hiërarchisch: taken worden in volgorde van complexiteit aangeboden.<sup data-src=\"rl-ber\" data-p=\"49\">[p49]</sup><br><br><b>Geheugen</b> (G.2):<br>Geheugenstrategietraining (interne + externe strategieën) heeft positief effect bij milde geheugenstoornissen. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"49-50\">[p49–50]</sup> Gebruik 'errorless learning' en mogelijk 'spaced retrieval'.<sup data-src=\"rl-ber\" data-p=\"50\">[p50]</sup><br><br><b>(Hemi)neglect</b> (G.3):<br>Visuele scanningstraining heeft gunstig effect op aandacht voor de verwaarloosde zijde. (niveau 1)<sup data-src=\"rl-ber\" data-p=\"50\">[p50]</sup> Gecombineerde training (visuele scanning, lezen, kopiëren, activatie extremiteiten verwaarloosde zijde, nekmusculatuurstimulatie, hemispatiële zonnebril, prismabril, videofeedback) is effectief. (niveau 3)<sup data-src=\"rl-ber\" data-p=\"50\">[p50]</sup>",
+        "implicatie": "Herken cognitieve stoornissen vroeg (gebruik MoCA). Voor aandacht: compensatiestrategietraining. Voor geheugen: interne + externe strategieën. Voor neglect: visuele scanningstraining, gecombineerde benadering. Werk samen met neuropsycholoog."
+      },
+      "links": []
+    },
+    "bro-cognitie-aeroob-p5q9": {
+      "id": "bro-cognitie-aeroob-p5q9",
+      "type": "kennis",
+      "afk": "Cogn-aeroob",
+      "title": "Cognitie en aerobe training",
+      "fields": {
+        "kern": "Aerobe training heeft een gunstig effect op conditioneel leren en impliciet leren bij patiënten met een CVA. (niveau 2)<sup data-src=\"rl-ber\" data-p=\"51\">[p51]</sup>",
+        "toelichting": "Aerobe training bevordert neurofysiologische en -chemische veranderingen: proliferatie van neuronen, toename volume hippocampus, toename cerebrale doorbloeding en functionele activatiepatronen.<sup data-src=\"rl-ber\" data-p=\"51\">[p51]</sup><br><br><b>Dosering:</b><br><ul><li>Intensiteit: <b>VO<sub>2max</sub> 40–70%</b>, <b>HRR 40–70%</b>, <b>HR<sub>max</sub> 50–80%</b> of <b>Borg RPE-score 11–14</b> (schaal 6–20)</li><li>Frequentie: minimaal <b>3× per week</b></li><li>Duur: <b>20–60 minuten per sessie</b> (of meerdere sessies van 10 min)</li></ul><sup data-src=\"rl-ber\" data-p=\"51\">[p51]</sup>",
+        "implicatie": "Integreer aerobe training in het behandelprogramma van elke CVA-patiënt. Dosering: 3×/wk, 20–60 min, Borg 11–14. Dit is niet alleen goed voor de conditie, maar ook voor cognitief functioneren."
+      },
+      "links": []
+    },
+    "bro-rapportage-h1j0": {
+      "id": "bro-rapportage-h1j0",
+      "type": "kennis",
+      "afk": "Rapportage",
+      "title": "Rapportage, verslaglegging en afsluiting",
+      "fields": {
+        "kern": "De fysiotherapeut is een vast lid van het interdisciplinaire team en rapporteert mondeling en/of schriftelijk over de fysiotherapeutische werkdiagnose, het behandelplan en het therapeutisch proces.<sup data-src=\"rl-ber\" data-p=\"51\">[p51]</sup>",
+        "toelichting": "De behandeling wordt beëindigd indien de fysiotherapeut van mening is dat fysiotherapie geen toegevoegde waarde meer heeft, maar wel inschat dat de patiënt de doelstellingen zelfstandig kan bereiken.<sup data-src=\"rl-ber\" data-p=\"51\">[p51]</sup><br><br>Bij afsluiting:<br><ul><li>Met patiënt en eventueel mantelzorger bespreken waarom de behandeling stopt</li><li>Adviseren over behoud van de verbetering</li><li>Zesmaandelijks controleafspraak om functioneren te monitoren (bij incompleet herstel)</li><li>Patiënt informeren over wanneer weer contact opnemen met fysiotherapeut</li><li>Advies aan mantelzorger over veiligheid</li></ul><sup data-src=\"rl-ber\" data-p=\"51\">[p51]</sup><br><br>Het is wenselijk om in het eindverslag te vermelden of de richtlijn is gevolgd en op welke punten eventueel is afgeweken.<sup data-src=\"rl-ber\" data-p=\"51\">[p51]</sup>",
+        "implicatie": "Documenteer structureel. Vermeld in het eindverslag of je volgens de richtlijn hebt gehandeld. Plan bij incompleet herstel zesmaandelijkse controleafspraken."
+      },
+      "links": []
+    },
+    "fma-boven-bro-a1b2": {
+      "id": "fma-boven-bro-a1b2",
+      "type": "instrument",
+      "afk": "FMA-boven",
+      "title": "Fugl-Meyer Assessment – bovenste extremiteit",
+      "fields": {
+        "watMeetHet": "Gedissocieerd bewegen van de bovenste extremiteit na CVA. Onderdeel van de volledige FMA (Fugl-Meyer Assessment).<sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
+        "scoringscriteria": "Items scoren op een 3-puntsschaal (0–2). De bovenste-extremiteitssectie omvat reflexactiviteit, flexie-/extensiesynergieën, willekeurige bewegingen, pols-/handgrepen en snelheid/coördinatie. Maximale score: 66 punten.<sup data-src=\"rl-ber\" data-p=\"19\">[p19]</sup>",
+        "normwaarden": "FMA-vingerextensie is prognostisch voor arm-handvaardigheid 6 mnd (tabel 7).<sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup> Aanbevolen als meetinstrument in alle fasen: (H)AR, LR en RC (aanbevolen); VR (optioneel).<sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
+        "implicatie": "Meet FMA-boven vroeg (dag 2) voor prognose arm-hand. Het item 'vingerextensie' is samen met MI-schouderabductie de kern van het SAFE-model. Gebruik de volledige FMA-boven voor evaluatie gedissocieerd bewegen in alle fasen."
+      },
+      "links": []
+    },
+    "fma-onder-bro-c3d4": {
+      "id": "fma-onder-bro-c3d4",
+      "type": "instrument",
+      "afk": "FMA-onder",
+      "title": "Fugl-Meyer Assessment – onderste extremiteit",
+      "fields": {
+        "watMeetHet": "Gedissocieerd bewegen van de onderste extremiteit na CVA.<sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
+        "scoringscriteria": "Items scoren op een 3-puntsschaal (0–2). Maximale score onderste extremiteit: 34 punten.",
+        "normwaarden": "FMA-onderste extremiteit is een overweeg-meetinstrument voor prognose loopvaardigheid (tabel 7). Aanbevolen afname in (H)AR, LR en RC; optioneel in VR.<sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup><sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
+        "implicatie": "Overweeg FMA-onder naast MI-been als aanvulling voor prognose loopvaardigheid 6 mnd. Gebruik voor evaluatie van gedissocieerd bewegen been."
+      },
+      "links": []
+    },
+    "arat-bro-e5f6": {
+      "id": "arat-bro-e5f6",
+      "type": "instrument",
+      "afk": "ARAT",
+      "title": "Action Research Arm Test",
+      "fields": {
+        "watMeetHet": "Arm-handvaardigheid: grijpen, pakken, knijpen en grove armbewegingen.<sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
+        "scoringscriteria": "19 items op een 4-puntsschaal (0–3). Totaalscore 0–57. Subtests: grijpen, grip, knijp, grove armbewegingen.",
+        "normwaarden": "MCID chronische fase: <b>6 punten</b> verandering t.o.v. de score 6 maanden na het CVA.<sup data-src=\"rl-ber\" data-p=\"24\">[p24]</sup> Optioneel meetinstrument; aanbevolen afname in alle fasen: (H)AR, LR en RC (aanbevolen); VR (optioneel).<sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup> Halfjaarlijks monitoren in RC.<sup data-src=\"rl-ber\" data-p=\"24\">[p24]</sup>",
+        "implicatie": "Gebruik de ARAT halfjaarlijks in de chronische fase bij patiënten met incompleet armherstel (FAT 1–4 pnt, somatosensorische stoornissen of hemineglect). MCID = 6 punten. Let op 'learned non-use'."
+      },
+      "links": []
+    },
+    "nhpt-bro-g7h8": {
+      "id": "nhpt-bro-g7h8",
+      "type": "instrument",
+      "afk": "NHPT",
+      "title": "Nine Hole Peg Test",
+      "fields": {
+        "watMeetHet": "Fijne handvaardigheid (vingervaardigheid) na CVA.<sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
+        "scoringscriteria": "Tijd (seconden) om 9 pennetjes één voor één in een bord te plaatsen en weer te verwijderen. Korter = beter.",
+        "normwaarden": "Optioneel meetinstrument voor arm-handvaardigheid. Aanbevolen in (H)AR, LR en RC; optioneel in VR.<sup data-src=\"rl-ber\" data-p=\"17\">[p17]</sup>",
+        "implicatie": "Gebruik de NHPT als aanvulling op FAT en ARAT voor objectivering van fijne handmotoriek, met name bij patiënten met resterende vingerfunctie."
+      },
+      "links": []
+    },
+    "ssqol-bro-i9j0": {
+      "id": "ssqol-bro-i9j0",
+      "type": "instrument",
+      "afk": "SSQOL",
+      "title": "Stroke-Specific Quality of Life Scale",
+      "fields": {
+        "watMeetHet": "Ervaren kwaliteit van leven specifiek na CVA.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "scoringscriteria": "49 items over 12 domeinen (energie, gezinsrollen, taal, mobiliteit, stemming, persoonlijkheid, zelfzorg, sociale rollen, denken, bovenste extremiteit, visus, werk/productiviteit). 5-puntsschaal per item.",
+        "normwaarden": "Optioneel meetinstrument voor participatie. Alleen aanbevolen in de <b>RC-fase</b>.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "implicatie": "Overweeg SSQOL in de chronische fase om de ervaren kwaliteit van leven in kaart te brengen. Relevante aanvulling op de BI voor het participatiedomein."
+      },
+      "links": []
+    },
+    "nnm-bro-k1l2": {
+      "id": "nnm-bro-k1l2",
+      "type": "instrument",
+      "afk": "NNM",
+      "title": "Goniometer – Neutrale-0-Methode",
+      "fields": {
+        "watMeetHet": "Bewegingsuitslag (ROM) van gewrichten, gemeten volgens de Neutrale-0-Methode.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "scoringscriteria": "Meting in graden van actieve en passieve gewrichtsbeweeglijkheid met een goniometer, uitgaande van de anatomische nulstand.",
+        "normwaarden": "Optioneel meetinstrument. Aanbevolen in (H)AR, LR en RC; optioneel in VR.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "implicatie": "Gebruik NNM bij vermoeden van contracturen of bewegingsbeperkingen, met name enkeldorsaalflexie en schouderbeweeglijkheid. Belangrijk voor het monitoren van passieve ROM in de premobilisatie- en vroege revalidatiefase."
+      },
+      "links": []
+    },
+    "fes-bro-m3n4": {
+      "id": "fes-bro-m3n4",
+      "type": "instrument",
+      "afk": "FES",
+      "title": "Falls-Efficacy Scale",
+      "fields": {
+        "watMeetHet": "Self-efficacy ten aanzien van balanshandhaving; valangst.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "scoringscriteria": "Zelfrapportagevragenlijst waarin de patiënt aangeeft hoe zeker hij/zij zich voelt bij het uitvoeren van dagelijkse activiteiten zonder te vallen.",
+        "normwaarden": "Optioneel meetinstrument. Aanbevolen in (H)AR, LR en RC; optioneel in VR.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "implicatie": "Gebruik FES bij elke CVA-patiënt bij wie je valangst vermoedt. Valangst is een onafhankelijke belemmering voor mobiliteit en participatie. Integreert met de valpreventie-screening."
+      },
+      "links": []
+    },
+    "fss-bro-o5p6": {
+      "id": "fss-bro-o5p6",
+      "type": "instrument",
+      "afk": "FSS",
+      "title": "Fatigue Severity Scale",
+      "fields": {
+        "watMeetHet": "Vermoeidheid en de impact ervan op het dagelijks functioneren.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "scoringscriteria": "9 items op een 7-puntsschaal. Score ≥ 4 wordt doorgaans beschouwd als klinisch relevante vermoeidheid.",
+        "normwaarden": "Optioneel meetinstrument. Aanbevolen in LR en RC; niet standaard in (H)AR en VR.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "implicatie": "Screen op post-CVA-vermoeidheid in de LR- en RC-fase. Vermoeidheid is een veelvoorkomend en onderschat probleem dat de revalidatie kan belemmeren. Pas de dosis van training aan op basis van de FSS-score."
+      },
+      "links": []
+    },
+    "moca-bro-q7r8": {
+      "id": "moca-bro-q7r8",
+      "type": "instrument",
+      "afk": "MoCA",
+      "title": "Montreal Cognitive Assessment",
+      "fields": {
+        "watMeetHet": "Screening van cognitieve functies: aandacht, concentratie, executieve functies, geheugen, taal, visuoconstructieve vaardigheden, abstract denken, rekenen, oriëntatie.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "scoringscriteria": "Totaalscore 0–30. Afkapwaarde: &lt; 26 suggestief voor cognitieve stoornissen.",
+        "normwaarden": "Optioneel meetinstrument. Bedoeld als signalering. Aanbevolen in (H)AR, LR en RC; optioneel in VR.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "implicatie": "Gebruik MoCA vroeg in de revalidatie als screeningsinstrument voor cognitieve stoornissen. Bij afwijkende score (< 26): overleg met neuropsycholoog en pas je behandeling aan (bv. compensatiestrategietraining)."
+      },
+      "links": []
+    },
+    "olct-bro-s9t0": {
+      "id": "olct-bro-s9t0",
+      "type": "instrument",
+      "afk": "O-LCT",
+      "title": "O-Letter Cancellation Test",
+      "fields": {
+        "watMeetHet": "Visuospatieel neglect: de aandacht voor de verwaarloosde zijde van het gezichtsveld.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "scoringscriteria": "Patiënt streept alle 'O'-letters door op een vel papier. Score is het aantal gemiste targets, met name aan de contralaterale zijde.",
+        "normwaarden": "Optioneel meetinstrument. Aanbevolen in (H)AR, LR en RC; optioneel in VR.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "implicatie": "Gebruik O-LCT als snelle screening op hemineglect. Bij positief resultaat: integreer visuele scanningstraining en gecombineerde neglect-interventies in de behandeling."
+      },
+      "links": []
+    },
+    "mrs-bro-u1v2": {
+      "id": "mrs-bro-u1v2",
+      "type": "instrument",
+      "afk": "mRS",
+      "title": "Modified Rankin Scale",
+      "fields": {
+        "watMeetHet": "Functionele status / mate van handicap na CVA, op een globale schaal van 0 (geen symptomen) tot 6 (dood).<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "scoringscriteria": "Eén item, 7-puntsschaal (0–6). Score 0 = geen symptomen; 1 = geen significante beperkingen; 2 = lichte beperkingen; 3 = matige beperkingen; 4 = matig-ernstig; 5 = ernstig (bedlegerig).",
+        "normwaarden": "Optioneel meetinstrument voor functionele status. Aanbevolen in alle fasen: (H)AR, LR en RC (aanbevolen); VR (optioneel).<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup> Prognostisch: premorbide participatie als determinant voor basale ADL 6 mnd (tabel 7).<sup data-src=\"rl-ber\" data-p=\"22\">[p22]</sup>",
+        "implicatie": "Gebruik mRS bij intake om het premorbide functioneringsniveau vast te stellen. Dit is een prognostische determinant voor basale ADL 6 mnd. Overweeg ook bij pre-existente beperkingen (Bijlage 2)."
+      },
+      "links": []
+    },
+    "csi-bro-w3x4": {
+      "id": "csi-bro-w3x4",
+      "type": "instrument",
+      "afk": "CSI",
+      "title": "Caregiver Strain Index",
+      "fields": {
+        "watMeetHet": "Belasting van de mantelzorger van de CVA-patiënt.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "scoringscriteria": "13 items (ja/nee). Score ≥ 7 duidt op hoge belasting.",
+        "normwaarden": "Optioneel meetinstrument. Aanbevolen in LR en RC. Na ontslag naar huis of na proefverlof, én er is een mantelzorger aanwezig.<sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
+        "implicatie": "Neem de CSI af bij de mantelzorger zodra de patiënt naar huis gaat. Bij hoge score (≥ 7): bespreek in het team en verwijs zo nodig naar maatschappelijk werk of mantelzorgondersteuning."
+      },
+      "links": []
+    },
+    "casus-cna-bro-005a": {
+      "id": "casus-cna-bro-005a",
+      "type": "casuistiek",
+      "afk": "Casus-CVA-VR-anamnese",
+      "title": "CVA anamnese – vroege revalidatiefase",
+      "fields": {
+        "kern": "Mw. Jansen (68 jaar) wordt aangemeld op de stroke unit, 36 uur na een ischemisch CVA in de linker hemisfeer (herseninfarct PACS). Hulpvraag: 'Ik wil weer zelfstandig kunnen lopen en mijn rechterhand gebruiken.'",
+        "toelichting": "<b>Demografisch:</b> getrouwd, samenwonend, etagewoning met trap (leuning rechts), premorbide zelfstandig lopend (geen hulpmiddel), rechtshandig, voormalig administratief werk.<br><br><b>Medisch:</b> eerste CVA, geen recidief. CT-scan: ischemisch infarct linker hemisfeer. Geen trombolyse (buiten tijdsvenster). Comorbiditeit: hypertensie, diabetes mellitus type 2. Medicatie: metformine, lisinopril, acetylsalicylzuur.<br><br><b>ICF-stoornissen (eerste indruk):</b><br><ul><li>Functies: hemiparese rechts (arm &gt; been), verminderde sensibiliteit rechterhand, mogelijke visuospatiële aandachtsstoornis</li><li>Activiteiten: kan niet zelfstandig zitten, niet lopen, hulp bij transfers, niet zelfstandig eten/drinken met rechterhand</li><li>Participatie: voorheen actief (fietsen, wandelen met partner, tuinieren)</li></ul><br><b>Rode vlaggen:</b> controle bewustzijn (E4M6V5), geen progressieve achteruitgang, cardiaal stabiel.<br><b>Cognitief/emotioneel:</b> patiënte lijkt georiënteerd maar soms moeite met instructies (let op aandacht/taal); mantelzorger (echtgenoot) is aanwezig en betrokken.<sup data-src=\"rl-ber\" data-p=\"15\">[p15]</sup><sup data-src=\"rl-ber\" data-p=\"65-69\">[p65–69]</sup>",
+        "implicatie": "Start het diagnostisch proces conform stap 1–4. Screen op cognitieve stoornissen (MoCA), neem NIHSS over uit het medisch dossier. Plan meetmomenten conform tabel 5: &lt; 48u aanbevolen meetinstrumenten afnemen."
+      },
+      "links": []
+    },
+    "casus-cna-bro-005b": {
+      "id": "casus-cna-bro-005b",
+      "type": "casuistiek",
+      "afk": "Casus-CVA-VR-onderzoek",
+      "title": "CVA onderzoek en interventiekeuze – vroege revalidatiefase",
+      "fields": {
+        "kern": "Mw. Jansen (casus 005a) wordt onderzocht op dag 2 (&lt; 48u) en dag 5. Prognose 6 mnd wordt gesteld o.b.v. tabel 7. Op basis hiervan worden evidence-based interventies geselecteerd.",
+        "toelichting": "<b>Meetresultaten dag 2 (&lt; 48u):</b><br><table><tr><th>Instrument</th><th>Score</th><th>Interpretatie</th></tr><tr><td>TCT – zitbalans</td><td>36/100</td><td>Verminderde rompstabiliteit; ongunstige indicator loopprognose</td></tr><tr><td>MI onderste extremiteit</td><td>47/100</td><td>Enige motorische activiteit been; matig gunstig</td></tr><tr><td>MI bovenste extremiteit</td><td>28/100</td><td>Beperkte arm-activiteit</td></tr><tr><td>FMA vingerextensie</td><td>0/2</td><td>Geen vingerextensie — ongunstige armprognose</td></tr><tr><td>MI schouderabductie</td><td>19/33</td><td>Enige schouderabductie</td></tr><tr><td>FAC</td><td>1</td><td>Kan niet zelfstandig lopen</td></tr><tr><td>FAT</td><td>1/10</td><td>Minimale arm-handvaardigheid</td></tr><tr><td>BBS</td><td>12/56</td><td>Ernstig verminderd evenwicht</td></tr></table><br><b>BI dag 5:</b> 6/20 (ernstig ADL-afhankelijk)<br><br><b>Prognose 6 maanden (tabel 7):</b><br><ul><li><b>Loopvaardigheid:</b> ongunstig (TCT laag, MI-been matig). Monitor wekelijks eerste 4 weken.</li><li><b>Arm-handvaardigheid:</b> ongunstig (FMA vingerextensie = 0, MI-schouderabductie = 19). Patiënte is 'at risk' voor learned non-use. Monitor wekelijks.</li><li><b>Basale ADL:</b> ongunstig (BI dag 5 = 6). Monitor wekelijks eerste maand, dan maandelijks tot 6 mnd.</li></ul><br><b>Geselecteerde interventies:</b><br><em>Loopvaardigheid (niveau 1):</em><br><ul><li>Oefenen evenwicht tijdens verschillende activiteiten (F.1.6)</li><li>Loopbandtraining met gewichtsondersteuning (BWSTT) (F.1.7) — FAC &lt; 3, dus met ondersteuning</li><li>Spierkrachttraining paretische been (F.1.16)</li></ul><br><em>Arm-handvaardigheid (niveau 1):</em><br><ul><li>Therapeutisch positioneren paretische arm (F.4.1)</li><li>NMS pols- en vingerextensoren (F.4.10) — vroeg starten</li><li>Spierkrachttraining paretische arm (F.4.12)</li></ul><sup data-src=\"rl-ber\" data-p=\"21-22\">[p21–22]</sup><sup data-src=\"rl-ber\" data-p=\"27-33\">[p27–33]</sup><sup data-src=\"rl-ber\" data-p=\"39-45\">[p39–45]</sup>",
+        "implicatie": "Bij een ongunstige prognose op alle drie de domeinen: plan intensieve therapie (meerdere sessies per dag), monitor wekelijks, betrek de mantelzorger actief. Heroverweeg interventies bij elke meetronde. Let op cognitie (screen MoCA) en stemming (HADS vanaf dag 7)."
       },
       "links": []
     }
@@ -6229,6 +6748,528 @@ window.SEED_DATA = {
       "from": "casus-ez-beh-004",
       "to": "copd-spierkrachttraining-s5w2k",
       "rel": "nexus"
+    },
+    {
+      "id": "lnk-i4uzxw6",
+      "from": "rl-ber",
+      "to": "bro-cva-definitie-k1m9",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-5yk7kid",
+      "from": "rl-ber",
+      "to": "bro-fasen-tijdsbeloop-r2q7",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-5326wa8",
+      "from": "rl-ber",
+      "to": "bro-8stappen-p3f2",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-1ytfpvz",
+      "from": "rl-ber",
+      "to": "bro-stroke-service-v4n1",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-0wrb4db",
+      "from": "rl-ber",
+      "to": "bro-intensiteit-a8k3",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-bchvkyo",
+      "from": "rl-ber",
+      "to": "bro-taakspecificiteit-j5w2",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-yigcuwu",
+      "from": "rl-ber",
+      "to": "bro-ndt-bobath-d7e4",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-hajkd3i",
+      "from": "rl-ber",
+      "to": "bro-motorisch-leren-cva-h9p6",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-zymmhdq",
+      "from": "rl-ber",
+      "to": "bro-teleconsultatie-w3r8",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-llb31a0",
+      "from": "rl-ber",
+      "to": "bro-zelfmanagement-u6t5",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-8p7nax3",
+      "from": "rl-ber",
+      "to": "bro-sec-preventie-q1w0",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-5glrvur",
+      "from": "rl-ber",
+      "to": "bro-valpreventie-m8f3",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-zv0m3ee",
+      "from": "rl-ber",
+      "to": "bro-meetinstr-overzicht-c4g1",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-wjdvwa7",
+      "from": "rl-ber",
+      "to": "bro-syst-meten-n2j6",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-pcr1j1d",
+      "from": "rl-ber",
+      "to": "bro-prog-loop-z7y8",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-cipq8al",
+      "from": "rl-ber",
+      "to": "bro-prog-armhand-t3k9",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-k6t4oak",
+      "from": "rl-ber",
+      "to": "bro-prog-adl-b5c1",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-kaz1jfv",
+      "from": "rl-ber",
+      "to": "bro-prog-chronisch-e2d8",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-v3kj25k",
+      "from": "rl-ber",
+      "to": "bro-premobilisatie-f6g2",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-p8ng77e",
+      "from": "rl-ber",
+      "to": "bro-loop-interv-niv1-s9a4",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-lr260gg",
+      "from": "rl-ber",
+      "to": "bro-loop-interv-rest-y1b3",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-38wwjn1",
+      "from": "rl-ber",
+      "to": "bro-loophulpmiddelen-x0p5",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-v7mtpks",
+      "from": "rl-ber",
+      "to": "bro-arm-interv-niv1-g3h7",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-debbxhf",
+      "from": "rl-ber",
+      "to": "bro-arm-interv-rest-i8l2",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-zx9xx03",
+      "from": "rl-ber",
+      "to": "bro-adl-dyspraxie-c7d3",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-x4htyon",
+      "from": "rl-ber",
+      "to": "bro-cognitieve-reval-w4e6",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-49i1l2p",
+      "from": "rl-ber",
+      "to": "bro-cognitie-aeroob-p5q9",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-vwoc9qs",
+      "from": "rl-ber",
+      "to": "bro-rapportage-h1j0",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-lqlqmtt",
+      "from": "rl-ber",
+      "to": "fma-boven-bro-a1b2",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-ux612qx",
+      "from": "rl-ber",
+      "to": "fma-onder-bro-c3d4",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-2leo78y",
+      "from": "rl-ber",
+      "to": "arat-bro-e5f6",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-7o48lwk",
+      "from": "rl-ber",
+      "to": "nhpt-bro-g7h8",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-8337il5",
+      "from": "rl-ber",
+      "to": "ssqol-bro-i9j0",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-k746qvw",
+      "from": "rl-ber",
+      "to": "nnm-bro-k1l2",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-l9wjyxi",
+      "from": "rl-ber",
+      "to": "fes-bro-m3n4",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-pbe2jh4",
+      "from": "rl-ber",
+      "to": "fss-bro-o5p6",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-jvb44fg",
+      "from": "rl-ber",
+      "to": "moca-bro-q7r8",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-7gg0sx6",
+      "from": "rl-ber",
+      "to": "olct-bro-s9t0",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-1obris6",
+      "from": "rl-ber",
+      "to": "mrs-bro-u1v2",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-ib8gyxr",
+      "from": "rl-ber",
+      "to": "csi-bro-w3x4",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-wxjstvz",
+      "from": "rl-ber",
+      "to": "casus-cna-bro-005a",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-imzz04i",
+      "from": "rl-ber",
+      "to": "casus-cna-bro-005b",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-iu02mzo",
+      "from": "rl-ber",
+      "to": "tug-ej2xkyw",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-8gojt5x",
+      "from": "rl-ber",
+      "to": "neadl-i96unqd",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-ykzs3os",
+      "from": "rl-ber",
+      "to": "nrs-a2j2dqx",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-5p6u3vu",
+      "from": "rl-ber",
+      "to": "hads-3sykkqp",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-77lmngw",
+      "from": "rl-ber",
+      "to": "cirs",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-setr9b2",
+      "from": "casus-cna-bro-005a",
+      "to": "casus-cna-bro-005b",
+      "rel": "sequens"
+    },
+    {
+      "id": "lnk-ugo7nwh",
+      "from": "bro-motorisch-leren-cva-h9p6",
+      "to": "cna-motorisch-leren",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-mtnxzmb",
+      "from": "bro-ndt-bobath-d7e4",
+      "to": "cna-behandelstructuur",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-hhqv4fh",
+      "from": "bro-cva-definitie-k1m9",
+      "to": "cna-classificatie",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-x6gpmh4",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "cna-wat-hoe-waarom",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-hgu0yvg",
+      "from": "bro-8stappen-p3f2",
+      "to": "cna-rps-model",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ib8e1br",
+      "from": "bro-loop-interv-niv1-s9a4",
+      "to": "cna-spierkracht",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-epgwnpd",
+      "from": "bro-loop-interv-niv1-s9a4",
+      "to": "cna-balans",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-skz2pgw",
+      "from": "bro-arm-interv-niv1-g3h7",
+      "to": "cna-sturing",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-tlkjv3r",
+      "from": "bro-cognitieve-reval-w4e6",
+      "to": "cna-cognitief",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-yl4z1e9",
+      "from": "bro-cognitie-aeroob-p5q9",
+      "to": "cna-cognitief",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-tw5tg1w",
+      "from": "bro-intensiteit-a8k3",
+      "to": "cna-motorisch-leren",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-lol2r0d",
+      "from": "bro-taakspecificiteit-j5w2",
+      "to": "cna-motorisch-leren",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-58lf5q2",
+      "from": "bro-premobilisatie-f6g2",
+      "to": "cna-vier-ssen",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-e0ujx9q",
+      "from": "bro-loop-interv-niv1-s9a4",
+      "to": "cna-sturing",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-hrx315h",
+      "from": "fma-boven-bro-a1b2",
+      "to": "fma-vingerextensie-vtwclpn",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-oiz2epn",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "bro-meetinstr-overzicht-c4g1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-g78faay",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "bro-syst-meten-n2j6",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-dh7slpe",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "bro-loop-interv-niv1-s9a4",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-r6l67rj",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "bro-arm-interv-niv1-g3h7",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-2g9oc5c",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "bro-premobilisatie-f6g2",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-bqoscwl",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "bro-cognitieve-reval-w4e6",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-gr93flb",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "bro-prog-loop-z7y8",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-0yjibfy",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "bro-prog-armhand-t3k9",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-5gh1nq3",
+      "from": "bro-fasen-tijdsbeloop-r2q7",
+      "to": "bro-prog-adl-b5c1",
+      "rel": "contextus"
+    },
+    {
+      "id": "lnk-evrgli6",
+      "from": "casus-cna-bro-005a",
+      "to": "nihss-9texb5h",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-p9hv8fb",
+      "from": "casus-cna-bro-005a",
+      "to": "moca-bro-q7r8",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-3m84pha",
+      "from": "casus-cna-bro-005b",
+      "to": "tct-ihqr0ru",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-t8y6t0n",
+      "from": "casus-cna-bro-005b",
+      "to": "mi-f8eknl6",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-4qm06im",
+      "from": "casus-cna-bro-005b",
+      "to": "fma-boven-bro-a1b2",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-qnt3uey",
+      "from": "casus-cna-bro-005b",
+      "to": "fac-rk6w94j",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-25v4j5f",
+      "from": "casus-cna-bro-005b",
+      "to": "fat-0hh90n3",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-pit5209",
+      "from": "casus-cna-bro-005b",
+      "to": "bbs-rw9okgz",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-rjrx024",
+      "from": "casus-cna-bro-005b",
+      "to": "bi-jfriih3",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-cpvjxca",
+      "from": "casus-cna-bro-005b",
+      "to": "10mwt-btf63p5",
+      "rel": "usus"
+    },
+    {
+      "id": "lnk-lmpqvbx",
+      "from": "casus-cna-bro-005b",
+      "to": "bro-prog-loop-z7y8",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-ra66gwf",
+      "from": "casus-cna-bro-005b",
+      "to": "bro-prog-armhand-t3k9",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-shbonqv",
+      "from": "casus-cna-bro-005b",
+      "to": "bro-prog-adl-b5c1",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-zgzvtag",
+      "from": "casus-cna-bro-005b",
+      "to": "bro-loop-interv-niv1-s9a4",
+      "rel": "nexus"
+    },
+    {
+      "id": "lnk-meugq0o",
+      "from": "casus-cna-bro-005b",
+      "to": "bro-arm-interv-niv1-g3h7",
+      "rel": "nexus"
     }
   ],
   "tags": [
@@ -7323,6 +8364,174 @@ window.SEED_DATA = {
     {
       "object": "copd-spierkrachttraining-s5w2k",
       "tag": "rca"
+    },
+    {
+      "object": "bro-cva-definitie-k1m9",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-fasen-tijdsbeloop-r2q7",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-8stappen-p3f2",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-stroke-service-v4n1",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-intensiteit-a8k3",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-taakspecificiteit-j5w2",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-ndt-bobath-d7e4",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-motorisch-leren-cva-h9p6",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-teleconsultatie-w3r8",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-zelfmanagement-u6t5",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-sec-preventie-q1w0",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-valpreventie-m8f3",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-meetinstr-overzicht-c4g1",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-syst-meten-n2j6",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-prog-loop-z7y8",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-prog-armhand-t3k9",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-prog-adl-b5c1",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-prog-chronisch-e2d8",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-premobilisatie-f6g2",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-loop-interv-niv1-s9a4",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-loop-interv-rest-y1b3",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-loophulpmiddelen-x0p5",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-arm-interv-niv1-g3h7",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-arm-interv-rest-i8l2",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-adl-dyspraxie-c7d3",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-cognitieve-reval-w4e6",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-cognitie-aeroob-p5q9",
+      "tag": "cna"
+    },
+    {
+      "object": "bro-rapportage-h1j0",
+      "tag": "cna"
+    },
+    {
+      "object": "fma-boven-bro-a1b2",
+      "tag": "cna"
+    },
+    {
+      "object": "fma-onder-bro-c3d4",
+      "tag": "cna"
+    },
+    {
+      "object": "arat-bro-e5f6",
+      "tag": "cna"
+    },
+    {
+      "object": "nhpt-bro-g7h8",
+      "tag": "cna"
+    },
+    {
+      "object": "ssqol-bro-i9j0",
+      "tag": "cna"
+    },
+    {
+      "object": "nnm-bro-k1l2",
+      "tag": "cna"
+    },
+    {
+      "object": "fes-bro-m3n4",
+      "tag": "cna"
+    },
+    {
+      "object": "fss-bro-o5p6",
+      "tag": "cna"
+    },
+    {
+      "object": "moca-bro-q7r8",
+      "tag": "cna"
+    },
+    {
+      "object": "olct-bro-s9t0",
+      "tag": "cna"
+    },
+    {
+      "object": "mrs-bro-u1v2",
+      "tag": "cna"
+    },
+    {
+      "object": "csi-bro-w3x4",
+      "tag": "cna"
+    },
+    {
+      "object": "casus-cna-bro-005a",
+      "tag": "cna"
+    },
+    {
+      "object": "casus-cna-bro-005b",
+      "tag": "cna"
     }
   ]
 };
