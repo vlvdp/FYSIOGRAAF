@@ -260,9 +260,7 @@ const GRAPH = (() => {
   }
 
   function _updateStat() {
-    const el = document.getElementById('graphStat');
-    if (!el || !_nodes) return;
-    el.textContent = `${_nodes.length} nodes · ${_edges ? _edges.length : 0} edges`;
+    // noop — stats worden getoond in de gedeelde sidebar footer
   }
 
   function _updateFilterStatus() {

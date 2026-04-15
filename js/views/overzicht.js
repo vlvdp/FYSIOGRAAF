@@ -24,8 +24,6 @@ const OVZ = (() => {
     search:    '',
     type:      '',
     domeinen:  new Set(),
-    tag:       '',
-    tagSearch: '',
     sort:      'relevance',
   };
 
@@ -52,18 +50,6 @@ const OVZ = (() => {
     const el = document.getElementById('ovzSidebar');
     if (!el) return;
 
-    const allTags   = DB.getAllTags();
-    const domeinSet = new Set(DOMEIN_TAGS);
-    const otherTags = allTags.filter(t => !domeinSet.has(t)).sort();
-    const filtered  = _filters.tagSearch
-      ? otherTags.filter(t => t.includes(_filters.tagSearch.toLowerCase()))
-      : otherTags;
-
-    const tagCounts = {};
-    DB.getAll().forEach(obj => DB.getTags(obj.id).forEach(t => {
-      tagCounts[t] = (tagCounts[t] || 0) + 1;
-    }));
-
     el.innerHTML = `
       <div class="p-3 d-flex flex-column gap-3">
 
@@ -85,7 +71,6 @@ const OVZ = (() => {
             if (_filters.search.trim())   parts.push(`"${_esc(_filters.search.trim())}"`);
             if (_filters.type)            parts.push(TYPE_LABELS[_filters.type] || _filters.type);
             if (_filters.domeinen.size)   parts.push([..._filters.domeinen].map(d => d.toUpperCase()).join(', '));
-            if (_filters.tag)             parts.push(_filters.tag);
             const hasFilter = parts.length > 0;
             return `
               <div class="d-flex align-items-start gap-2">
@@ -115,34 +100,6 @@ const OVZ = (() => {
           </div>
           <div class="d-flex flex-column gap-1">
             ${DOMEIN_TAGS.map(t => _domeinBtn(t)).join('')}
-          </div>
-        </div>
-
-        <!-- Tags accordion -->
-        <div class="accordion accordion-flush" id="tagsAccordion">
-          <div class="accordion-item bg-transparent border-0">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed p-0 bg-transparent shadow-none text-uppercase fw-semibold text-secondary"
-                type="button" data-bs-toggle="collapse" data-bs-target="#tagsCollapse">
-                Tags
-                <span class="badge bg-secondary ms-2">${otherTags.length}</span>
-              </button>
-            </h2>
-            <div id="tagsCollapse" class="accordion-collapse collapse ${_filters.tag || _filters.tagSearch ? 'show' : ''}">
-              <div class="pt-2 d-flex flex-column gap-1">
-                <input type="search" class="form-control form-control-sm mb-1"
-                  placeholder="Filter tags…"
-                  value="${_esc(_filters.tagSearch)}"
-                  oninput="OVZ.setFilter('tagSearch', this.value)">
-                <button class="btn btn-sm text-start px-2 py-1 ${!_filters.tag ? 'btn-secondary' : 'btn-outline-secondary'}"
-                  onclick="OVZ.setFilter('tag','')">All</button>
-                ${filtered.map(t => `
-                  <button class="btn btn-sm text-start px-2 py-1 ${_filters.tag === t ? 'btn-secondary' : 'btn-outline-secondary'}"
-                    onclick="OVZ.setFilter('tag','${t}')">
-                    ${t} <span class="text-muted">${tagCounts[t] || 0}</span>
-                  </button>`).join('')}
-              </div>
-            </div>
           </div>
         </div>
 
@@ -185,12 +142,6 @@ const OVZ = (() => {
       _renderGrid();
       return;
     }
-    if (key === 'tagSearch') {
-      _filters.tagSearch = value;
-      _renderSidebar();
-      _renderGrid();
-      return;
-    }
     if (key === 'sort') {
       _filters.sort = value;
       _renderGrid();
@@ -203,8 +154,6 @@ const OVZ = (() => {
       else _filters.domeinen.add(value);
     } else if (key === 'domeinen_clear') {
       _filters.domeinen.clear();
-    } else if (key === 'tag') {
-      _filters.tag = _filters.tag === value ? '' : value;
     }
     _renderSidebar();
     _renderGrid();
@@ -219,7 +168,6 @@ const OVZ = (() => {
     const args = {};
     if (_filters.type)         args.type   = _filters.type;
     if (_filters.search.trim()) args.search = _filters.search.trim();
-    if (_filters.tag)          args.tags   = [_filters.tag];
 
     let results = DB.query(args);
 
@@ -383,8 +331,6 @@ const OVZ = (() => {
     _filters.search    = '';
     _filters.type      = '';
     _filters.domeinen  = new Set();
-    _filters.tag       = '';
-    _filters.tagSearch = '';
     _filters.sort      = 'relevance';
     _renderSidebar();
     _renderGrid();

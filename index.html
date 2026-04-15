@@ -22,34 +22,14 @@
 </head>
 <body class="d-flex flex-column h-100">
 
-<!-- ── NAVBAR ─────────────────────────────────────────────────────────────── -->
-<nav class="navbar border-bottom py-2 sticky-top p-0 d-flex align-items-stretch" id="appNavbar">
-
-  <!-- Brand — exact zelfde breedte als filter sidebar -->
-  <div class="d-flex align-items-center px-3 flex-shrink-0 app-sidebar">
-    <span class="fw-bold" style="color:#ff5900;font-family:var(--bs-font-monospace);">Fysiograaf<br><p class="fw-narrow text-secondary" style="font-family:var(--bs-font-monospace);">β 1.0</p></span>
-    <button class="btn btn-outline-secondary btn-sm d-lg-none ms-auto"
+<!-- ── NAVBAR (alleen mobile hamburger) ────────────────────────────────── -->
+<nav class="navbar border-bottom py-2 sticky-top d-lg-none" id="appNavbar">
+  <div class="d-flex align-items-center px-3 w-100">
+    <span class="fw-bold" style="color:#ff5900;font-family:var(--bs-font-monospace);">Fysiograaf</span>
+    <button class="btn btn-outline-secondary btn-sm ms-auto"
       type="button" data-bs-toggle="offcanvas" data-bs-target="#filterPanel">
-      ☰ Filters
+      ☰
     </button>
-  </div>
-
-  <!-- Tabs + acties -->
-  <div class="d-flex align-items-center flex-grow-1 px-3 gap-2">
-    <ul class="nav nav-tabs border-0 me-auto" id="topTabs">
-      <li class="nav-item">
-        <button class="nav-link active" id="tab-overzicht" onclick="APP.showTop('overzicht')"><svg width="16" height="13" viewBox="0 0 16 13" style="margin-bottom:1px;">
-  <circle cx="4" cy="4" r="3" fill="#F97316" stroke="#C05A0B" stroke-width="1.2"/>
-  <polygon points="12,1 15,6 9,6" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.2" stroke-linejoin="round"/>
-  <rect x="1" y="7.5" width="6" height="5" fill="#7C3AED" stroke="#5B28B3" stroke-width="1.2"/>
-  <polygon points="12,8 15,11 12,13.5 9,11" fill="#0D9488" stroke="#0A6B62" stroke-width="1.2" stroke-linejoin="round"/>
-</svg> Rolodex</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" id="tab-graph" onclick="APP.showTop('graph')"><svg width="13" height="13" viewBox="0 0 20 14" style="margin-bottom:1px;"><circle cx="4" cy="7" r="3.5" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.5"/><line x1="7.5" y1="7" x2="12.5" y2="7" stroke="#888" stroke-width="1.2"/><circle cx="16" cy="7" r="3.5" fill="#0D9488" stroke="#0A6B62" stroke-width="1.5"/></svg> Graph</button>
-      </li>
-    </ul>
-
   </div>
 </nav>
 
@@ -62,21 +42,43 @@
   <div class="offcanvas-lg offcanvas-start border-end flex-shrink-0 app-sidebar" id="filterPanel"
        tabindex="-1">
     <div class="offcanvas-header d-lg-none border-bottom">
-      <h6 class="offcanvas-title">Filters</h6>
+      <h6 class="offcanvas-title">Menu</h6>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#filterPanel"></button>
     </div>
     <div class="offcanvas-body p-0 d-flex flex-column h-100">
+
+      <!-- Brand + view switcher -->
+      <div class="p-3 pb-2 border-bottom">
+        <div class="d-none d-lg-block mb-3">
+          <span class="fw-bold" style="color:#ff5900;font-family:var(--bs-font-monospace);font-size:1.1rem;">Fysiograaf</span>
+          <span class="text-secondary small" style="font-family:var(--bs-font-monospace);"> β 1.0</span>
+        </div>
+        <div class="btn-group w-100" role="group" id="viewSwitcher">
+          <button class="btn btn-sm btn-secondary" id="tab-overzicht" onclick="APP.showTop('overzicht')">
+            <svg width="14" height="11" viewBox="0 0 16 13" style="margin-bottom:1px;"><circle cx="4" cy="4" r="3" fill="#F97316" stroke="#C05A0B" stroke-width="1.2"/><polygon points="12,1 15,6 9,6" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.2" stroke-linejoin="round"/><rect x="1" y="7.5" width="6" height="5" fill="#7C3AED" stroke="#5B28B3" stroke-width="1.2"/><polygon points="12,8 15,11 12,13.5 9,11" fill="#0D9488" stroke="#0A6B62" stroke-width="1.2" stroke-linejoin="round"/></svg>
+            Rolodex
+          </button>
+          <button class="btn btn-sm btn-outline-secondary" id="tab-graph" onclick="APP.showTop('graph')">
+            <svg width="12" height="11" viewBox="0 0 20 14" style="margin-bottom:1px;"><circle cx="4" cy="7" r="3.5" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.5"/><line x1="7.5" y1="7" x2="12.5" y2="7" stroke="#888" stroke-width="1.2"/><circle cx="16" cy="7" r="3.5" fill="#0D9488" stroke="#0A6B62" stroke-width="1.5"/></svg>
+            Graph
+          </button>
+        </div>
+      </div>
+
+      <!-- View-specifieke filters -->
       <div id="ovzSidebar" class="flex-grow-1 overflow-auto"><!-- overzicht.js --></div>
       <div id="graphSidebar" class="d-none flex-grow-1 overflow-auto"><!-- graph.js --></div>
+
       <!-- Persistent bodem -->
-      <div class="border-top p-3 d-flex flex-column gap-2">
-        <div class="text-muted d-flex flex-column small">
-          <span><span id="dbStatObjects">…</span> nodes</span>
-          <span><span id="dbStatLinks">…</span> edges</span>
-          <span><span id="dbStatTags">…</span> tags</span>
-          <span id="dbStatLastEdit" class="mt-1" style="opacity:0.6;"></span>
-        </div>
-        <div class="d-flex gap-2">
+      <div class="border-top px-3 py-2 d-flex align-items-center gap-2">
+        <span class="text-muted small flex-grow-1"><span id="dbStatObjects">…</span> nodes · <span id="dbStatLinks">…</span> edges</span>
+        <button class="btn btn-sm btn-outline-secondary py-0 px-1" type="button"
+          data-bs-toggle="collapse" data-bs-target="#sidebarDbMenu" title="Database">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="3" r="1.2"/><circle cx="8" cy="8" r="1.2"/><circle cx="8" cy="13" r="1.2"/></svg>
+        </button>
+      </div>
+      <div class="collapse border-top" id="sidebarDbMenu">
+        <div class="p-2 d-flex gap-2">
           <button class="btn btn-sm btn-outline-secondary flex-grow-1" onclick="DB.exportJSON()">↓ Export</button>
           <button class="btn btn-sm btn-outline-danger flex-grow-1" onclick="if(confirm('Reset DB to seed data?')) { DB.reset(); location.reload(); }">↺ Reset</button>
         </div>

@@ -9,9 +9,12 @@ const APP = (() => {
   // ── Top-tab navigatie ────────────────────────────────────────────────────
 
   function showTop(id) {
-    // Nav-tab active state
+    // View-switcher button state
     TOP_IDS.forEach(tid => {
-      document.getElementById(`tab-${tid}`)?.classList.toggle('active', tid === id);
+      const btn = document.getElementById(`tab-${tid}`);
+      if (!btn) return;
+      btn.classList.toggle('btn-secondary', tid === id);
+      btn.classList.toggle('btn-outline-secondary', tid !== id);
     });
 
     // Sidebar panels
@@ -48,18 +51,6 @@ const APP = (() => {
     const el = id => document.getElementById(id);
     if (el('dbStatObjects')) el('dbStatObjects').textContent = s.objects;
     if (el('dbStatLinks'))   el('dbStatLinks').textContent   = s.links;
-    if (el('dbStatTags'))    el('dbStatTags').textContent    = s.tags;
-    if (el('dbStatLastEdit')) {
-      if (s.lastEdit) {
-        const d = new Date(s.lastEdit);
-        el('dbStatLastEdit').textContent = d.toLocaleString('en-GB', {
-          day: '2-digit', month: '2-digit', year: 'numeric',
-          hour: '2-digit', minute: '2-digit',
-        });
-      } else {
-        el('dbStatLastEdit').textContent = '';
-      }
-    }
   }
 
   // ── Init ─────────────────────────────────────────────────────────────────
@@ -76,15 +67,13 @@ const APP = (() => {
   // ── Toetsenbordnavigatie ─────────────────────────────────────────────────
 
   document.addEventListener('keydown', e => {
-    // Negeer als gebruiker aan het typen is
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
 
-    const ovzOpen = document.getElementById('ovzDetailOverlay')?.classList.contains('active');
-
-    // Escape: sluit rolodex detail
-    if (e.key === 'Escape' && ovzOpen) {
-      OVZ.closeDetail();
-      return;
+    if (e.key === 'Escape') {
+      const panel = document.getElementById('detailPanel');
+      if (panel?.classList.contains('show')) {
+        OVZ.closeDetail();
+      }
     }
   });
 

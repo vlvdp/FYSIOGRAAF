@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "IZ Widget",
-      "runtimeExecutable": "/Users/vincent/.nvm/versions/node/v24.14.1/bin/node",
+      "runtimeExecutable": "/opt/homebrew/bin/node",
       "runtimeArgs": ["server.js"],
       "port": 8081
     }

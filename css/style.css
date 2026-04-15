@@ -23,7 +23,10 @@ h6 { color: var(--bs-secondary-color); }
 
 
 /* ── Sidebar breedte ─────────────────────────────────────────────────────── */
-.app-sidebar { width: 240px; }
+.app-sidebar { width: 260px; }
+
+/* ── View switcher ──────────────────────────────────────────────────────── */
+#viewSwitcher .btn { font-size: 0.8rem; }
 
 /* ── Detail offcanvas breedte ────────────────────────────────────────────── */
 #detailPanel { --bs-offcanvas-width: min(540px, 95vw); }
