@@ -70,6 +70,10 @@ const CARDS = (() => {
     </div>`;
   }
 
+  function _escapeAttr(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
   function _normBlock(content) {
     if (!content) return '';
     if (content.includes('norm-block')) return content;
@@ -150,7 +154,9 @@ const CARDS = (() => {
     const f     = obj.fields || {};
 
     // ── Body: inhoud ──────────────────────────────────────────────────────────
-    const body = [
+    let body = [
+      f.kern              ? `<p class="small fw-semibold mb-3">${f.kern}</p>`      : '',
+      f.toelichting       ? `<div class="small mb-3">${f.toelichting}</div>`      : '',
       f.watMeetHet        ? _field('What it measures', f.watMeetHet)          : '',
       f.scoringscriteria  ? _field('Scoring criteria', f.scoringscriteria)   : '',
       f.normwaarden       ? _normBlock(f.normwaarden)                        : '',
@@ -160,6 +166,40 @@ const CARDS = (() => {
       f.scope             ? _field('Scope', f.scope)                              : '',
       f.kernaanbevelingen ? _field('Key recommendations', f.kernaanbevelingen)    : '',
     ].filter(Boolean).join('');
+
+    // ── Bronvermelding: hover-tooltip op <sup> + Sources-blok onderaan ────────
+    const citedSources = new Map();   // id → Set<page>
+    body = body.replace(
+      /<sup\s+data-src="([^"]+)"\s+data-p="([^"]+)">([^<]*)<\/sup>/g,
+      (match, srcId, page, label) => {
+        const src = DB.get(srcId);
+        if (!src) return match;
+        if (!citedSources.has(srcId)) citedSources.set(srcId, new Set());
+        citedSources.get(srcId).add(page);
+        const tip = `${src.title || src.afk || srcId}, p${page}`;
+        return `<sup class="citation-ref" data-src="${srcId}" data-p="${page}" title="${_escapeAttr(tip)}">${label}</sup>`;
+      }
+    );
+
+    if (citedSources.size) {
+      const items = [...citedSources.entries()].map(([srcId, pages]) => {
+        const src = DB.get(srcId);
+        if (!src) return '';
+        const pageList = [...pages].sort((a, b) => {
+          const na = parseInt(a, 10), nb = parseInt(b, 10);
+          return (isNaN(na) ? 0 : na) - (isNaN(nb) ? 0 : nb);
+        }).map(p => `p${p}`).join(', ');
+        const label = src.title || src.afk || srcId;
+        return `<li class="small">
+          <a href="#" onclick="event.preventDefault(); CARDS.openDetail('${srcId}');" class="text-decoration-none">${label}</a>
+          <span class="text-muted"> — ${pageList}</span>
+        </li>`;
+      }).filter(Boolean).join('');
+      body += `<div class="sources-block mt-3 pt-3 border-top">
+        <div class="text-uppercase fw-semibold text-secondary small mb-1">Sources</div>
+        <ul class="list-unstyled mb-0">${items}</ul>
+      </div>`;
+    }
 
     // ── Footer: graaf-relaties (richting + rel-type) ──────────────────────────
     const rawLinks = DB.getLinks(id);

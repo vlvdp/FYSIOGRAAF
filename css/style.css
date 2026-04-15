@@ -35,6 +35,18 @@ h6 { color: var(--bs-secondary-color); }
 
 
 /* .norm-block / .implicatie-block — guard classes; stijl via .alert-info/.alert-warning */
+
+/* ── Inline citation refs ────────────────────────────────────────────────── */
+.citation-ref {
+  color: var(--bs-secondary-color, #6c757d);
+  font-weight: 400;
+  font-size: 0.7em;
+  margin-left: 0.15em;
+  cursor: help;
+  text-decoration: none;
+}
+.citation-ref:hover { color: var(--bs-body-color, inherit); }
+
 /* ── Klikbare elementen ───────────────────────────────────────────────────── */
 [onclick] { cursor: pointer; }
 
