@@ -125,6 +125,10 @@ const GRAPH = (() => {
       degreeMap[l.to]   = (degreeMap[l.to]   || 0) + 1;
     });
 
+    const css = getComputedStyle(document.documentElement);
+    const emphasisColor = css.getPropertyValue('--bs-emphasis-color').trim() || '#fff';
+    const secondaryColor = css.getPropertyValue('--bs-secondary-color').trim() || '#888';
+
     const visNodeArr = objects.map(obj => {
       const c      = TYPE_COLOR[obj.type] || { bg: '#555', border: '#333', font: '#fff' };
       const label  = obj.afk || obj.title?.slice(0, 12) || obj.id;
@@ -136,7 +140,7 @@ const GRAPH = (() => {
         label,
         title:  fullTitle,
         group:  obj.type,
-        color:  { background: c.bg, border: c.border, highlight: { background: c.bg, border: '#fff' } },
+        color:  { background: c.bg, border: c.border, highlight: { background: c.bg, border: emphasisColor } },
         font:   { color: c.font, size: 12, face: 'JetBrains Mono, monospace' },
         shape:  _shapeForType(obj.type),
         size,
@@ -149,8 +153,8 @@ const GRAPH = (() => {
       to:     l.to,
       label:  l.rel,
       title:  l.rel,
-      color:  { color: REL_COLOR[l.rel] || '#666', opacity: 0.7 },
-      font:   { color: '#888', size: 9, face: 'Inter, sans-serif', align: 'middle' },
+      color:  { color: REL_COLOR[l.rel] || secondaryColor, opacity: 0.7 },
+      font:   { color: secondaryColor, size: 9, face: 'Inter, sans-serif', align: 'middle' },
       arrows: { to: { enabled: true, scaleFactor: 0.6 } },
       width:  1.5,
       smooth: { type: 'dynamic' },

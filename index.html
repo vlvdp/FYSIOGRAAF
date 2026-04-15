@@ -27,7 +27,7 @@
 
   <!-- Brand — exact zelfde breedte als filter sidebar -->
   <div class="d-flex align-items-center px-3 flex-shrink-0 app-sidebar">
-    <span class="fw-bold" style="color:#ff5900;font-family:var(--bs-font-monospace);">Fysiograaf<br><p class="fw-narrow" style="color:#4c5954;font-family:var(--bs-font-monospace);">β 1.0</p></span>
+    <span class="fw-bold" style="color:#ff5900;font-family:var(--bs-font-monospace);">Fysiograaf<br><p class="fw-narrow text-secondary" style="font-family:var(--bs-font-monospace);">β 1.0</p></span>
     <button class="btn btn-outline-secondary btn-sm d-lg-none ms-auto"
       type="button" data-bs-toggle="offcanvas" data-bs-target="#filterPanel">
       ☰ Filters
@@ -351,6 +351,10 @@
       document.documentElement.setAttribute('data-bs-theme', next);
       localStorage.setItem('theme', next);
       syncModeIcon();
+      // Re-render graph so edge labels / highlight border pick up new CSS vars
+      if (typeof GRAPH !== 'undefined' && !document.getElementById('graph-main').classList.contains('d-none')) {
+        try { GRAPH.render(); } catch(e){}
+      }
     });
   })();
 </script>
