@@ -11,7 +11,13 @@
     else document.documentElement.setAttribute('data-bs-theme','dark');
   })();
 </script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link id="bootstrap-theme" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script>
+  (function(){
+    var savedBs = localStorage.getItem('bsThemeUrl');
+    if (savedBs) document.getElementById('bootstrap-theme').href = savedBs;
+  })();
+</script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="d-flex flex-column h-100">
@@ -225,6 +231,101 @@
 <script src="js/views/graph.js"></script>
 <script src="js/app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     BOOTSWATCH THEME SWITCHER — floating palette icon
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div id="themeSwitcher" style="position:fixed;bottom:16px;right:16px;z-index:10000;font-family:var(--bs-font-sans-serif);">
+  <button id="themeSwitcherBtn" type="button" class="btn btn-sm btn-secondary rounded-circle shadow"
+          style="width:38px;height:38px;padding:0;display:flex;align-items:center;justify-content:center;"
+          title="Change theme" aria-label="Change theme">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/>
+      <path d="M12 2C6.5 2 2 6 2 11c0 5 4 9 9 9 1.4 0 2-.8 2-1.7 0-.4-.2-.8-.5-1.1-.3-.3-.5-.7-.5-1.1 0-.9.7-1.6 1.6-1.6H15c3.9 0 7-3.1 7-7 0-3.9-4.5-6.5-10-6.5z"/>
+    </svg>
+  </button>
+  <div id="themeSwitcherPanel" class="card shadow"
+       style="display:none;position:absolute;bottom:46px;right:0;width:240px;">
+    <div class="card-body p-2">
+      <div class="small text-muted mb-1 px-1">Bootswatch theme</div>
+      <select id="themeSelect" class="form-select form-select-sm mb-2"></select>
+      <div class="small text-muted mb-1 px-1">Or custom CSS URL</div>
+      <div class="input-group input-group-sm mb-2">
+        <input id="themeUrlInput" type="text" class="form-control" placeholder="https://...">
+        <button id="themeUrlApply" class="btn btn-outline-secondary" type="button">Apply</button>
+      </div>
+      <button id="themeReset" class="btn btn-sm btn-outline-secondary w-100">Reset to default</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function(){
+    var DEFAULT_CSS = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
+    var BW = function(name){ return 'https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/'+name+'/bootstrap.min.css'; };
+    var THEMES = [
+      { label: 'Default Bootstrap', url: DEFAULT_CSS },
+      { label: 'Flatly (clean, readable)', url: BW('flatly') },
+      { label: 'Litera (typography)',      url: BW('litera') },
+      { label: 'Cosmo',                    url: BW('cosmo') },
+      { label: 'Journal',                  url: BW('journal') },
+      { label: 'Lumen',                    url: BW('lumen') },
+      { label: 'Minty',                    url: BW('minty') },
+      { label: 'Sandstone',                url: BW('sandstone') },
+      { label: 'Simplex',                  url: BW('simplex') },
+      { label: 'Spacelab',                 url: BW('spacelab') },
+      { label: 'United',                   url: BW('united') },
+      { label: 'Yeti',                     url: BW('yeti') },
+      { label: 'Zephyr',                   url: BW('zephyr') },
+      { label: 'Morph',                    url: BW('morph') },
+      { label: 'Pulse',                    url: BW('pulse') },
+      { label: 'Cerulean',                 url: BW('cerulean') },
+      { label: '— Dark themes —',          url: '' },
+      { label: 'Darkly',                   url: BW('darkly') },
+      { label: 'Cyborg',                   url: BW('cyborg') },
+      { label: 'Slate',                    url: BW('slate') },
+      { label: 'Solar',                    url: BW('solar') },
+      { label: 'Superhero',                url: BW('superhero') },
+      { label: 'Vapor',                    url: BW('vapor') },
+      { label: 'Quartz',                   url: BW('quartz') }
+    ];
+    var link    = document.getElementById('bootstrap-theme');
+    var btn     = document.getElementById('themeSwitcherBtn');
+    var panel   = document.getElementById('themeSwitcherPanel');
+    var select  = document.getElementById('themeSelect');
+    var input   = document.getElementById('themeUrlInput');
+    var apply   = document.getElementById('themeUrlApply');
+    var reset   = document.getElementById('themeReset');
+    var current = localStorage.getItem('bsThemeUrl') || DEFAULT_CSS;
+
+    THEMES.forEach(function(t){
+      var o = document.createElement('option');
+      o.value = t.url; o.textContent = t.label;
+      if (!t.url) o.disabled = true;
+      select.appendChild(o);
+    });
+    select.value = current;
+    input.value = (current === DEFAULT_CSS) ? '' : current;
+
+    function setTheme(url){
+      if (!url) return;
+      link.href = url;
+      if (url === DEFAULT_CSS) localStorage.removeItem('bsThemeUrl');
+      else localStorage.setItem('bsThemeUrl', url);
+    }
+
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+    });
+    document.addEventListener('click', function(e){
+      if (!document.getElementById('themeSwitcher').contains(e.target)) panel.style.display = 'none';
+    });
+    select.addEventListener('change', function(){ setTheme(select.value); input.value = (select.value === DEFAULT_CSS) ? '' : select.value; });
+    apply .addEventListener('click',  function(){ if (input.value.trim()) setTheme(input.value.trim()); });
+    input .addEventListener('keydown',function(e){ if (e.key === 'Enter' && input.value.trim()) setTheme(input.value.trim()); });
+    reset .addEventListener('click',  function(){ setTheme(DEFAULT_CSS); select.value = DEFAULT_CSS; input.value = ''; });
+  })();
+</script>
 
 </body>
 </html>
