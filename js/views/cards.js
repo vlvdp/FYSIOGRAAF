@@ -81,7 +81,7 @@ const CARDS = (() => {
     if (embedIdx !== -1) content = content.substring(0, embedIdx).replace(/<\/div>\s*$/, '').trim();
     if (!content) return '';
     return `<div class="norm-block alert alert-info small">
-      <div class="text-uppercase fw-semibold mb-1">Reference values / Cut-off values</div>
+      <div class="text-uppercase fw-semibold mb-1">Waarden</div>
       ${content}
     </div>`;
   }
@@ -90,7 +90,7 @@ const CARDS = (() => {
     if (!content) return '';
     if (content.includes('implicatie-block')) return content;
     return `<div class="implicatie-block alert alert-warning small">
-      <div class="text-uppercase fw-semibold mb-1">Clinical implication</div>
+      <div class="text-uppercase fw-semibold mb-1">Implicaties</div>
       ${content}
     </div>`;
   }
@@ -157,8 +157,8 @@ const CARDS = (() => {
     let body = [
       f.kern              ? `<p class="small fw-semibold mb-3">${f.kern}</p>`      : '',
       f.toelichting       ? `<div class="small mb-3">${f.toelichting}</div>`      : '',
-      f.watMeetHet        ? _field('What it measures', f.watMeetHet)          : '',
-      f.scoringscriteria  ? _field('Scoring criteria', f.scoringscriteria)   : '',
+      f.watMeetHet        ? _field('Meting', f.watMeetHet)                   : '',
+      f.scoringscriteria  ? _field('Scoring', f.scoringscriteria)            : '',
       f.normwaarden       ? _normBlock(f.normwaarden)                        : '',
       f.implicatie        ? _implicatieBlock(f.implicatie)                   : '',
       f.focus             ? `<p class="small fst-italic text-muted">${f.focus}</p>` : '',
@@ -167,7 +167,7 @@ const CARDS = (() => {
       f.doelen            ? _field('Doelen', f.doelen)                            : '',
       f.indicaties        ? _field('Indicaties', f.indicaties)                    : '',
       f.contraindicaties  ? _field('Contra-indicaties', f.contraindicaties)       : '',
-      f.kernaanbevelingen ? _field('Key recommendations', f.kernaanbevelingen)    : '',
+      f.kernaanbevelingen ? _field('Kernaanbevelingen', f.kernaanbevelingen)      : '',
     ].filter(Boolean).join('');
 
     // ── Bronvermelding: hover-tooltip op <sup> + Sources-blok onderaan ────────
@@ -199,7 +199,7 @@ const CARDS = (() => {
         </li>`;
       }).filter(Boolean).join('');
       body += `<div class="sources-block mt-3 pt-3 border-top">
-        <div class="text-uppercase fw-semibold text-secondary small mb-1">Sources</div>
+        <div class="text-uppercase fw-semibold text-secondary small mb-1">Bronnen</div>
         <ul class="list-unstyled mb-0">${items}</ul>
       </div>`;
     }
