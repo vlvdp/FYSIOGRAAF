@@ -31,6 +31,27 @@ h6 { color: var(--bs-secondary-color); }
 /* ── Detail offcanvas breedte ────────────────────────────────────────────── */
 #detailPanel { --bs-offcanvas-width: min(540px, 95vw); }
 
+/* Phone-size: detail panel full-screen (iPad blijft zij-paneel) */
+@media (max-width: 575.98px) {
+  #detailPanel { --bs-offcanvas-width: 100vw; }
+}
+
+/* ── Offcanvas: laat body krimpen zodat footers niet van het scherm vallen ─ */
+.offcanvas-body { min-height: 0; }
+#ovzDetailFooter,
+#ovzDetailFooter2 { flex-shrink: 0; }
+
+/* ── iOS dynamic viewport: voorkom dat content achter de adresbalk valt ─── */
+@supports (height: 100dvh) {
+  html.h-100,
+  body.h-100 { height: 100dvh !important; }
+}
+
+/* ── Floating theme switcher: alleen desktop; op mobile in de navbar ─────── */
+@media (max-width: 991.98px) {
+  #themeSwitcher { display: none !important; }
+}
+
 /* ── Masonry grid ────────────────────────────────────────────────────────── */
 .masonry { columns: 300px; column-gap: 14px; }
 .masonry .card { break-inside: avoid; margin-bottom: 14px; display: inline-block; width: 100%; }

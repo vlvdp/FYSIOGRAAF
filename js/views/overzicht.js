@@ -254,9 +254,51 @@ const OVZ = (() => {
     casuistiek: '#0D9488',
   };
 
+  // ── Detail-paneel navigatiestack ──────────────────────────────────────────
+  let _history           = [];
+  let _currentId         = null;
+  let _detailListenerSet = false;
+
+  function _ensureDetailListener() {
+    if (_detailListenerSet) return;
+    const panel = document.getElementById('detailPanel');
+    if (!panel) return;
+    panel.addEventListener('hidden.bs.offcanvas', () => {
+      _history   = [];
+      _currentId = null;
+      _updateBackBtn();
+    });
+    _detailListenerSet = true;
+  }
+
+  function _updateBackBtn() {
+    const btn = document.getElementById('ovzDetailBackBtn');
+    if (!btn) return;
+    btn.classList.toggle('d-none', _history.length === 0);
+  }
+
+  function back() {
+    if (!_history.length) return;
+    const prev = _history.pop();
+    _renderDetail(prev);
+  }
+
   function showDetail(id) {
+    const panel  = document.getElementById('detailPanel');
+    const isOpen = panel?.classList.contains('show');
+    if (isOpen && _currentId && _currentId !== id) {
+      _history.push(_currentId);
+    } else if (!isOpen) {
+      _history = [];
+    }
+    _renderDetail(id);
+  }
+
+  function _renderDetail(id) {
     const obj = DB.get(id);
     if (!obj) return;
+    _currentId = id;
+    _ensureDetailListener();
 
     const detail    = CARDS.buildDetailHTML(id);
     const tags      = DB.getTags(id);
@@ -313,6 +355,7 @@ const OVZ = (() => {
     f1.classList.toggle('d-none', !detail.footer);
     f2.classList.toggle('d-none', !detail.footer2);
 
+    _updateBackBtn();
     bootstrap.Offcanvas.getOrCreateInstance(document.getElementById('detailPanel')).show();
   }
 
@@ -336,5 +379,5 @@ const OVZ = (() => {
     _renderGrid();
   }
 
-  return { render, setFilter, clearAllFilters, showDetail, closeDetail };
+  return { render, setFilter, clearAllFilters, showDetail, closeDetail, back };
 })();
