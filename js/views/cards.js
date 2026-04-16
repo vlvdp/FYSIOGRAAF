@@ -94,9 +94,13 @@ const CARDS = (() => {
     try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; }
   }
 
-  function _urlLink(u) {
-    if (!u) return '';
-    return `<a href="${u}" target="_blank" rel="noopener" class="small text-decoration-none">${_urlLabel(u)}</a>`;
+  // Uniforme bron-regel: link + optionele muted suffix (bv. paginanummers)
+  function _bronRow({ href, onclick, label, suffix }) {
+    const a = href
+      ? `<a href="${href}" target="_blank" rel="noopener" class="text-decoration-none">${label}</a>`
+      : `<a href="#" onclick="${onclick}" class="text-decoration-none">${label}</a>`;
+    const s = suffix ? `<span class="text-muted"> — ${suffix}</span>` : '';
+    return `<div class="small">${a}${s}</div>`;
   }
 
   // ── FRONT — minimale kaart voor de masonry grid ───────────────────────────
@@ -220,16 +224,14 @@ const CARDS = (() => {
         const na = parseInt(a, 10), nb = parseInt(b, 10);
         return (isNaN(na) ? 0 : na) - (isNaN(nb) ? 0 : nb);
       }).map(p => `p${p}`).join(', ');
-      const label = src.title || src.afk || srcId;
-      bronnenRows.push(
-        `<div class="small">
-           <a href="#" onclick="event.preventDefault(); CARDS.openDetail('${srcId}');" class="text-decoration-none">${label}</a>
-           <span class="text-muted"> — ${pageList}</span>
-         </div>`
-      );
+      bronnenRows.push(_bronRow({
+        onclick: `event.preventDefault(); CARDS.openDetail('${srcId}');`,
+        label:   src.title || src.afk || srcId,
+        suffix:  pageList,
+      }));
     }
-    if (obj.url)   bronnenRows.push(`<div class="small">${_urlLink(obj.url)}</div>`);
-    if (obj.urlPP) bronnenRows.push(`<div class="small">${_urlLink(obj.urlPP)}</div>`);
+    if (obj.url)   bronnenRows.push(_bronRow({ href: obj.url,   label: _urlLabel(obj.url)   }));
+    if (obj.urlPP) bronnenRows.push(_bronRow({ href: obj.urlPP, label: _urlLabel(obj.urlPP) }));
 
     const footer2 = bronnenRows.length
       ? `<div class="text-uppercase fw-semibold text-secondary small mb-1">Bronnen</div>
