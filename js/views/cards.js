@@ -167,7 +167,7 @@ const CARDS = (() => {
       f.kernaanbevelingen ? _field('Kernaanbevelingen', f.kernaanbevelingen)      : '',
     ].filter(Boolean).join('');
 
-    // ── Bronvermelding: hover-tooltip op <sup> + Sources-blok onderaan ────────
+    // ── Bronvermelding: hover-tooltip op <sup>, aggregeer voor footer ─────────
     const citedSources = new Map();   // id → Set<page>
     body = body.replace(
       /<sup\s+data-src="([^"]+)"\s+data-p="([^"]+)">([^<]*)<\/sup>/g,
@@ -180,26 +180,6 @@ const CARDS = (() => {
         return `<sup class="citation-ref" data-src="${srcId}" data-p="${page}" title="${_escapeAttr(tip)}">${label}</sup>`;
       }
     );
-
-    if (citedSources.size) {
-      const items = [...citedSources.entries()].map(([srcId, pages]) => {
-        const src = DB.get(srcId);
-        if (!src) return '';
-        const pageList = [...pages].sort((a, b) => {
-          const na = parseInt(a, 10), nb = parseInt(b, 10);
-          return (isNaN(na) ? 0 : na) - (isNaN(nb) ? 0 : nb);
-        }).map(p => `p${p}`).join(', ');
-        const label = src.title || src.afk || srcId;
-        return `<li class="small">
-          <a href="#" onclick="event.preventDefault(); CARDS.openDetail('${srcId}');" class="text-decoration-none">${label}</a>
-          <span class="text-muted"> — ${pageList}</span>
-        </li>`;
-      }).filter(Boolean).join('');
-      body += `<div class="sources-block mt-3 pt-3 border-top">
-        <div class="text-uppercase fw-semibold text-secondary small mb-1">Bronnen</div>
-        <ul class="list-unstyled mb-0">${items}</ul>
-      </div>`;
-    }
 
     // ── Footer: graaf-relaties (richting + rel-type) ──────────────────────────
     const rawLinks = DB.getLinks(id);
@@ -230,12 +210,31 @@ const CARDS = (() => {
 
     const footer = relSection ? `<div class="d-flex flex-column gap-1">${relSection}</div>` : '';
 
-    // Outbound URLs — platte weergave, geen icoontjes of badges
-    const urlRows = [
-      obj.url   ? _urlLink(obj.url)   : '',
-      obj.urlPP ? _urlLink(obj.urlPP) : '',
-    ].filter(Boolean).join('<br>');
-    const footer2 = urlRows;
+    // ── Bronnen-blok in de footer: citaties + outbound URLs, gestapeld ────────
+    const bronnenRows = [];
+
+    for (const [srcId, pages] of citedSources.entries()) {
+      const src = DB.get(srcId);
+      if (!src) continue;
+      const pageList = [...pages].sort((a, b) => {
+        const na = parseInt(a, 10), nb = parseInt(b, 10);
+        return (isNaN(na) ? 0 : na) - (isNaN(nb) ? 0 : nb);
+      }).map(p => `p${p}`).join(', ');
+      const label = src.title || src.afk || srcId;
+      bronnenRows.push(
+        `<div class="small">
+           <a href="#" onclick="event.preventDefault(); CARDS.openDetail('${srcId}');" class="text-decoration-none">${label}</a>
+           <span class="text-muted"> — ${pageList}</span>
+         </div>`
+      );
+    }
+    if (obj.url)   bronnenRows.push(`<div class="small">${_urlLink(obj.url)}</div>`);
+    if (obj.urlPP) bronnenRows.push(`<div class="small">${_urlLink(obj.urlPP)}</div>`);
+
+    const footer2 = bronnenRows.length
+      ? `<div class="text-uppercase fw-semibold text-secondary small mb-1">Bronnen</div>
+         ${bronnenRows.join('')}`
+      : '';
 
     return { body, footer, footer2 };
   }
