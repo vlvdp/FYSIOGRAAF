@@ -1,7 +1,7 @@
 /**
  * cards.js — Kaartgrid renderer vanuit DB-queries
  *
- * Unified node schema: { id, type, afk, title, fields{}, links[] }
+ * Unified node schema: { id, type, afk, title, fields{}, url?, urlPP? }
  * Front = minimale kaart in masonry (afk + titel + chips)
  * Back  = detail offcanvas (alle inhoud)
  */
@@ -49,11 +49,6 @@ const CARDS = (() => {
     return `<button type="button" class="${cls}" ${style} ${click}>${text}</button>`;
   }
 
-  function _linkBadge(text, href) {
-    return `<a class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis border text-decoration-none"
-      href="${href}" target="_blank" rel="noopener">${text}</a>`;
-  }
-
   // ── Helpers ───────────────────────────────────────────────────────────────
 
   function _linkedBronnen(id) {
@@ -95,12 +90,14 @@ const CARDS = (() => {
     </div>`;
   }
 
-  const LINK_ICONS = {
-    'meetinstrumentenzorg.nl': '📋',
-    'fysiomedia.nl':           '🎬',
-    'physio-pedia.com':        '🌐',
-    'Richtlijn (PDF/web)':     '📄',
-  };
+  function _urlLabel(u) {
+    try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; }
+  }
+
+  function _urlLink(u) {
+    if (!u) return '';
+    return `<a href="${u}" target="_blank" rel="noopener" class="small text-decoration-none">${_urlLabel(u)}</a>`;
+  }
 
   // ── FRONT — minimale kaart voor de masonry grid ───────────────────────────
 
@@ -229,14 +226,16 @@ const CARDS = (() => {
         </div>`).join('');
     }
 
-    const refBadges = (obj.links || []).map(l =>
-      _linkBadge(l.label, l.url)
-    );
-
     const relSection = [_relRows(outGroups, '→'), _relRows(inGroups, '←')].filter(Boolean).join('');
 
-    const footer  = relSection ? `<div class="d-flex flex-column gap-1">${relSection}</div>` : '';
-    const footer2 = refBadges.join('');
+    const footer = relSection ? `<div class="d-flex flex-column gap-1">${relSection}</div>` : '';
+
+    // Outbound URLs — platte weergave, geen icoontjes of badges
+    const urlRows = [
+      obj.url   ? _urlLink(obj.url)   : '',
+      obj.urlPP ? _urlLink(obj.urlPP) : '',
+    ].filter(Boolean).join('<br>');
+    const footer2 = urlRows;
 
     return { body, footer, footer2 };
   }

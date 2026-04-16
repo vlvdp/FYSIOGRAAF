@@ -16,7 +16,19 @@ window.SEED_DATA = {
 
 ## Object-types & velden
 
-Elke object: `{ id, type, afk, title, fields: {...}, links: [{label,url}] }`
+Elke object: `{ id, type, afk, title, fields: {...}, url?, urlPP? }`
+
+### Outbound URLs
+
+URLs zijn **first-class velden** op elk object — geen geneste arrays of labels. Zo zijn ze direct indexeerbaar (`Object.values(objects).filter(o => !o.url)`) en verdwijnen ze nooit in gerenderde HTML.
+
+| veld | inhoud | rol per type |
+|---|---|---|
+| `url` | primaire outbound URL | `bronnen`: richtlijn/PDF (verplicht) · `instrument`: meetinstrumentenzorg.nl (verplicht waar bestaand) · `kennis`: richtlijn-URL of andere (optioneel) · `casuistiek`: — |
+| `urlPP` | physio-pedia URL | `instrument` + `kennis`: optioneel, waar relevant |
+
+Legacy-veld `links: [{label,url}]` is afgeschaft (per 2026-04).
+
 
 ### `instrument` — meetinstrument (69 instances)
 | veld | dekking | inhoud |
