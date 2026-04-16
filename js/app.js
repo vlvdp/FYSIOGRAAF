@@ -4,7 +4,7 @@
 
 const APP = (() => {
 
-  const TOP_IDS = ['overzicht', 'graph'];
+  const TOP_IDS = ['overzicht', 'graph', 'tabel'];
 
   // ── Top-tab navigatie ────────────────────────────────────────────────────
 
@@ -18,16 +18,16 @@ const APP = (() => {
     });
 
     // Sidebar panels
-    const ovzSidebar   = document.getElementById('ovzSidebar');
-    const graphSidebar = document.getElementById('graphSidebar');
-    ovzSidebar?.classList.toggle('d-none',   id !== 'overzicht');
-    graphSidebar?.classList.toggle('d-none', id !== 'graph');
+    ['ovzSidebar', 'graphSidebar', 'tabelSidebar', 'editorSidebar'].forEach(sid => {
+      document.getElementById(sid)?.classList.toggle('d-none',
+        sid !== { overzicht: 'ovzSidebar', graph: 'graphSidebar', tabel: 'tabelSidebar', editor: 'editorSidebar' }[id]);
+    });
 
     // Main panels
-    const ovzMain   = document.getElementById('overzicht-main');
-    const graphMain = document.getElementById('graph-main');
-    ovzMain?.classList.toggle('d-none',   id !== 'overzicht');
-    graphMain?.classList.toggle('d-none', id !== 'graph');
+    ['overzicht-main', 'graph-main', 'tabel-main', 'editor-main'].forEach(mid => {
+      document.getElementById(mid)?.classList.toggle('d-none',
+        mid !== `${id === 'overzicht' ? 'overzicht' : id}-main`);
+    });
 
     // Render lazy bij eerste bezoek
     _renderTopIfNeeded(id);
@@ -42,6 +42,8 @@ const APP = (() => {
     _rendered.add(id);
     if (id === 'overzicht') OVZ.render();
     if (id === 'graph')     GRAPH.render();
+    if (id === 'tabel')     TABEL.render();
+    if (id === 'editor')    EDITOR.render();
   }
 
   // ── DB stats bar ─────────────────────────────────────────────────────────

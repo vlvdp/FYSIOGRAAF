@@ -257,6 +257,7 @@ const OVZ = (() => {
   // ── Detail-paneel navigatiestack ──────────────────────────────────────────
   let _history           = [];
   let _currentId         = null;
+  let _panelOpen         = false;
   let _detailListenerSet = false;
 
   function _ensureDetailListener() {
@@ -266,6 +267,7 @@ const OVZ = (() => {
     panel.addEventListener('hidden.bs.offcanvas', () => {
       _history   = [];
       _currentId = null;
+      _panelOpen = false;
       _updateBackBtn();
     });
     _detailListenerSet = true;
@@ -284,13 +286,12 @@ const OVZ = (() => {
   }
 
   function showDetail(id) {
-    const panel  = document.getElementById('detailPanel');
-    const isOpen = panel?.classList.contains('show');
-    if (isOpen && _currentId && _currentId !== id) {
+    if (_panelOpen && _currentId && _currentId !== id) {
       _history.push(_currentId);
-    } else if (!isOpen) {
+    } else if (!_panelOpen) {
       _history = [];
     }
+    _panelOpen = true;
     _renderDetail(id);
   }
 
@@ -354,6 +355,8 @@ const OVZ = (() => {
     f2.innerHTML  = detail.footer2;
     f1.classList.toggle('d-none', !detail.footer);
     f2.classList.toggle('d-none', !detail.footer2);
+    const fWrap = document.getElementById('ovzDetailFooterWrap');
+    if (fWrap) fWrap.classList.toggle('d-none', !detail.footer && !detail.footer2);
 
     _updateBackBtn();
     bootstrap.Offcanvas.getOrCreateInstance(document.getElementById('detailPanel')).show();

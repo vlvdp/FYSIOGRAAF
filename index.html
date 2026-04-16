@@ -22,28 +22,77 @@
 </head>
 <body class="d-flex flex-column h-100">
 
-<!-- ── NAVBAR (alleen mobile hamburger) ────────────────────────────────── -->
+<!-- ── NAVBAR (alleen mobile) ──────────────────────────────────────────── -->
 <nav class="navbar border-bottom py-2 sticky-top d-lg-none" id="appNavbar">
   <div class="d-flex align-items-center px-3 w-100 gap-2">
     <span class="fw-bold" style="color:#ff5900;font-family:var(--bs-font-monospace);">Fysiograaf</span>
-    <button class="btn btn-outline-secondary btn-sm ms-auto"
-            id="modeToggleBtnMobile" type="button"
-            title="Toggle light/dark" aria-label="Toggle light/dark">
-      <svg id="modeIconSunMobile" width="16" height="16" viewBox="0 0 24 24" fill="none"
-           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-           style="display:none;">
-        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
-      </svg>
-      <svg id="modeIconMoonMobile" width="16" height="16" viewBox="0 0 24 24" fill="none"
-           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
-      </svg>
-    </button>
-    <button class="btn btn-outline-secondary btn-sm"
-      type="button" data-bs-toggle="offcanvas" data-bs-target="#filterPanel"
-      title="Menu" aria-label="Menu">
-      ☰
-    </button>
+
+    <div class="ms-auto d-flex gap-1">
+
+      <!-- Theme + mode dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center p-2 lh-1"
+                type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                title="Theme" aria-label="Theme">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a3 3 0 0 1-2.121-.879A3 3 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0M15 15v-4H9.258l-4.015 4zM0 .5v12.495zm0 12.495V13z"/>
+          </svg>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end p-2" style="min-width:240px;">
+          <div class="small text-muted mb-1 px-1">Mode</div>
+          <div class="btn-group btn-group-sm w-100 mb-2" role="group" aria-label="Light/dark mode">
+            <input type="radio" class="btn-check" name="modeToggle" id="modeLightMobile" autocomplete="off">
+            <label class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center gap-1" for="modeLightMobile">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+              </svg>
+              Light
+            </label>
+            <input type="radio" class="btn-check" name="modeToggle" id="modeDarkMobile" autocomplete="off">
+            <label class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center gap-1" for="modeDarkMobile">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+              </svg>
+              Dark
+            </label>
+          </div>
+          <div class="small text-muted mb-1 px-1">Bootswatch theme</div>
+          <select id="navbarThemeSelect" class="form-select form-select-sm mb-2"></select>
+          <div class="small text-muted mb-1 px-1">Or custom CSS URL</div>
+          <div class="input-group input-group-sm mb-2">
+            <input id="navbarThemeUrlInput" type="text" class="form-control" placeholder="https://...">
+            <button id="navbarThemeUrlApply" class="btn btn-outline-secondary" type="button">Apply</button>
+          </div>
+          <button id="navbarThemeReset" class="btn btn-sm btn-outline-secondary w-100">Reset to default</button>
+        </div>
+      </div>
+
+      <!-- DB dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center p-2 lh-1"
+                type="button" data-bs-toggle="dropdown"
+                title="Database" aria-label="Database">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+            <circle cx="8" cy="3" r="1.5"/><circle cx="8" cy="8" r="1.5"/><circle cx="8" cy="13" r="1.5"/>
+          </svg>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><button class="dropdown-item" type="button" onclick="DB.exportJSON()">↓ Export</button></li>
+          <li><button class="dropdown-item text-danger" type="button"
+              onclick="if(confirm('Reset DB to seed data?')) { DB.reset(); location.reload(); }">↺ Reset</button></li>
+        </ul>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center p-2 lh-1"
+              type="button" data-bs-toggle="offcanvas" data-bs-target="#filterPanel"
+              title="Menu" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </button>
+
+    </div>
   </div>
 </nav>
 
@@ -76,44 +125,90 @@
             <svg width="12" height="11" viewBox="0 0 20 14" style="margin-bottom:1px;"><circle cx="4" cy="7" r="3.5" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.5"/><line x1="7.5" y1="7" x2="12.5" y2="7" stroke="#888" stroke-width="1.2"/><circle cx="16" cy="7" r="3.5" fill="#0D9488" stroke="#0A6B62" stroke-width="1.5"/></svg>
             Graph
           </button>
+          <button class="btn btn-sm btn-outline-secondary" id="tab-tabel" onclick="APP.showTop('tabel')">
+            <svg width="14" height="11" viewBox="0 0 16 12" style="margin-bottom:1px;" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1" width="14" height="10" rx="1"/><line x1="1" y1="4" x2="15" y2="4"/><line x1="1" y1="7.5" x2="15" y2="7.5"/><line x1="5.5" y1="1" x2="5.5" y2="11"/></svg>
+            Tabel
+          </button>
         </div>
       </div>
 
       <!-- View-specifieke filters -->
       <div id="ovzSidebar" class="flex-grow-1 overflow-auto"><!-- overzicht.js --></div>
       <div id="graphSidebar" class="d-none flex-grow-1 overflow-auto"><!-- graph.js --></div>
+      <div id="tabelSidebar" class="d-none flex-grow-1 overflow-auto"><!-- tabel.js --></div>
+      <div id="editorSidebar" class="d-none flex-grow-1 overflow-auto p-3">
+        <input type="search" class="form-control form-control-sm mb-2" id="editorSearch" placeholder="Search afk / title..." oninput="EDITOR.applyFilter()">
+        <select class="form-select form-select-sm mb-2" id="editorTypeFilter" onchange="EDITOR.applyFilter()"></select>
+        <select class="form-select form-select-sm mb-2" id="editorUrlFilter" onchange="EDITOR.applyFilter()">
+          <option value="">All URL states</option>
+          <option value="missing-url">Missing url</option>
+          <option value="missing-pp">Missing urlPP</option>
+          <option value="missing-any">Missing either</option>
+          <option value="has-both">Has both</option>
+        </select>
+        <div class="d-flex flex-column gap-2">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-secondary" id="editorChangeCount">0 changes</span>
+            <span class="text-muted small" id="editorRowCount"></span>
+          </div>
+          <button class="btn btn-sm btn-primary w-100" onclick="EDITOR.exportSeed()">Export seed.js</button>
+          <button class="btn btn-sm btn-outline-secondary w-100" onclick="EDITOR.revert()">Reset</button>
+        </div>
+      </div>
 
-      <!-- Persistent bodem -->
+      <!-- Persistent bodem (desktop: DB-menu + theme; mobile: alles zit in navbar) -->
       <div class="border-top px-3 py-2 d-flex align-items-center gap-2">
         <span class="text-muted small flex-grow-1"><span id="dbStatObjects">…</span> nodes · <span id="dbStatLinks">…</span> edges</span>
-        <button class="btn btn-sm btn-outline-secondary py-0 px-1 d-lg-none" type="button"
-          data-bs-toggle="collapse" data-bs-target="#sidebarThemeMenu" title="Theme">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/>
-            <path d="M12 2C6.5 2 2 6 2 11c0 5 4 9 9 9 1.4 0 2-.8 2-1.7 0-.4-.2-.8-.5-1.1-.3-.3-.5-.7-.5-1.1 0-.9.7-1.6 1.6-1.6H15c3.9 0 7-3.1 7-7 0-3.9-4.5-6.5-10-6.5z"/>
-          </svg>
-        </button>
-        <button class="btn btn-sm btn-outline-secondary py-0 px-1" type="button"
-          data-bs-toggle="collapse" data-bs-target="#sidebarDbMenu" title="Database">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="3" r="1.2"/><circle cx="8" cy="8" r="1.2"/><circle cx="8" cy="13" r="1.2"/></svg>
+
+        <!-- Theme dropdown (desktop) — identiek aan mobile navbar -->
+        <div class="dropdown d-none d-lg-block">
+          <button class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center p-2 lh-1"
+                  type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                  title="Theme" aria-label="Theme">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a3 3 0 0 1-2.121-.879A3 3 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0M15 15v-4H9.258l-4.015 4zM0 .5v12.495zm0 12.495V13z"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end p-2" style="min-width:240px;">
+            <div class="small text-muted mb-1 px-1">Mode</div>
+            <div class="btn-group btn-group-sm w-100 mb-2" role="group" aria-label="Light/dark mode">
+              <input type="radio" class="btn-check" name="modeToggleSidebar" id="modeLightSidebar" autocomplete="off">
+              <label class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center gap-1" for="modeLightSidebar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                </svg>
+                Light
+              </label>
+              <input type="radio" class="btn-check" name="modeToggleSidebar" id="modeDarkSidebar" autocomplete="off">
+              <label class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center gap-1" for="modeDarkSidebar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+                </svg>
+                Dark
+              </label>
+            </div>
+            <div class="small text-muted mb-1 px-1">Bootswatch theme</div>
+            <select id="sidebarThemeSelect" class="form-select form-select-sm mb-2"></select>
+            <div class="small text-muted mb-1 px-1">Or custom CSS URL</div>
+            <div class="input-group input-group-sm mb-2">
+              <input id="sidebarThemeUrlInput" type="text" class="form-control" placeholder="https://...">
+              <button id="sidebarThemeUrlApply" class="btn btn-outline-secondary" type="button">Apply</button>
+            </div>
+            <button id="sidebarThemeReset" class="btn btn-sm btn-outline-secondary w-100">Reset to default</button>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary d-none d-lg-inline-flex align-items-center justify-content-center p-2 lh-1" type="button"
+          data-bs-toggle="collapse" data-bs-target="#sidebarDbMenu" title="Database" aria-label="Database">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="3" r="1.5"/><circle cx="8" cy="8" r="1.5"/><circle cx="8" cy="13" r="1.5"/></svg>
         </button>
       </div>
       <div class="collapse border-top" id="sidebarDbMenu">
-        <div class="p-2 d-flex gap-2">
-          <button class="btn btn-sm btn-outline-secondary flex-grow-1" onclick="DB.exportJSON()">↓ Export</button>
-          <button class="btn btn-sm btn-outline-danger flex-grow-1" onclick="if(confirm('Reset DB to seed data?')) { DB.reset(); location.reload(); }">↺ Reset</button>
-        </div>
-      </div>
-      <div class="collapse border-top d-lg-none" id="sidebarThemeMenu">
         <div class="p-2 d-flex flex-column gap-2">
-          <div class="small text-muted px-1">Bootswatch theme</div>
-          <select id="sidebarThemeSelect" class="form-select form-select-sm"></select>
-          <div class="small text-muted px-1">Or custom CSS URL</div>
-          <div class="input-group input-group-sm">
-            <input id="sidebarThemeUrlInput" type="text" class="form-control" placeholder="https://...">
-            <button id="sidebarThemeUrlApply" class="btn btn-outline-secondary" type="button">Apply</button>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-secondary flex-grow-1" onclick="DB.exportJSON()">↓ Export</button>
+            <button class="btn btn-sm btn-outline-danger flex-grow-1" onclick="if(confirm('Reset DB to seed data?')) { DB.reset(); location.reload(); }">↺ Reset</button>
           </div>
-          <button id="sidebarThemeReset" class="btn btn-sm btn-outline-secondary">Reset to default</button>
         </div>
       </div>
     </div>
@@ -123,6 +218,8 @@
   <div class="flex-grow-1 overflow-hidden d-flex flex-column">
     <div id="overzicht-main" class="flex-grow-1 p-3 overflow-auto"></div>
     <div id="graph-main" class="d-none flex-grow-1 overflow-hidden" style="min-height:0"></div>
+    <div id="tabel-main" class="d-none flex-grow-1 p-3 overflow-auto"></div>
+    <div id="editor-main" class="d-none flex-grow-1 overflow-auto"></div>
   </div>
 
 </div>
@@ -133,18 +230,31 @@
 <div class="offcanvas offcanvas-end" id="detailPanel" tabindex="-1">
   <div class="offcanvas-header border-bottom align-items-start py-2">
     <div class="flex-grow-1 me-2" id="ovzDetailHeader"></div>
-    <button type="button" class="btn btn-sm btn-link text-secondary p-0 flex-shrink-0 mt-1 me-2 d-none lh-1"
+    <button type="button" class="btn-close flex-shrink-0 mt-1 me-2 d-none"
             id="ovzDetailBackBtn" title="Back" aria-label="Back"
-            onclick="OVZ.back()">
-      <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
-        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-      </svg>
-    </button>
+            onclick="OVZ.back()"
+            style="background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 fill=%22%23000%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%22/%3E%3C/svg%3E');"></button>
     <button type="button" class="btn-close flex-shrink-0 mt-1" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body" id="ovzDetailBody"></div>
-  <div class="border-top p-3 d-flex flex-column" id="ovzDetailFooter"></div>
-  <div class="border-top p-3 d-flex flex-column gap-1" id="ovzDetailFooter2"></div>
+  <!-- Inklapbare footer -->
+  <div class="border-top" id="ovzDetailFooterWrap">
+    <button class="btn btn-sm w-100 text-muted py-1 d-flex align-items-center justify-content-center gap-1"
+            type="button" data-bs-toggle="collapse" data-bs-target="#ovzDetailFooterCollapse"
+            aria-expanded="true" aria-controls="ovzDetailFooterCollapse"
+            id="ovzDetailFooterToggle">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0-1A6 6 0 1 0 8 2a6 6 0 0 0 0 12zm-.5-3.5v-3h1v3h-1zm0-4.5v-1h1v1h-1z"/>
+      </svg>
+      <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor" class="detail-footer-chevron" style="transition:transform .2s;">
+        <path fill-rule="evenodd" d="M1.6 4.6a.5.5 0 0 1 .8 0L8 10.3l5.6-5.7a.5.5 0 0 1 .8.8l-6 6a.5.5 0 0 1-.8 0l-6-6a.5.5 0 0 1 0-.8z"/>
+      </svg>
+    </button>
+    <div class="collapse show" id="ovzDetailFooterCollapse">
+      <div class="p-3 pt-0 d-flex flex-column" id="ovzDetailFooter"></div>
+      <div class="border-top p-3 d-flex flex-column gap-1" id="ovzDetailFooter2"></div>
+    </div>
+  </div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════════
@@ -270,7 +380,9 @@
 <script src="js/views/cards.js"></script>
 <script src="js/views/overzicht.js"></script>
 <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<script src="js/views/tabel.js"></script>
 <script src="js/views/graph.js"></script>
+<script src="js/views/editor.js"></script>
 <script src="js/app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -291,9 +403,8 @@
   <button id="themeSwitcherBtn" type="button" class="btn btn-sm btn-secondary rounded-circle shadow"
           style="width:38px;height:38px;padding:0;display:flex;align-items:center;justify-content:center;"
           title="Change theme" aria-label="Change theme">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/>
-      <path d="M12 2C6.5 2 2 6 2 11c0 5 4 9 9 9 1.4 0 2-.8 2-1.7 0-.4-.2-.8-.5-1.1-.3-.3-.5-.7-.5-1.1 0-.9.7-1.6 1.6-1.6H15c3.9 0 7-3.1 7-7 0-3.9-4.5-6.5-10-6.5z"/>
+    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+      <path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a3 3 0 0 1-2.121-.879A3 3 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0M15 15v-4H9.258l-4.015 4zM0 .5v12.495zm0 12.495V13z"/>
     </svg>
   </button>
   <div id="themeSwitcherPanel" class="card shadow"
@@ -350,10 +461,16 @@
     var current = localStorage.getItem('bsThemeUrl') || DEFAULT_CSS;
 
     // Sidebar (mobile) palette controls — delen dezelfde setTheme-logica
-    var selectM = document.getElementById('sidebarThemeSelect');
-    var inputM  = document.getElementById('sidebarThemeUrlInput');
-    var applyM  = document.getElementById('sidebarThemeUrlApply');
-    var resetM  = document.getElementById('sidebarThemeReset');
+    var selectM = document.getElementById('navbarThemeSelect');
+    var inputM  = document.getElementById('navbarThemeUrlInput');
+    var applyM  = document.getElementById('navbarThemeUrlApply');
+    var resetM  = document.getElementById('navbarThemeReset');
+
+    // Sidebar (desktop) palette controls
+    var selectS = document.getElementById('sidebarThemeSelect');
+    var inputS  = document.getElementById('sidebarThemeUrlInput');
+    var applyS  = document.getElementById('sidebarThemeUrlApply');
+    var resetS  = document.getElementById('sidebarThemeReset');
 
     function populateSelect(sel){
       THEMES.forEach(function(t){
@@ -366,20 +483,24 @@
     }
     populateSelect(select);
     if (selectM) populateSelect(selectM);
+    if (selectS) populateSelect(selectS);
     input.value = (current === DEFAULT_CSS) ? '' : current;
     if (inputM) inputM.value = input.value;
+    if (inputS) inputS.value = input.value;
 
     function setTheme(url){
       if (!url) return;
       link.href = url;
       if (url === DEFAULT_CSS) localStorage.removeItem('bsThemeUrl');
       else localStorage.setItem('bsThemeUrl', url);
-      // Sync beide sets controls
+      // Sync alle sets controls
       if (select.value !== url) select.value = url;
       if (selectM && selectM.value !== url) selectM.value = url;
+      if (selectS && selectS.value !== url) selectS.value = url;
       var u = (url === DEFAULT_CSS) ? '' : url;
       if (input.value !== u) input.value = u;
       if (inputM && inputM.value !== u) inputM.value = u;
+      if (inputS && inputS.value !== u) inputS.value = u;
     }
 
     btn.addEventListener('click', function(e){
@@ -399,36 +520,46 @@
     if (inputM)  inputM .addEventListener('keydown',function(e){ if (e.key === 'Enter' && inputM.value.trim()) setTheme(inputM.value.trim()); });
     if (resetM)  resetM .addEventListener('click',  function(){ setTheme(DEFAULT_CSS); });
 
-    // Light/dark mode toggle — gedeeld tussen floating (desktop) en navbar (mobile)
-    var modeBtn     = document.getElementById('modeToggleBtn');
-    var modeBtnM    = document.getElementById('modeToggleBtnMobile');
-    var iconSun     = document.getElementById('modeIconSun');
-    var iconMoon    = document.getElementById('modeIconMoon');
-    var iconSunM    = document.getElementById('modeIconSunMobile');
-    var iconMoonM   = document.getElementById('modeIconMoonMobile');
-    function syncModeIcon(){
+    if (selectS) selectS.addEventListener('change', function(){ setTheme(selectS.value); });
+    if (applyS)  applyS .addEventListener('click',  function(){ if (inputS.value.trim()) setTheme(inputS.value.trim()); });
+    if (inputS)  inputS .addEventListener('keydown',function(e){ if (e.key === 'Enter' && inputS.value.trim()) setTheme(inputS.value.trim()); });
+    if (resetS)  resetS .addEventListener('click',  function(){ setTheme(DEFAULT_CSS); });
+
+    // Light/dark mode — desktop (floating icon-button) + mobile (radio in dropdown)
+    var modeBtn    = document.getElementById('modeToggleBtn');
+    var iconSun    = document.getElementById('modeIconSun');
+    var iconMoon   = document.getElementById('modeIconMoon');
+    var modeLightM = document.getElementById('modeLightMobile');
+    var modeDarkM  = document.getElementById('modeDarkMobile');
+    var modeLightS = document.getElementById('modeLightSidebar');
+    var modeDarkS  = document.getElementById('modeDarkSidebar');
+    function syncModeUI(){
       var mode = document.documentElement.getAttribute('data-bs-theme');
-      var showSun  = (mode === 'dark')  ? 'block' : 'none';
-      var showMoon = (mode === 'light') ? 'block' : 'none';
-      if (iconSun)   iconSun.style.display   = showSun;
-      if (iconMoon)  iconMoon.style.display  = showMoon;
-      if (iconSunM)  iconSunM.style.display  = showSun;
-      if (iconMoonM) iconMoonM.style.display = showMoon;
+      if (iconSun)  iconSun.style.display  = (mode === 'dark')  ? 'block' : 'none';
+      if (iconMoon) iconMoon.style.display = (mode === 'light') ? 'block' : 'none';
+      if (modeLightM) modeLightM.checked = (mode !== 'dark');
+      if (modeDarkM)  modeDarkM.checked  = (mode === 'dark');
+      if (modeLightS) modeLightS.checked = (mode !== 'dark');
+      if (modeDarkS)  modeDarkS.checked  = (mode === 'dark');
     }
-    syncModeIcon();
-    function toggleMode(){
-      var cur = document.documentElement.getAttribute('data-bs-theme');
-      var next = (cur === 'dark') ? 'light' : 'dark';
+    syncModeUI();
+    function setMode(next){
       document.documentElement.setAttribute('data-bs-theme', next);
       localStorage.setItem('theme', next);
-      syncModeIcon();
+      syncModeUI();
       // Re-render graph so edge labels / highlight border pick up new CSS vars
       if (typeof GRAPH !== 'undefined' && !document.getElementById('graph-main').classList.contains('d-none')) {
         try { GRAPH.render(); } catch(e){}
       }
     }
-    if (modeBtn)  modeBtn.addEventListener('click',  toggleMode);
-    if (modeBtnM) modeBtnM.addEventListener('click', toggleMode);
+    if (modeBtn) modeBtn.addEventListener('click', function(){
+      var cur = document.documentElement.getAttribute('data-bs-theme');
+      setMode(cur === 'dark' ? 'light' : 'dark');
+    });
+    if (modeLightM) modeLightM.addEventListener('change', function(){ if (modeLightM.checked) setMode('light'); });
+    if (modeDarkM)  modeDarkM .addEventListener('change', function(){ if (modeDarkM.checked)  setMode('dark');  });
+    if (modeLightS) modeLightS.addEventListener('change', function(){ if (modeLightS.checked) setMode('light'); });
+    if (modeDarkS)  modeDarkS .addEventListener('change', function(){ if (modeDarkS.checked)  setMode('dark');  });
   })();
 </script>
 

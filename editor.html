@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-bs-theme="light" class="h-100">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fysiograaf — URL Editor</title>
+<link id="bootstrap-theme" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/cosmo/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { font-size: .875rem; }
+  .table td, .table th { vertical-align: middle; }
+  .url-input { font-size: .8rem; min-width: 260px; }
+  .url-input:focus { box-shadow: 0 0 0 .15rem rgba(255,89,0,.25); }
+  .url-input.is-changed { background-color: var(--bs-warning-bg-subtle); }
+  .badge-type { font-size: .7rem; }
+  .sticky-header th { position: sticky; top: 0; z-index: 2; }
+  a.url-check { font-size: .75rem; }
+  .filter-bar { position: sticky; top: 0; z-index: 3; }
+  .row-changed { background-color: var(--bs-warning-bg-subtle) !important; }
+</style>
+</head>
+<body class="d-flex flex-column h-100">
+
+<!-- ── Top bar ──────────────────────────────────────────────────────────── -->
+<nav class="navbar border-bottom py-2 sticky-top">
+  <div class="d-flex align-items-center px-3 w-100 gap-2">
+    <a href="index.html" class="fw-bold text-decoration-none" style="color:#ff5900;font-family:var(--bs-font-monospace);">
+      ← Fysiograaf
+    </a>
+    <span class="text-muted">URL Editor</span>
+    <div class="ms-auto d-flex gap-2 align-items-center">
+      <span class="badge bg-secondary" id="changeCount">0 changes</span>
+      <button class="btn btn-sm btn-outline-secondary" onclick="EDITOR.revert()" title="Revert all changes">Reset</button>
+      <button class="btn btn-sm btn-primary" onclick="EDITOR.exportSeed()" title="Download updated seed.js">
+        Export seed.js
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Filters ──────────────────────────────────────────────────────────── -->
+<div class="border-bottom px-3 py-2 d-flex gap-2 align-items-center flex-wrap filter-bar bg-body">
+  <input type="search" class="form-control form-control-sm" style="max-width:240px"
+         id="searchInput" placeholder="Search afk / title..." oninput="EDITOR.applyFilter()">
+  <select class="form-select form-select-sm" style="max-width:160px" id="typeFilter" onchange="EDITOR.applyFilter()">
+    <option value="">All types</option>
+  </select>
+  <select class="form-select form-select-sm" style="max-width:160px" id="urlFilter" onchange="EDITOR.applyFilter()">
+    <option value="">All URL states</option>
+    <option value="missing-url">Missing url</option>
+    <option value="missing-pp">Missing urlPP</option>
+    <option value="missing-any">Missing either</option>
+    <option value="has-both">Has both</option>
+  </select>
+  <span class="text-muted small" id="rowCount"></span>
+</div>
+
+<!-- ── Table ────────────────────────────────────────────────────────────── -->
+<div class="flex-grow-1 overflow-auto">
+  <table class="table table-sm table-hover mb-0">
+    <thead class="sticky-header">
+      <tr>
+        <th style="width:3rem">#</th>
+        <th style="width:5.5rem; cursor:pointer" onclick="EDITOR.sortBy('type')">Type</th>
+        <th style="width:7rem;  cursor:pointer" onclick="EDITOR.sortBy('afk')">Afk</th>
+        <th style="cursor:pointer" onclick="EDITOR.sortBy('title')">Title</th>
+        <th>url</th>
+        <th>urlPP</th>
+      </tr>
+    </thead>
+    <tbody id="editorBody"></tbody>
+  </table>
+</div>
+
+<!-- ── Scripts ──────────────────────────────────────────────────────────── -->
+<script src="data/seed.js"></script>
+<script>
+const EDITOR = (() => {
+
+  // Deep-clone seed data so we can diff later
+  const _orig = JSON.parse(JSON.stringify(window.SEED_DATA));
+  const _data = JSON.parse(JSON.stringify(window.SEED_DATA));
+  let _rows = [];     // current visible rows (array of objects)
+  let _sortKey = 'type';
+  let _sortAsc = true;
+
+  // ── Build rows array ──────────────────────────────────────────────────
+
+  function _allRows() {
+    return Object.values(_data.objects).map(o => ({
+      id:    o.id,
+      type:  o.type,
+      afk:   o.afk || '',
+      title: o.title || '',
+      url:   o.url || '',
+      urlPP: o.urlPP || '',
+    }));
+  }
+
+  // ── Render ────────────────────────────────────────────────────────────
+
+  function render() {
+    _rows = _allRows();
+    _populateTypeFilter();
+    applyFilter();
+  }
+
+  function _populateTypeFilter() {
+    const types = [...new Set(_rows.map(r => r.type))].sort();
+    const sel = document.getElementById('typeFilter');
+    sel.innerHTML = '<option value="">All types</option>' +
+      types.map(t => `<option value="${t}">${t} (${_rows.filter(r => r.type === t).length})</option>`).join('');
+  }
+
+  function applyFilter() {
+    let filtered = _allRows();
+
+    const q = document.getElementById('searchInput').value.toLowerCase().trim();
+    if (q) filtered = filtered.filter(r =>
+      r.afk.toLowerCase().includes(q) || r.title.toLowerCase().includes(q) || r.id.toLowerCase().includes(q)
+    );
+
+    const typeF = document.getElementById('typeFilter').value;
+    if (typeF) filtered = filtered.filter(r => r.type === typeF);
+
+    const urlF = document.getElementById('urlFilter').value;
+    if (urlF === 'missing-url')  filtered = filtered.filter(r => !r.url);
+    if (urlF === 'missing-pp')   filtered = filtered.filter(r => !r.urlPP);
+    if (urlF === 'missing-any')  filtered = filtered.filter(r => !r.url || !r.urlPP);
+    if (urlF === 'has-both')     filtered = filtered.filter(r => r.url && r.urlPP);
+
+    // Sort
+    filtered.sort((a, b) => {
+      const va = (a[_sortKey] || '').toLowerCase();
+      const vb = (b[_sortKey] || '').toLowerCase();
+      return _sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+    });
+
+    _rows = filtered;
+    _renderTable();
+  }
+
+  function _renderTable() {
+    const tbody = document.getElementById('editorBody');
+    const TYPE_COLORS = {
+      instrument: '#F97316', kennis: '#2563EB', bronnen: '#7C3AED', casuistiek: '#0D9488'
+    };
+
+    tbody.innerHTML = _rows.map((r, i) => {
+      const origObj = _orig.objects[r.id] || {};
+      const urlChanged  = (r.url   || '') !== (origObj.url   || '');
+      const ppChanged   = (r.urlPP || '') !== (origObj.urlPP || '');
+      const rowClass    = (urlChanged || ppChanged) ? 'row-changed' : '';
+      const c = TYPE_COLORS[r.type] || '#666';
+      return `<tr class="${rowClass}" data-id="${r.id}">
+        <td class="text-muted">${i + 1}</td>
+        <td><span class="badge badge-type" style="background:${c}">${r.type}</span></td>
+        <td class="font-monospace fw-semibold small">${_esc(r.afk)}</td>
+        <td class="small text-truncate" style="max-width:240px" title="${_esc(r.title)}">${_esc(r.title)}</td>
+        <td>
+          <div class="d-flex align-items-center gap-1">
+            <input type="url" class="form-control form-control-sm url-input ${urlChanged ? 'is-changed' : ''}"
+                   value="${_esc(r.url)}"
+                   placeholder="—"
+                   data-field="url" data-id="${r.id}"
+                   oninput="EDITOR.onChange(this)">
+            ${r.url ? `<a href="${_esc(r.url)}" target="_blank" rel="noopener" class="url-check" title="Open">↗</a>` : ''}
+          </div>
+        </td>
+        <td>
+          <div class="d-flex align-items-center gap-1">
+            <input type="url" class="form-control form-control-sm url-input ${ppChanged ? 'is-changed' : ''}"
+                   value="${_esc(r.urlPP)}"
+                   placeholder="—"
+                   data-field="urlPP" data-id="${r.id}"
+                   oninput="EDITOR.onChange(this)">
+            ${r.urlPP ? `<a href="${_esc(r.urlPP)}" target="_blank" rel="noopener" class="url-check" title="Open">↗</a>` : ''}
+          </div>
+        </td>
+      </tr>`;
+    }).join('');
+
+    document.getElementById('rowCount').textContent = `${_rows.length} nodes`;
+    _updateChangeCount();
+  }
+
+  function _esc(s) {
+    return String(s || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  // ── Editing ───────────────────────────────────────────────────────────
+
+  function onChange(input) {
+    const id    = input.dataset.id;
+    const field = input.dataset.field;
+    const val   = input.value.trim();
+
+    // Update working data
+    if (_data.objects[id]) {
+      if (val) _data.objects[id][field] = val;
+      else     delete _data.objects[id][field];
+    }
+
+    // Visual feedback
+    const orig = (_orig.objects[id] || {})[field] || '';
+    const changed = val !== orig;
+    input.classList.toggle('is-changed', changed);
+
+    // Row highlight
+    const tr = input.closest('tr');
+    const obj = _data.objects[id] || {};
+    const origObj = _orig.objects[id] || {};
+    const anyChange = (obj.url || '') !== (origObj.url || '') || (obj.urlPP || '') !== (origObj.urlPP || '');
+    tr.classList.toggle('row-changed', anyChange);
+
+    _updateChangeCount();
+  }
+
+  function _updateChangeCount() {
+    let count = 0;
+    for (const [id, obj] of Object.entries(_data.objects)) {
+      const orig = _orig.objects[id] || {};
+      if ((obj.url || '') !== (orig.url || ''))     count++;
+      if ((obj.urlPP || '') !== (orig.urlPP || '')) count++;
+    }
+    const badge = document.getElementById('changeCount');
+    badge.textContent = `${count} change${count !== 1 ? 's' : ''}`;
+    badge.classList.toggle('bg-warning', count > 0);
+    badge.classList.toggle('text-dark', count > 0);
+    badge.classList.toggle('bg-secondary', count === 0);
+  }
+
+  // ── Sort ───────────────────────────────────────────────────────────────
+
+  function sortBy(key) {
+    if (_sortKey === key) _sortAsc = !_sortAsc;
+    else { _sortKey = key; _sortAsc = true; }
+    applyFilter();
+  }
+
+  // ── Export ─────────────────────────────────────────────────────────────
+
+  function exportSeed() {
+    const out = 'window.SEED_DATA = ' + JSON.stringify(_data, null, 2) + ';\n';
+    const blob = new Blob([out], { type: 'application/javascript' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = 'seed.js';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  // ── Revert ─────────────────────────────────────────────────────────────
+
+  function revert() {
+    if (!confirm('Revert all changes?')) return;
+    for (const [id, orig] of Object.entries(_orig.objects)) {
+      if (orig.url)   _data.objects[id].url   = orig.url;
+      else            delete _data.objects[id].url;
+      if (orig.urlPP) _data.objects[id].urlPP = orig.urlPP;
+      else            delete _data.objects[id].urlPP;
+    }
+    applyFilter();
+  }
+
+  // ── Init ───────────────────────────────────────────────────────────────
+
+  document.addEventListener('DOMContentLoaded', render);
+
+  return { render, applyFilter, onChange, sortBy, exportSeed, revert };
+})();
+</script>
+
+</body>
+</html>

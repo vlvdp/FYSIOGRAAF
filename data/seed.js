@@ -184,8 +184,7 @@ window.SEED_DATA = {
         "normwaarden": "Mannen: ~<b>−75 tot −120 cmH₂O</b> (leeftijdafhankelijk)<br>Vrouwen: ~<b>−50 tot −80 cmH₂O</b><br>Afkapwaarde inspiratoire spierzwakte: &lt;−60 cmH₂O (mannen), &lt;−50 cmH₂O (vrouwen)<br>Postoperatief CABG: tijdelijk verlaagd door sternotomie",
         "implicatie": "Verlaagde MIP = indicatie voor inspiratoire spiertraining (IST). Bij COPD en hartfalen correleer MIP met dyspnoe en functionele capaciteit. IST toepasbaar bij MIP &lt;60–70% voorspelde waarde."
       },
-      "urlPP": "https://www.physio-pedia.com/Maximal_Inspiratory_Pressure_(MIP/PImax)",
-      "url": "https://meetinstrumentenzorg.nl/instrumenten/maximale-inspiratoire-monddruk/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/maximale-inspiratoire-monddrukmeting/"
     },
     "gold-1-4-4ymlz7m": {
       "id": "gold-1-4-4ymlz7m",
@@ -385,7 +384,7 @@ window.SEED_DATA = {
         "normwaarden": "Score <b>≥3</b> per observatiemoment = verdenking delier → arts informeren<br>Sensitiviteit ~90%, specificiteit ~73%",
         "implicatie": "Delier = contra-indicatie voor complexe motorische training. Fysiotherapeut past programma aan: eenvoudige transfers, heldere instructies, korte sessies. Mobilisatie wél voortgezet indien veilig (voorkomt verdere deconditioning)."
       },
-      "urlPP": "https://www.physio-pedia.com/Delirium_Assessment_in_ICU"
+      "urlPP": "https://www.physio-pedia.com/Delirium"
     },
     "gcs-aoz5fcz": {
       "id": "gcs-aoz5fcz",
@@ -643,8 +642,8 @@ window.SEED_DATA = {
         "normwaarden": "MCiD: <b>2 punten</b> op 10-puntsschaal (verschil voor vs. na behandeling).<br>Doelwaarde: ≥7 per activiteit voor acceptabele functie.<br>Bij lage rugpijn: onderdeel verplichte set NPRS + QBPDS + PSK (KNGF 2021). <sup data-src=\"rl-rug-2021\" data-p=\"12\">[p12]</sup>",
         "implicatie": "Verplicht meetinstrument bij lage rugpijn (KNGF 2021). Sterk patiëntgericht: behandeldoelen direct gebaseerd op wat patiënt wil bereiken. Verhoogt therapietrouw en intrinsieke motivatie. Responsief voor individuele verandering; niet geschikt voor groepsvergelijkingen."
       },
-      "urlPP": "https://www.physio-pedia.com/Patient-Specific_Functional_Scale_(PSFS)",
-      "url": "https://meetinstrumentenzorg.nl/instrumenten/patientspecifieke-klachtenlijst/"
+      "urlPP": "https://www.physio-pedia.com/Patient_Specific_Functional_Scale",
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/patient-specifieke-klachten/"
     },
     "borg-rpe-3q3dw37": {
       "id": "borg-rpe-3q3dw37",
@@ -700,7 +699,7 @@ window.SEED_DATA = {
         "implicatie": "Verbetering ≥25–35m na revalidatie = klinisch betekenisvol. Lage afstand correleert met hogere mortaliteit bij COPD en HF. Veiliger en beter getolereerd dan ISWT bij kwetsbare patiënten."
       },
       "urlPP": "https://www.physio-pedia.com/Six_Minute_Walk_Test_/_6_Minute_Walk_Test",
-      "url": "https://meetinstrumentenzorg.nl/instrumenten/zes-minuten-wandeltest/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/6-minute-walk-test-zes-minuten-wandeltest/"
     },
     "10mwt-btf63p5": {
       "id": "10mwt-btf63p5",
@@ -714,7 +713,7 @@ window.SEED_DATA = {
         "implicatie": "&lt;0,8 m/s = loophulpmiddel en begeleiding buiten noodzakelijk. ≥1,0 m/s = adequaat voor veilig oversteken bij verkeerslicht (normtijd). Uitkomstmaat voor loopinterventies CVA."
       },
       "urlPP": "https://www.physio-pedia.com/10_Metre_Walk_Test",
-      "url": "https://meetinstrumentenzorg.nl/instrumenten/10-meter-looptest/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/10-meter-walk-test-tien-meter-looptest/"
     },
     "mrc-0y16lq5": {
       "id": "mrc-0y16lq5",
@@ -810,7 +809,7 @@ window.SEED_DATA = {
         "implicatie": ">12 sec = verminderde beenkracht en verhoogd valrisico. Snel en goedkoop valide maat voor functionele beenkracht. Basis voor krachttrainingsindicatie. Sensitief voor verandering na 4–6 weken training."
       },
       "urlPP": "https://www.physio-pedia.com/Five_Times_Sit_to_Stand_Test",
-      "url": "https://meetinstrumentenzorg.nl/instrumenten/five-times-sit-to-stand-test/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/timed-chair-stand-test/"
     },
     "4mgs-joxgyw4": {
       "id": "4mgs-joxgyw4",
@@ -824,7 +823,7 @@ window.SEED_DATA = {
         "implicatie": "&lt;0,8 m/s = valpreventie prioriteit, mobiliteitsinterventie. &lt;0,6 m/s = kwetsbare patiënt (frailty), intensieve revalidatie-indicatie. Snelle looptest met sterke prognostische waarde voor ouderen."
       },
       "urlPP": "https://www.physio-pedia.com/4_Metre_Gait_Speed",
-      "url": "https://meetinstrumentenzorg.nl/instrumenten/four-meter-gait-speed/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/short-physical-performance-battery/"
     },
     "nrs-a2j2dqx": {
       "id": "nrs-a2j2dqx",
@@ -837,7 +836,7 @@ window.SEED_DATA = {
         "normwaarden": "0 = geen pijn · 1–3 = milde pijn · 4–6 = matige pijn · 7–10 = ernstige pijn<br>MCiD: <b>2 punten</b> (0–10 schaal) of <b>≥30% verbetering</b> t.o.v. baseline<br>Schaal 6–20 variant: 6 = geen inspanning/pijn, 20 = maximale inspanning/pijn <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup> <sup data-src=\"rl-ber\" data-p=\"18\">[p18]</sup>",
         "implicatie": "Breed toepasbaar bij alle patiëntgroepen. Bij lage rugpijn: verplicht meetinstrument in alle drie behandelprofielen (KNGF 2021). Klinisch relevante verbetering = ≥30% t.o.v. baseline. Gebruik consistente schaalversie binnen één patiënt. Bij hartrevalidatie en COPD: NRS gecombineerd met Borg voor onderscheid pijn vs. vermoeidheid."
       },
-      "url": "https://meetinstrumentenzorg.nl/instrumenten/numerieke-beoordelingsschaal/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/numeric-pain-rating-scale/"
     },
     "ems-3n8cc7q": {
       "id": "ems-3n8cc7q",
@@ -1028,7 +1027,7 @@ window.SEED_DATA = {
         "indicaties": "Fysiotherapie is geïndiceerd bij alle patiënten met een CVA in het continuüm van zorg, onafhankelijk van geslacht, leeftijd en ernst.<sup data-src=\"rl-ber\" data-p=\"2\">[p2]</sup> Het gaat hierbij om het fysiotherapeutisch onderzoek en de behandeling gericht op stoornissen in functies, beperkingen in activiteiten en participatieproblemen, met evaluatie en monitoring van het functioneren.<sup data-src=\"rl-ber\" data-p=\"2-3\">[p2–3]</sup> Elke patiënt met een CVA dient in aanmerking te komen voor opname op een stroke unit.<sup data-src=\"rl-ber\" data-p=\"8\">[p8]</sup>",
         "contraindicaties": "Patiënten met een <b>transient ischaemic attack (TIA)</b> en een <b>subarachnoïdale bloeding (SAB)</b> vallen buiten de scope van deze richtlijn.<sup data-src=\"rl-ber\" data-p=\"1\">[p1]</sup><br><br><b>Rode vlaggen / verwijzing:</b><br><ul><li>Neurologische oefenmethoden c.q. behandelconcepten (NDT/Bobath) op functie- en activiteitenniveau zijn <b>niet effectiever</b> dan andere behandelvormen; kies een eclectische benadering.<sup data-src=\"rl-ber\" data-p=\"12\">[p12]</sup></li><li>Snelle reactivering na intracerebrale bloeding is niet wenselijk wegens risico op bloeddrukverhoging; bij SAB wegens risico op recidief.<sup data-src=\"rl-ber\" data-p=\"25\">[p25]</sup></li><li>Bij vermoeden van cognitieve stoornissen, depressie of apraxie: verwijzing naar neuropsycholoog resp. ergotherapeut.<sup data-src=\"rl-ber\" data-p=\"48-49\">[p48–49]</sup></li></ul>"
       },
-      "url": "https://kngf.nl/kennisplatform/richtlijnen/beroerte"
+      "url": "https://www.kngf.nl/kennisplatform/richtlijnen/beroerte"
     },
     "rl-cva": {
       "id": "rl-cva",
@@ -1053,7 +1052,7 @@ window.SEED_DATA = {
         "indicaties": "Fysiotherapie en oefentherapie C/M bij patiënten met COPD is afhankelijk van de gediagnosticeerde beperkingen, gericht op een of meer van de volgende drie aangrijpingspunten: de fysieke capaciteit, de fysieke activiteit en het adembewegingsapparaat.<sup data-src=\"rl-copd-2020\" data-p=\"3\">[p3]</sup> Verwijzing is geïndiceerd bij patiënten met milde tot matige symptoomlast (profiel 2–5) en bij hoge symptoomlast na screening voor longrevalidatie (profiel 6).<sup data-src=\"rl-copd-2020\" data-p=\"9-11\">[p9–11]</sup>",
         "contraindicaties": "Rode vlaggen voor (terug)verwijzing naar de arts: desaturatie bij kamerlucht (SpO₂ &lt; 90% in rust of &lt; 85% bij inspanning), perifeer oedeem, hemoptoë, overvloedige sputumproductie, cyanose met hoofdpijn, koorts, tachypneu in rust, verdenking op onbekende comorbiditeit, verergering van bekende comorbiditeit.<sup data-src=\"rl-copd-2020\" data-p=\"8\">[p8]</sup> Generieke rode vlaggen omvatten o.a. instabiele angina pectoris, hartkloppingen, duizeligheid na inspanning, verminderd bewustzijn, acuut optredende zwelling van één been, plotselinge heftige pijn in de borst/rug, systolische bloeddruk &gt; 200 mmHg of diastolisch &gt; 120 mmHg, tachycardie &gt; 120/min of bradycardie &lt; 40/min in rust.<sup data-src=\"rl-copd-2020\" data-p=\"8-9\">[p8–9]</sup>"
       },
-      "url": "https://kngf.nl/kennisplatform/richtlijnen/copd"
+      "url": "https://www.kngf.nl/kennisplatform/richtlijnen/copd"
     },
     "rl-hart": {
       "id": "rl-hart",
@@ -1064,7 +1063,7 @@ window.SEED_DATA = {
         "scope": "Fase I (klinisch), II (poliklinisch) en III (onderhoud) hartrevalidatie na ACS, CABG, klepoperatie en bij chronisch hartfalen (HF).",
         "kernaanbevelingen": "• Fase I: vroege mobilisatie op geleide van Stoplicht en vitale parameters<br> • PPC-screening preoperatief bij CABG; PPC-preventie met ademtherapie<br> • Trainingsintensiteit: 60–80% HRmax of Borg RPE 12–14<br> • Krachttraining 40–60% 1RM, 2–3×/week als aanvulling op aerobe training<br> • MIP-training bij inspiratoire spierkrachtsbeperking (&lt;60% voorspeld)<br> • KvL meten bij start en einde revalidatie (KVL-H)"
       },
-      "url": "https://kngf.nl/kennisplatform/richtlijnen/hartrevalidatie-2024"
+      "url": "https://www.kngf.nl/kennisplatform/richtlijnen/hartrevalidatie"
     },
     "rl-onc": {
       "id": "rl-onc",
@@ -1075,7 +1074,7 @@ window.SEED_DATA = {
         "scope": "Fysiotherapie tijdens actieve behandeling (chemo, radiotherapie) én in de fase na curatieve behandeling. Inclusief palliatieve zorg.",
         "kernaanbevelingen": "• Aerobe training op basis van SRT (Wmax): 60–80% Wmax, 3×/week<br> • Krachttraining 60–80% 1RM bij spierkrachtstekort<br> • Lastmeter screenen bij start behandeling; doorverwijzen bij score ≥4<br> • MVI onderscheidt lichamelijke vs. mentale vermoeidheid → behandelkeuze<br> • VAS-vermoeidheid als snelle dagelijkse monitoring<br> • HADS screenen op angst/depressie; verwijzen bij score ≥8 per subschaal"
       },
-      "url": "https://kngf.nl/kennisplatform/richtlijnen/oncologie"
+      "url": "https://www.kngf.nl/kennisplatform/richtlijnen/oncologie"
     },
     "rl-kwo": {
       "id": "rl-kwo",
@@ -1086,7 +1085,7 @@ window.SEED_DATA = {
         "scope": "Paramedische richtlijn (fysiotherapie, ergotherapie, diëtetiek, logopedica) voor kwetsbare ouderen in ziekenhuis, revalidatiecentrum en verpleeghuis.",
         "kernaanbevelingen": "• Mobilisatie zo vroeg mogelijk na opname; DEMMI dagelijks monitoren<br> • Valrisicoscreening met TUG; bij &gt;12 sec: valpreventieprotocol activeren<br> • Cognitieve screening (MMSE) als basis voor oefentherapie-aanpassing<br> • DOS bij verdenking delier: aanpassen programma (korte sessies, eenvoudig)<br> • Krachtraining (5STST, 4MGS) en balans (BBS, POMA) als kernuitkomsten<br> • PAI bij dementie: tonusassessment stuurt mobilisatieaanpak"
       },
-      "url": "https://www.kennisplatformfysiotherapie.nl/richtlijnen/kwetsbare-ouderen"
+      "url": "https://www.kennisplatformfysiotherapie.nl/themas/paramedische-richtlijn-kwetsbare-ouderen/"
     },
     "rl-val": {
       "id": "rl-val",
@@ -1117,7 +1116,7 @@ window.SEED_DATA = {
         "scope": "Handboek voor het CNA-onderwijs in de bachelor fysiotherapie aan de HU/IBS. Behandelt het volledige diagnostisch en therapeutisch proces bij CNA: anamnese (WAT–HOE–WAAROM), neurologische functies (Vier S'en), motorisch leren en behandelprincipes gedifferentieerd per laesielocatie.",
         "kernaanbevelingen": "• WAT–HOE–WAAROM als structuur voor elk diagnostisch moment<br>• RPS-model voor schematische ordening van ICF-bevindingen<br>• Vier S'en (Spierkracht, Spiertonus, Sturing, Sensibiliteit) als kernfuncties<br>• Hiërarchisch model (Archi/Paleo/Neo) bepaalt haalbare strategie per laesie<br>• Taak- en contextspecificiteit centraal in motorisch leren<br>• CLA: therapeut als probleemaanbieder, patiënt als probleemoplosser<br>• Behandelprincipes per laesielocatie: cortex, basale kernen, cerebellum, ruggenmerg"
       },
-      "url": "https://kngf.nl/kennisplatform/richtlijnen/beroerte"
+      "url": "https://www.kngf.nl/kennisplatform/richtlijnen/beroerte"
     },
     "cna-classificatie": {
       "id": "cna-classificatie",
@@ -1546,7 +1545,7 @@ window.SEED_DATA = {
         "indicaties": "Patiënt met lage rugpijn (pijn tussen onderste ribben en bilplooien, eventueel met uitstraling naar bil/been) of LRS (radiculaire pijn in bil/been met prikkeling- of uitvalsverschijnselen suggestief voor specifieke lumbosacrale zenuwwortelaandoening).<sup data-src=\"rl-rug-2021\" data-p=\"7\">[p7]</sup>",
         "contraindicaties": "<ul><li>Ernstige oorzaak van rugpijn/LRS (rode vlaggen: spondylitis ankylopoetica, maligniteiten, infecties, wervelfracturen)<sup data-src=\"rl-rug-2021\" data-p=\"8\">[p8]</sup></li><li>LRS met ernstige motorische uitval (MRC-score &le; 3/5) en/of ernstige pijn (NPRS &ge; 8)<sup data-src=\"rl-rug-2021\" data-p=\"8\">[p8]</sup></li><li>Leeftijd &lt; 16 jaar</li><li>Zwangerschapsgerelateerde rugpijn</li><li>Coccygodynie (stuitpijn)</li><li>Viscerale oorzaak</li><li>Klachten gerelateerd aan operatieve ingreep in de afgelopen 12 maanden<sup data-src=\"rl-rug-2021\" data-p=\"8\">[p8]</sup></li></ul>"
       },
-      "url": "https://www.kennisplatformfysiotherapie.nl/richtlijnen/lage-rugpijn-en-lumbosacraal-radiculair-syndroom/samenvatting/"
+      "url": "https://www.kennisplatformfysiotherapie.nl/richtlijnen/lage-rugpijn-2021"
     },
     "sbst-rug-8p2w": {
       "id": "sbst-rug-8p2w",
@@ -1559,7 +1558,7 @@ window.SEED_DATA = {
         "normwaarden": "De score classificeert de patiënt in een risicoprofiel (laag/matig/hoog) dat de behandelintensiteit stuurt.<br>KNGF 2021: andere classificatiesystemen (TCS/Delitto, CB-CFT/O'Sullivan) worden nog niet aanbevolen wegens onvoldoende bewijs. <sup data-src=\"rl-rug-2021\" data-p=\"20\">[p20]</sup>",
         "implicatie": "Ondersteunt profielkeuze: profiel 1 (laag, max 3 sessies), profiel 2 (matig, oefentherapie), profiel 3 (hoog, psychosociaal/gedragsmatig). Baseer evaluatie nooit uitsluitend op SBST — combineer met klinisch redeneren, anamnese en prognostische factoren (KNGF 2021)."
       },
-      "url": "https://meetinstrumentenzorg.nl/instrument/start-back-screening-tool/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/start-back-screening-tool/"
     },
     "qbpds-rug-5j3k": {
       "id": "qbpds-rug-5j3k",
@@ -1572,7 +1571,7 @@ window.SEED_DATA = {
         "normwaarden": "Hogere score = meer beperkingen.<br>MCiD: <b>≥20 punten</b> of <b>≥30% verbetering</b> t.o.v. baseline (KNGF 2021).<br>Score &gt;50 duidt op ernstige functionele beperkingen. <sup data-src=\"rl-rug-2021\" data-p=\"22\">[p22]</sup>",
         "implicatie": "Verplicht meetinstrument naast NPRS en PSK bij alle profielen (KNGF 2021). Inzicht in welke specifieke ADL-taken belemmerd worden; dient als evaluatiemiddel voor functioneel herstel. Klinisch relevante verbetering = ≥30% t.o.v. baseline."
       },
-      "url": "https://meetinstrumentenzorg.nl/instrument/quebec-back-pain-disability-scale/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/quebec-back-pain-disability-scale/"
     },
     "rug-classificatie-2m1q": {
       "id": "rug-classificatie-2m1q",
@@ -1618,7 +1617,7 @@ window.SEED_DATA = {
         "normwaarden": "MCiD: <b>2–3 punten</b> verbetering of <b>≥30%</b> t.o.v. baseline.<br>Score ≥14 duidt op ernstige beperkingen.<br>Alternatief voor QBPDS als primair functie-instrument (KNGF 2021 beveelt QBPDS aan als standaard). <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
         "implicatie": "Optioneel meetinstrument (KNGF 2021). Voorkeur bij mildere presentaties vanwege hogere responsiviteit in dat bereik. Bij ernstigere presentaties of LRS: overweeg ODI. Niet combineren met QBPDS — kies één van beide als primaire functionele uitkomstmaat."
       },
-      "url": "https://meetinstrumentenzorg.nl/instrument/roland-morris-disability-questionnaire/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/roland-morris-disability-questionnaire/"
     },
     "odi-rug-r4s5": {
       "id": "odi-rug-r4s5",
@@ -1631,7 +1630,7 @@ window.SEED_DATA = {
         "normwaarden": "MCiD: <b>10 procentpunten</b> of <b>≥30% relatieve verbetering</b> t.o.v. baseline.<br>Gebruik versie 2.1a (KNGF 2021). <sup data-src=\"rl-rug-2021\" data-p=\"61\">[p61]</sup>",
         "implicatie": "Optioneel meetinstrument (KNGF 2021). Voorkeur bij LRS-patiënten en ernstigere presentaties boven RMDQ/QBPDS vanwege breder scorebereik in hogere invaliditeitsniveaus. Niet combineren met RMDQ — kies één van beide."
       },
-      "url": "https://meetinstrumentenzorg.nl/instrument/oswestry-disability-index/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/oswestry-disability-index-of-oswestry-low-back-pain-disability-questionnaire/"
     },
     "fabq-rug-t6u7": {
       "id": "fabq-rug-t6u7",
@@ -1644,7 +1643,7 @@ window.SEED_DATA = {
         "normwaarden": "FABQ-PA ≥15: verhoogde angst-vermijding m.b.t. fysieke activiteit.<br>FABQ-W ≥34: sterk verhoogd risico op langdurig werkverzuim.<br>Hoge scores voorspellen chroniciteit, langdurig verzuim en slechte behandelrespons. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Optioneel instrument (KNGF 2021). Essentieel bij profiel 3 (hoog risico). Hoge FABQ-PA → overweeg exposure in vivo. Hoge FABQ-W → indicatie voor arbeidsgerichte interventie en eventueel multidisciplinaire aanpak. Alternatief: TSK (kinesiofobie) als angst-vermijding centraal staat."
       },
-      "url": "https://meetinstrumentenzorg.nl/instrument/fear-avoidance-beliefs-questionnaire/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/fear-avoidance-beliefs-questionnaire/"
     },
     "pseq-rug-v8w9": {
       "id": "pseq-rug-v8w9",
@@ -1656,8 +1655,7 @@ window.SEED_DATA = {
         "scoringscriteria": "10 items, elk gescoord 0–6 (0 = helemaal niet zeker, 6 = helemaal zeker). Totaalscore 0–60. Hogere score = meer self-efficacy. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "normwaarden": "Score &lt;40 wijst op lage self-efficacy → geassocieerd met chroniciteit en hogere zorgconsumptie.<br>Score &lt;20 = zeer lage self-efficacy, sterke indicatie voor intensieve begeleiding. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Lage PSEQ is indicatie voor gedragsmatige interventies (graded activity, ACT) en psycho-educatie. Inzetbaar bij profiel 2 en 3. Negatieve self-efficacy is prognostische factor voor persisterende klachten (KNGF 2021)."
-      },
-      "url": "https://meetinstrumentenzorg.nl/instrument/pain-self-efficacy-questionnaire/"
+      }
     },
     "gpe-rug-x0y1": {
       "id": "gpe-rug-x0y1",
@@ -1822,7 +1820,7 @@ window.SEED_DATA = {
         "normwaarden": "<b>Distress:</b> 0–10 normaal, ≥11 verhoogd, ≥21 sterk verhoogd.<br><b>Depressie:</b> 0–2 normaal, ≥3 verhoogd, ≥6 sterk verhoogd.<br><b>Angst:</b> 0–7 normaal, ≥8 verhoogd, ≥13 sterk verhoogd.<br><b>Somatisatie:</b> 0–10 normaal, ≥11 verhoogd, ≥21 sterk verhoogd. <sup data-src=\"rl-rug-2021\" data-p=\"62\">[p62]</sup>",
         "implicatie": "Breder dan HADS (meet ook distress en somatisatie). Inzetten bij vermoeden van psychosociale belasting als prognostische factor (KNGF 2021). Sterk verhoogde scores → overweeg verwijzing psycholoog/psychiater. Alternatief voor HADS wanneer distress en somatisatie ook relevant zijn."
       },
-      "url": "https://meetinstrumentenzorg.nl/instrumenten/vierdimensionale-klachtenlijst/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/vier-dimensionale-klachtenlijst/"
     },
     "lrp-oefentherapie-a1b2": {
       "id": "lrp-oefentherapie-a1b2",
@@ -1918,7 +1916,7 @@ window.SEED_DATA = {
         "normwaarden": "16-19: lage bezorgdheid.<br>20-27: matige bezorgdheid.<br>28-64: hoge bezorgdheid.",
         "implicatie": "Bij een score &gt; 20 is er sprake van valangst, wat een onafhankelijke risicofactor is voor toekomstige valincidenten en activiteitsvermijding."
       },
-      "url": "https://meetinstrumentenzorg.nl/instrument/falls-efficacy-scale-international-fes-i/"
+      "url": "https://meetinstrumentenzorg.nl/instrumenten/falls-efficacy-scale-international-7-16-items/"
     },
     "val-stratificatie-p9o2": {
       "id": "val-stratificatie-p9o2",
