@@ -131,10 +131,10 @@ const OVZ = (() => {
   // ── Detail offcanvas ──────────────────────────────────────────────────────
 
   const TYPE_COLORS = {
-    instrument: '#F97316',
-    kennis:     '#2563EB',
-    bronnen:    '#7C3AED',
-    casuistiek: '#0D9488',
+    instrument: 'var(--type-instrument)',
+    kennis:     'var(--type-kennis)',
+    bronnen:    'var(--type-bronnen)',
+    casuistiek: 'var(--type-casuistiek)',
   };
 
   // ── Detail-paneel navigatiestack ──────────────────────────────────────────
@@ -198,9 +198,8 @@ const OVZ = (() => {
 
     const domainDots = tags
       .filter(t => DOMEIN_TAGS.includes(t))
-      .map(t => `<span class="rounded-circle" title="${t.toUpperCase()}"
-        style="width:8px;height:8px;background:${DOMEIN_COLORS[t]};display:inline-block;"></span>`)
-      .join('');
+      .map(t => `<i class="bi bi-circle-fill" title="${t.toUpperCase()}" style="color:${DOMEIN_COLORS[t]};font-size:0.55rem;"></i>`)
+      .join(' ');
 
     const hasSubtitle = obj.afk && obj.title && obj.afk !== obj.title;
 

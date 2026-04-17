@@ -16,18 +16,18 @@ const APP = (() => {
   };
 
   const TYPE_ICONS = {
-    instrument: `<svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#F97316" stroke="#C05A0B" stroke-width="1.5"/></svg>`,
-    kennis:     `<svg width="14" height="14" viewBox="0 0 14 14"><polygon points="7,1 13,13 1,13" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
-    bronnen:    `<svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="1" width="12" height="12" fill="#7C3AED" stroke="#5B28B3" stroke-width="1.5"/></svg>`,
-    casuistiek: `<svg width="14" height="14" viewBox="0 0 14 14"><polygon points="7,1 13,7 7,13 1,7" fill="#0D9488" stroke="#0A6B62" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+    instrument: `<i class="bi bi-circle-fill"   style="color:var(--type-instrument)"></i>`,
+    kennis:     `<i class="bi bi-triangle-fill" style="color:var(--type-kennis)"></i>`,
+    bronnen:    `<i class="bi bi-square-fill"   style="color:var(--type-bronnen)"></i>`,
+    casuistiek: `<i class="bi bi-diamond-fill"  style="color:var(--type-casuistiek)"></i>`,
   };
 
   // Bootstrap-icon varianten voor compacte sidebar-knoppen
   const TYPE_BI = {
-    instrument: { cls: 'bi-circle-fill',   color: '#F97316' },
-    kennis:     { cls: 'bi-triangle-fill', color: '#2563EB' },
-    bronnen:    { cls: 'bi-square-fill',   color: '#7C3AED' },
-    casuistiek: { cls: 'bi-diamond-fill',  color: '#0D9488' },
+    instrument: { cls: 'bi-circle-fill',   color: 'var(--type-instrument)' },
+    kennis:     { cls: 'bi-triangle-fill', color: 'var(--type-kennis)' },
+    bronnen:    { cls: 'bi-square-fill',   color: 'var(--type-bronnen)' },
+    casuistiek: { cls: 'bi-diamond-fill',  color: 'var(--type-casuistiek)' },
   };
 
   const DOMEIN_TAGS   = ['msa', 'cna', 'rca', 'mtt', 'onco', 'ger'];
@@ -85,7 +85,8 @@ const APP = (() => {
     const typeBtns = Object.entries(TYPE_LABELS).map(([k, v]) => {
       const active = FILTERS.type === k;
       const icon   = TYPE_BI[k];
-      return `<button class="${BTN_BASE} ${active ? 'btn-secondary' : 'btn-outline-secondary'}"
+      const variant = active ? 'btn-secondary' : 'btn-outline-secondary';
+      return `<button class="${BTN_BASE} ${variant}"
         onclick="APP.setFilter('type','${k}')" title="${v}">
         <i class="sb-icon bi ${icon.cls}" style="color:${icon.color}"></i>
         <span class="sb-label">${v}</span>
@@ -95,9 +96,10 @@ const APP = (() => {
     const domBtns = DOMEIN_TAGS.map(t => {
       const active = FILTERS.domeinen.has(t);
       const color  = DOMEIN_COLORS[t];
-      return `<button class="${BTN_BASE} ${active ? 'btn-secondary' : 'btn-outline-secondary'}"
+      const variant = active ? 'btn-secondary' : 'btn-outline-secondary';
+      return `<button class="${BTN_BASE} ${variant}"
         onclick="APP.setFilter('domein','${t}')" title="${t.toUpperCase()}">
-        <span class="sb-icon rounded-circle" style="width:10px;height:10px;background:${color};display:inline-block;"></span>
+        <i class="sb-icon bi bi-circle-fill" style="color:${color};font-size:0.6rem;"></i>
         <span class="sb-label">${t.toUpperCase()}</span>
       </button>`;
     }).join('');

@@ -9,11 +9,13 @@ const GRAPH = (() => {
 
   // ── Kleurenschema (sync met style.css) ───────────────────────────────────
 
+  // vis-network rendert naar canvas → hex-waarden vereist (geen CSS vars).
+  // Sync deze bij palette-wijzigingen met --type-* in style.css.
   const TYPE_COLOR = {
-    instrument:  { bg: '#F97316', border: '#C05A0B', font: '#000000' },
-    kennis:      { bg: '#2563EB', border: '#1A4BAD', font: '#FFFFFF' },
-    bronnen:     { bg: '#7C3AED', border: '#5B28B3', font: '#FFFFFF' },
-    casuistiek:  { bg: '#0D9488', border: '#0A6B62', font: '#FFFFFF' },
+    instrument:  { bg: '#E8833A', border: '#A35B1F', font: '#000000' },
+    kennis:      { bg: '#0B6FBF', border: '#084A80', font: '#FFFFFF' },
+    bronnen:     { bg: '#7A4FBF', border: '#543585', font: '#FFFFFF' },
+    casuistiek:  { bg: '#0F9D8A', border: '#0A6E60', font: '#FFFFFF' },
   };
 
   const REL_COLOR = {
@@ -46,10 +48,10 @@ const GRAPH = (() => {
   // ── Render ────────────────────────────────────────────────────────────────
 
   const TYPE_SHAPES = {
-    instrument: `<svg width="12" height="12" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#F97316" stroke="#C05A0B" stroke-width="1.5"/></svg>`,
-    kennis:     `<svg width="12" height="12" viewBox="0 0 14 14"><polygon points="7,1 13,13 1,13" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
-    bronnen:    `<svg width="12" height="12" viewBox="0 0 14 14"><rect x="1" y="1" width="12" height="12" fill="#7C3AED" stroke="#5B28B3" stroke-width="1.5"/></svg>`,
-    casuistiek: `<svg width="12" height="12" viewBox="0 0 14 14"><polygon points="7,1 13,7 7,13 1,7" fill="#0D9488" stroke="#0A6B62" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+    instrument: `<i class="bi bi-circle-fill"   style="color:var(--type-instrument)"></i>`,
+    kennis:     `<i class="bi bi-triangle-fill" style="color:var(--type-kennis)"></i>`,
+    bronnen:    `<i class="bi bi-square-fill"   style="color:var(--type-bronnen)"></i>`,
+    casuistiek: `<i class="bi bi-diamond-fill"  style="color:var(--type-casuistiek)"></i>`,
   };
 
   function render() {
@@ -60,7 +62,7 @@ const GRAPH = (() => {
 
       <!-- Floating controls rechtsboven -->
       <div class="graph-controls d-flex flex-column gap-2">
-        <div class="graph-ctrl-card p-2 d-flex flex-column gap-1">
+        <div class="card p-2 d-flex flex-column gap-1">
           <div class="text-uppercase fw-semibold text-secondary mb-1" style="font-size:0.65rem">Relation</div>
           ${Object.entries(REL_COLOR).map(([rel, color]) => `
             <button class="btn btn-sm btn-secondary text-start d-flex align-items-center gap-2"
@@ -69,14 +71,14 @@ const GRAPH = (() => {
               ${rel}
             </button>`).join('')}
         </div>
-        <div class="graph-ctrl-card p-2 d-flex flex-column gap-1">
+        <div class="card p-2 d-flex flex-column gap-1">
           <button class="btn btn-sm btn-outline-secondary" id="graph-fit" title="Fit to view">⊡ Fit</button>
           <button class="btn btn-sm btn-outline-secondary" id="graph-physics" title="Toggle physics">⟳ Stabilise</button>
         </div>
       </div>
 
       <!-- Floating focus bar linksboven -->
-      <div id="graph-focus-bar" class="graph-focus-bar d-none align-items-center gap-2 px-2 py-1 rounded">
+      <div id="graph-focus-bar" class="graph-focus-bar alert alert-warning mb-0 d-none align-items-center gap-2 px-2 py-1">
         <span class="small flex-grow-1 text-truncate" id="graph-focus-label"></span>
         <button class="btn btn-sm p-0 lh-1 border-0 bg-transparent text-secondary" id="graph-focus-clear" title="Clear focus">✕</button>
       </div>

@@ -11,10 +11,10 @@ const CARDS = (() => {
   const DOMAIN_TAGS = ['rca', 'cna', 'msa', 'mtt', 'onco', 'ger'];
 
   const TYPE_ICONS = {
-    instrument: `<svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#F97316" stroke="#C05A0B" stroke-width="1.5"/></svg>`,
-    kennis:     `<svg width="14" height="14" viewBox="0 0 14 14"><polygon points="7,1 13,13 1,13" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
-    bronnen:    `<svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="1" width="12" height="12" fill="#7C3AED" stroke="#5B28B3" stroke-width="1.5"/></svg>`,
-    casuistiek: `<svg width="14" height="14" viewBox="0 0 14 14"><polygon points="7,1 13,7 7,13 1,7" fill="#0D9488" stroke="#0A6B62" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+    instrument: `<i class="bi bi-circle-fill"   style="color:var(--type-instrument)"></i>`,
+    kennis:     `<i class="bi bi-triangle-fill" style="color:var(--type-kennis)"></i>`,
+    bronnen:    `<i class="bi bi-square-fill"   style="color:var(--type-bronnen)"></i>`,
+    casuistiek: `<i class="bi bi-diamond-fill"  style="color:var(--type-casuistiek)"></i>`,
   };
 
   const DOMAIN_COLORS = {
@@ -114,7 +114,7 @@ const CARDS = (() => {
     const pills = [];
 
     tags.filter(t => DOMAIN_TAGS.includes(t)).forEach(t =>
-      pills.push(_colorBadge(t, DOMAIN_COLORS[t]))
+      pills.push(_colorBadge(t.toUpperCase(), DOMAIN_COLORS[t]))
     );
     tags.filter(t => TOETS_TAGS.includes(t)).forEach(t =>
       pills.push(_neutralBadge(t))
@@ -181,7 +181,7 @@ const CARDS = (() => {
         if (!citedSources.has(srcId)) citedSources.set(srcId, new Set());
         citedSources.get(srcId).add(page);
         const tip = `${src.title || src.afk || srcId}, p${page}`;
-        return `<sup class="citation-ref" data-src="${srcId}" data-p="${page}" title="${_escapeAttr(tip)}">${label}</sup>`;
+        return `<sup class="citation-ref text-secondary" data-src="${srcId}" data-p="${page}" title="${_escapeAttr(tip)}">${label}</sup>`;
       }
     );
 
