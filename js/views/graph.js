@@ -37,11 +37,11 @@ const GRAPH = (() => {
   let _edges           = null;
   let _visNodes        = null;
   let _visEdges        = null;
-  let _activeTypes     = new Set(Object.keys(TYPE_COLOR));
-  let _activeRels      = new Set(Object.keys(REL_COLOR));
-  let _searchTerm      = '';
+  let _activeRels      = new Set(Object.keys(REL_COLOR)); // graph-specific
   let _focusNodeId     = null;
   let _focusNeighborIds = new Set();
+
+  const DOMEIN_TAGS = APP.DOMEIN_TAGS;
 
   // ── Render ────────────────────────────────────────────────────────────────
 
@@ -53,58 +53,36 @@ const GRAPH = (() => {
   };
 
   function render() {
-    const sidebar = document.getElementById('graphSidebar');
-    const main    = document.getElementById('graph-main');
-    if (!sidebar || !main) return;
-    sidebar.innerHTML = _buildSidebarHTML();
-    main.innerHTML    = `<div id="graphCanvas" class="w-100 h-100"></div>`;
-    _buildNetwork();
-    _bindControls();
-  }
+    const main = document.getElementById('graph-main');
+    if (!main) return;
+    main.innerHTML = `
+      <div id="graph-canvas" class="w-100 h-100"></div>
 
-  function _buildSidebarHTML() {
-    return `
-      <div class="p-3 d-flex flex-column gap-3">
-        <div class="d-flex flex-column gap-1">
-          <input type="text" id="graphSearch" class="form-control form-control-sm"
-            placeholder="Search node…" autocomplete="off">
-          <div class="d-flex align-items-start gap-2">
-            <span class="text-muted small flex-grow-1 text-break" id="graphFilterStatus">no filters active</span>
-          </div>
-          <div id="graphFocusBar" class="d-none d-flex align-items-center gap-2 px-2 py-1 rounded"
-            style="background:color-mix(in srgb,var(--bs-warning) 15%,transparent);border:1px solid color-mix(in srgb,var(--bs-warning) 40%,transparent);">
-            <span class="small flex-grow-1 text-truncate" id="graphFocusLabel"></span>
-            <button class="btn btn-sm p-0 lh-1 border-0 bg-transparent text-secondary" id="graphFocusClear" title="Clear focus">✕</button>
-          </div>
+      <!-- Floating controls rechtsboven -->
+      <div class="graph-controls d-flex flex-column gap-2">
+        <div class="graph-ctrl-card p-2 d-flex flex-column gap-1">
+          <div class="text-uppercase fw-semibold text-secondary mb-1" style="font-size:0.65rem">Relation</div>
+          ${Object.entries(REL_COLOR).map(([rel, color]) => `
+            <button class="btn btn-sm btn-secondary text-start d-flex align-items-center gap-2"
+              data-filter-rel="${rel}">
+              <span class="rounded-circle flex-shrink-0" style="width:8px;height:8px;background:${color};display:inline-block;"></span>
+              ${rel}
+            </button>`).join('')}
         </div>
-        <div>
-          <div class="text-uppercase fw-semibold text-secondary mb-2">Type</div>
-          <div class="d-flex flex-column gap-1">
-            ${Object.entries(TYPE_COLOR).map(([type, c]) => `
-              <button class="btn btn-sm w-100 text-start d-flex align-items-center gap-2 btn-secondary"
-                data-filter-type="${type}">
-                ${TYPE_SHAPES[type] || ''} ${TYPE_LABEL[type]}
-              </button>`).join('')}
-          </div>
-        </div>
-        <div>
-          <div class="text-uppercase fw-semibold text-secondary mb-2">Relation</div>
-          <div class="d-flex flex-column gap-1">
-            ${Object.entries(REL_COLOR).map(([rel, color]) => `
-              <button class="btn btn-sm w-100 text-start d-flex align-items-center gap-2 btn-secondary"
-                data-filter-rel="${rel}">
-                <span class="rounded-circle flex-shrink-0" style="width:8px;height:8px;background:${color};display:inline-block;"></span>
-                ${rel}
-              </button>`).join('')}
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1">
-          <button class="btn btn-sm btn-outline-secondary" id="graphFit">⊡ Fit</button>
-          <button class="btn btn-sm btn-outline-secondary" id="graphPhysics">⟳ Stabilise</button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#legendaModal">⊞ Legend</button>
+        <div class="graph-ctrl-card p-2 d-flex flex-column gap-1">
+          <button class="btn btn-sm btn-outline-secondary" id="graph-fit" title="Fit to view">⊡ Fit</button>
+          <button class="btn btn-sm btn-outline-secondary" id="graph-physics" title="Toggle physics">⟳ Stabilise</button>
         </div>
       </div>
+
+      <!-- Floating focus bar linksboven -->
+      <div id="graph-focus-bar" class="graph-focus-bar d-none align-items-center gap-2 px-2 py-1 rounded">
+        <span class="small flex-grow-1 text-truncate" id="graph-focus-label"></span>
+        <button class="btn btn-sm p-0 lh-1 border-0 bg-transparent text-secondary" id="graph-focus-clear" title="Clear focus">✕</button>
+      </div>
     `;
+    _buildNetwork();
+    _bindControls();
   }
 
   function _buildNetwork() {
@@ -174,7 +152,7 @@ const GRAPH = (() => {
   }
 
   function _initVis() {
-    const container = document.getElementById('graphCanvas');
+    const container = document.getElementById('graph-canvas');
     if (!container) return;
     if (_network) { _network.destroy(); _network = null; }
 
@@ -218,10 +196,27 @@ const GRAPH = (() => {
 
   function _nodeVisible(node) {
     if (_focusNodeId && !_focusNeighborIds.has(node.id)) return false;
-    if (!_activeTypes.has(node.group)) return false;
-    if (_searchTerm) {
+
+    const F = APP.FILTERS;
+
+    // Type filter (single select or all)
+    if (F.type && node.group !== F.type) return false;
+
+    // Domein filter
+    if (F.domeinen.size > 0) {
+      const allSelected = DOMEIN_TAGS.every(d => F.domeinen.has(d));
+      if (!allSelected) {
+        const tags = new Set(DB.getTags(node.id));
+        const match = [...F.domeinen].some(d => tags.has(d));
+        if (!match) return false;
+      }
+    }
+
+    // Search
+    const q = F.search.trim().toLowerCase();
+    if (q) {
       const label = (node.label + ' ' + (node.title || '')).toLowerCase();
-      if (!label.includes(_searchTerm)) return false;
+      if (!label.includes(q)) return false;
     }
     return true;
   }
@@ -259,22 +254,7 @@ const GRAPH = (() => {
     _updateStat();
   }
 
-  function _updateStat() {
-    // noop — stats worden getoond in de gedeelde sidebar footer
-  }
-
-  function _updateFilterStatus() {
-    const el = document.getElementById('graphFilterStatus');
-    if (!el) return;
-    const allTypes = Object.keys(TYPE_COLOR);
-    const allRels  = Object.keys(REL_COLOR);
-    const hiddenTypes = allTypes.filter(t => !_activeTypes.has(t));
-    const hiddenRels  = allRels.filter(r => !_activeRels.has(r));
-    const parts = [];
-    if (hiddenTypes.length) parts.push(hiddenTypes.map(t => TYPE_LABEL[t]).join(', ') + ' hidden');
-    if (hiddenRels.length)  parts.push(hiddenRels.join(', ') + ' hidden');
-    el.textContent = parts.length ? parts.join(' · ') : 'no filters active';
-  }
+  function _updateStat() { /* noop */ }
 
   // ── Focus mode ────────────────────────────────────────────────────────────
 
@@ -298,8 +278,8 @@ const GRAPH = (() => {
   }
 
   function _updateFocusUI() {
-    const bar   = document.getElementById('graphFocusBar');
-    const label = document.getElementById('graphFocusLabel');
+    const bar   = document.getElementById('graph-focus-bar');
+    const label = document.getElementById('graph-focus-label');
     if (!bar || !label) return;
     if (_focusNodeId) {
       const node = _visNodes.find(n => n.id === _focusNodeId);
@@ -307,42 +287,17 @@ const GRAPH = (() => {
       const count = _focusNeighborIds.size - 1;
       label.textContent = `${name} · ${count} neighbour${count !== 1 ? 's' : ''}`;
       bar.classList.remove('d-none');
+      bar.classList.add('d-flex');
     } else {
       bar.classList.add('d-none');
+      bar.classList.remove('d-flex');
     }
   }
 
   // ── Event bindings ────────────────────────────────────────────────────────
 
   function _bindControls() {
-    // Zoek
-    const searchEl = document.getElementById('graphSearch');
-    if (searchEl) {
-      searchEl.addEventListener('input', e => {
-        _searchTerm = e.target.value.toLowerCase().trim();
-        _applyFilters();
-        if (_searchTerm && _network) {
-          // Highlight gevonden nodes
-          const found = _visNodes.filter(_nodeVisible).map(n => n.id);
-          if (found.length) _network.selectNodes(found);
-        }
-      });
-    }
-
-    // Type-filters
-    document.querySelectorAll('[data-filter-type]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const type = btn.dataset.filterType;
-        if (_activeTypes.has(type)) _activeTypes.delete(type);
-        else _activeTypes.add(type);
-        btn.classList.toggle('btn-secondary', _activeTypes.has(type));
-        btn.classList.toggle('btn-outline-secondary', !_activeTypes.has(type));
-        _applyFilters();
-        _updateFilterStatus();
-      });
-    });
-
-    // Relatie-filters
+    // Relatie-filters (graph-specifiek)
     document.querySelectorAll('[data-filter-rel]').forEach(btn => {
       btn.addEventListener('click', () => {
         const rel = btn.dataset.filterRel;
@@ -351,27 +306,27 @@ const GRAPH = (() => {
         btn.classList.toggle('btn-secondary', _activeRels.has(rel));
         btn.classList.toggle('btn-outline-secondary', !_activeRels.has(rel));
         _applyFilters();
-        _updateFilterStatus();
       });
     });
 
-    // Fit
-    document.getElementById('graphFit')?.addEventListener('click', () => {
+    document.getElementById('graph-fit')?.addEventListener('click', () => {
       _network?.fit({ animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
     });
 
-    // Focus wissen
-    document.getElementById('graphFocusClear')?.addEventListener('click', () => _clearFocus());
+    document.getElementById('graph-focus-clear')?.addEventListener('click', () => _clearFocus());
 
-    // Physics toggle
-    document.getElementById('graphPhysics')?.addEventListener('click', () => {
+    document.getElementById('graph-physics')?.addEventListener('click', () => {
       if (!_network) return;
-      const opts = _network.physics;
-      const current = opts?.physicsEnabled ?? false;
+      const current = _network.physics?.physicsEnabled ?? false;
       _network.setOptions({ physics: { enabled: !current } });
-      document.getElementById('graphPhysics').textContent = !current ? '⏸ Pause' : '⟳ Stabilise';
+      document.getElementById('graph-physics').textContent = !current ? '⏸ Pause' : '⟳ Stabilise';
     });
   }
+
+  // Subscribe to shared filter changes
+  APP.subscribe(() => {
+    if (_network) _applyFilters();
+  });
 
   // ── Public ────────────────────────────────────────────────────────────────
 

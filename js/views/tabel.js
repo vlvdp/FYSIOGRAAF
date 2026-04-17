@@ -7,112 +7,17 @@
 
 const TABEL = (() => {
 
-  const TYPE_ICONS = {
-    instrument: `<svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#F97316" stroke="#C05A0B" stroke-width="1.5"/></svg>`,
-    kennis:     `<svg width="14" height="14" viewBox="0 0 14 14"><polygon points="7,1 13,13 1,13" fill="#2563EB" stroke="#1A4BAD" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
-    bronnen:    `<svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="1" width="12" height="12" fill="#7C3AED" stroke="#5B28B3" stroke-width="1.5"/></svg>`,
-    casuistiek: `<svg width="14" height="14" viewBox="0 0 14 14"><polygon points="7,1 13,7 7,13 1,7" fill="#0D9488" stroke="#0A6B62" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
-  };
-
-  const TYPE_LABELS = {
-    instrument:  'Instrument',
-    kennis:      'Knowledge',
-    bronnen:     'Sources',
-    casuistiek:  'Case Studies',
-  };
-
-  const DOMEIN_TAGS  = ['msa', 'cna', 'rca', 'mtt', 'onco', 'ger'];
-  const DOMEIN_COLORS = { msa: 'var(--msa)', cna: 'var(--cna)', rca: 'var(--rca)', mtt: 'var(--mtt)', onco: 'var(--onco)', ger: 'var(--ger)' };
-
-  let _filters = {
-    search:   '',
-    type:     '',
-    domeinen: new Set(),
-  };
+  const TYPE_ICONS    = APP.TYPE_ICONS;
+  const TYPE_LABELS   = APP.TYPE_LABELS;
+  const DOMEIN_TAGS   = APP.DOMEIN_TAGS;
+  const DOMEIN_COLORS = APP.DOMEIN_COLORS;
 
   let _sort = { col: 'afk', dir: 'asc' };
 
   // ── Public ────────────────────────────────────────────────────────────────
 
   function render() {
-    _renderToolbar();
     _renderTable();
-  }
-
-  // ── Toolbar (zoekbalk + filters) ──────────────────────────────────────────
-
-  function _renderToolbar() {
-    const el = document.getElementById('tabelSidebar');
-    if (!el) return;
-
-    const hasFilter = _filters.search.trim() || _filters.type || _filters.domeinen.size;
-
-    el.innerHTML = `
-      <div class="p-3 d-flex flex-column gap-3">
-
-        <div class="d-flex flex-column gap-1">
-          <input type="search" class="form-control form-control-sm" id="tabelSearch"
-            placeholder="Search…"
-            value="${_esc(_filters.search)}"
-            oninput="TABEL.setFilter('search', this.value)"
-            autocomplete="off">
-          ${(() => {
-            const parts = [];
-            if (_filters.search.trim())   parts.push('"' + _esc(_filters.search.trim()) + '"');
-            if (_filters.type)            parts.push(TYPE_LABELS[_filters.type] || _filters.type);
-            if (_filters.domeinen.size)   parts.push([..._filters.domeinen].map(d => d.toUpperCase()).join(', '));
-            return `
-              <div class="d-flex align-items-start gap-2">
-                <span class="text-muted small flex-grow-1 text-break">
-                  ${parts.length > 0 ? parts.join(' · ') : 'no filters active'}
-                </span>
-                ${parts.length > 0 ? '<button class="btn btn-sm btn-outline-secondary py-0 px-2 flex-shrink-0" onclick="TABEL.clearAll()">clear</button>' : ''}
-              </div>`;
-          })()}
-        </div>
-
-        <!-- Type filter -->
-        <div>
-          <div class="text-uppercase fw-semibold text-secondary mb-2" style="font-size:0.7rem">Type</div>
-          <div class="d-flex flex-column gap-1">
-            ${Object.entries(TYPE_LABELS).map(([k, v]) => {
-              const active = _filters.type === k;
-              return `<button class="btn btn-sm w-100 text-start d-flex align-items-center gap-2 ${active ? 'btn-secondary' : 'btn-outline-secondary'}"
-                onclick="TABEL.setFilter('type','${k}')">
-                ${TYPE_ICONS[k]} ${v}
-              </button>`;
-            }).join('')}
-          </div>
-        </div>
-
-        <!-- Domain filter -->
-        <div>
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <span class="text-uppercase fw-semibold text-secondary" style="font-size:0.7rem">Domain</span>
-            ${_filters.domeinen.size
-              ? `<button class="btn btn-sm btn-outline-secondary py-0 px-2" onclick="TABEL.setFilter('domeinen_clear','')">clear</button>`
-              : ''}
-          </div>
-          <div class="d-flex flex-column gap-1">
-            ${DOMEIN_TAGS.map(t => {
-              const active = _filters.domeinen.has(t);
-              const color = DOMEIN_COLORS[t] || 'var(--bs-secondary-color)';
-              return `<button class="btn btn-sm w-100 text-start d-flex align-items-center gap-2 ${active ? 'btn-secondary' : 'btn-outline-secondary'}"
-                onclick="TABEL.setFilter('domein','${t}')">
-                <span class="rounded-circle flex-shrink-0" style="width:8px;height:8px;background:${color};display:inline-block;"></span>
-                ${t.toUpperCase()}
-              </button>`;
-            }).join('')}
-          </div>
-        </div>
-
-      </div>
-    `;
-
-    if (_filters.search) {
-      const inp = document.getElementById('tabelSearch');
-      if (inp) { inp.focus(); inp.setSelectionRange(inp.value.length, inp.value.length); }
-    }
   }
 
   // ── Table ─────────────────────────────────────────────────────────────────
@@ -121,18 +26,19 @@ const TABEL = (() => {
     const main = document.getElementById('tabel-main');
     if (!main) return;
 
+    const F = APP.FILTERS;
     const args = {};
-    if (_filters.type)          args.type   = _filters.type;
-    if (_filters.search.trim()) args.search = _filters.search.trim();
+    if (F.type)           args.type   = F.type;
+    if (F.search.trim())  args.search = F.search.trim();
 
     let results = DB.query(args);
 
     // Domein filter
-    const allSelected = DOMEIN_TAGS.every(d => _filters.domeinen.has(d));
-    if (_filters.domeinen.size > 0 && !allSelected) {
+    const allSelected = DOMEIN_TAGS.every(d => F.domeinen.has(d));
+    if (F.domeinen.size > 0 && !allSelected) {
       results = results.filter(obj => {
         const tags = new Set(DB.getTags(obj.id));
-        return [..._filters.domeinen].some(d => tags.has(d));
+        return [...F.domeinen].some(d => tags.has(d));
       });
     }
 
@@ -197,7 +103,7 @@ const TABEL = (() => {
       <p class="text-muted mb-2" style="font-size:0.74rem;">${results.length} objects · ${breakdown}</p>
       <div class="table-responsive">
         <table class="table table-sm table-hover table-striped align-middle mb-0 tabel-view">
-          <thead class="table-light sticky-top">
+          <thead class="table-light" style="position:sticky;top:0;z-index:1;">
             <tr>${ths}</tr>
           </thead>
           <tbody>${rows}</tbody>
@@ -272,34 +178,6 @@ const TABEL = (() => {
     });
   }
 
-  // ── Filter logic ──────────────────────────────────────────────────────────
-
-  function setFilter(key, value) {
-    if (key === 'search') {
-      _filters.search = value;
-      _renderTable();
-      return;
-    }
-    if (key === 'type') {
-      _filters.type = _filters.type === value ? '' : value;
-    } else if (key === 'domein') {
-      if (_filters.domeinen.has(value)) _filters.domeinen.delete(value);
-      else _filters.domeinen.add(value);
-    } else if (key === 'domeinen_clear') {
-      _filters.domeinen.clear();
-    }
-    _renderToolbar();
-    _renderTable();
-  }
-
-  function clearAll() {
-    _filters.search   = '';
-    _filters.type     = '';
-    _filters.domeinen = new Set();
-    _renderToolbar();
-    _renderTable();
-  }
-
   // ── Detail (hergebruik OVZ detail-panel) ──────────────────────────────────
 
   function openDetail(id) {
@@ -312,5 +190,8 @@ const TABEL = (() => {
     return String(s || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
-  return { render, setFilter, clearAll, toggleSort, openDetail };
+  // Subscribe to shared filter changes
+  APP.subscribe(() => _renderTable());
+
+  return { render, toggleSort, openDetail };
 })();

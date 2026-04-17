@@ -22,29 +22,66 @@ h5 { color: var(--bs-danger); }
 h6 { color: var(--bs-secondary-color); }
 
 
-/* ── Sidebar breedte ─────────────────────────────────────────────────────── */
-.app-sidebar { width: 260px; }
+/* ── Sidebar (smal, collapsible naar icon-rail) ─────────────────────────── */
+#filter-panel { width: 200px; transition: width .18s ease; }
 
-/* ── View switcher ──────────────────────────────────────────────────────── */
-#viewSwitcher .btn { font-size: 0.8rem; }
+/* Sidebar icoon (marker voor collapse-layout) */
+.sb-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+}
+
+/* Collapsed icon-rail */
+@media (min-width: 992px) {
+  body.sidebar-collapsed #filter-panel { width: 48px !important; }
+  body.sidebar-collapsed .sb-label,
+  body.sidebar-collapsed .sb-section-label { display: none !important; }
+  body.sidebar-collapsed #app-sidebar .btn {
+    justify-content: center !important;
+    gap: 0 !important;
+  }
+}
+
+/* ── Graph floating controls ────────────────────────────────────────────── */
+#graph-main { position: relative; }
+
+.graph-controls {
+  position: absolute; top: 12px; right: 12px; z-index: 5;
+  max-width: 180px;
+}
+.graph-ctrl-card {
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+.graph-focus-bar {
+  position: absolute; top: 12px; left: 12px; z-index: 5;
+  max-width: 60%;
+  background: color-mix(in srgb, var(--bs-warning) 15%, var(--bs-body-bg));
+  border: 1px solid color-mix(in srgb, var(--bs-warning) 40%, transparent);
+}
 
 /* ── Detail offcanvas breedte ────────────────────────────────────────────── */
-#detailPanel { --bs-offcanvas-width: min(540px, 95vw); }
+#detail-panel { --bs-offcanvas-width: min(540px, 95vw); }
 
 /* Phone-size: detail panel full-screen (iPad blijft zij-paneel) */
 @media (max-width: 575.98px) {
-  #detailPanel { --bs-offcanvas-width: 100vw; }
+  #detail-panel { --bs-offcanvas-width: 100vw; }
 }
 
 /* ── Offcanvas: laat body krimpen zodat footers niet van het scherm vallen ─ */
 .offcanvas-body { min-height: 0; }
-#ovzDetailFooterWrap { flex-shrink: 0; }
-#ovzDetailFooter,
-#ovzDetailFooter2 { flex-shrink: 0; }
+#detail-footer-wrap { flex-shrink: 0; }
+#detail-footer,
+#detail-footer-extra { flex-shrink: 0; }
 
 /* ── Footer chevron rotatie bij collapse ─────────────────────────────────── */
-[aria-expanded="false"] .detail-footer-chevron { transform: rotate(-90deg); }
-[aria-expanded="true"]  .detail-footer-chevron { transform: rotate(0deg); }
+[aria-expanded="false"] .detail-chevron { transform: rotate(-90deg); }
+[aria-expanded="true"]  .detail-chevron { transform: rotate(0deg); }
 
 /* ── iOS dynamic viewport: voorkom dat content achter de adresbalk valt ─── */
 @supports (height: 100dvh) {
@@ -52,16 +89,9 @@ h6 { color: var(--bs-secondary-color); }
   body.h-100 { height: 100dvh !important; }
 }
 
-/* ── Floating theme switcher: verborgen (nu in sidebar + navbar) ──────────── */
-#themeSwitcher { display: none !important; }
-
 /* ── Masonry grid ────────────────────────────────────────────────────────── */
 .masonry { columns: 300px; column-gap: 14px; }
 .masonry .card { break-inside: avoid; margin-bottom: 14px; display: inline-block; width: 100%; }
-
-
-
-/* .norm-block / .implicatie-block — guard classes; stijl via .alert-info/.alert-warning */
 
 /* ── Inline citation refs ────────────────────────────────────────────────── */
 .citation-ref {
@@ -77,8 +107,6 @@ h6 { color: var(--bs-secondary-color); }
 /* ── Klikbare elementen ───────────────────────────────────────────────────── */
 [onclick] { cursor: pointer; }
 
-
-
 /* ── Tabel-view ─────────────────────────────────────────────────────────── */
 .tabel-view { font-size: 0.82rem; }
 .tabel-view thead th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -92,8 +120,8 @@ h6 { color: var(--bs-secondary-color); }
 
 /* ── Print ───────────────────────────────────────────────────────────────── */
 @media print {
-  nav, .offcanvas, button, .btn { display: none !important; }
-  body, .card, .norm-block, .implicatie-block {
+  header, footer, .offcanvas, button, .btn { display: none !important; }
+  body, .card {
     background: #fff !important; color: #111 !important; border-color: #ddd !important;
   }
   .masonry { display: block !important; }
@@ -103,6 +131,4 @@ h6 { color: var(--bs-secondary-color); }
     border-left: 3px solid #555 !important;
     margin-bottom: 16px; width: 100%; box-shadow: none !important;
   }
-
-
 }
