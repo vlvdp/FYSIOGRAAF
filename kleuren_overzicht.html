@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="nl" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<title>Fysiograaf — Kleuren­overzicht</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', system-ui, sans-serif; padding: 2rem; }
+  h2 { margin-top: 2.5rem; font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; letter-spacing: .02em; }
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: .75rem;
+  }
+  .swatch {
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    overflow: hidden;
+    font-size: .8rem;
+  }
+  .swatch .chip {
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    padding: .4rem .6rem;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0,0,0,.5);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+  }
+  .swatch .meta {
+    padding: .5rem .6rem;
+    background: #fff;
+  }
+  .swatch .meta code { font-size: .72rem; color: #555; display:block; }
+  .swatch .meta .use { font-size: .68rem; color: #888; margin-top: .15rem; }
+  .theme-dark .swatch .meta { background: #1e1e1e; color: #eee; }
+  .theme-dark .swatch .meta code { color: #aaa; }
+  .theme-dark { background: #0f0f0f; color: #eee; padding: 1rem; border-radius: .75rem; }
+  .legend { font-size: .75rem; color: #666; margin-bottom: 1rem; }
+  .pair-row { display: flex; gap: .4rem; }
+  .pair-row > div { flex: 1; }
+  .dot-row { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; margin:.5rem 0 1rem; font-size:.78rem; }
+  .dot { width:14px; height:14px; border-radius:50%; display:inline-block; vertical-align:middle; margin-right:.25rem; border:1px solid rgba(0,0,0,.15); }
+</style>
+</head>
+<body>
+
+<h1 class="mb-1" style="font-family:'JetBrains Mono',monospace;">Fysiograaf &mdash; Kleuren in gebruik</h1>
+<p class="legend">Overzicht van alle kleurwaarden in <code>css/</code>, <code>js/</code> en <code>index.html</code>. Dezelfde hex-waarde kan meerdere semantische rollen hebben (zie &ldquo;gebruik&rdquo;). <em>Bijgewerkt na refactor: relatie-kleuren zijn nu CSS-tokens, fallback-bug gefixt, <code>--c-info-alt</code> toegevoegd, dark-mode relaties bestaan nu.</em></p>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>1. Brand</h2>
+<div class="swatch-grid">
+  <div class="swatch">
+    <div class="chip" style="background:#ff5900">#ff5900</div>
+    <div class="meta"><strong>--brand</strong><code>#ff5900</code><div class="use">style.css:7, layout_voorbeeld.html:13 (hardcoded)</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>2. Node-types (4 categorie&euml;n) &mdash; light</h2>
+<div class="swatch-grid">
+  <div class="swatch">
+    <div class="pair-row">
+      <div class="chip" style="background:#E8833A">#E8833A</div>
+      <div class="chip" style="background:#A35B1F">#A35B1F</div>
+    </div>
+    <div class="meta"><strong>instrument</strong> &mdash; oranje <code>--type-instrument / -edge</code><div class="use">= --msa, --c-warning. graph.js, app.js, index.html</div></div>
+  </div>
+  <div class="swatch">
+    <div class="pair-row">
+      <div class="chip" style="background:#0B6FBF">#0B6FBF</div>
+      <div class="chip" style="background:#084A80">#084A80</div>
+    </div>
+    <div class="meta"><strong>kennis</strong> &mdash; blauw <code>--type-kennis / -edge</code><div class="use">= --mtt, --c-accent. graph.js, app.js</div></div>
+  </div>
+  <div class="swatch">
+    <div class="pair-row">
+      <div class="chip" style="background:#7A4FBF">#7A4FBF</div>
+      <div class="chip" style="background:#543585">#543585</div>
+    </div>
+    <div class="meta"><strong>bronnen</strong> &mdash; paars <code>--type-bronnen / -edge</code><div class="use">= --cna, --c-purple. graph.js, app.js</div></div>
+  </div>
+  <div class="swatch">
+    <div class="pair-row">
+      <div class="chip" style="background:#0F9D8A">#0F9D8A</div>
+      <div class="chip" style="background:#0A6E60">#0A6E60</div>
+    </div>
+    <div class="meta"><strong>casu&iuml;stiek</strong> &mdash; munt <code>--type-casuistiek / -edge</code><div class="use">= --ger, --c-success. graph.js, app.js</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>3. Node-types &mdash; dark theme</h2>
+<div class="theme-dark">
+<div class="swatch-grid">
+  <div class="swatch">
+    <div class="pair-row">
+      <div class="chip" style="background:#FFB366">#FFB366</div>
+      <div class="chip" style="background:#CC7A3D">#CC7A3D</div>
+    </div>
+    <div class="meta"><strong>instrument (dark)</strong><code>--type-instrument / -edge</code></div>
+  </div>
+  <div class="swatch">
+    <div class="pair-row">
+      <div class="chip" style="background:#5AB4F0">#5AB4F0</div>
+      <div class="chip" style="background:#2E7AB0">#2E7AB0</div>
+    </div>
+    <div class="meta"><strong>kennis (dark)</strong><code>--type-kennis / -edge</code></div>
+  </div>
+  <div class="swatch">
+    <div class="pair-row">
+      <div class="chip" style="background:#B89AF5">#B89AF5</div>
+      <div class="chip" style="background:#7D5BC0">#7D5BC0</div>
+    </div>
+    <div class="meta"><strong>bronnen (dark)</strong><code>--type-bronnen / -edge</code></div>
+  </div>
+  <div class="swatch">
+    <div class="pair-row">
+      <div class="chip" style="background:#4ED3BD">#4ED3BD</div>
+      <div class="chip" style="background:#1F9080">#1F9080</div>
+    </div>
+    <div class="meta"><strong>casu&iuml;stiek (dark)</strong><code>--type-casuistiek / -edge</code></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>4. Domeinen (6) &mdash; light</h2>
+<div class="swatch-grid">
+  <div class="swatch"><div class="chip" style="background:#D1365A">#D1365A</div><div class="meta"><strong>--rca</strong> &mdash; danger<code>#D1365A</code><div class="use">= --c-danger</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#7A4FBF">#7A4FBF</div><div class="meta"><strong>--cna</strong> &mdash; purple<code>#7A4FBF</code><div class="use">= --type-bronnen, --c-purple</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#E8833A">#E8833A</div><div class="meta"><strong>--msa</strong> &mdash; warning<code>#E8833A</code><div class="use">= --type-instrument, --c-warning</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#0B6FBF">#0B6FBF</div><div class="meta"><strong>--mtt</strong> &mdash; accent<code>#0B6FBF</code><div class="use">= --type-kennis, --c-accent</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#4A8A2E">#4A8A2E</div><div class="meta"><strong>--onco</strong> &mdash; info-alt<code>#4A8A2E</code><div class="use">uniek (geen alias)</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#0F9D8A">#0F9D8A</div><div class="meta"><strong>--ger</strong> &mdash; success<code>#0F9D8A</code><div class="use">= --type-casuistiek, --c-success</div></div></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>5. Domeinen &mdash; dark theme</h2>
+<div class="theme-dark">
+<div class="swatch-grid">
+  <div class="swatch"><div class="chip" style="background:#F2708C">#F2708C</div><div class="meta"><strong>--rca</strong><code>#F2708C</code></div></div>
+  <div class="swatch"><div class="chip" style="background:#B89AF5">#B89AF5</div><div class="meta"><strong>--cna</strong><code>#B89AF5</code></div></div>
+  <div class="swatch"><div class="chip" style="background:#FFB366">#FFB366</div><div class="meta"><strong>--msa</strong><code>#FFB366</code></div></div>
+  <div class="swatch"><div class="chip" style="background:#5AB4F0">#5AB4F0</div><div class="meta"><strong>--mtt</strong><code>#5AB4F0</code></div></div>
+  <div class="swatch"><div class="chip" style="background:#9CD66B">#9CD66B</div><div class="meta"><strong>--onco</strong><code>#9CD66B</code></div></div>
+  <div class="swatch"><div class="chip" style="background:#4ED3BD">#4ED3BD</div><div class="meta"><strong>--ger</strong><code>#4ED3BD</code></div></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>6. Relatie-types (graph edges) &mdash; light</h2>
+<p class="legend">Sinds refactor als CSS-tokens in <code>style.css</code>. <code>graph.js</code> leest ze live via <code>getComputedStyle()</code>, <code>index.html</code> referenceert met <code>var(--rel-*)</code>.</p>
+<div class="swatch-grid">
+  <div class="swatch"><div class="chip" style="background:#F97316">#F97316</div><div class="meta"><strong>--rel-nexus</strong><code>#F97316</code><div class="use">structureel / anker</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#7C3AED">#7C3AED</div><div class="meta"><strong>--rel-contextus</strong><code>#7C3AED</code><div class="use">associatief / duidend</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#E11D48">#E11D48</div><div class="meta"><strong>--rel-usus</strong><code>#E11D48</code><div class="use">functioneel / actie</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#16A34A">#16A34A</div><div class="meta"><strong>--rel-sequens</strong><code>#16A34A</code><div class="use">narratief / volgorde</div></div></div>
+</div>
+
+<h2>6b. Relatie-types &mdash; dark theme</h2>
+<div class="theme-dark">
+<div class="swatch-grid">
+  <div class="swatch"><div class="chip" style="background:#FB923C">#FB923C</div><div class="meta"><strong>--rel-nexus (dark)</strong><code>#FB923C</code></div></div>
+  <div class="swatch"><div class="chip" style="background:#A78BFA">#A78BFA</div><div class="meta"><strong>--rel-contextus (dark)</strong><code>#A78BFA</code></div></div>
+  <div class="swatch"><div class="chip" style="background:#FB7185">#FB7185</div><div class="meta"><strong>--rel-usus (dark)</strong><code>#FB7185</code></div></div>
+  <div class="swatch"><div class="chip" style="background:#4ADE80">#4ADE80</div><div class="meta"><strong>--rel-sequens (dark)</strong><code>#4ADE80</code></div></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>7. Overige tokens</h2>
+<div class="swatch-grid">
+  <div class="swatch"><div class="chip" style="background:#831eff">#831eff</div><div class="meta"><strong>--type-richtlijn</strong><code>#831eff</code><div class="use">style.css, cards.js fallback (gefixt)</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#DC2626">#DC2626</div><div class="meta"><strong>--badge-ric</strong><code>#DC2626</code><div class="use">style.css</div></div></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>8. Print-stylesheet (alleen @media print)</h2>
+<div class="swatch-grid">
+  <div class="swatch"><div class="chip" style="background:#fff;color:#333;text-shadow:none">#fff</div><div class="meta"><code>body/card background</code><div class="use">style.css:148</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#111">#111</div><div class="meta"><code>body color</code><div class="use">style.css:148</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#ddd;color:#333;text-shadow:none">#ddd</div><div class="meta"><code>border color</code><div class="use">style.css:148, 153</div></div></div>
+  <div class="swatch"><div class="chip" style="background:#555">#555</div><div class="meta"><code>card border-left</code><div class="use">style.css:154</div></div></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>9. Snelle legenda &mdash; alle unieke hexwaarden</h2>
+<div class="dot-row">
+  <span><span class="dot" style="background:#ff5900"></span>#ff5900 brand</span>
+  <span><span class="dot" style="background:#E8833A"></span>#E8833A oranje</span>
+  <span><span class="dot" style="background:#A35B1F"></span>#A35B1F oranje-edge</span>
+  <span><span class="dot" style="background:#0B6FBF"></span>#0B6FBF blauw</span>
+  <span><span class="dot" style="background:#084A80"></span>#084A80 blauw-edge</span>
+  <span><span class="dot" style="background:#7A4FBF"></span>#7A4FBF paars</span>
+  <span><span class="dot" style="background:#543585"></span>#543585 paars-edge</span>
+  <span><span class="dot" style="background:#0F9D8A"></span>#0F9D8A munt</span>
+  <span><span class="dot" style="background:#0A6E60"></span>#0A6E60 munt-edge</span>
+  <span><span class="dot" style="background:#D1365A"></span>#D1365A danger</span>
+  <span><span class="dot" style="background:#4A8A2E"></span>#4A8A2E onco</span>
+  <span><span class="dot" style="background:#831eff"></span>#831eff richtlijn</span>
+  <span><span class="dot" style="background:#DC2626"></span>#DC2626 badge-ric</span>
+  <span><span class="dot" style="background:#F97316"></span>#F97316 nexus</span>
+  <span><span class="dot" style="background:#7C3AED"></span>#7C3AED contextus</span>
+  <span><span class="dot" style="background:#E11D48"></span>#E11D48 usus</span>
+  <span><span class="dot" style="background:#16A34A"></span>#16A34A sequens</span>
+</div>
+
+<p class="legend mt-4">
+<strong>Observaties (na refactor):</strong><br>
+&bull; 4 node-type kleuren zijn identiek aan 4 van de 6 domeinkleuren (oranje/blauw/paars/munt). Alleen <code>--rca</code> (#D1365A) en <code>--onco</code> (#4A8A2E) zijn uniek voor domeinen &mdash; bewuste overlap, want types worden onderscheiden via vorm (redundant encoding).<br>
+&bull; Relatie-types zijn nu CSS-tokens (<code>--rel-*</code>) met light &eacute;n dark varianten. <code>graph.js</code> leest live, theme-switch werkt automatisch door.<br>
+&bull; Fallback-bug in <code>cards.js</code> (#8B5CF6 &rarr; #831eff) gefixt.<br>
+&bull; <code>--c-info-alt</code> toegevoegd aan semantische laag (was alleen aanwezig als <code>--onco</code>).<br>
+&bull; Ontwerpprincipe &ldquo;&eacute;&eacute;n ziel, twee uitvoeringen&rdquo; vastgelegd in <code>style.css</code> kop-comment.
+</p>
+
+</body>
+</html>

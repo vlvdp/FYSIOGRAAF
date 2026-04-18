@@ -8,23 +8,9 @@
 
 const CARDS = (() => {
 
-  const DOMAIN_TAGS = ['rca', 'cna', 'msa', 'mtt', 'onco', 'ger'];
-
-  const TYPE_ICONS = {
-    instrument: `<i class="bi bi-circle-fill"   style="color:var(--type-instrument)"></i>`,
-    kennis:     `<i class="bi bi-triangle-fill" style="color:var(--type-kennis)"></i>`,
-    bronnen:    `<i class="bi bi-square-fill"   style="color:var(--type-bronnen)"></i>`,
-    casuistiek: `<i class="bi bi-diamond-fill"  style="color:var(--type-casuistiek)"></i>`,
-  };
-
-  const DOMAIN_COLORS = {
-    rca:  'var(--rca)',
-    cna:  'var(--cna)',
-    msa:  'var(--msa)',
-    mtt:  'var(--mtt)',
-    onco: 'var(--onco)',
-    ger:  'var(--ger)',
-  };
+  const DOMAIN_TAGS   = APP.DOMEIN_TAGS;
+  const DOMAIN_COLORS = APP.DOMEIN_COLORS;
+  const TYPE_ICONS    = APP.TYPE_ICONS;
 
   // ── Badge helpers — Bootstrap .badge.rounded-pill ─────────────────────────
 
@@ -125,7 +111,7 @@ const CARDS = (() => {
       pills.push(_neutralBadge(CAS_LABELS[ct] || ct));
     }
     _linkedBronnen(obj.id).forEach(o =>
-      pills.push(_navBadge(o.afk || o.title, 'var(--type-richtlijn, #8B5CF6)', o.id, true))
+      pills.push(_navBadge(o.afk || o.title, 'var(--type-richtlijn, #831eff)', o.id, true))
     );
 
     const footerHtml = pills.length

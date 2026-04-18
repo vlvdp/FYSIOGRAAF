@@ -23,83 +23,112 @@
 <body class="d-flex flex-column h-100">
 
 <!-- ══════════════════════════════════════════════════════════════════════════
-     TOPBAR — brand · view-switcher · theme · db · sidebar-toggle (mobile)
+     TOPBAR — brand · search · view-switcher · utilities
+     Mobile (<lg): brand + filter/nav togglers → row 1; search → row 2;
+                   nav-items collapsed behind navbar-toggler
+     Desktop (≥lg): alles inline op één rij
      ══════════════════════════════════════════════════════════════════════════ -->
-<header class="border-bottom px-3 py-2 d-flex flex-wrap align-items-center gap-2">
+<nav class="navbar navbar-expand-lg border-bottom py-2">
+  <div class="container-fluid gap-2 flex-wrap">
 
-  <span class="fw-bold font-monospace" style="color:var(--brand);">Fysiograaf</span>
-  <span class="text-secondary small font-monospace">β 1.1</span>
-
-  <input type="search" class="form-control form-control-sm ms-3 flex-grow-1" id="app-search"
-         placeholder="Search…" autocomplete="off"
-         style="min-width:200px; width:auto;"
-         oninput="APP.setFilter('search', this.value)">
-
-  <button class="btn btn-sm btn-secondary ms-auto" id="tab-overzicht" onclick="APP.showTop('overzicht')">
-    <i class="bi bi-card-text"></i> Rolodex
-  </button>
-  <button class="btn btn-sm btn-outline-secondary" id="tab-graph" onclick="APP.showTop('graph')">
-    <i class="bi bi-bullseye"></i> Graph
-  </button>
-  <button class="btn btn-sm btn-outline-secondary" id="tab-tabel" onclick="APP.showTop('tabel')">
-    <i class="bi bi-table"></i> Tabel
-  </button>
-
-  <!-- Legend -->
-  <button class="btn btn-sm btn-outline-secondary" type="button"
-          data-bs-toggle="modal" data-bs-target="#legend-modal"
-          title="Legend" aria-label="Legend">
-    <i class="bi bi-info-circle"></i>
-  </button>
-
-  <!-- Theme dropdown -->
-  <div class="dropdown">
-    <button class="btn btn-sm btn-outline-secondary" type="button"
-            data-bs-toggle="dropdown" data-bs-auto-close="outside"
-            title="Theme" aria-label="Theme">
-      <i class="bi bi-palette"></i>
-    </button>
-    <div class="dropdown-menu dropdown-menu-end p-2" style="min-width:260px;">
-      <div class="small text-muted mb-1 px-1">Mode</div>
-      <div class="btn-group btn-group-sm w-100 mb-2" role="group" aria-label="Light/dark mode">
-        <input type="radio" class="btn-check" name="mode" id="mode-light" autocomplete="off">
-        <label class="btn btn-outline-secondary" for="mode-light"><i class="bi bi-sun"></i> Light</label>
-        <input type="radio" class="btn-check" name="mode" id="mode-dark" autocomplete="off">
-        <label class="btn btn-outline-secondary" for="mode-dark"><i class="bi bi-moon-stars"></i> Dark</label>
-      </div>
-      <div class="small text-muted mb-1 px-1">Bootswatch theme</div>
-      <select id="theme-select" class="form-select form-select-sm mb-2"></select>
-      <div class="small text-muted mb-1 px-1">Or custom CSS URL</div>
-      <div class="input-group input-group-sm mb-2">
-        <input id="theme-url" type="text" class="form-control" placeholder="https://...">
-        <button id="theme-apply" class="btn btn-outline-secondary" type="button">Apply</button>
-      </div>
-      <button id="theme-reset" class="btn btn-sm btn-outline-secondary w-100">Reset to default</button>
+    <!-- Brand + version -->
+    <div class="d-flex align-items-center gap-2 me-lg-2">
+      <span class="navbar-brand brand m-0 p-0">Fysiograaf</span>
+      <span class="text-secondary small font-monospace">β 1.1</span>
     </div>
+
+    <!-- Mobile-only togglers: filters (offcanvas) + nav collapse -->
+    <div class="d-flex gap-1 ms-auto d-lg-none">
+      <button class="btn btn-sm btn-outline-secondary" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#filter-panel"
+              title="Filters" aria-label="Filters">
+        <i class="bi bi-funnel"></i>
+      </button>
+      <button class="navbar-toggler p-1 border" type="button"
+              data-bs-toggle="collapse" data-bs-target="#topnav"
+              aria-controls="topnav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <!-- Search: own row on mobile (order-last), inline grower on desktop -->
+    <input type="search" class="form-control form-control-sm order-last order-lg-0 w-100 w-lg-auto flex-lg-grow-1 mx-lg-2"
+           id="app-search"
+           placeholder="Search…" autocomplete="off"
+           oninput="APP.setFilter('search', this.value)">
+
+    <!-- Collapsible nav items -->
+    <div class="collapse navbar-collapse" id="topnav">
+      <div class="d-flex flex-wrap align-items-center gap-2 py-2 py-lg-0 ms-lg-auto">
+
+        <!-- View switcher -->
+        <div class="btn-group btn-group-sm" role="group" aria-label="View">
+          <button class="btn btn-secondary" id="tab-overzicht" onclick="APP.showTop('overzicht')">
+            <i class="bi bi-card-text"></i> Rolodex
+          </button>
+          <button class="btn btn-outline-secondary" id="tab-graph" onclick="APP.showTop('graph')">
+            <i class="bi bi-bullseye"></i> Graph
+          </button>
+          <button class="btn btn-outline-secondary" id="tab-tabel" onclick="APP.showTop('tabel')">
+            <i class="bi bi-table"></i> Tabel
+          </button>
+        </div>
+
+        <!-- Vertical divider (desktop only) -->
+        <div class="vr d-none d-lg-block"></div>
+
+        <!-- Legend -->
+        <button class="btn btn-sm btn-outline-secondary" type="button"
+                data-bs-toggle="modal" data-bs-target="#legend-modal"
+                title="Legend" aria-label="Legend">
+          <i class="bi bi-info-circle"></i>
+        </button>
+
+        <!-- Theme dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-sm btn-outline-secondary" type="button"
+                  data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                  title="Theme" aria-label="Theme">
+            <i class="bi bi-palette"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end dropdown-menu-wide p-2">
+            <div class="small text-muted mb-1 px-1">Mode</div>
+            <div class="btn-group btn-group-sm w-100 mb-2" role="group" aria-label="Light/dark mode">
+              <input type="radio" class="btn-check" name="mode" id="mode-light" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="mode-light"><i class="bi bi-sun"></i> Light</label>
+              <input type="radio" class="btn-check" name="mode" id="mode-dark" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="mode-dark"><i class="bi bi-moon-stars"></i> Dark</label>
+            </div>
+            <div class="small text-muted mb-1 px-1">Bootswatch theme</div>
+            <select id="theme-select" class="form-select form-select-sm mb-2"></select>
+            <div class="small text-muted mb-1 px-1">Or custom CSS URL</div>
+            <div class="input-group input-group-sm mb-2">
+              <input id="theme-url" type="text" class="form-control" placeholder="https://...">
+              <button id="theme-apply" class="btn btn-outline-secondary" type="button">Apply</button>
+            </div>
+            <button id="theme-reset" class="btn btn-sm btn-outline-secondary w-100">Reset to default</button>
+          </div>
+        </div>
+
+        <!-- DB dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-sm btn-outline-secondary" type="button"
+                  data-bs-toggle="dropdown"
+                  title="Database" aria-label="Database">
+            <i class="bi bi-database"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><button class="dropdown-item" type="button" onclick="DB.exportJSON()"><i class="bi bi-download"></i> Export</button></li>
+            <li><button class="dropdown-item text-danger" type="button"
+                onclick="if(confirm('Reset DB to seed data?')) { DB.reset(); location.reload(); }"><i class="bi bi-arrow-counterclockwise"></i> Reset</button></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
   </div>
-
-  <!-- DB dropdown -->
-  <div class="dropdown">
-    <button class="btn btn-sm btn-outline-secondary" type="button"
-            data-bs-toggle="dropdown"
-            title="Database" aria-label="Database">
-      <i class="bi bi-database"></i>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end">
-      <li><button class="dropdown-item" type="button" onclick="DB.exportJSON()"><i class="bi bi-download"></i> Export</button></li>
-      <li><button class="dropdown-item text-danger" type="button"
-          onclick="if(confirm('Reset DB to seed data?')) { DB.reset(); location.reload(); }"><i class="bi bi-arrow-counterclockwise"></i> Reset</button></li>
-    </ul>
-  </div>
-
-  <!-- Sidebar toggle (mobile only) -->
-  <button class="btn btn-sm btn-outline-secondary d-lg-none" type="button"
-          data-bs-toggle="offcanvas" data-bs-target="#filter-panel"
-          title="Menu" aria-label="Menu">
-    <i class="bi bi-list"></i>
-  </button>
-
-</header>
+</nav>
 
 <!-- ══════════════════════════════════════════════════════════════════════════
      BODY — sidebar | main
@@ -168,7 +197,7 @@
   <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h6 class="modal-title font-monospace">Graph — Legend</h6>
+        <h6 class="modal-title">Graph — Legend</h6>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
@@ -216,25 +245,25 @@
           </thead>
           <tbody>
             <tr>
-              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:#F97316"></span></td>
+              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:var(--rel-nexus)"></span></td>
               <td class="fw-semibold">Nexus</td>
               <td class="text-muted small">Structural / Anchor</td>
               <td class="text-muted small">X belongs to Y — points up to the framework</td>
             </tr>
             <tr>
-              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:#7C3AED"></span></td>
+              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:var(--rel-contextus)"></span></td>
               <td class="fw-semibold">Contextus</td>
               <td class="text-muted small">Associative / Illuminating</td>
               <td class="text-muted small">Knowledge gives meaning to instrument, skill or case</td>
             </tr>
             <tr>
-              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:#E11D48"></span></td>
+              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:var(--rel-usus)"></span></td>
               <td class="fw-semibold">Usus</td>
               <td class="text-muted small">Functional / Action</td>
               <td class="text-muted small">Source prescribes — case applies</td>
             </tr>
             <tr>
-              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:#16A34A"></span></td>
+              <td><span class="rounded-circle d-inline-block" style="width:10px;height:10px;background:var(--rel-sequens)"></span></td>
               <td class="fw-semibold">Sequens</td>
               <td class="text-muted small">Narrative / Sequence</td>
               <td class="text-muted small">Case diagnosis leads to case treatment</td>
@@ -248,23 +277,23 @@
             <tr><th>From</th><th>To</th><th>Relation</th></tr>
           </thead>
           <tbody>
-            <tr><td>Source</td><td>Instrument</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
-            <tr><td>Source</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
-            <tr><td>Source</td><td>Skill</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
-            <tr><td>Knowledge</td><td>Instrument</td><td><span class="badge rounded-pill" style="background:#7C3AED">contextus</span></td></tr>
-            <tr><td>Knowledge</td><td>Skill</td><td><span class="badge rounded-pill" style="background:#7C3AED">contextus</span></td></tr>
-            <tr><td>Knowledge</td><td>Case Study</td><td><span class="badge rounded-pill" style="background:#7C3AED">contextus</span></td></tr>
-            <tr><td>Knowledge</td><td>Source</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
-            <tr><td>Knowledge</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
-            <tr><td>Instrument</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
-            <tr><td>Instrument</td><td>Source</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
-            <tr><td>Skill</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
-            <tr><td>Skill</td><td>Source</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
-            <tr><td>Case Study</td><td>Source</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
-            <tr><td>Case Study</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:#F97316">nexus</span></td></tr>
-            <tr><td>Case Study</td><td>Instrument</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
-            <tr><td>Case Study</td><td>Skill</td><td><span class="badge rounded-pill" style="background:#E11D48">usus</span></td></tr>
-            <tr><td>Case diagnosis</td><td>Case treatment</td><td><span class="badge rounded-pill" style="background:#16A34A">sequens</span></td></tr>
+            <tr><td>Source</td><td>Instrument</td><td><span class="badge rounded-pill" style="background:var(--rel-usus)">usus</span></td></tr>
+            <tr><td>Source</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:var(--rel-usus)">usus</span></td></tr>
+            <tr><td>Source</td><td>Skill</td><td><span class="badge rounded-pill" style="background:var(--rel-usus)">usus</span></td></tr>
+            <tr><td>Knowledge</td><td>Instrument</td><td><span class="badge rounded-pill" style="background:var(--rel-contextus)">contextus</span></td></tr>
+            <tr><td>Knowledge</td><td>Skill</td><td><span class="badge rounded-pill" style="background:var(--rel-contextus)">contextus</span></td></tr>
+            <tr><td>Knowledge</td><td>Case Study</td><td><span class="badge rounded-pill" style="background:var(--rel-contextus)">contextus</span></td></tr>
+            <tr><td>Knowledge</td><td>Source</td><td><span class="badge rounded-pill" style="background:var(--rel-nexus)">nexus</span></td></tr>
+            <tr><td>Knowledge</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:var(--rel-nexus)">nexus</span></td></tr>
+            <tr><td>Instrument</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:var(--rel-nexus)">nexus</span></td></tr>
+            <tr><td>Instrument</td><td>Source</td><td><span class="badge rounded-pill" style="background:var(--rel-nexus)">nexus</span></td></tr>
+            <tr><td>Skill</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:var(--rel-nexus)">nexus</span></td></tr>
+            <tr><td>Skill</td><td>Source</td><td><span class="badge rounded-pill" style="background:var(--rel-nexus)">nexus</span></td></tr>
+            <tr><td>Case Study</td><td>Source</td><td><span class="badge rounded-pill" style="background:var(--rel-nexus)">nexus</span></td></tr>
+            <tr><td>Case Study</td><td>Knowledge</td><td><span class="badge rounded-pill" style="background:var(--rel-nexus)">nexus</span></td></tr>
+            <tr><td>Case Study</td><td>Instrument</td><td><span class="badge rounded-pill" style="background:var(--rel-usus)">usus</span></td></tr>
+            <tr><td>Case Study</td><td>Skill</td><td><span class="badge rounded-pill" style="background:var(--rel-usus)">usus</span></td></tr>
+            <tr><td>Case diagnosis</td><td>Case treatment</td><td><span class="badge rounded-pill" style="background:var(--rel-sequens)">sequens</span></td></tr>
           </tbody>
         </table>
 

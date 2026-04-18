@@ -1,5 +1,22 @@
 /* ══════════════════════════════════════════════════════════════════════════
-   DESIGN TOKENS — alleen wat Bootstrap niet biedt
+   DESIGN TOKENS — klinisch & fris, dual-mode
+
+   Principe: elke semantische kleur heeft één "ziel" (bv. munt = stabiel/
+   vitaal) met twee uitvoeringen:
+     light mode  = donkerder/verzadigder  → contrast op wit
+     dark mode   = lichter/zachter         → contrast op zwart
+   De identiteit blijft herkenbaar, de helderheid past zich aan.
+
+   Contrast getoetst op AA (≥4.5:1) tegen witte/zwarte bg.
+
+   Lagen:
+     1. Semantische UI-rollen   (--c-accent, --c-success, ...)
+     2. Categorisch: node-types (--type-*)      — vorm doet extra werk
+     3. Categorisch: domeinen    (--rca, --cna, ...)
+     4. Categorisch: relaties    (--rel-*)      — alleen in graph
+     6. Brand                    (--brand)      — uitzondering, niet in systeem
+
+   Alle hardcoded hex in HTML/JS moet een van deze tokens referencen.
    ══════════════════════════════════════════════════════════════════════════ */
 
 :root {
@@ -25,15 +42,22 @@
   --ger:  #0F9D8A;   /* success    */
 
   /* ── Semantisch: UI-states (rollen gescheiden) ────────────────────────── */
-  --c-accent:  #0B6FBF;
-  --c-success: #0F9D8A;
-  --c-warning: #E8833A;
-  --c-danger:  #D1365A;
-  --c-purple:  #7A4FBF;
+  --c-accent:   #0B6FBF;
+  --c-success:  #0F9D8A;
+  --c-warning:  #E8833A;
+  --c-danger:   #D1365A;
+  --c-info-alt: #4A8A2E;
+  --c-purple:   #7A4FBF;
+
+  /* ── Categorisch: 4 relatie-types (graph edges + legend badges) ───────── */
+  --rel-nexus:     #F97316;   /* structureel / anker  */
+  --rel-contextus: #7C3AED;   /* associatief          */
+  --rel-usus:      #E11D48;   /* functioneel / actie  */
+  --rel-sequens:   #16A34A;   /* narratief / volgorde */
 
   /* ── Overige ──────────────────────────────────────────────────────────── */
   --type-richtlijn: #831eff;
-  --badge-ric: #DC2626;
+  --badge-ric:      #DC2626;
 }
 
 [data-bs-theme="dark"] {
@@ -53,15 +77,35 @@
   --onco: #9CD66B;
   --ger:  #4ED3BD;
 
-  --c-accent:  #5AB4F0;
-  --c-success: #4ED3BD;
-  --c-warning: #FFB366;
-  --c-danger:  #F2708C;
-  --c-purple:  #B89AF5;
+  --c-accent:   #5AB4F0;
+  --c-success:  #4ED3BD;
+  --c-warning:  #FFB366;
+  --c-danger:   #F2708C;
+  --c-info-alt: #9CD66B;
+  --c-purple:   #B89AF5;
+
+  --rel-nexus:     #FB923C;
+  --rel-contextus: #A78BFA;
+  --rel-usus:      #FB7185;
+  --rel-sequens:   #4ADE80;
 }
 
 /* Headings: standaard body-kleur (Bootstrap regelt dark-mode inversie) */
 
+
+/* ── Brand wordmark ──────────────────────────────────────────────────────
+   Uitzondering op de typografie-regel in LAYOUT_MANIFEST §3: de brandnaam
+   gebruikt monospace als wordmark-identiteit, geen code/identifier.       */
+.brand {
+  color: var(--brand);
+  font-family: var(--bs-font-monospace);
+  font-weight: 700;
+}
+
+/* ── Dropdown variant: bredere menu-items (bv. theme picker) ──────────────
+   Bootstrap's default --bs-dropdown-min-width is 10rem; overschrijven via
+   de CSS custom property ipv inline style is de idiomatische BS 5.3+ weg. */
+.dropdown-menu-wide { --bs-dropdown-min-width: 16rem; }
 
 /* ── Sidebar (smal, collapsible naar icon-rail) ─────────────────────────── */
 #filter-panel { width: 200px; transition: width .18s ease; }
@@ -143,7 +187,7 @@
 
 /* ── Print ───────────────────────────────────────────────────────────────── */
 @media print {
-  header, footer, .offcanvas, button, .btn { display: none !important; }
+  header, nav, footer, .offcanvas, button, .btn { display: none !important; }
   body, .card {
     background: #fff !important; color: #111 !important; border-color: #ddd !important;
   }

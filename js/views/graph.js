@@ -7,23 +7,42 @@
 
 const GRAPH = (() => {
 
-  // ── Kleurenschema (sync met style.css) ───────────────────────────────────
-
+  // ── Kleurenschema ────────────────────────────────────────────────────────
+  //
   // vis-network rendert naar canvas → hex-waarden vereist (geen CSS vars).
-  // Sync deze bij palette-wijzigingen met --type-* in style.css.
-  const TYPE_COLOR = {
-    instrument:  { bg: '#E8833A', border: '#A35B1F', font: '#000000' },
-    kennis:      { bg: '#0B6FBF', border: '#084A80', font: '#FFFFFF' },
-    bronnen:     { bg: '#7A4FBF', border: '#543585', font: '#FFFFFF' },
-    casuistiek:  { bg: '#0F9D8A', border: '#0A6E60', font: '#FFFFFF' },
+  // We lezen CSS custom properties live via readPalette() zodat theme-switch
+  // automatisch meekomt en style.css de enige bron van waarheid is.
+
+  const TYPE_META = {
+    instrument: { bgVar: '--type-instrument',  edgeVar: '--type-instrument-edge',  font: '#000000' },
+    kennis:     { bgVar: '--type-kennis',      edgeVar: '--type-kennis-edge',      font: '#FFFFFF' },
+    bronnen:    { bgVar: '--type-bronnen',     edgeVar: '--type-bronnen-edge',     font: '#FFFFFF' },
+    casuistiek: { bgVar: '--type-casuistiek',  edgeVar: '--type-casuistiek-edge',  font: '#FFFFFF' },
   };
 
-  const REL_COLOR = {
-    nexus:     '#F97316',
-    contextus: '#7C3AED',
-    usus:      '#E11D48',
-    sequens:   '#16A34A',
+  const REL_VARS = {
+    nexus:     '--rel-nexus',
+    contextus: '--rel-contextus',
+    usus:      '--rel-usus',
+    sequens:   '--rel-sequens',
   };
+
+  function _readPalette() {
+    const css = getComputedStyle(document.documentElement);
+    const read = (v, fallback) => (css.getPropertyValue(v).trim() || fallback);
+    const TYPE_COLOR = {};
+    for (const [k, m] of Object.entries(TYPE_META)) {
+      TYPE_COLOR[k] = { bg: read(m.bgVar, '#555'), border: read(m.edgeVar, '#333'), font: m.font };
+    }
+    const REL_COLOR = {};
+    for (const [k, v] of Object.entries(REL_VARS)) {
+      REL_COLOR[k] = read(v, '#888');
+    }
+    return { TYPE_COLOR, REL_COLOR };
+  }
+
+  // Fallback-references voor modules die zonder theme-context genaderen.
+  const REL_COLOR = _readPalette().REL_COLOR;
 
   const TYPE_LABEL = {
     instrument:  'Instrument',
@@ -47,16 +66,10 @@ const GRAPH = (() => {
 
   // ── Render ────────────────────────────────────────────────────────────────
 
-  const TYPE_SHAPES = {
-    instrument: `<i class="bi bi-circle-fill"   style="color:var(--type-instrument)"></i>`,
-    kennis:     `<i class="bi bi-triangle-fill" style="color:var(--type-kennis)"></i>`,
-    bronnen:    `<i class="bi bi-square-fill"   style="color:var(--type-bronnen)"></i>`,
-    casuistiek: `<i class="bi bi-diamond-fill"  style="color:var(--type-casuistiek)"></i>`,
-  };
-
   function render() {
     const main = document.getElementById('graph-main');
     if (!main) return;
+    const relColors = _readPalette().REL_COLOR;
     main.innerHTML = `
       <div id="graph-canvas" class="w-100 h-100"></div>
 
@@ -64,7 +77,7 @@ const GRAPH = (() => {
       <div class="graph-controls d-flex flex-column gap-2">
         <div class="card p-2 d-flex flex-column gap-1">
           <div class="text-uppercase fw-semibold text-secondary mb-1" style="font-size:0.65rem">Relation</div>
-          ${Object.entries(REL_COLOR).map(([rel, color]) => `
+          ${Object.entries(relColors).map(([rel, color]) => `
             <button class="btn btn-sm btn-secondary text-start d-flex align-items-center gap-2"
               data-filter-rel="${rel}">
               <span class="rounded-circle flex-shrink-0" style="width:8px;height:8px;background:${color};display:inline-block;"></span>
@@ -108,6 +121,9 @@ const GRAPH = (() => {
     const css = getComputedStyle(document.documentElement);
     const emphasisColor = css.getPropertyValue('--bs-emphasis-color').trim() || '#fff';
     const secondaryColor = css.getPropertyValue('--bs-secondary-color').trim() || '#888';
+
+    // Lees live zodat theme-switch automatisch doorwerkt
+    const { TYPE_COLOR, REL_COLOR } = _readPalette();
 
     const visNodeArr = objects.map(obj => {
       const c      = TYPE_COLOR[obj.type] || { bg: '#555', border: '#333', font: '#fff' };
